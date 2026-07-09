@@ -24,8 +24,6 @@
   const ATTENDANCE_LABELS = {
     present: "出席",
     absent: "缺席",
-    late: "遲到",
-    excused: "請假",
   };
 
   const $ = (sel, root = document) => root.querySelector(sel);
@@ -40,21 +38,25 @@
   let members = [];
   let resources = null;
   let syllabus = null;
+  let specialtySyllabus = null;
   let currentMember = null;
 
   /* ---------- Data ---------- */
 
   async function loadData() {
-    const [membersRes, syllabusRes] = await Promise.all([
+    const [membersRes, syllabusRes, specialtyRes] = await Promise.all([
       fetch("data/members.json", { cache: "no-store" }),
       fetch("data/progressive-syllabus.json", { cache: "no-store" }),
+      fetch("data/specialty-syllabus.json", { cache: "no-store" }),
     ]);
     if (!membersRes.ok) throw new Error("無法載入成員資料");
     if (!syllabusRes.ok) throw new Error("無法載入獎章綱要");
+    if (!specialtyRes.ok) throw new Error("無法載入專科徽章綱要");
     const data = await membersRes.json();
     members = data.members || [];
     resources = data.resources || null;
     syllabus = await syllabusRes.json();
+    specialtySyllabus = await specialtyRes.json();
   }
 
   function findMember(name, scoutId) {
@@ -157,6 +159,11 @@
   /* ---------- Tabs ---------- */
 
   function switchTab(tabId) {
+    const validTabs = new Set(["progressive", "badges", "activity", "resources"]);
+    if (tabId === "overview" || tabId === "attendance" || !validTabs.has(tabId)) {
+      tabId = "progressive";
+    }
+
     const buttons = $$(".tab-btn");
     const panels = $$(".tab-panel");
 
@@ -175,6 +182,8 @@
 
     sessionStorage.setItem(TAB_KEY, tabId);
     if (tabId !== "progressive") showProgressiveList();
+    if (tabId !== "activity") showActivityList();
+    if (tabId !== "badges") showSpecialtyList();
   }
 
   function initTabs() {
@@ -212,6 +221,8 @@
     loginError.hidden = true;
     loginForm.reset();
     showProgressiveList();
+    showActivityList();
+    showSpecialtyList();
   }
 
   function showDashboard(member) {
@@ -219,14 +230,15 @@
     loginView.hidden = true;
     dashboardView.hidden = false;
     showProgressiveList();
+    showActivityList();
+    showSpecialtyList();
     renderProfile(member);
-    renderActivity(member);
     renderProgressive(member);
     renderBadges(member);
-    renderAttendance(member);
+    renderActivitySummary(member);
     renderResources();
 
-    const savedTab = sessionStorage.getItem(TAB_KEY) || "overview";
+    const savedTab = sessionStorage.getItem(TAB_KEY) || "progressive";
     switchTab(savedTab);
 
     window.scrollTo({ top: 0, behavior: "instant" });
@@ -245,46 +257,246 @@
     joinEl.setAttribute("datetime", member.joinDate);
   }
 
-  function renderActivity(member) {
-    const a = member.activity;
-    $("#stat-attendance").textContent = a.attendanceRate;
-    $("#stat-service").textContent = a.serviceHours;
-    $("#stat-camping").textContent = a.campingCount;
-    $("#stat-outdoor").textContent = a.outdoorActivities.length;
-
-    requestAnimationFrame(() => {
-      $("#stat-attendance-bar").style.width = `${a.attendanceRate}%`;
-    });
-
-    const list = $("#activity-list");
-    list.innerHTML = "";
-
-    if (!a.outdoorActivities.length) {
-      list.innerHTML = `<li class="empty-state">暫無戶外活動紀錄</li>`;
-      return;
-    }
-
-    const sorted = [...a.outdoorActivities].sort((x, y) =>
-      y.date.localeCompare(x.date)
-    );
-
-    for (const act of sorted) {
-      const li = document.createElement("li");
-      li.className = "activity-item";
-      li.innerHTML = `
-        <span class="activity-type type-${act.type}">${act.type}</span>
-        <span class="activity-name">${escapeHtml(act.name)}</span>
-        <time class="activity-date" datetime="${act.date}">${formatDate(act.date)}</time>
-      `;
-      list.appendChild(li);
-    }
-  }
-
   function showProgressiveList() {
     const listView = $("#progressive-list-view");
     const detailView = $("#progressive-detail-view");
     if (listView) listView.hidden = false;
     if (detailView) detailView.hidden = true;
+  }
+
+  function showActivityList() {
+    const listView = $("#activity-list-view");
+    const detailView = $("#activity-detail-view");
+    if (listView) listView.hidden = false;
+    if (detailView) detailView.hidden = true;
+  }
+
+  function showActivityDetail(kind) {
+    if (!currentMember) return;
+    const titles = {
+      attendance: { title: "出席率", subtitle: "集會與活動出席明細" },
+      service: { title: "服務時數", subtitle: "服務活動明細" },
+      camping: { title: "露營次數", subtitle: "露營活動明細" },
+      outdoor: { title: "戶外活動", subtitle: "參與過的戶外活動明細" },
+    };
+    const meta = titles[kind];
+    if (!meta) return;
+
+    $("#activity-list-view").hidden = true;
+    $("#activity-detail-view").hidden = false;
+    $("#activity-detail-title").textContent = meta.title;
+    $("#activity-detail-subtitle").textContent = meta.subtitle;
+    $("#activity-detail-content").innerHTML = renderActivityDetailContent(
+      currentMember,
+      kind
+    );
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function getAttendanceStats(member) {
+    const records = member.attendance || [];
+    const counts = { present: 0, absent: 0 };
+    for (const r of records) {
+      const status = normalizeAttendanceStatus(r);
+      if (counts[status] !== undefined) counts[status]++;
+    }
+    const total = records.length;
+    const rate = total
+      ? Math.round((counts.present / total) * 100)
+      : (member.activity && member.activity.attendanceRate) || 0;
+    return { records, counts, total, rate };
+  }
+
+  function getServiceRecords(member) {
+    const activity = member.activity || {};
+    if (Array.isArray(activity.serviceRecords) && activity.serviceRecords.length) {
+      return [...activity.serviceRecords].sort((a, b) =>
+        b.date.localeCompare(a.date)
+      );
+    }
+    return (activity.outdoorActivities || [])
+      .filter((a) => a.type === "服務")
+      .map((a) => ({
+        date: a.date,
+        name: a.name,
+        hours: a.hours || 0,
+        note: a.note || "",
+      }))
+      .sort((a, b) => b.date.localeCompare(a.date));
+  }
+
+  function getCampingRecords(member) {
+    const activity = member.activity || {};
+    if (Array.isArray(activity.campingRecords) && activity.campingRecords.length) {
+      return [...activity.campingRecords].sort((a, b) =>
+        b.date.localeCompare(a.date)
+      );
+    }
+    return (activity.outdoorActivities || [])
+      .filter((a) => a.type === "露營")
+      .map((a) => ({
+        date: a.date,
+        name: a.name,
+        nights: a.nights || 1,
+        note: a.note || "",
+      }))
+      .sort((a, b) => b.date.localeCompare(a.date));
+  }
+
+  function getOutdoorRecords(member) {
+    const activity = member.activity || {};
+    return [...(activity.outdoorActivities || [])].sort((a, b) =>
+      b.date.localeCompare(a.date)
+    );
+  }
+
+  function renderActivityDetailContent(member, kind) {
+    if (kind === "attendance") {
+      const { records, counts, total, rate } = getAttendanceStats(member);
+      const summary = `
+        <div class="detail-meta">
+          <span>出席率 <strong>${rate}%</strong></span>
+          <span>出席 ${counts.present}</span>
+          <span>缺席 ${counts.absent}</span>
+          <span>共 ${total} 次</span>
+        </div>`;
+      if (!records.length) {
+        return `${summary}<p class="empty-state">暫無出席紀錄</p>`;
+      }
+      const rows = [...records]
+        .sort((a, b) => b.date.localeCompare(a.date))
+        .map((r) => {
+          const status = normalizeAttendanceStatus(r);
+          const note = formatAttendanceNote(r);
+          return `
+          <tr>
+            <td><time datetime="${r.date}">${formatDate(r.date)}</time></td>
+            <td>${escapeHtml(r.name)}</td>
+            <td><span class="activity-type type-${r.type}">${escapeHtml(r.type)}</span></td>
+            <td><span class="att-status status-${status}">${ATTENDANCE_LABELS[status]}</span></td>
+            <td class="att-note">${note ? escapeHtml(note) : "—"}</td>
+          </tr>`;
+        })
+        .join("");
+      return `${summary}
+        <div class="attendance-table-wrap">
+          <table class="attendance-table" aria-label="出席明細">
+            <thead>
+              <tr>
+                <th scope="col">日期</th>
+                <th scope="col">活動／集會</th>
+                <th scope="col">類型</th>
+                <th scope="col">狀態</th>
+                <th scope="col">備註</th>
+              </tr>
+            </thead>
+            <tbody>${rows}</tbody>
+          </table>
+        </div>`;
+    }
+
+    if (kind === "service") {
+      const records = getServiceRecords(member);
+      const totalHours =
+        (member.activity && member.activity.serviceHours) ||
+        records.reduce((sum, r) => sum + (Number(r.hours) || 0), 0);
+      const summary = `
+        <div class="detail-meta">
+          <span>累計服務時數 <strong>${totalHours}</strong> 小時</span>
+          <span>共 ${records.length} 項</span>
+        </div>`;
+      if (!records.length) {
+        return `${summary}<p class="empty-state">暫無服務紀錄</p>`;
+      }
+      const rows = records
+        .map(
+          (r) => `
+          <tr>
+            <td><time datetime="${r.date}">${formatDate(r.date)}</time></td>
+            <td>${escapeHtml(r.name)}</td>
+            <td>${r.hours != null && r.hours !== "" ? `${r.hours} 小時` : "—"}</td>
+            <td class="att-note">${r.note ? escapeHtml(r.note) : "—"}</td>
+          </tr>`
+        )
+        .join("");
+      return `${summary}
+        <div class="attendance-table-wrap">
+          <table class="attendance-table" aria-label="服務時數明細">
+            <thead>
+              <tr>
+                <th scope="col">日期</th>
+                <th scope="col">服務項目</th>
+                <th scope="col">時數</th>
+                <th scope="col">備註</th>
+              </tr>
+            </thead>
+            <tbody>${rows}</tbody>
+          </table>
+        </div>`;
+    }
+
+    if (kind === "camping") {
+      const records = getCampingRecords(member);
+      const count =
+        (member.activity && member.activity.campingCount) || records.length;
+      const summary = `
+        <div class="detail-meta">
+          <span>露營次數 <strong>${count}</strong></span>
+          <span>共 ${records.length} 項紀錄</span>
+        </div>`;
+      if (!records.length) {
+        return `${summary}<p class="empty-state">暫無露營紀錄</p>`;
+      }
+      const rows = records
+        .map(
+          (r) => `
+          <tr>
+            <td><time datetime="${r.date}">${formatDate(r.date)}</time></td>
+            <td>${escapeHtml(r.name)}</td>
+            <td>${r.nights != null && r.nights !== "" ? `${r.nights} 晚` : "—"}</td>
+            <td class="att-note">${r.note ? escapeHtml(r.note) : "—"}</td>
+          </tr>`
+        )
+        .join("");
+      return `${summary}
+        <div class="attendance-table-wrap">
+          <table class="attendance-table" aria-label="露營明細">
+            <thead>
+              <tr>
+                <th scope="col">日期</th>
+                <th scope="col">露營活動</th>
+                <th scope="col">晚數</th>
+                <th scope="col">備註</th>
+              </tr>
+            </thead>
+            <tbody>${rows}</tbody>
+          </table>
+        </div>`;
+    }
+
+    if (kind === "outdoor") {
+      const records = getOutdoorRecords(member);
+      const summary = `
+        <div class="detail-meta">
+          <span>戶外活動 <strong>${records.length}</strong> 次</span>
+        </div>`;
+      if (!records.length) {
+        return `${summary}<p class="empty-state">暫無戶外活動紀錄</p>`;
+      }
+      const items = records
+        .map(
+          (act) => `
+          <li class="activity-item">
+            <span class="activity-type type-${act.type}">${escapeHtml(act.type)}</span>
+            <span class="activity-name">${escapeHtml(act.name)}</span>
+            <time class="activity-date" datetime="${act.date}">${formatDate(act.date)}</time>
+          </li>`
+        )
+        .join("");
+      return `${summary}<ul class="activity-list">${items}</ul>`;
+    }
+
+    return `<p class="empty-state">暫無資料</p>`;
   }
 
   function showBadgeDetail(badgeKey) {
@@ -455,7 +667,10 @@
   }
 
   function renderBadges(member) {
-    const badges = member.specialtyBadges || [];
+    const badges = (member.specialtyBadges || []).map((badge, index) => ({
+      ...badge,
+      _index: index,
+    }));
     const grouped = {
       interest: [],
       skill: [],
@@ -481,6 +696,19 @@
       true,
       "暫無獎項紀錄"
     );
+
+    $$("#specialty-groups .badge-item[data-specialty-index]").forEach((el) => {
+      el.addEventListener("click", () => {
+        const idx = Number(el.dataset.specialtyIndex);
+        showSpecialtyDetail(idx);
+      });
+      el.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          showSpecialtyDetail(Number(el.dataset.specialtyIndex));
+        }
+      });
+    });
   }
 
   function renderBadgeItems(items, isAward, emptyText) {
@@ -493,11 +721,16 @@
         const iconHtml = iconSrc
           ? `<img class="badge-icon" src="${escapeHtml(iconSrc)}" alt="${escapeHtml(b.name)}圖示" width="40" height="40" loading="lazy" />`
           : `<span class="badge-icon badge-icon-placeholder" aria-hidden="true"></span>`;
+        const indexAttr =
+          !isAward && b._index != null
+            ? ` data-specialty-index="${b._index}" role="button" tabindex="0"`
+            : "";
+        const clickable = !isAward ? "is-clickable" : "";
         return `
-        <li class="badge-item ${isAward ? "award" : ""} ${iconSrc ? "has-icon" : ""}">
+        <li class="badge-item ${isAward ? "award" : ""} ${iconSrc ? "has-icon" : ""} ${clickable}"${indexAttr}>
           ${isAward ? "" : iconHtml}
           <span class="badge-name">${escapeHtml(b.name)}</span>
-          <time class="badge-date" datetime="${b.earnedDate}">${formatDate(b.earnedDate)}</time>
+          <time class="badge-date" datetime="${b.earnedDate || ""}">${formatDate(b.earnedDate || b.assessmentDate)}</time>
         </li>`;
       })
       .join("");
@@ -506,67 +739,178 @@
   function resolveSpecialtyIcon(badge) {
     if (badge.icon) return badge.icon;
     const group = normalizeSpecialtyGroup(badge);
-    if (group !== "interest") return null;
-    const base = String(badge.name || "").replace(/章$/, "");
-    if (!base) return null;
-    return `assets/specialty/interest/${base}.png`;
+    const raw = String(badge.name || "")
+      .replace(/（教導組）/g, "")
+      .replace(/\(教導組\)/g, "")
+      .trim();
+    const candidates = [
+      raw,
+      raw.replace(/章$/, ""),
+      raw.replace(/獎章$/, ""),
+      raw.replace(/徽章$/, ""),
+    ];
+    for (const base of candidates) {
+      if (!base) continue;
+      return `assets/specialty/${group}/${base}.png`;
+    }
+    return null;
   }
 
-  function renderAttendance(member) {
-    const records = member.attendance || [];
-    const summary = $("#attendance-summary");
-    const body = $("#attendance-body");
+  function specialtyKeyOf(badge) {
+    if (badge.syllabusKey) return badge.syllabusKey;
+    const group = normalizeSpecialtyGroup(badge);
+    const raw = String(badge.name || "")
+      .replace(/（教導組）/g, "")
+      .replace(/\(教導組\)/g, "")
+      .trim();
+    const bases = [
+      raw,
+      raw.replace(/章$/, ""),
+      raw.replace(/獎章$/, ""),
+      raw.replace(/徽章$/, ""),
+    ];
+    const map = (specialtySyllabus && specialtySyllabus.badges) || {};
+    for (const base of bases) {
+      const key = `${group}:${base}`;
+      if (map[key]) return key;
+    }
+    return `${group}:${bases[1] || bases[0]}`;
+  }
 
-    const counts = { present: 0, absent: 0, late: 0, excused: 0 };
-    for (const r of records) {
-      if (counts[r.status] !== undefined) counts[r.status]++;
+  function showSpecialtyList() {
+    const listView = $("#specialty-list-view");
+    const detailView = $("#specialty-detail-view");
+    if (listView) listView.hidden = false;
+    if (detailView) detailView.hidden = true;
+  }
+
+  function showSpecialtyDetail(index) {
+    if (!currentMember) return;
+    const badge = (currentMember.specialtyBadges || [])[index];
+    if (!badge) return;
+
+    const key = specialtyKeyOf(badge);
+    const syl =
+      (specialtySyllabus &&
+        specialtySyllabus.badges &&
+        specialtySyllabus.badges[key]) ||
+      null;
+
+    $("#specialty-list-view").hidden = true;
+    $("#specialty-detail-view").hidden = false;
+
+    const iconSrc = resolveSpecialtyIcon(badge);
+    const icon = $("#specialty-detail-icon");
+    if (iconSrc) {
+      icon.hidden = false;
+      icon.src = iconSrc;
+      icon.alt = `${badge.name}圖示`;
+    } else {
+      icon.hidden = true;
+      icon.removeAttribute("src");
     }
 
-    const total = records.length;
-    const rate = total
-      ? Math.round(((counts.present + counts.late) / total) * 100)
-      : 0;
+    $("#specialty-detail-name").textContent = badge.name;
+    $("#specialty-detail-english").textContent =
+      (syl && syl.englishName) || badge.englishName || "";
+    const groupLabel =
+      badge.category ||
+      (SPECIALTY_GROUPS.find((g) => g.key === normalizeSpecialtyGroup(badge)) ||
+        {}).label ||
+      "";
+    $("#specialty-detail-group").textContent = groupLabel;
+
+    $("#specialty-meta-activity").textContent =
+      badge.activityName || badge.name || "—";
+    $("#specialty-meta-organizer").textContent = badge.organizer || "—";
+    const dateIso = badge.assessmentDate || badge.earnedDate || "";
+    $("#specialty-meta-date").textContent = formatDate(dateIso);
+    $("#specialty-meta-examiner").textContent =
+      badge.examiner || badge.assessor || "—";
+
+    const sectionsEl = $("#specialty-detail-sections");
+    const items = (syl && syl.items) || [];
+    if (!items.length) {
+      sectionsEl.innerHTML = `<p class="empty-state">暫無綱要分項資料</p>`;
+    } else {
+      sectionsEl.innerHTML = `
+        <section class="syllabus-section">
+          <header class="syllabus-section-header">
+            <h3>考核分項</h3>
+            <span class="section-progress">${items.length} 項</span>
+          </header>
+          <ul class="syllabus-items">
+            ${items
+              .map((it) => {
+                const details = (it.details || [])
+                  .map((d) => `<li>${escapeHtml(d)}</li>`)
+                  .join("");
+                return `
+                  <li class="syllabus-item done">
+                    <div class="syllabus-item-head">
+                      <span class="item-status is-done">已完成</span>
+                      <span class="syllabus-item-title">${escapeHtml(it.title)}</span>
+                    </div>
+                    ${details ? `<ul class="syllabus-details">${details}</ul>` : ""}
+                  </li>`;
+              })
+              .join("")}
+          </ul>
+        </section>`;
+    }
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function renderActivitySummary(member) {
+    const activity = member.activity || {};
+    const { rate } = getAttendanceStats(member);
+    const outdoorCount = (activity.outdoorActivities || []).length;
+    const summary = $("#attendance-summary");
 
     summary.innerHTML = `
-      <div class="att-stat">
+      <button type="button" class="att-stat" data-activity-detail="attendance">
         <span class="att-stat-value">${rate}%</span>
-        <span class="att-stat-label">近期出席率</span>
-      </div>
-      <div class="att-stat">
-        <span class="att-stat-value">${counts.present}</span>
-        <span class="att-stat-label">出席</span>
-      </div>
-      <div class="att-stat">
-        <span class="att-stat-value">${counts.late}</span>
-        <span class="att-stat-label">遲到</span>
-      </div>
-      <div class="att-stat">
-        <span class="att-stat-value">${counts.excused}</span>
-        <span class="att-stat-label">請假</span>
-      </div>
-      <div class="att-stat">
-        <span class="att-stat-value">${counts.absent}</span>
-        <span class="att-stat-label">缺席</span>
-      </div>
+        <span class="att-stat-label">出席率</span>
+        <span class="att-stat-hint">查看明細</span>
+      </button>
+      <button type="button" class="att-stat" data-activity-detail="service">
+        <span class="att-stat-value">${activity.serviceHours || 0}</span>
+        <span class="att-stat-label">服務時數</span>
+        <span class="att-stat-hint">查看明細</span>
+      </button>
+      <button type="button" class="att-stat" data-activity-detail="camping">
+        <span class="att-stat-value">${activity.campingCount || 0}</span>
+        <span class="att-stat-label">露營次數</span>
+        <span class="att-stat-hint">查看明細</span>
+      </button>
+      <button type="button" class="att-stat" data-activity-detail="outdoor">
+        <span class="att-stat-value">${outdoorCount}</span>
+        <span class="att-stat-label">戶外活動</span>
+        <span class="att-stat-hint">查看明細</span>
+      </button>
     `;
 
-    if (!records.length) {
-      body.innerHTML = `<tr><td colspan="4" class="empty-state">暫無出席紀錄</td></tr>`;
-      return;
-    }
+    summary.querySelectorAll("[data-activity-detail]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        showActivityDetail(btn.dataset.activityDetail);
+      });
+    });
+  }
 
-    const sorted = [...records].sort((a, b) => b.date.localeCompare(a.date));
-    body.innerHTML = sorted
-      .map(
-        (r) => `
-        <tr>
-          <td><time datetime="${r.date}">${formatDate(r.date)}</time></td>
-          <td>${escapeHtml(r.name)}</td>
-          <td><span class="activity-type type-${r.type}">${escapeHtml(r.type)}</span></td>
-          <td><span class="att-status status-${r.status}">${ATTENDANCE_LABELS[r.status] || r.status}</span></td>
-        </tr>`
-      )
-      .join("");
+  function normalizeAttendanceStatus(record) {
+    if (record.status === "present" || record.status === "absent") return record.status;
+    // 相容舊資料：遲到視為出席，請假視為缺席
+    if (record.status === "late") return "present";
+    if (record.status === "excused") return "absent";
+    return "absent";
+  }
+
+  function formatAttendanceNote(record) {
+    if (record.note) return record.note;
+    if (record.status === "late") return "遲到";
+    if (record.status === "excused") return "請假";
+    return "";
   }
 
   function renderResources() {
@@ -668,7 +1012,7 @@
     }
 
     saveSession(member);
-    sessionStorage.setItem(TAB_KEY, "overview");
+    sessionStorage.setItem(TAB_KEY, "progressive");
     showDashboard(member);
   });
 
@@ -679,6 +1023,14 @@
 
   $("#badge-back-btn").addEventListener("click", () => {
     showProgressiveList();
+  });
+
+  $("#activity-back-btn").addEventListener("click", () => {
+    showActivityList();
+  });
+
+  $("#specialty-back-btn").addEventListener("click", () => {
+    showSpecialtyList();
   });
 
   $$(".demo-fill").forEach((btn) => {

@@ -110,42 +110,14 @@
       <!-- 分頁導覽 -->
       <div class="tabs-area">
         <div class="tab-nav" role="tablist" aria-label="紀錄分頁">
-          <button type="button" class="tab-btn is-active" role="tab" id="tab-overview" aria-controls="panel-overview" aria-selected="true" data-tab="overview">活動紀錄總覽</button>
-          <button type="button" class="tab-btn" role="tab" id="tab-progressive" aria-controls="panel-progressive" aria-selected="false" data-tab="progressive" tabindex="-1">進度性獎章</button>
+          <button type="button" class="tab-btn is-active" role="tab" id="tab-progressive" aria-controls="panel-progressive" aria-selected="true" data-tab="progressive">進度性獎章</button>
           <button type="button" class="tab-btn" role="tab" id="tab-badges" aria-controls="panel-badges" aria-selected="false" data-tab="badges" tabindex="-1">專科徽章及獎項</button>
-          <button type="button" class="tab-btn" role="tab" id="tab-attendance" aria-controls="panel-attendance" aria-selected="false" data-tab="attendance" tabindex="-1">出席紀錄</button>
+          <button type="button" class="tab-btn" role="tab" id="tab-activity" aria-controls="panel-activity" aria-selected="false" data-tab="activity" tabindex="-1">活動記錄</button>
           <button type="button" class="tab-btn" role="tab" id="tab-resources" aria-controls="panel-resources" aria-selected="false" data-tab="resources" tabindex="-1">有用資料</button>
         </div>
 
-        <!-- 活動紀錄總覽 -->
-        <div class="tab-panel is-active" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview">
-          <header class="panel-header">
-            <h2 id="activity-heading">活動紀錄總覽</h2>
-            <p>出席、服務與戶外參與概況</p>
-          </header>
-          <div class="stat-grid" id="stat-grid">
-            <article class="stat-item">
-              <p class="stat-label">出席率</p>
-              <p class="stat-value"><span id="stat-attendance">0</span><span class="stat-unit">%</span></p>
-              <div class="stat-bar" aria-hidden="true"><div id="stat-attendance-bar" class="stat-bar-fill"></div></div>
-            </article>
-            <article class="stat-item">
-              <p class="stat-label">服務時數</p>
-              <p class="stat-value"><span id="stat-service">0</span><span class="stat-unit">小時</span></p>
-            </article>
-            <article class="stat-item">
-              <p class="stat-label">露營次數</p>
-              <p class="stat-value"><span id="stat-camping">0</span><span class="stat-unit">次</span></p>
-            </article>
-            <article class="stat-item">
-              <p class="stat-label">戶外活動</p>
-              <p class="stat-value"><span id="stat-outdoor">0</span><span class="stat-unit">項</span></p>
-            </article>
-          </div>
-        </div>
-
         <!-- 進度性獎章 -->
-        <div class="tab-panel" id="panel-progressive" role="tabpanel" aria-labelledby="tab-progressive" hidden>
+        <div class="tab-panel is-active" id="panel-progressive" role="tabpanel" aria-labelledby="tab-progressive">
           <div id="progressive-list-view">
             <header class="panel-header">
               <h2>進度性獎章考核進度</h2>
@@ -178,68 +150,97 @@
 
         <!-- 專科徽章及獎項 -->
         <div class="tab-panel" id="panel-badges" role="tabpanel" aria-labelledby="tab-badges" hidden>
-          <header class="panel-header">
-            <h2>專科徽章及獎項</h2>
-            <p>興趣組、技能組、服務組、教導組及其他獎章徽章</p>
-          </header>
+          <div id="specialty-list-view">
+            <header class="panel-header">
+              <h2>專科徽章及獎項</h2>
+              <p>點選已考獲專科徽章查看考核詳情與綱要分項</p>
+            </header>
 
-          <section class="specialty-section" aria-labelledby="specialty-heading">
-            <h3 id="specialty-heading" class="section-block-title">專科徽章</h3>
-            <div class="specialty-groups" id="specialty-groups">
-              <div class="badge-group group-interest">
-                <h4 class="subsection-title">興趣組</h4>
-                <ul id="specialty-interest" class="badge-list"></ul>
+            <section class="specialty-section" aria-labelledby="specialty-heading">
+              <h3 id="specialty-heading" class="section-block-title">專科徽章</h3>
+              <div class="specialty-groups" id="specialty-groups">
+                <div class="badge-group group-interest">
+                  <h4 class="subsection-title">興趣組</h4>
+                  <ul id="specialty-interest" class="badge-list"></ul>
+                </div>
+                <div class="badge-group group-skill">
+                  <h4 class="subsection-title">技能組</h4>
+                  <ul id="specialty-skill" class="badge-list"></ul>
+                </div>
+                <div class="badge-group group-service">
+                  <h4 class="subsection-title">服務組</h4>
+                  <ul id="specialty-service" class="badge-list"></ul>
+                </div>
+                <div class="badge-group group-instructor">
+                  <h4 class="subsection-title">教導組</h4>
+                  <ul id="specialty-instructor" class="badge-list"></ul>
+                </div>
+                <div class="badge-group group-other">
+                  <h4 class="subsection-title">其他獎章及徽章</h4>
+                  <ul id="specialty-other" class="badge-list"></ul>
+                </div>
               </div>
-              <div class="badge-group group-skill">
-                <h4 class="subsection-title">技能組</h4>
-                <ul id="specialty-skill" class="badge-list"></ul>
-              </div>
-              <div class="badge-group group-service">
-                <h4 class="subsection-title">服務組</h4>
-                <ul id="specialty-service" class="badge-list"></ul>
-              </div>
-              <div class="badge-group group-instructor">
-                <h4 class="subsection-title">教導組</h4>
-                <ul id="specialty-instructor" class="badge-list"></ul>
-              </div>
-              <div class="badge-group group-other">
-                <h4 class="subsection-title">其他獎章及徽章</h4>
-                <ul id="specialty-other" class="badge-list"></ul>
-              </div>
-            </div>
-          </section>
+            </section>
 
-          <section class="awards-section" aria-labelledby="awards-heading">
-            <h3 id="awards-heading" class="section-block-title">獎項紀錄</h3>
-            <div class="badge-group award-group">
-              <ul id="award-list" class="badge-list"></ul>
-            </div>
-          </section>
+            <section class="awards-section" aria-labelledby="awards-heading">
+              <h3 id="awards-heading" class="section-block-title">獎項紀錄</h3>
+              <div class="badge-group award-group">
+                <ul id="award-list" class="badge-list"></ul>
+              </div>
+            </section>
+          </div>
+
+          <div id="specialty-detail-view" class="specialty-detail-view" hidden>
+            <button type="button" id="specialty-back-btn" class="btn-back">← 返回專科徽章列表</button>
+            <header class="badge-detail-header">
+              <img id="specialty-detail-icon" class="badge-detail-icon" src="" alt="" width="96" height="96" />
+              <div class="badge-detail-titles">
+                <h2 id="specialty-detail-name"></h2>
+                <p id="specialty-detail-english" class="badge-detail-english"></p>
+                <span id="specialty-detail-group" class="prog-status"></span>
+              </div>
+            </header>
+
+            <dl class="specialty-meta" id="specialty-meta">
+              <div>
+                <dt>活動名稱</dt>
+                <dd id="specialty-meta-activity"></dd>
+              </div>
+              <div>
+                <dt>主辦機構</dt>
+                <dd id="specialty-meta-organizer"></dd>
+              </div>
+              <div>
+                <dt>考核日期</dt>
+                <dd id="specialty-meta-date"></dd>
+              </div>
+              <div>
+                <dt>主考</dt>
+                <dd id="specialty-meta-examiner"></dd>
+              </div>
+            </dl>
+
+            <div id="specialty-detail-sections" class="badge-detail-sections"></div>
+          </div>
         </div>
 
-        <!-- 出席紀錄 -->
-        <div class="tab-panel" id="panel-attendance" role="tabpanel" aria-labelledby="tab-attendance" hidden>
-          <header class="panel-header">
-            <h2>出席紀錄</h2>
-            <p>集會與活動出席明細</p>
-          </header>
-          <div class="attendance-summary" id="attendance-summary"></div>
-          <div class="attendance-table-wrap">
-            <table class="attendance-table" aria-label="出席明細">
-              <thead>
-                <tr>
-                  <th scope="col">日期</th>
-                  <th scope="col">活動／集會</th>
-                  <th scope="col">類型</th>
-                  <th scope="col">狀態</th>
-                </tr>
-              </thead>
-              <tbody id="attendance-body"></tbody>
-            </table>
+        <!-- 活動記錄 -->
+        <div class="tab-panel" id="panel-activity" role="tabpanel" aria-labelledby="tab-activity" hidden>
+          <div id="activity-list-view">
+            <header class="panel-header">
+              <h2>活動記錄</h2>
+              <p>點選項目查看詳細資料</p>
+            </header>
+            <div class="attendance-summary" id="attendance-summary"></div>
           </div>
-          <div class="activity-list-wrap outdoor-section">
-            <h3 class="subsection-title">參與過的戶外活動</h3>
-            <ul id="activity-list" class="activity-list"></ul>
+
+          <div id="activity-detail-view" class="activity-detail-view" hidden>
+            <button type="button" id="activity-back-btn" class="btn-back">← 返回活動記錄</button>
+            <header class="panel-header">
+              <h2 id="activity-detail-title"></h2>
+              <p id="activity-detail-subtitle"></p>
+            </header>
+            <div id="activity-detail-content"></div>
           </div>
         </div>
 

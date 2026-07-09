@@ -127,6 +127,112 @@
             "date": "2026-06-14",
             "type": "戶外"
           }
+        ],
+        "serviceRecords": [
+          {
+            "date": "2026-04-05",
+            "name": "清明植樹服務",
+            "hours": 4,
+            "note": ""
+          },
+          {
+            "date": "2026-01-18",
+            "name": "社區清潔服務",
+            "hours": 3,
+            "note": ""
+          },
+          {
+            "date": "2025-12-20",
+            "name": "聖誕老人派禮物",
+            "hours": 5,
+            "note": ""
+          },
+          {
+            "date": "2025-11-02",
+            "name": "賣旗日",
+            "hours": 6,
+            "note": ""
+          },
+          {
+            "date": "2025-10-12",
+            "name": "長者中心探訪",
+            "hours": 3,
+            "note": ""
+          },
+          {
+            "date": "2025-09-14",
+            "name": "校園清潔服務",
+            "hours": 2,
+            "note": ""
+          },
+          {
+            "date": "2025-08-23",
+            "name": "暑期社區服務日",
+            "hours": 8,
+            "note": ""
+          },
+          {
+            "date": "2025-07-19",
+            "name": "義工訓練暨服務",
+            "hours": 6,
+            "note": ""
+          },
+          {
+            "date": "2025-06-08",
+            "name": "環保回收服務",
+            "hours": 4,
+            "note": ""
+          },
+          {
+            "date": "2025-05-11",
+            "name": "母親節探訪服務",
+            "hours": 3,
+            "note": ""
+          },
+          {
+            "date": "2025-04-06",
+            "name": "清明植樹服務",
+            "hours": 4,
+            "note": ""
+          }
+        ],
+        "campingRecords": [
+          {
+            "date": "2026-05-16",
+            "name": "長洲露營",
+            "nights": 2,
+            "note": ""
+          },
+          {
+            "date": "2026-02-21",
+            "name": "船灣郊野公園露營",
+            "nights": 1,
+            "note": ""
+          },
+          {
+            "date": "2025-12-06",
+            "name": "西貢露營",
+            "nights": 2,
+            "note": ""
+          },
+          {
+            "date": "2025-10-18",
+            "name": "大嶼山露營",
+            "nights": 1,
+            "note": ""
+          },
+          {
+            "date": "2025-07-12",
+            "name": "暑假旅露營",
+            "nights": 3,
+            "note": ""
+          },
+          {
+            "date": "2025-03-22",
+            "name": "春季小隊露營",
+            "nights": 1,
+            "note": ""
+          }
         ]
       },
       "attendance": [
@@ -134,91 +240,106 @@
           "date": "2026-06-14",
           "name": "水上活動日",
           "type": "戶外",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-06-07",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-05-31",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-05-24",
           "name": "週六例會",
           "type": "集會",
-          "status": "absent"
+          "status": "absent",
+          "note": ""
         },
         {
           "date": "2026-05-16",
           "name": "長洲露營",
           "type": "露營",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-05-10",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-05-03",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-04-26",
           "name": "週六例會",
           "type": "集會",
-          "status": "late"
+          "status": "present",
+          "note": "遲到"
         },
         {
           "date": "2026-04-19",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-04-12",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-04-05",
           "name": "清明植樹服務",
           "type": "服務",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-03-29",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-03-22",
           "name": "週六例會",
           "type": "集會",
-          "status": "excused"
+          "status": "absent",
+          "note": "請假"
         },
         {
           "date": "2026-03-15",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-03-08",
           "name": "急救訓練日",
           "type": "訓練",
-          "status": "present"
+          "status": "present",
+          "note": ""
         }
       ],
       "progressiveBadges": [
@@ -323,38 +444,72 @@
           "earnedDate": "2025-07-22",
           "category": "興趣組",
           "group": "interest",
-          "icon": "assets/specialty/interest/游泳.png"
+          "icon": "assets/specialty/interest/游泳.png",
+          "activityName": "游泳專科徽章考核",
+          "organizer": "新界東第42旅童軍團",
+          "assessmentDate": "2025-07-22",
+          "syllabusKey": "interest:游泳",
+          "examiner": "李領袖"
         },
         {
           "name": "營地烹飪章",
           "earnedDate": "2025-03-15",
           "category": "興趣組",
           "group": "interest",
-          "icon": "assets/specialty/interest/營地烹飪.png"
+          "icon": "assets/specialty/interest/營地烹飪.png",
+          "activityName": "營地烹飪專科徽章考核",
+          "organizer": "新界東第42旅童軍團",
+          "assessmentDate": "2025-03-15",
+          "syllabusKey": "interest:營地烹飪",
+          "examiner": "王領袖"
         },
         {
           "name": "露營章",
           "earnedDate": "2024-08-10",
           "category": "技能組",
-          "group": "skill"
+          "group": "skill",
+          "icon": "assets/specialty/skill/露營.png",
+          "activityName": "露營專科徽章考核",
+          "organizer": "新界東地域專章秘書",
+          "assessmentDate": "2024-08-10",
+          "syllabusKey": "skill:露營",
+          "examiner": "張領袖"
         },
         {
           "name": "急救章",
           "earnedDate": "2024-01-20",
           "category": "服務組",
-          "group": "service"
+          "group": "service",
+          "icon": "assets/specialty/service/急救.png",
+          "activityName": "急救專科徽章考核",
+          "organizer": "香港聖約翰救護機構",
+          "assessmentDate": "2024-01-20",
+          "syllabusKey": "service:急救",
+          "examiner": "陳主考"
         },
         {
           "name": "露營章（教導組）",
           "earnedDate": "2025-11-08",
           "category": "教導組",
-          "group": "instructor"
+          "group": "instructor",
+          "icon": "assets/specialty/instructor/露營.png",
+          "activityName": "露營教導組專科徽章考核",
+          "organizer": "新界東地域專章秘書",
+          "assessmentDate": "2025-11-08",
+          "syllabusKey": "instructor:露營",
+          "examiner": "張領袖"
         },
         {
           "name": "服務獎章",
           "earnedDate": "2025-06-30",
           "category": "其他獎章及徽章",
-          "group": "other"
+          "group": "other",
+          "icon": "assets/specialty/other/服務獎章.png",
+          "activityName": "服務獎章考核",
+          "organizer": "新界東第42旅童軍團",
+          "assessmentDate": "2025-06-30",
+          "syllabusKey": "other:服務獎章",
+          "examiner": "李領袖"
         }
       ],
       "awards": [
@@ -413,6 +568,76 @@
             "date": "2026-05-16",
             "type": "露營"
           }
+        ],
+        "serviceRecords": [
+          {
+            "date": "2026-04-05",
+            "name": "清明植樹服務",
+            "hours": 4,
+            "note": ""
+          },
+          {
+            "date": "2026-01-18",
+            "name": "社區清潔服務",
+            "hours": 3,
+            "note": ""
+          },
+          {
+            "date": "2025-12-20",
+            "name": "聖誕老人派禮物",
+            "hours": 5,
+            "note": ""
+          },
+          {
+            "date": "2025-11-02",
+            "name": "賣旗日",
+            "hours": 6,
+            "note": ""
+          },
+          {
+            "date": "2025-09-14",
+            "name": "校園清潔服務",
+            "hours": 2,
+            "note": ""
+          },
+          {
+            "date": "2025-08-23",
+            "name": "暑期社區服務日",
+            "hours": 8,
+            "note": ""
+          },
+          {
+            "date": "2025-06-08",
+            "name": "環保回收服務",
+            "hours": 4,
+            "note": ""
+          }
+        ],
+        "campingRecords": [
+          {
+            "date": "2026-05-16",
+            "name": "長洲露營",
+            "nights": 2,
+            "note": ""
+          },
+          {
+            "date": "2026-02-21",
+            "name": "船灣郊野公園露營",
+            "nights": 1,
+            "note": ""
+          },
+          {
+            "date": "2025-12-06",
+            "name": "西貢露營",
+            "nights": 2,
+            "note": ""
+          },
+          {
+            "date": "2025-07-12",
+            "name": "暑假旅露營",
+            "nights": 3,
+            "note": ""
+          }
         ]
       },
       "attendance": [
@@ -420,91 +645,106 @@
           "date": "2026-06-14",
           "name": "水上活動日",
           "type": "戶外",
-          "status": "excused"
+          "status": "absent",
+          "note": "請假"
         },
         {
           "date": "2026-06-07",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-05-31",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-05-24",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-05-16",
           "name": "長洲露營",
           "type": "露營",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-05-10",
           "name": "週六例會",
           "type": "集會",
-          "status": "absent"
+          "status": "absent",
+          "note": ""
         },
         {
           "date": "2026-05-03",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-04-26",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-04-19",
           "name": "週六例會",
           "type": "集會",
-          "status": "late"
+          "status": "present",
+          "note": "遲到"
         },
         {
           "date": "2026-04-12",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-04-05",
           "name": "清明植樹服務",
           "type": "服務",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-03-29",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-03-22",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-03-15",
           "name": "週六例會",
           "type": "集會",
-          "status": "absent"
+          "status": "absent",
+          "note": ""
         },
         {
           "date": "2026-03-08",
           "name": "急救訓練日",
           "type": "訓練",
-          "status": "present"
+          "status": "present",
+          "note": ""
         }
       ],
       "progressiveBadges": [
@@ -577,19 +817,36 @@
           "earnedDate": "2025-09-05",
           "category": "興趣組",
           "group": "interest",
-          "icon": "assets/specialty/interest/藝術.png"
+          "icon": "assets/specialty/interest/藝術.png",
+          "activityName": "藝術專科徽章考核",
+          "organizer": "新界東第42旅童軍團",
+          "assessmentDate": "2025-09-05",
+          "syllabusKey": "interest:藝術",
+          "examiner": "王領袖"
         },
         {
           "name": "急救章",
           "earnedDate": "2025-02-14",
           "category": "服務組",
-          "group": "service"
+          "group": "service",
+          "icon": "assets/specialty/service/急救.png",
+          "activityName": "急救專科徽章考核",
+          "organizer": "香港紅十字會",
+          "assessmentDate": "2025-02-14",
+          "syllabusKey": "service:急救",
+          "examiner": "黃主考"
         },
         {
           "name": "世界童軍環境章",
           "earnedDate": "2026-04-05",
           "category": "其他獎章及徽章",
-          "group": "other"
+          "group": "other",
+          "icon": "assets/specialty/other/世界童軍環境章.png",
+          "activityName": "世界童軍環境教育訓練班",
+          "organizer": "香港童軍總會",
+          "assessmentDate": "2026-04-05",
+          "syllabusKey": "other:世界童軍環境章",
+          "examiner": "林主考"
         }
       ],
       "awards": [
@@ -633,6 +890,46 @@
             "date": "2026-06-14",
             "type": "戶外"
           }
+        ],
+        "serviceRecords": [
+          {
+            "date": "2026-04-05",
+            "name": "清明植樹服務",
+            "hours": 4,
+            "note": ""
+          },
+          {
+            "date": "2026-01-18",
+            "name": "社區清潔服務",
+            "hours": 3,
+            "note": ""
+          },
+          {
+            "date": "2025-12-20",
+            "name": "聖誕老人派禮物",
+            "hours": 5,
+            "note": ""
+          },
+          {
+            "date": "2025-11-02",
+            "name": "賣旗日",
+            "hours": 4,
+            "note": ""
+          }
+        ],
+        "campingRecords": [
+          {
+            "date": "2026-05-16",
+            "name": "長洲露營",
+            "nights": 2,
+            "note": ""
+          },
+          {
+            "date": "2025-12-06",
+            "name": "西貢露營",
+            "nights": 1,
+            "note": ""
+          }
         ]
       },
       "attendance": [
@@ -640,91 +937,106 @@
           "date": "2026-06-14",
           "name": "水上活動日",
           "type": "戶外",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-06-07",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-05-31",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-05-24",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-05-16",
           "name": "長洲露營",
           "type": "露營",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-05-10",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-05-03",
           "name": "週六例會",
           "type": "集會",
-          "status": "late"
+          "status": "present",
+          "note": "遲到"
         },
         {
           "date": "2026-04-26",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-04-19",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-04-12",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-04-05",
           "name": "清明植樹服務",
           "type": "服務",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-03-29",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-03-22",
           "name": "週六例會",
           "type": "集會",
-          "status": "absent"
+          "status": "absent",
+          "note": ""
         },
         {
           "date": "2026-03-15",
           "name": "週六例會",
           "type": "集會",
-          "status": "present"
+          "status": "present",
+          "note": ""
         },
         {
           "date": "2026-03-08",
           "name": "急救訓練日",
           "type": "訓練",
-          "status": "present"
+          "status": "present",
+          "note": ""
         }
       ],
       "progressiveBadges": [
@@ -774,7 +1086,12 @@
           "earnedDate": "2026-01-25",
           "category": "興趣組",
           "group": "interest",
-          "icon": "assets/specialty/interest/釣魚.png"
+          "icon": "assets/specialty/interest/釣魚.png",
+          "activityName": "釣魚專科徽章考核",
+          "organizer": "新界東第42旅童軍團",
+          "assessmentDate": "2026-01-25",
+          "syllabusKey": "interest:釣魚",
+          "examiner": "李領袖"
         }
       ],
       "awards": []
@@ -792,7 +1109,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -845,7 +1164,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -898,7 +1219,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -951,7 +1274,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -1004,7 +1329,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -1057,7 +1384,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -1110,7 +1439,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -1163,7 +1494,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -1216,7 +1549,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -1269,7 +1604,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -1322,7 +1659,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -1375,7 +1714,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -1428,7 +1769,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -1481,7 +1824,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -1534,7 +1879,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -1587,7 +1934,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -1640,7 +1989,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -1693,7 +2044,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -1746,7 +2099,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -1799,7 +2154,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -1852,7 +2209,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -1905,7 +2264,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -1958,7 +2319,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -2011,7 +2374,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -2064,7 +2429,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -2117,7 +2484,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -2170,7 +2539,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -2223,7 +2594,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -2276,7 +2649,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -2329,7 +2704,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -2382,7 +2759,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -2435,7 +2814,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -2488,7 +2869,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -2541,7 +2924,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -2594,7 +2979,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -2647,7 +3034,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [
@@ -2700,7 +3089,9 @@
         "attendanceRate": 0,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": []
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
       },
       "attendance": [],
       "progressiveBadges": [

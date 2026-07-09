@@ -1193,14 +1193,15 @@ button { cursor: pointer; border: none; background: none; }
 }
 
 .badge-icon {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   object-fit: contain;
   flex-shrink: 0;
   background: transparent;
   border: none;
   box-shadow: none;
   border-radius: 0;
+  padding: 0;
 }
 
 .badge-icon-placeholder {
@@ -1237,37 +1238,106 @@ button { cursor: pointer; border: none; background: none; }
   border-left-color: var(--green-soft);
 }
 
-/* ===== Attendance ===== */
+.badge-item.is-clickable {
+  cursor: pointer;
+}
+
+.badge-item.is-clickable:hover {
+  background: var(--green-mist);
+}
+
+.badge-item.is-clickable:focus-visible {
+  outline: 2px solid var(--green-mid);
+  outline-offset: 2px;
+}
+
+.specialty-detail-view {
+  animation: panel-fade 0.35s var(--ease) both;
+}
+
+.specialty-meta {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin: 1.25rem 0 1.5rem;
+  padding: 1rem 1.1rem;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(26, 61, 43, 0.06);
+}
+
+@media (min-width: 640px) {
+  .specialty-meta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.specialty-meta > div {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.specialty-meta dt {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+}
+
+.specialty-meta dd {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--green-deep);
+}
+
+/* ===== Activity record ===== */
 .attendance-summary {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.75rem;
   margin-bottom: 1.25rem;
 }
 
-@media (min-width: 560px) {
+@media (min-width: 720px) {
   .attendance-summary {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .att-stat {
+  display: block;
+  width: 100%;
   background: var(--white);
-  padding: 0.9rem 0.65rem;
+  padding: 1rem 0.75rem;
   border-radius: var(--radius);
   text-align: center;
   box-shadow: 0 2px 8px rgba(26, 61, 43, 0.06);
+  border: none;
   border-top: 3px solid var(--green-soft);
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  transition: transform 0.15s var(--ease), box-shadow 0.15s var(--ease);
 }
 
-.att-stat:nth-child(3) { border-top-color: var(--gold); }
-.att-stat:nth-child(4) { border-top-color: #6b8a9e; }
-.att-stat:nth-child(5) { border-top-color: var(--danger); }
+.att-stat:nth-child(2) { border-top-color: var(--gold); }
+.att-stat:nth-child(3) { border-top-color: #2a5a8a; }
+.att-stat:nth-child(4) { border-top-color: #3d7a55; }
+
+.att-stat:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(26, 61, 43, 0.1);
+}
+
+.att-stat:focus-visible {
+  outline: 2px solid var(--green-mid);
+  outline-offset: 2px;
+}
 
 .att-stat-value {
   display: block;
   font-family: var(--font-serif);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--green-deep);
   line-height: 1.2;
@@ -1275,10 +1345,41 @@ button { cursor: pointer; border: none; background: none; }
 
 .att-stat-label {
   display: block;
-  margin-top: 0.2rem;
-  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
   color: var(--ink-muted);
   font-weight: 500;
+}
+
+.att-stat-hint {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--green-mid);
+}
+
+.activity-detail-view {
+  animation: panel-fade 0.35s var(--ease) both;
+}
+
+.detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.25rem;
+  margin-bottom: 1rem;
+  padding: 0.85rem 1rem;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(26, 61, 43, 0.06);
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+}
+
+.detail-meta strong {
+  color: var(--green-deep);
+  font-family: var(--font-serif);
+  font-weight: 700;
 }
 
 .attendance-table-wrap {
@@ -1340,14 +1441,9 @@ button { cursor: pointer; border: none; background: none; }
   color: var(--danger);
 }
 
-.status-late {
-  background: #f5efe3;
-  color: var(--gold-deep);
-}
-
-.status-excused {
-  background: #e8eef5;
-  color: #2a4a6b;
+.att-note {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
 }
 
 /* ===== Resources ===== */

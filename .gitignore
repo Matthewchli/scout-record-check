@@ -6,3 +6,5 @@ Thumbs.db
 assets/*-syllabus.txt
 assets/progressive-*.txt
 assets/pdf-extract.txt
+
+tmp/
