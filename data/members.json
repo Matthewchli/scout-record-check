@@ -1,0 +1,2744 @@
+{
+  "resources": {
+    "troopInfo": [
+      {
+        "label": "旅團名稱",
+        "value": "香港童軍總會 新界東第1558旅（林大輝中學）"
+      },
+      {
+        "label": "集會時間",
+        "value": "逢星期六 14:00–17:00"
+      },
+      {
+        "label": "集會地點",
+        "value": "社區會堂地下禮堂"
+      },
+      {
+        "label": "制服要求",
+        "value": "正式集會須穿著完整制服"
+      }
+    ],
+    "contacts": [
+      {
+        "role": "旅長",
+        "name": "李領袖",
+        "phone": "9123 4567",
+        "note": "緊急聯絡"
+      },
+      {
+        "role": "副旅長",
+        "name": "王領袖",
+        "phone": "9876 5432",
+        "note": "活動查詢"
+      },
+      {
+        "role": "團務",
+        "name": "張領袖",
+        "phone": "9555 1122",
+        "note": "出席／獎章紀錄"
+      }
+    ],
+    "links": [
+      {
+        "title": "香港童軍總會",
+        "url": "https://www.scout.org.hk/",
+        "desc": "官方網站與最新消息"
+      },
+      {
+        "title": "進度性獎章綱要",
+        "url": "https://www.scout.org.hk/",
+        "desc": "初級至總章考核要求參考"
+      },
+      {
+        "title": "專科徽章一覽",
+        "url": "https://www.scout.org.hk/",
+        "desc": "各專科徽章考核內容"
+      }
+    ],
+    "notices": [
+      {
+        "date": "2026-06-01",
+        "title": "暑假露營報名",
+        "content": "7月長洲露營名額有限，請於6月20日前向領袖報名。"
+      },
+      {
+        "date": "2026-05-15",
+        "title": "高級獎章考核日",
+        "content": "下月將安排高級獎章相關考核項目，有意者請提早準備。"
+      },
+      {
+        "date": "2026-04-20",
+        "title": "服務時數登記",
+        "content": "校外服務時數可交證明予團務領袖補登。"
+      }
+    ]
+  },
+  "members": [
+    {
+      "name": "陳志明",
+      "scoutId": "HK24001",
+      "troop": "第42旅",
+      "section": "童軍",
+      "rank": "巡邏長",
+      "joinDate": "2022-09-01",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 92,
+        "serviceHours": 48,
+        "campingCount": 6,
+        "outdoorActivities": [
+          {
+            "name": "大帽山日行",
+            "date": "2025-11-15",
+            "type": "遠足"
+          },
+          {
+            "name": "西貢露營",
+            "date": "2025-12-06",
+            "type": "露營"
+          },
+          {
+            "name": "社區清潔服務",
+            "date": "2026-01-18",
+            "type": "服務"
+          },
+          {
+            "name": "船灣郊野公園露營",
+            "date": "2026-02-21",
+            "type": "露營"
+          },
+          {
+            "name": "急救訓練日",
+            "date": "2026-03-08",
+            "type": "訓練"
+          },
+          {
+            "name": "清明植樹服務",
+            "date": "2026-04-05",
+            "type": "服務"
+          },
+          {
+            "name": "長洲露營",
+            "date": "2026-05-16",
+            "type": "露營"
+          },
+          {
+            "name": "水上活動日",
+            "date": "2026-06-14",
+            "type": "戶外"
+          }
+        ]
+      },
+      "attendance": [
+        {
+          "date": "2026-06-14",
+          "name": "水上活動日",
+          "type": "戶外",
+          "status": "present"
+        },
+        {
+          "date": "2026-06-07",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-05-31",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-05-24",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "absent"
+        },
+        {
+          "date": "2026-05-16",
+          "name": "長洲露營",
+          "type": "露營",
+          "status": "present"
+        },
+        {
+          "date": "2026-05-10",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-05-03",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-26",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "late"
+        },
+        {
+          "date": "2026-04-19",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-12",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-05",
+          "name": "清明植樹服務",
+          "type": "服務",
+          "status": "present"
+        },
+        {
+          "date": "2026-03-29",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-03-22",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "excused"
+        },
+        {
+          "date": "2026-03-15",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-03-08",
+          "name": "急救訓練日",
+          "type": "訓練",
+          "status": "present"
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "completed",
+          "completedDate": "2023-03-12",
+          "completedIds": [
+            "d-a-1a",
+            "d-a-1b",
+            "d-a-1c",
+            "d-a-1d",
+            "d-a-2a",
+            "d-a-2b",
+            "d-a-2c",
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1a",
+            "d-c-1b",
+            "d-c-2a",
+            "d-d-1a",
+            "d-d-2a"
+          ]
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "completed",
+          "completedDate": "2024-06-20",
+          "completedIds": [
+            "s-a-1a",
+            "s-a-1b",
+            "s-a-1c",
+            "s-a-1d",
+            "s-a-1e",
+            "s-a-2a",
+            "s-a-2b",
+            "s-a-2c",
+            "s-a-2d",
+            "s-a-3a",
+            "s-a-3b",
+            "s-a-3c",
+            "s-a-4",
+            "s-b-1a",
+            "s-b-2a",
+            "s-b-2b",
+            "s-b-3a",
+            "s-b-4a",
+            "s-b-4b",
+            "s-c-1a",
+            "s-c-1b",
+            "s-c-1c",
+            "s-c-1d",
+            "s-c-2a",
+            "s-c-3a",
+            "s-d-1a",
+            "s-d-2a",
+            "s-d-3a",
+            "s-e-1a"
+          ]
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "in_progress",
+          "completedDate": null,
+          "completedIds": [
+            "a-a-1a",
+            "a-a-1b",
+            "a-a-1c",
+            "a-a-2a",
+            "a-a-2b",
+            "a-a-2c",
+            "a-a-3a",
+            "a-a-3b",
+            "a-a-3c",
+            "a-a-4"
+          ]
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [
+        {
+          "name": "游泳章",
+          "earnedDate": "2025-07-22",
+          "category": "興趣組",
+          "group": "interest",
+          "icon": "assets/specialty/interest/游泳.png"
+        },
+        {
+          "name": "營地烹飪章",
+          "earnedDate": "2025-03-15",
+          "category": "興趣組",
+          "group": "interest",
+          "icon": "assets/specialty/interest/營地烹飪.png"
+        },
+        {
+          "name": "露營章",
+          "earnedDate": "2024-08-10",
+          "category": "技能組",
+          "group": "skill"
+        },
+        {
+          "name": "急救章",
+          "earnedDate": "2024-01-20",
+          "category": "服務組",
+          "group": "service"
+        },
+        {
+          "name": "露營章（教導組）",
+          "earnedDate": "2025-11-08",
+          "category": "教導組",
+          "group": "instructor"
+        },
+        {
+          "name": "服務獎章",
+          "earnedDate": "2025-06-30",
+          "category": "其他獎章及徽章",
+          "group": "other"
+        }
+      ],
+      "awards": [
+        {
+          "name": "全年最佳出席獎",
+          "earnedDate": "2025-06-30",
+          "category": "獎項"
+        },
+        {
+          "name": "服務時數優異獎",
+          "earnedDate": "2026-01-10",
+          "category": "獎項"
+        }
+      ]
+    },
+    {
+      "name": "林美欣",
+      "scoutId": "HK24015",
+      "troop": "第42旅",
+      "section": "童軍",
+      "rank": "副巡邏長",
+      "joinDate": "2023-09-01",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 88,
+        "serviceHours": 32,
+        "campingCount": 4,
+        "outdoorActivities": [
+          {
+            "name": "西貢露營",
+            "date": "2025-12-06",
+            "type": "露營"
+          },
+          {
+            "name": "社區清潔服務",
+            "date": "2026-01-18",
+            "type": "服務"
+          },
+          {
+            "name": "船灣郊野公園露營",
+            "date": "2026-02-21",
+            "type": "露營"
+          },
+          {
+            "name": "急救訓練日",
+            "date": "2026-03-08",
+            "type": "訓練"
+          },
+          {
+            "name": "清明植樹服務",
+            "date": "2026-04-05",
+            "type": "服務"
+          },
+          {
+            "name": "長洲露營",
+            "date": "2026-05-16",
+            "type": "露營"
+          }
+        ]
+      },
+      "attendance": [
+        {
+          "date": "2026-06-14",
+          "name": "水上活動日",
+          "type": "戶外",
+          "status": "excused"
+        },
+        {
+          "date": "2026-06-07",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-05-31",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-05-24",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-05-16",
+          "name": "長洲露營",
+          "type": "露營",
+          "status": "present"
+        },
+        {
+          "date": "2026-05-10",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "absent"
+        },
+        {
+          "date": "2026-05-03",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-26",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-19",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "late"
+        },
+        {
+          "date": "2026-04-12",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-05",
+          "name": "清明植樹服務",
+          "type": "服務",
+          "status": "present"
+        },
+        {
+          "date": "2026-03-29",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-03-22",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-03-15",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "absent"
+        },
+        {
+          "date": "2026-03-08",
+          "name": "急救訓練日",
+          "type": "訓練",
+          "status": "present"
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "completed",
+          "completedDate": "2024-02-18",
+          "completedIds": [
+            "d-a-1a",
+            "d-a-1b",
+            "d-a-1c",
+            "d-a-1d",
+            "d-a-2a",
+            "d-a-2b",
+            "d-a-2c",
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1a",
+            "d-c-1b",
+            "d-c-2a",
+            "d-d-1a",
+            "d-d-2a"
+          ]
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "in_progress",
+          "completedDate": null,
+          "completedIds": [
+            "s-a-1a",
+            "s-a-1b",
+            "s-a-1c",
+            "s-a-1d",
+            "s-a-1e",
+            "s-a-2a",
+            "s-a-2b",
+            "s-a-2c"
+          ]
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [
+        {
+          "name": "藝術章",
+          "earnedDate": "2025-09-05",
+          "category": "興趣組",
+          "group": "interest",
+          "icon": "assets/specialty/interest/藝術.png"
+        },
+        {
+          "name": "急救章",
+          "earnedDate": "2025-02-14",
+          "category": "服務組",
+          "group": "service"
+        },
+        {
+          "name": "世界童軍環境章",
+          "earnedDate": "2026-04-05",
+          "category": "其他獎章及徽章",
+          "group": "other"
+        }
+      ],
+      "awards": [
+        {
+          "name": "新進成員進步獎",
+          "earnedDate": "2024-06-30",
+          "category": "獎項"
+        }
+      ]
+    },
+    {
+      "name": "黃子軒",
+      "scoutId": "HK25008",
+      "troop": "第42旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "2025-09-01",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 95,
+        "serviceHours": 16,
+        "campingCount": 2,
+        "outdoorActivities": [
+          {
+            "name": "急救訓練日",
+            "date": "2026-03-08",
+            "type": "訓練"
+          },
+          {
+            "name": "清明植樹服務",
+            "date": "2026-04-05",
+            "type": "服務"
+          },
+          {
+            "name": "長洲露營",
+            "date": "2026-05-16",
+            "type": "露營"
+          },
+          {
+            "name": "水上活動日",
+            "date": "2026-06-14",
+            "type": "戶外"
+          }
+        ]
+      },
+      "attendance": [
+        {
+          "date": "2026-06-14",
+          "name": "水上活動日",
+          "type": "戶外",
+          "status": "present"
+        },
+        {
+          "date": "2026-06-07",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-05-31",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-05-24",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-05-16",
+          "name": "長洲露營",
+          "type": "露營",
+          "status": "present"
+        },
+        {
+          "date": "2026-05-10",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-05-03",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "late"
+        },
+        {
+          "date": "2026-04-26",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-19",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-12",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-05",
+          "name": "清明植樹服務",
+          "type": "服務",
+          "status": "present"
+        },
+        {
+          "date": "2026-03-29",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-03-22",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "absent"
+        },
+        {
+          "date": "2026-03-15",
+          "name": "週六例會",
+          "type": "集會",
+          "status": "present"
+        },
+        {
+          "date": "2026-03-08",
+          "name": "急救訓練日",
+          "type": "訓練",
+          "status": "present"
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "in_progress",
+          "completedDate": null,
+          "completedIds": [
+            "d-a-1a",
+            "d-a-1b",
+            "d-a-1c",
+            "d-a-1d",
+            "d-a-2a",
+            "d-a-2b"
+          ]
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [
+        {
+          "name": "釣魚章",
+          "earnedDate": "2026-01-25",
+          "category": "興趣組",
+          "group": "interest",
+          "icon": "assets/specialty/interest/釣魚.png"
+        }
+      ],
+      "awards": []
+    },
+    {
+      "name": "王子兮",
+      "scoutId": "2025045143",
+      "englishName": "WANG Zixi",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "王悦晴",
+      "scoutId": "2025021995",
+      "englishName": "WONG Yuet Ching",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "余心蓓",
+      "scoutId": "2026000238",
+      "englishName": "YU Sum Pui",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "李在立",
+      "scoutId": "2025045135",
+      "englishName": "LEE Choi Lap",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "李泳錡",
+      "scoutId": "2026000204",
+      "englishName": "LI Wing Ki",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "李凱晴",
+      "scoutId": "2025021912",
+      "englishName": "LI HOI CHING",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "李鴻鈞",
+      "scoutId": "2025045200",
+      "englishName": "LEE Hung Kwan",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "周丰海",
+      "scoutId": "2019048160",
+      "englishName": "CHOW Fung Hoi",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "胡喬立",
+      "scoutId": "2025045317",
+      "englishName": "WOO Kiu Lap",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "馬皓哲",
+      "scoutId": "2025045168",
+      "englishName": "MA Haozhe",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "高卓言",
+      "scoutId": "2025045309",
+      "englishName": "KO Cheuk Yin",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "張芯語",
+      "scoutId": "2025098340",
+      "englishName": "CHEUNG Sum Yu",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "張浩鏗",
+      "scoutId": "2025045226",
+      "englishName": "CHEUNG Ho Hang",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "梁諾然",
+      "scoutId": "2026000188",
+      "englishName": "LEUNG Nok Yin Curtis",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "許曦月",
+      "scoutId": "2025045184",
+      "englishName": "HUI Hei Yuet",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "郭箴然",
+      "scoutId": "2025045069",
+      "englishName": "KWOK Cham Yin",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "陳子峻",
+      "scoutId": "2025045218",
+      "englishName": "CHAN Corey",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "陳培天",
+      "scoutId": "2026000170",
+      "englishName": "CHAN Pui Tin Jasper",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "陳睿",
+      "scoutId": "2025098357",
+      "englishName": "CHEN Victor",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "陳樂熹",
+      "scoutId": "2022015701",
+      "englishName": "CHAN Lok Hei",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "陳澤輝",
+      "scoutId": "2025045275",
+      "englishName": "CHEN Morgan",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "黃明毅",
+      "scoutId": "2026000162",
+      "englishName": "HUANG Mingyi",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "黃芯瑤",
+      "scoutId": "2025021599",
+      "englishName": "WONG Sum Yiu",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "楊淳熙",
+      "scoutId": "2025045101",
+      "englishName": "YEUNG Annabella",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "葉繕熒",
+      "scoutId": "2025098332",
+      "englishName": "YIP Sin Ying Ava",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "劉雨澤",
+      "scoutId": "2026000089",
+      "englishName": "LAU Yu Chak",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "劉珈晴",
+      "scoutId": "2025045077",
+      "englishName": "LAU Ka Ching",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "劉晁揚",
+      "scoutId": "2026000196",
+      "englishName": "LIU Chaoyang",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "蔡卓妍",
+      "scoutId": "2025045283",
+      "englishName": "CHOI Cheuk Yin",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "蔡振熙",
+      "scoutId": "2022068510",
+      "englishName": "CHOY Chun Hei",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "蔣禮謙",
+      "scoutId": "2025045234",
+      "englishName": "CHIANG Lai Him",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "盧樂欣",
+      "scoutId": "2026000246",
+      "englishName": "LO Lok Yan",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "謝子津",
+      "scoutId": "2025021615",
+      "englishName": "TSE Tsz Chun Angus",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "謝采澄",
+      "scoutId": "2026000220",
+      "englishName": "TSE Choi Ching",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "羅梓渘",
+      "scoutId": "2026000212",
+      "englishName": "LOR Tsz Yau",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "羅臻琳",
+      "scoutId": "2025045085",
+      "englishName": "LAW Chun Lam",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    },
+    {
+      "name": "關敬諾",
+      "scoutId": "2025098324",
+      "englishName": "KWAN King Lok",
+      "troop": "新界東第1558旅",
+      "section": "童軍",
+      "rank": "隊員",
+      "joinDate": "",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": []
+      },
+      "attendance": [],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": []
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": []
+    }
+  ]
+}

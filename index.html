@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>童軍成員紀錄查閱</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- 登入畫面 -->
+  <section id="login-view" class="login-view" aria-label="登入">
+    <div class="login-backdrop" aria-hidden="true"></div>
+    <div class="login-panel">
+      <header class="login-brand">
+        <img
+          class="troop-logo troop-logo-login"
+          src="assets/troop-logo.png"
+          alt="新界東第1558旅團徽 · 林大輝中學"
+          width="96"
+          height="96"
+        />
+        <h1 class="brand-name">童軍成員紀錄</h1>
+        <p class="brand-tagline">查閱活動、獎章與個人進度</p>
+      </header>
+
+      <form id="login-form" class="login-form" novalidate>
+        <div class="field">
+          <label for="member-name">中文姓名</label>
+          <input
+            type="text"
+            id="member-name"
+            name="name"
+            autocomplete="name"
+            placeholder="請輸入中文姓名"
+            required
+          />
+        </div>
+        <div class="field">
+          <label for="scout-id">Scout ID</label>
+          <input
+            type="text"
+            id="scout-id"
+            name="scoutId"
+            autocomplete="username"
+            placeholder="例如 2025098324"
+            required
+          />
+        </div>
+        <p id="login-error" class="login-error" role="alert" hidden></p>
+        <button type="submit" class="btn btn-primary">登入查閱</button>
+      </form>
+
+      <aside class="demo-hint">
+        <p class="demo-title">示範帳號</p>
+        <ul>
+          <li><button type="button" class="demo-fill" data-name="陳志明" data-id="HK24001">陳志明 · HK24001</button></li>
+          <li><button type="button" class="demo-fill" data-name="林美欣" data-id="HK24015">林美欣 · HK24015</button></li>
+          <li><button type="button" class="demo-fill" data-name="黃子軒" data-id="HK25008">黃子軒 · HK25008</button></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 成員儀表板 -->
+  <section id="dashboard-view" class="dashboard-view" hidden aria-label="成員紀錄">
+    <header class="dash-header">
+      <div class="dash-header-inner">
+        <div class="dash-brand">
+          <img
+            class="troop-logo troop-logo-header"
+            src="assets/troop-logo.png"
+            alt="新界東第1558旅團徽 · 林大輝中學"
+            width="40"
+            height="40"
+          />
+          <span class="dash-brand-text">童軍成員紀錄</span>
+        </div>
+        <div class="dash-user">
+          <div class="user-meta">
+            <span id="header-name" class="user-name"></span>
+            <span id="header-id" class="user-id"></span>
+          </div>
+          <button type="button" id="logout-btn" class="btn btn-ghost">登出</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="dash-main">
+      <!-- 個人簡介 -->
+      <section class="profile-section" aria-labelledby="profile-heading">
+        <div class="profile-banner">
+          <div class="profile-avatar" id="profile-avatar" aria-hidden="true"></div>
+          <div class="profile-info">
+            <h2 id="profile-heading" class="profile-name"></h2>
+            <p class="profile-detail">
+              <span id="profile-troop"></span>
+              <span class="dot" aria-hidden="true">·</span>
+              <span id="profile-section"></span>
+              <span class="dot" aria-hidden="true">·</span>
+              <span id="profile-rank"></span>
+            </p>
+            <p class="profile-join">加入日期：<time id="profile-join"></time></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 分頁導覽 -->
+      <div class="tabs-area">
+        <div class="tab-nav" role="tablist" aria-label="紀錄分頁">
+          <button type="button" class="tab-btn is-active" role="tab" id="tab-overview" aria-controls="panel-overview" aria-selected="true" data-tab="overview">活動紀錄總覽</button>
+          <button type="button" class="tab-btn" role="tab" id="tab-progressive" aria-controls="panel-progressive" aria-selected="false" data-tab="progressive" tabindex="-1">進度性獎章</button>
+          <button type="button" class="tab-btn" role="tab" id="tab-badges" aria-controls="panel-badges" aria-selected="false" data-tab="badges" tabindex="-1">專科徽章及獎項</button>
+          <button type="button" class="tab-btn" role="tab" id="tab-attendance" aria-controls="panel-attendance" aria-selected="false" data-tab="attendance" tabindex="-1">出席紀錄</button>
+          <button type="button" class="tab-btn" role="tab" id="tab-resources" aria-controls="panel-resources" aria-selected="false" data-tab="resources" tabindex="-1">有用資料</button>
+        </div>
+
+        <!-- 活動紀錄總覽 -->
+        <div class="tab-panel is-active" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview">
+          <header class="panel-header">
+            <h2 id="activity-heading">活動紀錄總覽</h2>
+            <p>出席、服務與戶外參與概況</p>
+          </header>
+          <div class="stat-grid" id="stat-grid">
+            <article class="stat-item">
+              <p class="stat-label">出席率</p>
+              <p class="stat-value"><span id="stat-attendance">0</span><span class="stat-unit">%</span></p>
+              <div class="stat-bar" aria-hidden="true"><div id="stat-attendance-bar" class="stat-bar-fill"></div></div>
+            </article>
+            <article class="stat-item">
+              <p class="stat-label">服務時數</p>
+              <p class="stat-value"><span id="stat-service">0</span><span class="stat-unit">小時</span></p>
+            </article>
+            <article class="stat-item">
+              <p class="stat-label">露營次數</p>
+              <p class="stat-value"><span id="stat-camping">0</span><span class="stat-unit">次</span></p>
+            </article>
+            <article class="stat-item">
+              <p class="stat-label">戶外活動</p>
+              <p class="stat-value"><span id="stat-outdoor">0</span><span class="stat-unit">項</span></p>
+            </article>
+          </div>
+        </div>
+
+        <!-- 進度性獎章 -->
+        <div class="tab-panel" id="panel-progressive" role="tabpanel" aria-labelledby="tab-progressive" hidden>
+          <div id="progressive-list-view">
+            <header class="panel-header">
+              <h2>進度性獎章考核進度</h2>
+              <p>探索、標準、高級及總領袖獎章 · 點選獎章查看完整分項</p>
+            </header>
+            <div id="progressive-list" class="progressive-list"></div>
+          </div>
+
+          <div id="progressive-detail-view" class="progressive-detail-view" hidden>
+            <button type="button" id="badge-back-btn" class="btn-back">← 返回獎章列表</button>
+            <header class="badge-detail-header">
+              <img id="badge-detail-icon" class="badge-detail-icon" src="" alt="" width="96" height="96" />
+              <div class="badge-detail-titles">
+                <h2 id="badge-detail-name"></h2>
+                <p id="badge-detail-english" class="badge-detail-english"></p>
+                <span id="badge-detail-status" class="prog-status"></span>
+              </div>
+            </header>
+            <p id="badge-detail-eligibility" class="badge-detail-eligibility"></p>
+            <div class="prog-progress badge-detail-progress">
+              <div class="prog-progress-bar" role="progressbar" id="badge-detail-bar" aria-valuemin="0" aria-valuemax="100">
+                <div id="badge-detail-fill" class="prog-progress-fill"></div>
+              </div>
+              <p id="badge-detail-progress-text" class="prog-progress-text"></p>
+            </div>
+            <p id="badge-detail-note" class="badge-detail-note"></p>
+            <div id="badge-detail-sections" class="badge-detail-sections"></div>
+          </div>
+        </div>
+
+        <!-- 專科徽章及獎項 -->
+        <div class="tab-panel" id="panel-badges" role="tabpanel" aria-labelledby="tab-badges" hidden>
+          <header class="panel-header">
+            <h2>專科徽章及獎項</h2>
+            <p>興趣組、技能組、服務組、教導組及其他獎章徽章</p>
+          </header>
+
+          <section class="specialty-section" aria-labelledby="specialty-heading">
+            <h3 id="specialty-heading" class="section-block-title">專科徽章</h3>
+            <div class="specialty-groups" id="specialty-groups">
+              <div class="badge-group group-interest">
+                <h4 class="subsection-title">興趣組</h4>
+                <ul id="specialty-interest" class="badge-list"></ul>
+              </div>
+              <div class="badge-group group-skill">
+                <h4 class="subsection-title">技能組</h4>
+                <ul id="specialty-skill" class="badge-list"></ul>
+              </div>
+              <div class="badge-group group-service">
+                <h4 class="subsection-title">服務組</h4>
+                <ul id="specialty-service" class="badge-list"></ul>
+              </div>
+              <div class="badge-group group-instructor">
+                <h4 class="subsection-title">教導組</h4>
+                <ul id="specialty-instructor" class="badge-list"></ul>
+              </div>
+              <div class="badge-group group-other">
+                <h4 class="subsection-title">其他獎章及徽章</h4>
+                <ul id="specialty-other" class="badge-list"></ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="awards-section" aria-labelledby="awards-heading">
+            <h3 id="awards-heading" class="section-block-title">獎項紀錄</h3>
+            <div class="badge-group award-group">
+              <ul id="award-list" class="badge-list"></ul>
+            </div>
+          </section>
+        </div>
+
+        <!-- 出席紀錄 -->
+        <div class="tab-panel" id="panel-attendance" role="tabpanel" aria-labelledby="tab-attendance" hidden>
+          <header class="panel-header">
+            <h2>出席紀錄</h2>
+            <p>集會與活動出席明細</p>
+          </header>
+          <div class="attendance-summary" id="attendance-summary"></div>
+          <div class="attendance-table-wrap">
+            <table class="attendance-table" aria-label="出席明細">
+              <thead>
+                <tr>
+                  <th scope="col">日期</th>
+                  <th scope="col">活動／集會</th>
+                  <th scope="col">類型</th>
+                  <th scope="col">狀態</th>
+                </tr>
+              </thead>
+              <tbody id="attendance-body"></tbody>
+            </table>
+          </div>
+          <div class="activity-list-wrap outdoor-section">
+            <h3 class="subsection-title">參與過的戶外活動</h3>
+            <ul id="activity-list" class="activity-list"></ul>
+          </div>
+        </div>
+
+        <!-- 有用資料 -->
+        <div class="tab-panel" id="panel-resources" role="tabpanel" aria-labelledby="tab-resources" hidden>
+          <header class="panel-header">
+            <h2>有用資料</h2>
+            <p>旅團資訊、聯絡及常用連結</p>
+          </header>
+          <div id="resources-content" class="resources-content"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="dash-footer">
+      <p>僅供旅團成員查閱個人紀錄 · 資料由領袖更新</p>
+    </footer>
+  </section>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
