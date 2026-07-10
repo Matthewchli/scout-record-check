@@ -98,6 +98,13 @@
     return `${y}年${Number(m)}月${Number(d)}日`;
   }
 
+  function formatDateDMY(iso) {
+    if (!iso) return "—";
+    const [y, m, d] = iso.split("-");
+    if (!y || !m || !d) return "—";
+    return `${d}-${m}-${y}`;
+  }
+
   function initials(name) {
     return name.slice(0, 1);
   }
@@ -661,7 +668,7 @@
           const note = formatAttendanceNote(r);
           return `
           <tr>
-            <td><time datetime="${r.date}">${formatDate(r.date)}</time></td>
+            <td><time datetime="${r.date}">${formatDateDMY(r.date)}</time></td>
             <td>${escapeHtml(r.name)}</td>
             <td><span class="activity-type type-${r.type}">${escapeHtml(r.type)}</span></td>
             <td><span class="att-status status-${status}">${ATTENDANCE_LABELS[status]}</span></td>
