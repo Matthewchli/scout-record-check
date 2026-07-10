@@ -1,4 +1,4 @@
-const fs = require("fs");
+﻿const fs = require("fs");
 const path = require("path");
 
 const membersPath = path.join(__dirname, "..", "data", "members.json");
@@ -65,7 +65,7 @@ function makeBadge(syllabusKey, assessmentDate, extras = {}) {
 
 const profiles = {
   // 盧羿衡：較多章，涵蓋五組
-  HK24001: [
+  2025000101: [
     ["interest:游泳", "2025-07-22"],
     ["interest:營地烹飪", "2025-03-15"],
     ["interest:單車", "2024-11-02"],
@@ -84,7 +84,7 @@ const profiles = {
     ["other:領導才獎章", "2026-03-22"],
   ],
   // 吳溢潼：中等數量，偏興趣／服務
-  HK24015: [
+  2025000102: [
     ["interest:藝術", "2025-09-05"],
     ["interest:氣象", "2025-04-12"],
     ["interest:愛護動物", "2024-10-19"],
@@ -100,7 +100,7 @@ const profiles = {
     ["other:社區參與章", "2025-07-03"],
   ],
   // 吳承軒：較新成員，仍展示多組
-  HK25008: [
+  2025000103: [
     ["interest:釣魚", "2026-01-25"],
     ["interest:運動", "2025-11-15"],
     ["interest:步操", "2025-08-23"],

@@ -35,6 +35,12 @@ html {
   scrollbar-gutter: stable;
 }
 
+@media (max-width: 640px) {
+  html {
+    scrollbar-gutter: auto;
+  }
+}
+
 body {
   font-family: var(--font-sans);
   color: var(--ink);
@@ -94,11 +100,16 @@ button { cursor: pointer; border: none; background: none; }
 /* ===== Login ===== */
 .login-view {
   min-height: 100dvh;
-  display: grid;
-  place-items: center;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  padding: 2rem 1.25rem;
-  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2rem max(1.25rem, env(safe-area-inset-right)) 2rem max(1.25rem, env(safe-area-inset-left));
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .login-backdrop {
@@ -121,6 +132,10 @@ button { cursor: pointer; border: none; background: none; }
   position: relative;
   z-index: 1;
   width: min(100%, 336px);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
   background: var(--cream);
   border-radius: 8px;
   padding: 2rem 1.6rem 1.6rem;
@@ -2049,8 +2064,14 @@ button { cursor: pointer; border: none; background: none; }
 }
 
 @media (max-width: 480px) {
+  .login-view {
+    padding-top: max(1.25rem, env(safe-area-inset-top));
+    padding-bottom: max(1.25rem, env(safe-area-inset-bottom));
+  }
+
   .login-panel {
     padding: 1.6rem 1.1rem 1.2rem;
+    width: min(100%, 336px);
   }
 
   .prog-card-body {

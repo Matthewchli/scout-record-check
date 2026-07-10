@@ -1,4 +1,4 @@
-const fs = require("fs");
+﻿const fs = require("fs");
 const path = require("path");
 const XLSX = require("xlsx");
 
@@ -8,7 +8,7 @@ const attDir =
   "c:/Users/heiin/Desktop/童軍管理平台/出席記錄/2025-2026 出席記錄";
 const excelPath = "c:/Users/heiin/Desktop/童軍管理平台/活動記錄.xlsx";
 
-const DEMO_IDS = new Set(["HK24001", "HK24015", "HK25008"]);
+const DEMO_IDS = new Set(["2025000101", "2025000102", "2025000103"]);
 const YEAR_START = "2025-09-01";
 const YEAR_END = "2026-08-31";
 /** Cancelled activities — do not import */

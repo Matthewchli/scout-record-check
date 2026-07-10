@@ -1,4 +1,4 @@
-const fs = require("fs");
+﻿const fs = require("fs");
 const path = require("path");
 const XLSX = require("xlsx");
 
@@ -172,17 +172,17 @@ console.log(
 const data = JSON.parse(fs.readFileSync(membersPath, "utf8"));
 
 const demoProfiles = {
-  HK24001: {
+  2025000101: {
     absentDates: new Set(["2025-03-22", "2025-05-24", "2024-10-19", "2025-03-15"]),
     lateDates: new Set(["2026-04-26", "2025-04-26"]),
     excusedDates: new Set(["2026-03-22"]),
   },
-  HK24015: {
+  2025000102: {
     absentDates: new Set(["2025-05-31", "2024-10-19", "2026-02-28"]),
     lateDates: new Set(["2025-11-23"]),
     excusedDates: new Set(["2025-03-15"]),
   },
-  HK25008: {
+  2025000103: {
     absentDates: new Set(["2024-12-14", "2026-01-31"]),
     lateDates: new Set([]),
     excusedDates: new Set([]),

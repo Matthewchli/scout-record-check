@@ -1,4 +1,4 @@
-const fs = require("fs");
+﻿const fs = require("fs");
 const path = require("path");
 
 const syllabus = JSON.parse(
@@ -91,21 +91,21 @@ function buildItemCompletedDates(completedIds, badgeCompletedDate) {
 // 各進度性獎章可同時考核，不需完成上一章才開始下一章
 const profiles = {
   // 盧羿衡：四章皆有進度，探索／標準已完成，高級與總領袖並行
-  HK24001: [
+  2025000101: [
     makeBadge("discovery", "completed", "2023-03-12", 99),
     makeBadge("standard", "completed", "2024-06-20", 99),
     makeBadge("advanced", "in_progress", null, 14),
     makeBadge("chief", "in_progress", null, 7),
   ],
   // 吳溢潼：探索未完成，但標準／高級已同步進行
-  HK24015: [
+  2025000102: [
     makeBadge("discovery", "in_progress", null, 15),
     makeBadge("standard", "in_progress", null, 12),
     makeBadge("advanced", "in_progress", null, 6),
     makeBadge("chief", "in_progress", null, 3),
   ],
   // 吳承軒：四章同時起步，各有部分分項完成
-  HK25008: [
+  2025000103: [
     makeBadge("discovery", "in_progress", null, 9),
     makeBadge("standard", "in_progress", null, 7),
     makeBadge("advanced", "in_progress", null, 4),

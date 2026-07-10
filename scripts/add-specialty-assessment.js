@@ -1,11 +1,11 @@
-const fs = require("fs");
+﻿const fs = require("fs");
 const path = require("path");
 
 const membersPath = path.join(__dirname, "..", "data", "members.json");
 const data = JSON.parse(fs.readFileSync(membersPath, "utf8"));
 
 const demoMeta = {
-  HK24001: {
+  2025000101: {
     游泳章: {
       activityName: "游泳專科徽章考核",
       organizer: "新界東第42旅童軍團",
@@ -49,7 +49,7 @@ const demoMeta = {
       syllabusKey: "other:服務獎章",
     },
   },
-  HK24015: {
+  2025000102: {
     藝術章: {
       activityName: "藝術專科徽章考核",
       organizer: "新界東第42旅童軍團",
@@ -72,7 +72,7 @@ const demoMeta = {
       syllabusKey: "other:世界童軍環境章",
     },
   },
-  HK25008: {
+  2025000103: {
     釣魚章: {
       activityName: "釣魚專科徽章考核",
       organizer: "新界東第42旅童軍團",

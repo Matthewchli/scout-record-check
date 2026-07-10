@@ -1,4 +1,4 @@
-const XLSX = require("xlsx");
+﻿const XLSX = require("xlsx");
 const fs = require("fs");
 const path = require("path");
 
@@ -10,7 +10,7 @@ const syllabus = JSON.parse(
   )
 );
 
-const DEMO_IDS = new Set(["HK24001", "HK24015", "HK25008"]);
+const DEMO_IDS = new Set(["2025000101", "2025000102", "2025000103"]);
 
 const BADGE_KEY = {
   探索: "discovery",

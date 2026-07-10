@@ -97,7 +97,7 @@ def main() -> None:
         name = member["name"]
         src = icons.pop(name, None)
         if src is None:
-            if not str(member.get("scoutId", "")).startswith("HK"):
+            if name not in DEMO_FILENAMES:
                 missing.append(name)
             continue
 

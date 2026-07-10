@@ -1,11 +1,11 @@
-const fs = require("fs");
+﻿const fs = require("fs");
 const path = require("path");
 
 const file = path.join(__dirname, "..", "data", "members.json");
 const data = JSON.parse(fs.readFileSync(file, "utf8"));
 
 const demos = {
-  HK24001: {
+  2025000101: {
     serviceRecords: [
       { date: "2026-04-05", name: "清明植樹服務", hours: 4, note: "" },
       { date: "2026-01-18", name: "社區清潔服務", hours: 3, note: "" },
@@ -28,7 +28,7 @@ const demos = {
       { date: "2025-03-22", name: "春季小隊露營", nights: 1, note: "" },
     ],
   },
-  HK24015: {
+  2025000102: {
     serviceRecords: [
       { date: "2026-04-05", name: "清明植樹服務", hours: 4, note: "" },
       { date: "2026-01-18", name: "社區清潔服務", hours: 3, note: "" },
@@ -45,7 +45,7 @@ const demos = {
       { date: "2025-07-12", name: "暑假旅露營", nights: 3, note: "" },
     ],
   },
-  HK25008: {
+  2025000103: {
     serviceRecords: [
       { date: "2026-04-05", name: "清明植樹服務", hours: 4, note: "" },
       { date: "2026-01-18", name: "社區清潔服務", hours: 3, note: "" },

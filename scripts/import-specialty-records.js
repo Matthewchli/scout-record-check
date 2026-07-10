@@ -1,4 +1,4 @@
-const fs = require("fs");
+﻿const fs = require("fs");
 const path = require("path");
 const XLSX = require("xlsx");
 
@@ -6,7 +6,7 @@ const membersPath = path.join(__dirname, "..", "data", "members.json");
 const syllabusPath = path.join(__dirname, "..", "data", "specialty-syllabus.json");
 const excelPath = "c:/Users/heiin/Desktop/童軍管理平台/專科徽章 Record.xlsx";
 
-const DEMO_IDS = new Set(["HK24001", "HK24015", "HK25008"]);
+const DEMO_IDS = new Set(["2025000101", "2025000102", "2025000103"]);
 
 const GROUP_MAP = {
   興趣組: { key: "interest", label: "興趣組" },

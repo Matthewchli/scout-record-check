@@ -1,4 +1,4 @@
-const fs = require("fs");
+﻿const fs = require("fs");
 const path = require("path");
 const XLSX = require("xlsx");
 
@@ -7,7 +7,7 @@ const activitiesPath = path.join(__dirname, "..", "data", "activities.json");
 const attDir =
   "c:/Users/heiin/Desktop/童軍管理平台/出席記錄/2024-2025 出席記錄";
 
-const DEMO_IDS = new Set(["HK24001", "HK24015", "HK25008"]);
+const DEMO_IDS = new Set(["2025000101", "2025000102", "2025000103"]);
 const YEAR_START = "2024-09-01";
 const YEAR_END = "2025-08-31";
 

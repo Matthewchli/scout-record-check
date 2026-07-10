@@ -102,7 +102,7 @@ async function main() {
   for (const member of members) {
     const icon = icons.get(member.name);
     if (!icon) {
-      if (!String(member.scoutId).startsWith("HK")) missing.push(member.name);
+      if (!DEMO_FILENAMES[member.name]) missing.push(member.name);
       continue;
     }
 
