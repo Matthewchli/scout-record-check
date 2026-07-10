@@ -376,7 +376,8 @@ button { cursor: pointer; border: none; background: none; }
 
 .profile-banner {
   display: flex;
-  align-items: stretch;
+  flex-direction: row;
+  align-items: center;
   gap: 1.25rem;
   padding: 1.5rem;
   background:
@@ -403,9 +404,8 @@ button { cursor: pointer; border: none; background: none; }
 }
 
 .profile-avatar.has-photo {
-  align-self: center;
-  width: 5.4rem;
-  height: 6.75rem;
+  width: 86px;
+  height: 108px;
   aspect-ratio: 11 / 20;
   border-radius: 0;
   background: transparent;
@@ -1688,6 +1688,28 @@ button { cursor: pointer; border: none; background: none; }
   .att-stat-cards {
     grid-template-columns: 1fr;
   }
+
+  .attendance-table {
+    font-size: 0.78rem;
+  }
+
+  .attendance-table th,
+  .attendance-table td {
+    padding: 0.55rem 0.35rem;
+  }
+
+  .attendance-table th {
+    font-size: 0.72rem;
+  }
+
+  .attendance-table td {
+    white-space: normal;
+  }
+
+  .att-status {
+    padding: 0.15rem 0.35rem;
+    font-size: 0.7rem;
+  }
 }
 
 .detail-meta {
@@ -1715,6 +1737,8 @@ button { cursor: pointer; border: none; background: none; }
   box-shadow: 0 2px 8px rgba(26, 61, 43, 0.06);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  width: 100%;
+  max-width: 100%;
 }
 
 .attendance-table {
@@ -1722,7 +1746,7 @@ button { cursor: pointer; border: none; background: none; }
   border-collapse: collapse;
   table-layout: fixed;
   font-size: 0.9rem;
-  min-width: 560px;
+  min-width: 0;
 }
 
 .attendance-table--attendance .col-date {
@@ -1763,6 +1787,7 @@ button { cursor: pointer; border: none; background: none; }
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  word-break: break-word;
 }
 
 .attendance-table tbody tr:last-child td {
@@ -2007,15 +2032,21 @@ button { cursor: pointer; border: none; background: none; }
   }
 
   .profile-banner {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
+    gap: 0.85rem;
+    padding: 1rem;
   }
 
   .profile-avatar.has-photo {
-    align-self: center;
-    height: 6.75rem;
-    width: 5.4rem;
+    width: 86px;
+    height: 108px;
+  }
+
+  .profile-name {
+    font-size: 1.25rem;
+  }
+
+  .profile-detail {
+    font-size: 0.82rem;
   }
 
   .user-meta {
@@ -2029,5 +2060,10 @@ button { cursor: pointer; border: none; background: none; }
 
   .activity-date {
     grid-column: 2;
+  }
+
+  .dash-main {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
   }
 }
