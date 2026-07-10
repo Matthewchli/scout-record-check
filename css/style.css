@@ -120,10 +120,10 @@ button { cursor: pointer; border: none; background: none; }
 .login-panel {
   position: relative;
   z-index: 1;
-  width: min(100%, 420px);
+  width: min(100%, 336px);
   background: var(--cream);
   border-radius: 8px;
-  padding: 2.5rem 2rem 2rem;
+  padding: 2rem 1.6rem 1.6rem;
   box-shadow: var(--shadow-soft);
   animation: panel-in 0.7s var(--ease) both;
 }
@@ -141,7 +141,7 @@ button { cursor: pointer; border: none; background: none; }
 
 .login-brand {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
 }
 
 .troop-logo {
@@ -150,10 +150,10 @@ button { cursor: pointer; border: none; background: none; }
 }
 
 .troop-logo-login {
-  width: 96px;
-  height: 96px;
-  margin: 0 auto 1rem;
-  padding: 0.45rem;
+  width: 77px;
+  height: 77px;
+  margin: 0 auto 0.8rem;
+  padding: 0.36rem;
   border-radius: 50%;
   background: #fff;
   border: 2px solid rgba(26, 61, 43, 0.16);
@@ -1695,7 +1695,7 @@ button { cursor: pointer; border: none; background: none; }
 
   .attendance-table th,
   .attendance-table td {
-    padding: 0.55rem 0.35rem;
+    padding: 0.55rem 0.4rem;
   }
 
   .attendance-table th {
@@ -1709,6 +1709,37 @@ button { cursor: pointer; border: none; background: none; }
   .att-status {
     padding: 0.15rem 0.35rem;
     font-size: 0.7rem;
+  }
+
+  /* 手機版隱藏類型、備註，騰出空間給日期／活動／狀態 */
+  .attendance-table--attendance .col-type,
+  .attendance-table--attendance .col-note,
+  .attendance-table--attendance th:nth-child(3),
+  .attendance-table--attendance th:nth-child(5),
+  .attendance-table--attendance td:nth-child(3),
+  .attendance-table--attendance td:nth-child(5) {
+    display: none;
+  }
+
+  .attendance-table--attendance .col-date {
+    width: 30%;
+  }
+
+  .attendance-table--attendance .col-name {
+    width: 46%;
+  }
+
+  .attendance-table--attendance .col-status {
+    width: 24%;
+  }
+
+  .attendance-table--attendance td:nth-child(1),
+  .attendance-table--attendance td:nth-child(2),
+  .attendance-table--attendance td:nth-child(4) {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    word-break: break-word;
   }
 }
 
@@ -2019,7 +2050,7 @@ button { cursor: pointer; border: none; background: none; }
 
 @media (max-width: 480px) {
   .login-panel {
-    padding: 2rem 1.35rem 1.5rem;
+    padding: 1.6rem 1.1rem 1.2rem;
   }
 
   .prog-card-body {
