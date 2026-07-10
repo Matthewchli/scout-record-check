@@ -156,7 +156,8 @@ while ((match = headerRe.exec(text)) !== null) {
 
   if (!name || name.length > 18) continue;
   if (/目錄|引言|支部|進度|教導組專科徽章/.test(name)) continue;
-  if (!/完成|持有/.test(body.slice(0, 300))) continue;
+  // 手藝等章可能因跨頁，開頭「完成」落在較後；放寬至前 800 字
+  if (!/完成|持有/.test(body.slice(0, 800))) continue;
 
   const group = GROUP_FROM_LABEL[groupLabel];
   const key = `${group}:${name}`;

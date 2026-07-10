@@ -88,30 +88,34 @@ function buildItemCompletedDates(completedIds, badgeCompletedDate) {
   return dates;
 }
 
+// 各進度性獎章可同時考核，不需完成上一章才開始下一章
 const profiles = {
-  陳志明: [
+  // 盧羿衡：四章皆有進度，探索／標準已完成，高級與總領袖並行
+  HK24001: [
     makeBadge("discovery", "completed", "2023-03-12", 99),
     makeBadge("standard", "completed", "2024-06-20", 99),
-    makeBadge("advanced", "in_progress", null, 10),
-    makeBadge("chief", "not_started", null, 0),
+    makeBadge("advanced", "in_progress", null, 14),
+    makeBadge("chief", "in_progress", null, 7),
   ],
-  林美欣: [
-    makeBadge("discovery", "completed", "2024-02-18", 99),
-    makeBadge("standard", "in_progress", null, 8),
-    makeBadge("advanced", "not_started", null, 0),
-    makeBadge("chief", "not_started", null, 0),
+  // 吳溢潼：探索未完成，但標準／高級已同步進行
+  HK24015: [
+    makeBadge("discovery", "in_progress", null, 15),
+    makeBadge("standard", "in_progress", null, 12),
+    makeBadge("advanced", "in_progress", null, 6),
+    makeBadge("chief", "in_progress", null, 3),
   ],
-  黃子軒: [
-    makeBadge("discovery", "in_progress", null, 6),
-    makeBadge("standard", "not_started", null, 0),
-    makeBadge("advanced", "not_started", null, 0),
-    makeBadge("chief", "not_started", null, 0),
+  // 吳承軒：四章同時起步，各有部分分項完成
+  HK25008: [
+    makeBadge("discovery", "in_progress", null, 9),
+    makeBadge("standard", "in_progress", null, 7),
+    makeBadge("advanced", "in_progress", null, 4),
+    makeBadge("chief", "in_progress", null, 2),
   ],
 };
 
 for (const m of data.members) {
-  if (profiles[m.name]) {
-    m.progressiveBadges = profiles[m.name];
+  if (profiles[m.scoutId]) {
+    m.progressiveBadges = profiles[m.scoutId];
   }
 }
 

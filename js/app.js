@@ -292,7 +292,18 @@
   function renderProfile(member) {
     $("#header-name").textContent = member.name;
     $("#header-id").textContent = member.scoutId;
-    $("#profile-avatar").textContent = initials(member.name);
+
+    const avatar = $("#profile-avatar");
+    if (member.photo) {
+      avatar.classList.add("has-photo");
+      avatar.setAttribute("aria-hidden", "false");
+      avatar.innerHTML = `<img src="${escapeHtml(member.photo)}" alt="${escapeHtml(member.name)}的成員照片" width="120" height="150" />`;
+    } else {
+      avatar.classList.remove("has-photo");
+      avatar.setAttribute("aria-hidden", "true");
+      avatar.textContent = initials(member.name);
+    }
+
     const nameText = $("#profile-name-text");
     if (nameText) nameText.textContent = member.name;
     else $("#profile-heading").textContent = member.name;
@@ -305,6 +316,7 @@
   }
 
   function showProgressiveList() {
+    cancelProgressAnimations();
     const listView = $("#progressive-list-view");
     const detailView = $("#progressive-detail-view");
     if (listView) listView.hidden = false;
@@ -797,6 +809,7 @@
 
   function showBadgeDetail(badgeKey) {
     if (!currentMember || !syllabus || !syllabus[badgeKey]) return;
+    cancelProgressAnimations();
     const syl = syllabus[badgeKey];
     const progress = currentMember.progressiveBadges.find((b) => b.key === badgeKey);
     if (!progress) return;
@@ -824,13 +837,24 @@
     const bar = $("#badge-detail-bar");
     bar.setAttribute("aria-valuenow", String(pct));
     bar.setAttribute("aria-label", `${syl.name}進度`);
-    $("#badge-detail-progress-text").textContent =
+
+    const fillEl = $("#badge-detail-fill");
+    const textEl = $("#badge-detail-progress-text");
+    const dateSuffix =
       progress.status === "completed" && progress.completedDate
-        ? `${done} / ${total} 項完成（${pct}%）· 完成日期：${formatDate(progress.completedDate)}`
-        : `${done} / ${total} 項完成（${pct}%）`;
+        ? ` · 完成日期：${formatDate(progress.completedDate)}`
+        : "";
+
+    if (fillEl) fillEl.style.width = "0%";
+    if (textEl) textEl.textContent = `0 / ${total} 項完成（0%）${dateSuffix}`;
 
     requestAnimationFrame(() => {
-      $("#badge-detail-fill").style.width = `${pct}%`;
+      animateProgressBar(fillEl, textEl, {
+        done,
+        total,
+        pct,
+        textFormatter: (d, p) => `${d} / ${total} 項完成（${p}%）${dateSuffix}`,
+      });
     });
 
     const sectionsEl = $("#badge-detail-sections");
@@ -905,7 +929,59 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
+  let progressAnimFrames = new Set();
+
+  function cancelProgressAnimations() {
+    for (const id of progressAnimFrames) cancelAnimationFrame(id);
+    progressAnimFrames.clear();
+  }
+
+  function easeOutCubic(t) {
+    return 1 - Math.pow(1 - t, 3);
+  }
+
+  /**
+   * Animate progress fill + optional text from 0 → target over 1.5s.
+   * textFormatter(doneShown, pctShown) → string
+   */
+  function animateProgressBar(fillEl, textEl, { done, total, pct, textFormatter }) {
+    if (!fillEl) return;
+    fillEl.style.width = "0%";
+    if (textEl && textFormatter) {
+      textEl.textContent = textFormatter(0, 0);
+    }
+
+    const duration = 1500;
+    const start = performance.now();
+    let frameId = null;
+
+    function frame(now) {
+      const t = Math.min(1, (now - start) / duration);
+      const e = easeOutCubic(t);
+      const shownPct = pct * e;
+      const shownDone = Math.round(done * e);
+      fillEl.style.width = `${shownPct}%`;
+      if (textEl && textFormatter) {
+        textEl.textContent = textFormatter(shownDone, Math.round(shownPct));
+      }
+      if (t < 1) {
+        frameId = requestAnimationFrame(frame);
+        progressAnimFrames.add(frameId);
+      } else {
+        fillEl.style.width = `${pct}%`;
+        if (textEl && textFormatter) {
+          textEl.textContent = textFormatter(done, pct);
+        }
+        if (frameId) progressAnimFrames.delete(frameId);
+      }
+    }
+
+    frameId = requestAnimationFrame(frame);
+    progressAnimFrames.add(frameId);
+  }
+
   function renderProgressive(member) {
+    cancelProgressAnimations();
     const container = $("#progressive-list");
     container.innerHTML = "";
 
@@ -937,9 +1013,9 @@
             ${completedLine}
             <div class="prog-progress">
               <div class="prog-progress-bar" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100" aria-label="${escapeHtml(badge.name)}進度">
-                <div class="prog-progress-fill" data-pct="${pct}"></div>
+                <div class="prog-progress-fill" data-done="${done}" data-total="${total}" data-pct="${pct}"></div>
               </div>
-              <p class="prog-progress-text">${done} / ${total} 項完成（${pct}%）</p>
+              <p class="prog-progress-text">0 / ${total} 項完成（0%）</p>
             </div>
             <p class="prog-open-hint">查看完整分項考核內容 →</p>
           </div>
@@ -951,8 +1027,19 @@
     }
 
     requestAnimationFrame(() => {
-      $$(".prog-progress-fill", container).forEach((el) => {
-        el.style.width = `${el.dataset.pct}%`;
+      $$(".prog-card", container).forEach((card) => {
+        const fill = $(".prog-progress-fill", card);
+        const text = $(".prog-progress-text", card);
+        if (!fill) return;
+        const done = Number(fill.dataset.done) || 0;
+        const total = Number(fill.dataset.total) || 0;
+        const pct = Number(fill.dataset.pct) || 0;
+        animateProgressBar(fill, text, {
+          done,
+          total,
+          pct,
+          textFormatter: (d, p) => `${d} / ${total} 項完成（${p}%）`,
+        });
       });
     });
   }
@@ -1140,6 +1227,13 @@
     $("#specialty-meta-organizer").textContent = badge.organizer || "—";
     const dateIso = badge.assessmentDate || badge.earnedDate || "";
     $("#specialty-meta-date").textContent = formatDate(dateIso);
+    const noticeEl = $("#specialty-meta-notice");
+    if (badge.noticeUrl) {
+      const label = badge.noticeTitle || "查看通告";
+      noticeEl.innerHTML = `<a class="specialty-notice-link" href="${escapeHtml(badge.noticeUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`;
+    } else {
+      noticeEl.textContent = "—";
+    }
     $("#specialty-meta-examiner").textContent =
       badge.examiner || badge.assessor || "—";
 
@@ -1185,26 +1279,45 @@
     const outdoorCount = (activity.outdoorActivities || []).length;
     const summary = $("#attendance-summary");
 
+    const icons = {
+      attendance: `<span class="att-stat-icon-wrap"><svg class="att-stat-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm0 2v14h10V5H7zm2.3 8.7 1.4 1.4 4.3-4.3-1.4-1.4-2.9 2.9-1.1-1.1-1.4 1.4 1.1 1.1zM9 7h6v2H9V7z"/></svg></span>`,
+      service: `<span class="att-stat-icon-wrap"><svg class="att-stat-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a5 5 0 0 1 5 5v1.1c1.7.4 3 2 3 3.9v1l2 3v2h-2.1A5 5 0 0 1 13 21h-2a5 5 0 0 1-4.9-4H4v-2l2-3v-1c0-1.9 1.3-3.5 3-3.9V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v1h6V7a3 3 0 0 0-3-3zM8 10c-.6 0-1 .4-1 1v1.4l-1.6 2.4.2.2h13l.2-.2L17 12.4V11c0-.6-.4-1-1-1H8zm1 8a3 3 0 0 0 3 2h2a3 3 0 0 0 3-2H9z"/></svg></span>`,
+      camping: `<span class="att-stat-icon-wrap"><svg class="att-stat-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3 2 20h5.2L12 11.2 16.8 20H22L12 3zm0 11.5L9.4 20h5.2L12 14.5z"/></svg></span>`,
+      outdoor: `<span class="att-stat-icon-wrap"><svg class="att-stat-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m6.5 16 3.2-4.3 2.1 2.7 3.4-5.1L21 16H6.5zM3 18h18v2H3v-2zm11-9.5A2.5 2.5 0 1 1 16.5 6 2.5 2.5 0 0 1 14 8.5z"/></svg></span>`,
+    };
+
     summary.innerHTML = `
-      <button type="button" class="att-stat" data-activity-detail="attendance">
-        <span class="att-stat-value">${rate}%</span>
-        <span class="att-stat-label">出席率</span>
-        <span class="att-stat-hint">查看明細</span>
+      <button type="button" class="att-stat att-stat--attendance" data-activity-detail="attendance">
+        ${icons.attendance}
+        <span class="att-stat-body">
+          <span class="att-stat-value">${rate}%</span>
+          <span class="att-stat-label">出席率</span>
+          <span class="att-stat-hint">查看明細</span>
+        </span>
       </button>
-      <button type="button" class="att-stat" data-activity-detail="service">
-        <span class="att-stat-value">${activity.serviceHours || 0}</span>
-        <span class="att-stat-label">服務時數</span>
-        <span class="att-stat-hint">查看明細</span>
+      <button type="button" class="att-stat att-stat--service" data-activity-detail="service">
+        ${icons.service}
+        <span class="att-stat-body">
+          <span class="att-stat-value">${activity.serviceHours || 0}</span>
+          <span class="att-stat-label">服務時數</span>
+          <span class="att-stat-hint">查看明細</span>
+        </span>
       </button>
-      <button type="button" class="att-stat" data-activity-detail="camping">
-        <span class="att-stat-value">${activity.campingCount || 0}</span>
-        <span class="att-stat-label">露營次數</span>
-        <span class="att-stat-hint">查看明細</span>
+      <button type="button" class="att-stat att-stat--camping" data-activity-detail="camping">
+        ${icons.camping}
+        <span class="att-stat-body">
+          <span class="att-stat-value">${activity.campingCount || 0}</span>
+          <span class="att-stat-label">露營次數</span>
+          <span class="att-stat-hint">查看明細</span>
+        </span>
       </button>
-      <button type="button" class="att-stat" data-activity-detail="outdoor">
-        <span class="att-stat-value">${outdoorCount}</span>
-        <span class="att-stat-label">戶外活動</span>
-        <span class="att-stat-hint">查看明細</span>
+      <button type="button" class="att-stat att-stat--outdoor" data-activity-detail="outdoor">
+        ${icons.outdoor}
+        <span class="att-stat-body">
+          <span class="att-stat-value">${outdoorCount}</span>
+          <span class="att-stat-label">戶外活動</span>
+          <span class="att-stat-hint">查看明細</span>
+        </span>
       </button>
     `;
 
@@ -1340,6 +1453,7 @@
 
   $("#badge-back-btn").addEventListener("click", () => {
     showProgressiveList();
+    if (currentMember) renderProgressive(currentMember);
   });
 
   $("#activity-back-btn").addEventListener("click", () => {

@@ -5,7 +5,8 @@ const path = require("path");
 const membersPath = path.join(__dirname, "..", "data", "members.json");
 const data = JSON.parse(fs.readFileSync(membersPath, "utf8"));
 
-const DEMO_NAMES = new Set(["陳志明", "林美欣", "黃子軒"]);
+const DEMO_IDS = new Set(["HK24001", "HK24015", "HK25008"]);
+const DEMO_NAMES = new Set(["盧羿衡", "吳溢潼", "吳承軒"]);
 
 const progressiveTemplate = [
   {
@@ -69,11 +70,11 @@ function emptyMember(name, scoutId, englishName) {
   };
 }
 
-const demoMembers = data.members.filter((m) => DEMO_NAMES.has(m.name));
+const demoMembers = data.members.filter((m) => DEMO_IDS.has(m.scoutId));
 if (demoMembers.length !== 3) {
   console.warn(
     "warning: expected 3 demo members, found",
-    demoMembers.map((m) => m.name)
+    demoMembers.map((m) => `${m.name}/${m.scoutId}`)
   );
 }
 
@@ -92,7 +93,7 @@ for (const row of rows) {
   const scoutId = String(row["Scout ID"] || "").trim();
   const englishName = String(row.EnglishName || "").trim();
   if (!name || !scoutId) continue;
-  if (DEMO_NAMES.has(name)) continue;
+  if (DEMO_IDS.has(scoutId)) continue;
   const key = `${name}|${scoutId}`;
   if (seen.has(key)) continue;
   seen.add(key);
