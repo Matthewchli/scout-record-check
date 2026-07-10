@@ -48,7 +48,7 @@ function emptyMember(name, scoutId, englishName) {
     scoutId,
     englishName: englishName || "",
     troop: "新界東第1558旅",
-    section: "童軍",
+    section: "Cobra小隊",
     rank: "隊員",
     joinDate: "",
     photo: null,
@@ -62,6 +62,7 @@ function emptyMember(name, scoutId, englishName) {
     progressiveBadges: progressiveTemplate.map((b) => ({
       ...b,
       completedIds: [],
+      itemCompletedDates: {},
     })),
     specialtyBadges: [],
     awards: [],

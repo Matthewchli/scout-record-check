@@ -77,268 +77,425 @@
     {
       "name": "陳志明",
       "scoutId": "HK24001",
-      "troop": "第42旅",
-      "section": "童軍",
-      "rank": "巡邏長",
+      "troop": "新界東第1558旅",
+      "section": "Cobra小隊",
+      "rank": "團隊長",
       "joinDate": "2022-09-01",
       "photo": null,
       "activity": {
-        "attendanceRate": 92,
-        "serviceHours": 48,
-        "campingCount": 6,
+        "attendanceRate": 95,
+        "serviceHours": 50,
+        "campingCount": 3,
         "outdoorActivities": [
           {
-            "name": "大帽山日行",
-            "date": "2025-11-15",
-            "type": "遠足"
+            "date": "2026-04-18",
+            "name": "參觀博物館",
+            "type": "戶外",
+            "note": "消防及救護教育中心暨博物館"
           },
           {
-            "name": "西貢露營",
-            "date": "2025-12-06",
-            "type": "露營"
+            "date": "2026-02-28",
+            "name": "單車活動",
+            "type": "戶外",
+            "note": "大圍至白石角"
           },
           {
-            "name": "社區清潔服務",
-            "date": "2026-01-18",
-            "type": "服務"
+            "date": "2025-11-23",
+            "name": "步行籌款日",
+            "type": "戶外",
+            "note": "塱原自然生態公園"
           },
           {
-            "name": "船灣郊野公園露營",
-            "date": "2026-02-21",
-            "type": "露營"
+            "date": "2025-11-08",
+            "name": "高結構繩網",
+            "type": "戶外",
+            "note": "王兆生領袖訓練中心"
           },
           {
-            "name": "急救訓練日",
-            "date": "2026-03-08",
-            "type": "訓練"
-          },
-          {
-            "name": "清明植樹服務",
-            "date": "2026-04-05",
-            "type": "服務"
-          },
-          {
-            "name": "長洲露營",
-            "date": "2026-05-16",
-            "type": "露營"
-          },
-          {
-            "name": "水上活動日",
-            "date": "2026-06-14",
-            "type": "戶外"
+            "date": "2025-10-26",
+            "name": "香港童軍大會操",
+            "type": "戶外",
+            "note": "香港大球場"
           }
         ],
         "serviceRecords": [
           {
-            "date": "2026-04-05",
-            "name": "清明植樹服務",
-            "hours": 4,
-            "note": ""
-          },
-          {
-            "date": "2026-01-18",
-            "name": "社區清潔服務",
-            "hours": 3,
-            "note": ""
-          },
-          {
-            "date": "2025-12-20",
-            "name": "聖誕老人派禮物",
+            "date": "2026-07-03",
+            "name": "學校時裝表演",
             "hours": 5,
             "note": ""
           },
           {
-            "date": "2025-11-02",
-            "name": "賣旗日",
-            "hours": 6,
+            "date": "2026-05-16",
+            "name": "中六畢業典禮",
+            "hours": 5,
             "note": ""
           },
           {
-            "date": "2025-10-12",
-            "name": "長者中心探訪",
-            "hours": 3,
-            "note": ""
-          },
-          {
-            "date": "2025-09-14",
-            "name": "校園清潔服務",
-            "hours": 2,
-            "note": ""
-          },
-          {
-            "date": "2025-08-23",
-            "name": "暑期社區服務日",
+            "date": "2026-03-26",
+            "name": "學校陸運會",
             "hours": 8,
             "note": ""
           },
           {
-            "date": "2025-07-19",
-            "name": "義工訓練暨服務",
+            "date": "2025-11-16",
+            "name": "學校資訊日",
+            "hours": 5,
+            "note": ""
+          },
+          {
+            "date": "2025-09-29",
+            "name": "學校水運會",
+            "hours": 8,
+            "note": ""
+          },
+          {
+            "date": "2025-07-04",
+            "name": "學校時裝表演",
             "hours": 6,
             "note": ""
           },
           {
-            "date": "2025-06-08",
-            "name": "環保回收服務",
-            "hours": 4,
+            "date": "2025-04-10",
+            "name": "學校陸運會",
+            "hours": 8,
             "note": ""
           },
           {
-            "date": "2025-05-11",
-            "name": "母親節探訪服務",
-            "hours": 3,
-            "note": ""
-          },
-          {
-            "date": "2025-04-06",
-            "name": "清明植樹服務",
-            "hours": 4,
+            "date": "2024-11-17",
+            "name": "學校資訊日",
+            "hours": 5,
             "note": ""
           }
         ],
         "campingRecords": [
           {
-            "date": "2026-05-16",
-            "name": "長洲露營",
-            "nights": 2,
-            "note": ""
-          },
-          {
-            "date": "2026-02-21",
-            "name": "船灣郊野公園露營",
+            "date": "2025-12-19",
+            "name": "冬季露營",
             "nights": 1,
-            "note": ""
+            "note": "王兆生領袖訓練中心"
           },
           {
-            "date": "2025-12-06",
-            "name": "西貢露營",
-            "nights": 2,
-            "note": ""
-          },
-          {
-            "date": "2025-10-18",
-            "name": "大嶼山露營",
+            "date": "2025-09-05",
+            "name": "夏季露營",
             "nights": 1,
-            "note": ""
+            "note": "白沙灣潭華正海上活動中心"
           },
           {
-            "date": "2025-07-12",
-            "name": "暑假旅露營",
-            "nights": 3,
-            "note": ""
-          },
-          {
-            "date": "2025-03-22",
-            "name": "春季小隊露營",
+            "date": "2024-12-20",
+            "name": "冬季露營",
             "nights": 1,
-            "note": ""
+            "note": "洞梓童軍中心"
           }
         ]
       },
       "attendance": [
         {
-          "date": "2026-06-14",
-          "name": "水上活動日",
-          "type": "戶外",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-06-07",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-05-31",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-05-24",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "absent",
-          "note": ""
-        },
-        {
-          "date": "2026-05-16",
-          "name": "長洲露營",
-          "type": "露營",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-05-10",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-05-03",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-04-26",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "present",
-          "note": "遲到"
-        },
-        {
-          "date": "2026-04-19",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-04-12",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-04-05",
-          "name": "清明植樹服務",
+          "date": "2026-07-03",
+          "name": "學校時裝表演",
           "type": "服務",
           "status": "present",
           "note": ""
         },
         {
-          "date": "2026-03-29",
-          "name": "週六例會",
+          "date": "2026-05-16",
+          "name": "中六畢業典禮",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-05-09",
+          "name": "恆常集會",
           "type": "集會",
           "status": "present",
           "note": ""
         },
         {
-          "date": "2026-03-22",
-          "name": "週六例會",
+          "date": "2026-04-25",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-04-18",
+          "name": "參觀博物館",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-03-26",
+          "name": "學校陸運會",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-03-07",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-02-28",
+          "name": "單車活動",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-02-07",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-01-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-01-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-01-17",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-01-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-12-19",
+          "name": "冬季露營",
+          "type": "露營",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-11-23",
+          "name": "步行籌款日",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-11-16",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-11-08",
+          "name": "高結構繩網",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-10-26",
+          "name": "香港童軍大會操",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-10-25",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-10-11",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-10-04",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-09-29",
+          "name": "學校水運會",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-09-27",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-09-13",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-09-05",
+          "name": "夏季露營",
+          "type": "露營",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-07-04",
+          "name": "學校時裝表演",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-05-17",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-05-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-04-26",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": "遲到"
+        },
+        {
+          "date": "2025-04-10",
+          "name": "學校陸運會",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-04-05",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-03-29",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-03-22",
+          "name": "恆常集會",
           "type": "集會",
           "status": "absent",
-          "note": "請假"
+          "note": ""
         },
         {
-          "date": "2026-03-15",
-          "name": "週六例會",
+          "date": "2025-03-08",
+          "name": "恆常集會",
           "type": "集會",
           "status": "present",
           "note": ""
         },
         {
-          "date": "2026-03-08",
-          "name": "急救訓練日",
-          "type": "訓練",
+          "date": "2025-03-01",
+          "name": "恆常集會",
+          "type": "集會",
           "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-01-18",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-01-11",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-01-04",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2024-12-20",
+          "name": "冬季露營",
+          "type": "露營",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2024-11-30",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2024-11-23",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2024-11-17",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2024-11-08",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2024-10-19",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
           "note": ""
         }
       ],
@@ -359,7 +516,8 @@
             "d-a-2c",
             "d-a-3a",
             "d-a-3b",
-            "d-a-4",
+            "d-a-4a",
+            "d-a-4b",
             "d-b-1a",
             "d-b-2a",
             "d-b-3a",
@@ -370,7 +528,30 @@
             "d-c-2a",
             "d-d-1a",
             "d-d-2a"
-          ]
+          ],
+          "itemCompletedDates": {
+            "d-a-1a": "2022-05-22",
+            "d-a-1b": "2022-06-05",
+            "d-a-1c": "2022-06-20",
+            "d-a-1d": "2022-07-05",
+            "d-a-2a": "2022-07-19",
+            "d-a-2b": "2022-08-03",
+            "d-a-2c": "2022-08-18",
+            "d-a-3a": "2022-09-02",
+            "d-a-3b": "2022-09-16",
+            "d-a-4a": "2022-10-01",
+            "d-a-4b": "2022-10-16",
+            "d-b-1a": "2022-10-30",
+            "d-b-2a": "2022-11-14",
+            "d-b-3a": "2022-11-29",
+            "d-b-4a": "2022-12-13",
+            "d-b-4b": "2022-12-28",
+            "d-c-1a": "2023-01-12",
+            "d-c-1b": "2023-01-27",
+            "d-c-2a": "2023-02-10",
+            "d-d-1a": "2023-02-25",
+            "d-d-2a": "2023-03-12"
+          }
         },
         {
           "key": "standard",
@@ -391,7 +572,9 @@
             "s-a-3a",
             "s-a-3b",
             "s-a-3c",
-            "s-a-4",
+            "s-a-4a",
+            "s-a-4b",
+            "s-a-4c",
             "s-b-1a",
             "s-b-2a",
             "s-b-2b",
@@ -408,7 +591,40 @@
             "s-d-2a",
             "s-d-3a",
             "s-e-1a"
-          ]
+          ],
+          "itemCompletedDates": {
+            "s-a-1a": "2023-04-13",
+            "s-a-1b": "2023-04-27",
+            "s-a-1c": "2023-05-12",
+            "s-a-1d": "2023-05-26",
+            "s-a-1e": "2023-06-10",
+            "s-a-2a": "2023-06-24",
+            "s-a-2b": "2023-07-08",
+            "s-a-2c": "2023-07-23",
+            "s-a-2d": "2023-08-06",
+            "s-a-3a": "2023-08-21",
+            "s-a-3b": "2023-09-04",
+            "s-a-3c": "2023-09-19",
+            "s-a-4a": "2023-10-03",
+            "s-a-4b": "2023-10-18",
+            "s-a-4c": "2023-11-01",
+            "s-b-1a": "2023-11-16",
+            "s-b-2a": "2023-11-30",
+            "s-b-2b": "2023-12-15",
+            "s-b-3a": "2023-12-29",
+            "s-b-4a": "2024-01-13",
+            "s-b-4b": "2024-01-27",
+            "s-c-1a": "2024-02-10",
+            "s-c-1b": "2024-02-25",
+            "s-c-1c": "2024-03-10",
+            "s-c-1d": "2024-03-25",
+            "s-c-2a": "2024-04-08",
+            "s-c-3a": "2024-04-23",
+            "s-d-1a": "2024-05-07",
+            "s-d-2a": "2024-05-22",
+            "s-d-3a": "2024-06-05",
+            "s-e-1a": "2024-06-20"
+          }
         },
         {
           "key": "advanced",
@@ -426,8 +642,20 @@
             "a-a-3a",
             "a-a-3b",
             "a-a-3c",
-            "a-a-4"
-          ]
+            "a-a-4a"
+          ],
+          "itemCompletedDates": {
+            "a-a-1a": "2026-02-20",
+            "a-a-1b": "2026-03-07",
+            "a-a-1c": "2026-03-23",
+            "a-a-2a": "2026-04-07",
+            "a-a-2b": "2026-04-23",
+            "a-a-2c": "2026-05-08",
+            "a-a-3a": "2026-05-24",
+            "a-a-3b": "2026-06-09",
+            "a-a-3c": "2026-06-24",
+            "a-a-4a": "2026-07-10"
+          }
         },
         {
           "key": "chief",
@@ -435,7 +663,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [
@@ -446,7 +675,7 @@
           "group": "interest",
           "icon": "assets/specialty/interest/游泳.png",
           "activityName": "游泳專科徽章考核",
-          "organizer": "新界東第42旅童軍團",
+          "organizer": "新界東第1558旅童軍團",
           "assessmentDate": "2025-07-22",
           "syllabusKey": "interest:游泳",
           "examiner": "李領袖"
@@ -458,7 +687,7 @@
           "group": "interest",
           "icon": "assets/specialty/interest/營地烹飪.png",
           "activityName": "營地烹飪專科徽章考核",
-          "organizer": "新界東第42旅童軍團",
+          "organizer": "新界東第1558旅童軍團",
           "assessmentDate": "2025-03-15",
           "syllabusKey": "interest:營地烹飪",
           "examiner": "王領袖"
@@ -506,7 +735,7 @@
           "group": "other",
           "icon": "assets/specialty/other/服務獎章.png",
           "activityName": "服務獎章考核",
-          "organizer": "新界東第42旅童軍團",
+          "organizer": "新界東第1558旅童軍團",
           "assessmentDate": "2025-06-30",
           "syllabusKey": "other:服務獎章",
           "examiner": "李領袖"
@@ -528,222 +757,425 @@
     {
       "name": "林美欣",
       "scoutId": "HK24015",
-      "troop": "第42旅",
-      "section": "童軍",
-      "rank": "副巡邏長",
+      "troop": "新界東第1558旅",
+      "section": "Eagle小隊",
+      "rank": "副隊",
       "joinDate": "2023-09-01",
       "photo": null,
       "activity": {
-        "attendanceRate": 88,
-        "serviceHours": 32,
-        "campingCount": 4,
+        "attendanceRate": 95,
+        "serviceHours": 50,
+        "campingCount": 3,
         "outdoorActivities": [
           {
-            "name": "西貢露營",
-            "date": "2025-12-06",
-            "type": "露營"
+            "date": "2026-04-18",
+            "name": "參觀博物館",
+            "type": "戶外",
+            "note": "消防及救護教育中心暨博物館"
           },
           {
-            "name": "社區清潔服務",
-            "date": "2026-01-18",
-            "type": "服務"
+            "date": "2026-02-28",
+            "name": "單車活動",
+            "type": "戶外",
+            "note": "大圍至白石角"
           },
           {
-            "name": "船灣郊野公園露營",
-            "date": "2026-02-21",
-            "type": "露營"
+            "date": "2025-11-23",
+            "name": "步行籌款日",
+            "type": "戶外",
+            "note": "塱原自然生態公園"
           },
           {
-            "name": "急救訓練日",
-            "date": "2026-03-08",
-            "type": "訓練"
+            "date": "2025-11-08",
+            "name": "高結構繩網",
+            "type": "戶外",
+            "note": "王兆生領袖訓練中心"
           },
           {
-            "name": "清明植樹服務",
-            "date": "2026-04-05",
-            "type": "服務"
-          },
-          {
-            "name": "長洲露營",
-            "date": "2026-05-16",
-            "type": "露營"
+            "date": "2025-10-26",
+            "name": "香港童軍大會操",
+            "type": "戶外",
+            "note": "香港大球場"
           }
         ],
         "serviceRecords": [
           {
-            "date": "2026-04-05",
-            "name": "清明植樹服務",
-            "hours": 4,
-            "note": ""
-          },
-          {
-            "date": "2026-01-18",
-            "name": "社區清潔服務",
-            "hours": 3,
-            "note": ""
-          },
-          {
-            "date": "2025-12-20",
-            "name": "聖誕老人派禮物",
+            "date": "2026-07-03",
+            "name": "學校時裝表演",
             "hours": 5,
             "note": ""
           },
           {
-            "date": "2025-11-02",
-            "name": "賣旗日",
-            "hours": 6,
+            "date": "2026-05-16",
+            "name": "中六畢業典禮",
+            "hours": 5,
             "note": ""
           },
           {
-            "date": "2025-09-14",
-            "name": "校園清潔服務",
-            "hours": 2,
-            "note": ""
-          },
-          {
-            "date": "2025-08-23",
-            "name": "暑期社區服務日",
+            "date": "2026-03-26",
+            "name": "學校陸運會",
             "hours": 8,
             "note": ""
           },
           {
-            "date": "2025-06-08",
-            "name": "環保回收服務",
-            "hours": 4,
+            "date": "2025-11-16",
+            "name": "學校資訊日",
+            "hours": 5,
+            "note": ""
+          },
+          {
+            "date": "2025-09-29",
+            "name": "學校水運會",
+            "hours": 8,
+            "note": ""
+          },
+          {
+            "date": "2025-07-04",
+            "name": "學校時裝表演",
+            "hours": 6,
+            "note": ""
+          },
+          {
+            "date": "2025-04-10",
+            "name": "學校陸運會",
+            "hours": 8,
+            "note": ""
+          },
+          {
+            "date": "2024-11-17",
+            "name": "學校資訊日",
+            "hours": 5,
             "note": ""
           }
         ],
         "campingRecords": [
           {
-            "date": "2026-05-16",
-            "name": "長洲露營",
-            "nights": 2,
-            "note": ""
-          },
-          {
-            "date": "2026-02-21",
-            "name": "船灣郊野公園露營",
+            "date": "2025-12-19",
+            "name": "冬季露營",
             "nights": 1,
-            "note": ""
+            "note": "王兆生領袖訓練中心"
           },
           {
-            "date": "2025-12-06",
-            "name": "西貢露營",
-            "nights": 2,
-            "note": ""
+            "date": "2025-09-05",
+            "name": "夏季露營",
+            "nights": 1,
+            "note": "白沙灣潭華正海上活動中心"
           },
           {
-            "date": "2025-07-12",
-            "name": "暑假旅露營",
-            "nights": 3,
-            "note": ""
+            "date": "2024-12-20",
+            "name": "冬季露營",
+            "nights": 1,
+            "note": "洞梓童軍中心"
           }
         ]
       },
       "attendance": [
         {
-          "date": "2026-06-14",
-          "name": "水上活動日",
-          "type": "戶外",
-          "status": "absent",
-          "note": "請假"
-        },
-        {
-          "date": "2026-06-07",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-05-31",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-05-24",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-05-16",
-          "name": "長洲露營",
-          "type": "露營",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-05-10",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "absent",
-          "note": ""
-        },
-        {
-          "date": "2026-05-03",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-04-26",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-04-19",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "present",
-          "note": "遲到"
-        },
-        {
-          "date": "2026-04-12",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-04-05",
-          "name": "清明植樹服務",
+          "date": "2026-07-03",
+          "name": "學校時裝表演",
           "type": "服務",
           "status": "present",
           "note": ""
         },
         {
-          "date": "2026-03-29",
-          "name": "週六例會",
+          "date": "2026-05-16",
+          "name": "中六畢業典禮",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-05-09",
+          "name": "恆常集會",
           "type": "集會",
           "status": "present",
           "note": ""
         },
         {
-          "date": "2026-03-22",
-          "name": "週六例會",
+          "date": "2026-04-25",
+          "name": "恆常集會",
           "type": "集會",
           "status": "present",
           "note": ""
         },
         {
-          "date": "2026-03-15",
-          "name": "週六例會",
+          "date": "2026-04-18",
+          "name": "參觀博物館",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-03-26",
+          "name": "學校陸運會",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-03-07",
+          "name": "恆常集會",
           "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-02-28",
+          "name": "單車活動",
+          "type": "戶外",
           "status": "absent",
           "note": ""
         },
         {
-          "date": "2026-03-08",
-          "name": "急救訓練日",
-          "type": "訓練",
+          "date": "2026-02-07",
+          "name": "恆常集會",
+          "type": "集會",
           "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-01-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-01-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-01-17",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-01-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-12-19",
+          "name": "冬季露營",
+          "type": "露營",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-11-23",
+          "name": "步行籌款日",
+          "type": "戶外",
+          "status": "present",
+          "note": "遲到"
+        },
+        {
+          "date": "2025-11-16",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-11-08",
+          "name": "高結構繩網",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-10-26",
+          "name": "香港童軍大會操",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-10-25",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-10-11",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-10-04",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-09-29",
+          "name": "學校水運會",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-09-27",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-09-13",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-09-05",
+          "name": "夏季露營",
+          "type": "露營",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-07-04",
+          "name": "學校時裝表演",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-05-17",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-05-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-04-26",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-04-10",
+          "name": "學校陸運會",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-04-05",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-03-29",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-03-22",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-03-08",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-03-01",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-01-18",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-01-11",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-01-04",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2024-12-20",
+          "name": "冬季露營",
+          "type": "露營",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2024-11-30",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2024-11-23",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2024-11-17",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2024-11-08",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2024-10-19",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
           "note": ""
         }
       ],
@@ -764,7 +1196,8 @@
             "d-a-2c",
             "d-a-3a",
             "d-a-3b",
-            "d-a-4",
+            "d-a-4a",
+            "d-a-4b",
             "d-b-1a",
             "d-b-2a",
             "d-b-3a",
@@ -775,7 +1208,30 @@
             "d-c-2a",
             "d-d-1a",
             "d-d-2a"
-          ]
+          ],
+          "itemCompletedDates": {
+            "d-a-1a": "2023-04-30",
+            "d-a-1b": "2023-05-14",
+            "d-a-1c": "2023-05-29",
+            "d-a-1d": "2023-06-13",
+            "d-a-2a": "2023-06-27",
+            "d-a-2b": "2023-07-12",
+            "d-a-2c": "2023-07-27",
+            "d-a-3a": "2023-08-11",
+            "d-a-3b": "2023-08-25",
+            "d-a-4a": "2023-09-09",
+            "d-a-4b": "2023-09-24",
+            "d-b-1a": "2023-10-08",
+            "d-b-2a": "2023-10-23",
+            "d-b-3a": "2023-11-07",
+            "d-b-4a": "2023-11-21",
+            "d-b-4b": "2023-12-06",
+            "d-c-1a": "2023-12-21",
+            "d-c-1b": "2024-01-05",
+            "d-c-2a": "2024-01-19",
+            "d-d-1a": "2024-02-03",
+            "d-d-2a": "2024-02-18"
+          }
         },
         {
           "key": "standard",
@@ -792,7 +1248,17 @@
             "s-a-2a",
             "s-a-2b",
             "s-a-2c"
-          ]
+          ],
+          "itemCompletedDates": {
+            "s-a-1a": "2026-03-20",
+            "s-a-1b": "2026-04-05",
+            "s-a-1c": "2026-04-21",
+            "s-a-1d": "2026-05-07",
+            "s-a-1e": "2026-05-23",
+            "s-a-2a": "2026-06-08",
+            "s-a-2b": "2026-06-24",
+            "s-a-2c": "2026-07-10"
+          }
         },
         {
           "key": "advanced",
@@ -800,7 +1266,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -808,7 +1275,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [
@@ -819,7 +1287,7 @@
           "group": "interest",
           "icon": "assets/specialty/interest/藝術.png",
           "activityName": "藝術專科徽章考核",
-          "organizer": "新界東第42旅童軍團",
+          "organizer": "新界東第1558旅童軍團",
           "assessmentDate": "2025-09-05",
           "syllabusKey": "interest:藝術",
           "examiner": "王領袖"
@@ -860,181 +1328,424 @@
     {
       "name": "黃子軒",
       "scoutId": "HK25008",
-      "troop": "第42旅",
-      "section": "童軍",
+      "troop": "新界東第1558旅",
+      "section": "Falcon小隊",
       "rank": "隊員",
       "joinDate": "2025-09-01",
       "photo": null,
       "activity": {
-        "attendanceRate": 95,
-        "serviceHours": 16,
-        "campingCount": 2,
+        "attendanceRate": 98,
+        "serviceHours": 50,
+        "campingCount": 3,
         "outdoorActivities": [
           {
-            "name": "急救訓練日",
-            "date": "2026-03-08",
-            "type": "訓練"
+            "date": "2026-04-18",
+            "name": "參觀博物館",
+            "type": "戶外",
+            "note": "消防及救護教育中心暨博物館"
           },
           {
-            "name": "清明植樹服務",
-            "date": "2026-04-05",
-            "type": "服務"
+            "date": "2026-02-28",
+            "name": "單車活動",
+            "type": "戶外",
+            "note": "大圍至白石角"
           },
           {
-            "name": "長洲露營",
-            "date": "2026-05-16",
-            "type": "露營"
+            "date": "2025-11-23",
+            "name": "步行籌款日",
+            "type": "戶外",
+            "note": "塱原自然生態公園"
           },
           {
-            "name": "水上活動日",
-            "date": "2026-06-14",
-            "type": "戶外"
+            "date": "2025-11-08",
+            "name": "高結構繩網",
+            "type": "戶外",
+            "note": "王兆生領袖訓練中心"
+          },
+          {
+            "date": "2025-10-26",
+            "name": "香港童軍大會操",
+            "type": "戶外",
+            "note": "香港大球場"
           }
         ],
         "serviceRecords": [
           {
-            "date": "2026-04-05",
-            "name": "清明植樹服務",
-            "hours": 4,
-            "note": ""
-          },
-          {
-            "date": "2026-01-18",
-            "name": "社區清潔服務",
-            "hours": 3,
-            "note": ""
-          },
-          {
-            "date": "2025-12-20",
-            "name": "聖誕老人派禮物",
+            "date": "2026-07-03",
+            "name": "學校時裝表演",
             "hours": 5,
             "note": ""
           },
           {
-            "date": "2025-11-02",
-            "name": "賣旗日",
-            "hours": 4,
+            "date": "2026-05-16",
+            "name": "中六畢業典禮",
+            "hours": 5,
+            "note": ""
+          },
+          {
+            "date": "2026-03-26",
+            "name": "學校陸運會",
+            "hours": 8,
+            "note": ""
+          },
+          {
+            "date": "2025-11-16",
+            "name": "學校資訊日",
+            "hours": 5,
+            "note": ""
+          },
+          {
+            "date": "2025-09-29",
+            "name": "學校水運會",
+            "hours": 8,
+            "note": ""
+          },
+          {
+            "date": "2025-07-04",
+            "name": "學校時裝表演",
+            "hours": 6,
+            "note": ""
+          },
+          {
+            "date": "2025-04-10",
+            "name": "學校陸運會",
+            "hours": 8,
+            "note": ""
+          },
+          {
+            "date": "2024-11-17",
+            "name": "學校資訊日",
+            "hours": 5,
             "note": ""
           }
         ],
         "campingRecords": [
           {
-            "date": "2026-05-16",
-            "name": "長洲露營",
-            "nights": 2,
-            "note": ""
+            "date": "2025-12-19",
+            "name": "冬季露營",
+            "nights": 1,
+            "note": "王兆生領袖訓練中心"
           },
           {
-            "date": "2025-12-06",
-            "name": "西貢露營",
+            "date": "2025-09-05",
+            "name": "夏季露營",
             "nights": 1,
-            "note": ""
+            "note": "白沙灣潭華正海上活動中心"
+          },
+          {
+            "date": "2024-12-20",
+            "name": "冬季露營",
+            "nights": 1,
+            "note": "洞梓童軍中心"
           }
         ]
       },
       "attendance": [
         {
-          "date": "2026-06-14",
-          "name": "水上活動日",
-          "type": "戶外",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-06-07",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-05-31",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-05-24",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-05-16",
-          "name": "長洲露營",
-          "type": "露營",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-05-10",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-05-03",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "present",
-          "note": "遲到"
-        },
-        {
-          "date": "2026-04-26",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-04-19",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-04-12",
-          "name": "週六例會",
-          "type": "集會",
-          "status": "present",
-          "note": ""
-        },
-        {
-          "date": "2026-04-05",
-          "name": "清明植樹服務",
+          "date": "2026-07-03",
+          "name": "學校時裝表演",
           "type": "服務",
           "status": "present",
           "note": ""
         },
         {
-          "date": "2026-03-29",
-          "name": "週六例會",
+          "date": "2026-05-16",
+          "name": "中六畢業典禮",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-05-09",
+          "name": "恆常集會",
           "type": "集會",
           "status": "present",
           "note": ""
         },
         {
-          "date": "2026-03-22",
-          "name": "週六例會",
+          "date": "2026-04-25",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-04-18",
+          "name": "參觀博物館",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-03-26",
+          "name": "學校陸運會",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-03-07",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-02-28",
+          "name": "單車活動",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-02-07",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-01-31",
+          "name": "恆常集會",
           "type": "集會",
           "status": "absent",
           "note": ""
         },
         {
-          "date": "2026-03-15",
-          "name": "週六例會",
+          "date": "2026-01-24",
+          "name": "恆常集會",
           "type": "集會",
           "status": "present",
           "note": ""
         },
         {
-          "date": "2026-03-08",
-          "name": "急救訓練日",
-          "type": "訓練",
+          "date": "2026-01-17",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-01-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-12-19",
+          "name": "冬季露營",
+          "type": "露營",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-11-23",
+          "name": "步行籌款日",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-11-16",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-11-08",
+          "name": "高結構繩網",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-10-26",
+          "name": "香港童軍大會操",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-10-25",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-10-11",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-10-04",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-09-29",
+          "name": "學校水運會",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-09-27",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-09-13",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-09-05",
+          "name": "夏季露營",
+          "type": "露營",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-07-04",
+          "name": "學校時裝表演",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-05-17",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-05-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-04-26",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-04-10",
+          "name": "學校陸運會",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-04-05",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-03-29",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-03-22",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-03-08",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-03-01",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-01-18",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-01-11",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2025-01-04",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2024-12-20",
+          "name": "冬季露營",
+          "type": "露營",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2024-11-30",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2024-11-23",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2024-11-17",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2024-11-08",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2024-10-19",
+          "name": "恆常集會",
+          "type": "集會",
           "status": "present",
           "note": ""
         }
@@ -1053,7 +1764,15 @@
             "d-a-1d",
             "d-a-2a",
             "d-a-2b"
-          ]
+          ],
+          "itemCompletedDates": {
+            "d-a-1a": "2026-04-11",
+            "d-a-1b": "2026-04-29",
+            "d-a-1c": "2026-05-17",
+            "d-a-1d": "2026-06-04",
+            "d-a-2a": "2026-06-22",
+            "d-a-2b": "2026-07-10"
+          }
         },
         {
           "key": "standard",
@@ -1061,7 +1780,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -1069,7 +1789,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -1077,7 +1798,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [
@@ -1088,7 +1810,7 @@
           "group": "interest",
           "icon": "assets/specialty/interest/釣魚.png",
           "activityName": "釣魚專科徽章考核",
-          "organizer": "新界東第42旅童軍團",
+          "organizer": "新界東第1558旅童軍團",
           "assessmentDate": "2026-01-25",
           "syllabusKey": "interest:釣魚",
           "examiner": "李領袖"
@@ -1101,7 +1823,7 @@
       "scoutId": "2025045143",
       "englishName": "WANG Zixi",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Cobra小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -1121,7 +1843,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -1129,7 +1852,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -1137,7 +1861,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -1145,7 +1870,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -1156,7 +1882,7 @@
       "scoutId": "2025021995",
       "englishName": "WONG Yuet Ching",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Eagle小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -1176,7 +1902,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -1184,7 +1911,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -1192,7 +1920,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -1200,7 +1929,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -1211,7 +1941,7 @@
       "scoutId": "2026000238",
       "englishName": "YU Sum Pui",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Falcon小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -1231,7 +1961,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -1239,7 +1970,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -1247,7 +1979,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -1255,7 +1988,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -1266,7 +2000,7 @@
       "scoutId": "2025045135",
       "englishName": "LEE Choi Lap",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Otter小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -1286,7 +2020,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -1294,7 +2029,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -1302,7 +2038,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -1310,7 +2047,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -1321,7 +2059,7 @@
       "scoutId": "2026000204",
       "englishName": "LI Wing Ki",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Cobra小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -1341,7 +2079,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -1349,7 +2088,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -1357,7 +2097,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -1365,7 +2106,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -1376,7 +2118,7 @@
       "scoutId": "2025021912",
       "englishName": "LI HOI CHING",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Eagle小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -1396,7 +2138,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -1404,7 +2147,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -1412,7 +2156,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -1420,7 +2165,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -1431,7 +2177,7 @@
       "scoutId": "2025045200",
       "englishName": "LEE Hung Kwan",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Falcon小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -1451,7 +2197,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -1459,7 +2206,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -1467,7 +2215,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -1475,7 +2224,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -1486,7 +2236,7 @@
       "scoutId": "2019048160",
       "englishName": "CHOW Fung Hoi",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Otter小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -1506,7 +2256,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -1514,7 +2265,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -1522,7 +2274,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -1530,7 +2283,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -1541,7 +2295,7 @@
       "scoutId": "2025045317",
       "englishName": "WOO Kiu Lap",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Cobra小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -1561,7 +2315,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -1569,7 +2324,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -1577,7 +2333,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -1585,7 +2342,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -1596,7 +2354,7 @@
       "scoutId": "2025045168",
       "englishName": "MA Haozhe",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Eagle小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -1616,7 +2374,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -1624,7 +2383,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -1632,7 +2392,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -1640,7 +2401,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -1651,7 +2413,7 @@
       "scoutId": "2025045309",
       "englishName": "KO Cheuk Yin",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Falcon小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -1671,7 +2433,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -1679,7 +2442,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -1687,7 +2451,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -1695,7 +2460,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -1706,7 +2472,7 @@
       "scoutId": "2025098340",
       "englishName": "CHEUNG Sum Yu",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Otter小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -1726,7 +2492,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -1734,7 +2501,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -1742,7 +2510,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -1750,7 +2519,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -1761,7 +2531,7 @@
       "scoutId": "2025045226",
       "englishName": "CHEUNG Ho Hang",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Cobra小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -1781,7 +2551,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -1789,7 +2560,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -1797,7 +2569,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -1805,7 +2578,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -1816,7 +2590,7 @@
       "scoutId": "2026000188",
       "englishName": "LEUNG Nok Yin Curtis",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Eagle小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -1836,7 +2610,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -1844,7 +2619,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -1852,7 +2628,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -1860,7 +2637,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -1871,7 +2649,7 @@
       "scoutId": "2025045184",
       "englishName": "HUI Hei Yuet",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Falcon小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -1891,7 +2669,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -1899,7 +2678,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -1907,7 +2687,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -1915,7 +2696,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -1926,7 +2708,7 @@
       "scoutId": "2025045069",
       "englishName": "KWOK Cham Yin",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Otter小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -1946,7 +2728,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -1954,7 +2737,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -1962,7 +2746,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -1970,7 +2755,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -1981,7 +2767,7 @@
       "scoutId": "2025045218",
       "englishName": "CHAN Corey",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Cobra小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -2001,7 +2787,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -2009,7 +2796,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -2017,7 +2805,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -2025,7 +2814,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -2036,7 +2826,7 @@
       "scoutId": "2026000170",
       "englishName": "CHAN Pui Tin Jasper",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Eagle小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -2056,7 +2846,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -2064,7 +2855,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -2072,7 +2864,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -2080,7 +2873,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -2091,7 +2885,7 @@
       "scoutId": "2025098357",
       "englishName": "CHEN Victor",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Falcon小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -2111,7 +2905,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -2119,7 +2914,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -2127,7 +2923,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -2135,7 +2932,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -2146,7 +2944,7 @@
       "scoutId": "2022015701",
       "englishName": "CHAN Lok Hei",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Otter小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -2166,7 +2964,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -2174,7 +2973,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -2182,7 +2982,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -2190,7 +2991,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -2201,7 +3003,7 @@
       "scoutId": "2025045275",
       "englishName": "CHEN Morgan",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Cobra小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -2221,7 +3023,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -2229,7 +3032,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -2237,7 +3041,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -2245,7 +3050,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -2256,7 +3062,7 @@
       "scoutId": "2026000162",
       "englishName": "HUANG Mingyi",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Eagle小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -2276,7 +3082,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -2284,7 +3091,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -2292,7 +3100,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -2300,7 +3109,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -2311,7 +3121,7 @@
       "scoutId": "2025021599",
       "englishName": "WONG Sum Yiu",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Falcon小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -2331,7 +3141,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -2339,7 +3150,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -2347,7 +3159,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -2355,7 +3168,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -2366,7 +3180,7 @@
       "scoutId": "2025045101",
       "englishName": "YEUNG Annabella",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Otter小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -2386,7 +3200,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -2394,7 +3209,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -2402,7 +3218,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -2410,7 +3227,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -2421,7 +3239,7 @@
       "scoutId": "2025098332",
       "englishName": "YIP Sin Ying Ava",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Cobra小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -2441,7 +3259,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -2449,7 +3268,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -2457,7 +3277,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -2465,7 +3286,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -2476,7 +3298,7 @@
       "scoutId": "2026000089",
       "englishName": "LAU Yu Chak",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Eagle小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -2496,7 +3318,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -2504,7 +3327,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -2512,7 +3336,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -2520,7 +3345,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -2531,7 +3357,7 @@
       "scoutId": "2025045077",
       "englishName": "LAU Ka Ching",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Falcon小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -2551,7 +3377,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -2559,7 +3386,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -2567,7 +3395,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -2575,7 +3404,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -2586,7 +3416,7 @@
       "scoutId": "2026000196",
       "englishName": "LIU Chaoyang",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Otter小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -2606,7 +3436,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -2614,7 +3445,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -2622,7 +3454,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -2630,7 +3463,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -2641,7 +3475,7 @@
       "scoutId": "2025045283",
       "englishName": "CHOI Cheuk Yin",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Cobra小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -2661,7 +3495,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -2669,7 +3504,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -2677,7 +3513,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -2685,7 +3522,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -2696,7 +3534,7 @@
       "scoutId": "2022068510",
       "englishName": "CHOY Chun Hei",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Eagle小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -2716,7 +3554,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -2724,7 +3563,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -2732,7 +3572,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -2740,7 +3581,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -2751,7 +3593,7 @@
       "scoutId": "2025045234",
       "englishName": "CHIANG Lai Him",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Falcon小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -2771,7 +3613,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -2779,7 +3622,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -2787,7 +3631,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -2795,7 +3640,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -2806,7 +3652,7 @@
       "scoutId": "2026000246",
       "englishName": "LO Lok Yan",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Otter小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -2826,7 +3672,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -2834,7 +3681,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -2842,7 +3690,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -2850,7 +3699,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -2861,7 +3711,7 @@
       "scoutId": "2025021615",
       "englishName": "TSE Tsz Chun Angus",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Cobra小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -2881,7 +3731,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -2889,7 +3740,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -2897,7 +3749,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -2905,7 +3758,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -2916,7 +3770,7 @@
       "scoutId": "2026000220",
       "englishName": "TSE Choi Ching",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Eagle小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -2936,7 +3790,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -2944,7 +3799,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -2952,7 +3808,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -2960,7 +3817,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -2971,7 +3829,7 @@
       "scoutId": "2026000212",
       "englishName": "LOR Tsz Yau",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Falcon小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -2991,7 +3849,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -2999,7 +3858,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -3007,7 +3867,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -3015,7 +3876,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -3026,7 +3888,7 @@
       "scoutId": "2025045085",
       "englishName": "LAW Chun Lam",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Otter小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -3046,7 +3908,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -3054,7 +3917,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -3062,7 +3926,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -3070,7 +3935,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],
@@ -3081,7 +3947,7 @@
       "scoutId": "2025098324",
       "englishName": "KWAN King Lok",
       "troop": "新界東第1558旅",
-      "section": "童軍",
+      "section": "Cobra小隊",
       "rank": "隊員",
       "joinDate": "",
       "photo": null,
@@ -3101,7 +3967,8 @@
           "icon": "assets/badge-discovery.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "standard",
@@ -3109,7 +3976,8 @@
           "icon": "assets/badge-standard.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "advanced",
@@ -3117,7 +3985,8 @@
           "icon": "assets/badge-advanced.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         },
         {
           "key": "chief",
@@ -3125,7 +3994,8 @@
           "icon": "assets/badge-chief.png",
           "status": "not_started",
           "completedDate": null,
-          "completedIds": []
+          "completedIds": [],
+          "itemCompletedDates": {}
         }
       ],
       "specialtyBadges": [],

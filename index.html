@@ -94,13 +94,14 @@
         <div class="profile-banner">
           <div class="profile-avatar" id="profile-avatar" aria-hidden="true"></div>
           <div class="profile-info">
-            <h2 id="profile-heading" class="profile-name"></h2>
+            <h2 id="profile-heading" class="profile-name">
+              <span id="profile-name-text"></span>
+              <span id="profile-rank" class="profile-rank"></span>
+            </h2>
             <p class="profile-detail">
               <span id="profile-troop"></span>
               <span class="dot" aria-hidden="true">·</span>
               <span id="profile-section"></span>
-              <span class="dot" aria-hidden="true">·</span>
-              <span id="profile-rank"></span>
             </p>
             <p class="profile-join">加入日期：<time id="profile-join"></time></p>
           </div>
@@ -236,9 +237,16 @@
 
           <div id="activity-detail-view" class="activity-detail-view" hidden>
             <button type="button" id="activity-back-btn" class="btn-back">← 返回活動記錄</button>
-            <header class="panel-header">
-              <h2 id="activity-detail-title"></h2>
-              <p id="activity-detail-subtitle"></p>
+            <header class="panel-header activity-detail-header" id="activity-detail-header">
+              <div class="activity-detail-heading">
+                <h2 id="activity-detail-title"></h2>
+                <p id="activity-detail-subtitle"></p>
+                <div id="activity-year-switcher" class="att-year-switcher" hidden role="group" aria-label="選擇年度"></div>
+              </div>
+              <div id="activity-detail-overview" class="activity-detail-overview" hidden>
+                <div id="activity-detail-stats" class="activity-detail-stats"></div>
+                <div id="activity-detail-chart" class="activity-detail-chart"></div>
+              </div>
             </header>
             <div id="activity-detail-content"></div>
           </div>

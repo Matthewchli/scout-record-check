@@ -112,12 +112,50 @@
     const completed = new Set(badge.completedIds || []);
     let done = 0;
     let total = 0;
+    const electiveSeen = new Set();
+
     for (const section of syl.sections) {
-      const sp = sectionProgress(section, completed);
-      done += sp.done;
-      total += sp.total;
+      for (const sub of section.subsections) {
+        if (sub.electiveGroup) {
+          if (electiveSeen.has(sub.electiveGroup)) continue;
+          electiveSeen.add(sub.electiveGroup);
+          const tracks = collectElectiveTracks(syl, sub.electiveGroup);
+          const chosen = chooseElectiveTrack(tracks, completed);
+          total += chosen.items.length;
+          done += chosen.items.filter((it) => completed.has(it.id)).length;
+        } else {
+          for (const item of sub.items) {
+            total += 1;
+            if (completed.has(item.id)) done += 1;
+          }
+        }
+      }
     }
     return { done, total, pct: total ? Math.round((done / total) * 100) : 0 };
+  }
+
+  function collectElectiveTracks(syl, groupId) {
+    const tracks = [];
+    for (const section of syl.sections) {
+      for (const sub of section.subsections) {
+        if (sub.electiveGroup === groupId) tracks.push(sub);
+      }
+    }
+    return tracks;
+  }
+
+  function chooseElectiveTrack(tracks, completedSet) {
+    if (!tracks.length) return { items: [] };
+    let best = tracks[0];
+    let bestDone = -1;
+    for (const track of tracks) {
+      const n = track.items.filter((it) => completedSet.has(it.id)).length;
+      if (n > bestDone) {
+        bestDone = n;
+        best = track;
+      }
+    }
+    return best;
   }
 
   function collectItemIds(syl) {
@@ -133,11 +171,18 @@
   function sectionProgress(section, completedSet) {
     let done = 0;
     let total = 0;
+    const electiveSeen = new Set();
+
     for (const sub of section.subsections) {
-      if (sub.elective) {
-        // 4／5／6 選修：完成其中一項即可，進度只計 1 項
-        total += 1;
-        if (sub.items.some((item) => completedSet.has(item.id))) done += 1;
+      if (sub.electiveGroup) {
+        if (electiveSeen.has(sub.electiveGroup)) continue;
+        electiveSeen.add(sub.electiveGroup);
+        const tracks = section.subsections.filter(
+          (s) => s.electiveGroup === sub.electiveGroup
+        );
+        const chosen = chooseElectiveTrack(tracks, completedSet);
+        total += chosen.items.length;
+        done += chosen.items.filter((it) => completedSet.has(it.id)).length;
       } else {
         for (const item of sub.items) {
           total += 1;
@@ -248,10 +293,12 @@
     $("#header-name").textContent = member.name;
     $("#header-id").textContent = member.scoutId;
     $("#profile-avatar").textContent = initials(member.name);
-    $("#profile-heading").textContent = member.name;
+    const nameText = $("#profile-name-text");
+    if (nameText) nameText.textContent = member.name;
+    else $("#profile-heading").textContent = member.name;
+    $("#profile-rank").textContent = member.rank || "";
     $("#profile-troop").textContent = member.troop;
     $("#profile-section").textContent = member.section;
-    $("#profile-rank").textContent = member.rank;
     const joinEl = $("#profile-join");
     joinEl.textContent = formatDate(member.joinDate);
     joinEl.setAttribute("datetime", member.joinDate);
@@ -264,17 +311,36 @@
     if (detailView) detailView.hidden = true;
   }
 
+  let attendanceRingAnim = null;
+  let selectedAttendanceYear = "2025-2026";
+  const ATTENDANCE_YEARS = ["2026-2027", "2025-2026", "2024-2025"];
+
   function showActivityList() {
     const listView = $("#activity-list-view");
     const detailView = $("#activity-detail-view");
     if (listView) listView.hidden = false;
     if (detailView) detailView.hidden = true;
+    if (attendanceRingAnim) {
+      cancelAnimationFrame(attendanceRingAnim);
+      attendanceRingAnim = null;
+    }
+    const overviewEl = $("#activity-detail-overview");
+    if (overviewEl) overviewEl.hidden = true;
+    const chartEl = $("#activity-detail-chart");
+    if (chartEl) chartEl.innerHTML = "";
+    const statsEl = $("#activity-detail-stats");
+    if (statsEl) statsEl.innerHTML = "";
+    const yearSwitcher = $("#activity-year-switcher");
+    if (yearSwitcher) {
+      yearSwitcher.hidden = true;
+      yearSwitcher.innerHTML = "";
+    }
   }
 
   function showActivityDetail(kind) {
     if (!currentMember) return;
     const titles = {
-      attendance: { title: "出席率", subtitle: "集會與活動出席明細" },
+      attendance: { title: "出席率", subtitle: "" },
       service: { title: "服務時數", subtitle: "服務活動明細" },
       camping: { title: "露營次數", subtitle: "露營活動明細" },
       outdoor: { title: "戶外活動", subtitle: "參與過的戶外活動明細" },
@@ -285,16 +351,237 @@
     $("#activity-list-view").hidden = true;
     $("#activity-detail-view").hidden = false;
     $("#activity-detail-title").textContent = meta.title;
-    $("#activity-detail-subtitle").textContent = meta.subtitle;
-    $("#activity-detail-content").innerHTML = renderActivityDetailContent(
-      currentMember,
-      kind
-    );
+
+    const subtitleEl = $("#activity-detail-subtitle");
+    if (meta.subtitle) {
+      subtitleEl.hidden = false;
+      subtitleEl.textContent = meta.subtitle;
+    } else {
+      subtitleEl.hidden = true;
+      subtitleEl.textContent = "";
+    }
+
+    if (kind === "attendance") {
+      refreshAttendanceDetail(currentMember, true);
+    } else {
+      renderAttendanceYearSwitcher(false);
+      setAttendanceOverviewVisible(false);
+      const statsEl = $("#activity-detail-stats");
+      if (statsEl) statsEl.innerHTML = "";
+      renderActivityDetailChart(currentMember, kind);
+      $("#activity-detail-content").innerHTML = renderActivityDetailContent(
+        currentMember,
+        kind
+      );
+    }
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  function getAttendanceStats(member) {
-    const records = member.attendance || [];
+  function refreshAttendanceDetail(member, animateRing = true) {
+    renderActivityDetailStats(member, "attendance");
+    if (animateRing) {
+      renderActivityDetailChart(member, "attendance");
+    } else {
+      updateAttendanceRingInstant(member);
+    }
+    $("#activity-detail-content").innerHTML = renderActivityDetailContent(
+      member,
+      "attendance"
+    );
+  }
+
+  function scoutYearRange(yearKey) {
+    const [startYear] = String(yearKey).split("-").map(Number);
+    return {
+      start: `${startYear}-09-01`,
+      end: `${startYear + 1}-08-31`,
+    };
+  }
+
+  function filterAttendanceByYear(records, yearKey) {
+    const { start, end } = scoutYearRange(yearKey);
+    return (records || []).filter((r) => r.date >= start && r.date <= end);
+  }
+
+  function renderAttendanceYearSwitcher(visible) {
+    const switcher = $("#activity-year-switcher");
+    if (!switcher) return;
+
+    if (!visible) {
+      switcher.hidden = true;
+      switcher.innerHTML = "";
+      return;
+    }
+
+    switcher.hidden = false;
+    switcher.innerHTML = ATTENDANCE_YEARS.map((y) => {
+      const active = y === selectedAttendanceYear;
+      return `
+        <button
+          type="button"
+          class="att-year-btn${active ? " is-active" : ""}"
+          data-year="${y}"
+          aria-pressed="${active ? "true" : "false"}"
+        >${y}</button>`;
+    }).join("");
+
+    switcher.querySelectorAll(".att-year-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const year = btn.dataset.year;
+        if (!year || year === selectedAttendanceYear) return;
+        selectedAttendanceYear = year;
+        if (currentMember) refreshAttendanceDetail(currentMember, true);
+      });
+    });
+  }
+
+  function setAttendanceOverviewVisible(visible) {
+    const overviewEl = $("#activity-detail-overview");
+    if (overviewEl) overviewEl.hidden = !visible;
+  }
+
+  function renderActivityDetailStats(member, kind) {
+    const statsEl = $("#activity-detail-stats");
+    if (!statsEl) return;
+
+    if (kind !== "attendance") {
+      renderAttendanceYearSwitcher(false);
+      setAttendanceOverviewVisible(false);
+      statsEl.innerHTML = "";
+      return;
+    }
+
+    renderAttendanceYearSwitcher(true);
+    setAttendanceOverviewVisible(true);
+
+    const { counts, total } = getAttendanceStats(member, selectedAttendanceYear);
+    const present = counts.present || 0;
+    const absent = counts.absent || 0;
+
+    statsEl.innerHTML = `
+      <ul class="att-stat-cards" aria-label="出席統計">
+        <li class="att-stat-card att-stat-card--present">
+          <span class="att-stat-card-value">${present}</span>
+          <span class="att-stat-card-label">出席次數</span>
+        </li>
+        <li class="att-stat-card att-stat-card--absent">
+          <span class="att-stat-card-value">${absent}</span>
+          <span class="att-stat-card-label">缺席次數</span>
+        </li>
+        <li class="att-stat-card att-stat-card--total">
+          <span class="att-stat-card-value">${total}</span>
+          <span class="att-stat-card-label">活動總數</span>
+        </li>
+      </ul>
+    `;
+  }
+
+  function renderActivityDetailChart(member, kind) {
+    const chartEl = $("#activity-detail-chart");
+    if (!chartEl) return;
+
+    if (attendanceRingAnim) {
+      cancelAnimationFrame(attendanceRingAnim);
+      attendanceRingAnim = null;
+    }
+
+    if (kind !== "attendance") {
+      setAttendanceOverviewVisible(false);
+      chartEl.innerHTML = "";
+      return;
+    }
+
+    setAttendanceOverviewVisible(true);
+
+    const { counts, total, rate } = getAttendanceStats(
+      member,
+      selectedAttendanceYear
+    );
+    const present = counts.present || 0;
+    const absent = counts.absent || 0;
+    const presentPct = total ? (present / total) * 100 : 0;
+    const absentPct = total ? (absent / total) * 100 : 0;
+
+    chartEl.innerHTML = `
+      <div class="att-ring" role="img" aria-label="${selectedAttendanceYear}年度出席率 ${rate}%，出席 ${present} 次，缺席 ${absent} 次，共 ${total} 次">
+        <div class="att-ring-chart" id="att-ring-chart" style="background: conic-gradient(var(--cream-warm) 0 100%);">
+          <div class="att-ring-hole">
+            <span class="att-ring-value" id="att-ring-value">0%</span>
+            <span class="att-ring-label">出席率</span>
+          </div>
+        </div>
+      </div>
+    `;
+
+    animateAttendanceRing(rate, presentPct, absentPct);
+  }
+
+  function updateAttendanceRingInstant(member) {
+    const { counts, total, rate } = getAttendanceStats(
+      member,
+      selectedAttendanceYear
+    );
+    const presentPct = total ? (counts.present / total) * 100 : 0;
+    const absentPct = total ? (counts.absent / total) * 100 : 0;
+    const chart = $("#att-ring-chart");
+    const valueEl = $("#att-ring-value");
+    if (!chart || !valueEl) {
+      renderActivityDetailChart(member, "attendance");
+      return;
+    }
+    const endPresent = presentPct;
+    const endAbsent = presentPct + absentPct;
+    chart.style.background = `conic-gradient(
+      var(--green-mid) 0 ${endPresent}%,
+      #c45c5c ${endPresent}% ${endAbsent}%,
+      var(--cream-warm) ${endAbsent}% 100%
+    )`;
+    valueEl.textContent = `${rate}%`;
+  }
+
+  function animateAttendanceRing(targetRate, presentPct, absentPct) {
+    const chart = $("#att-ring-chart");
+    const valueEl = $("#att-ring-value");
+    if (!chart || !valueEl) return;
+
+    const duration = 2000;
+    const start = performance.now();
+
+    function easeOutCubic(t) {
+      return 1 - Math.pow(1 - t, 3);
+    }
+
+    function paint(p, a, shownRate) {
+      const endPresent = p;
+      const endAbsent = p + a;
+      chart.style.background = `conic-gradient(
+        var(--green-mid) 0 ${endPresent}%,
+        #c45c5c ${endPresent}% ${endAbsent}%,
+        var(--cream-warm) ${endAbsent}% 100%
+      )`;
+      valueEl.textContent = `${Math.round(shownRate)}%`;
+    }
+
+    paint(0, 0, 0);
+
+    function frame(now) {
+      const t = Math.min(1, (now - start) / duration);
+      const e = easeOutCubic(t);
+      paint(presentPct * e, absentPct * e, targetRate * e);
+      if (t < 1) {
+        attendanceRingAnim = requestAnimationFrame(frame);
+      } else {
+        paint(presentPct, absentPct, targetRate);
+        attendanceRingAnim = null;
+      }
+    }
+
+    attendanceRingAnim = requestAnimationFrame(frame);
+  }
+
+  function getAttendanceStats(member, yearKey) {
+    const all = member.attendance || [];
+    const records = yearKey ? filterAttendanceByYear(all, yearKey) : all;
     const counts = { present: 0, absent: 0 };
     for (const r of records) {
       const status = normalizeAttendanceStatus(r);
@@ -303,7 +590,9 @@
     const total = records.length;
     const rate = total
       ? Math.round((counts.present / total) * 100)
-      : (member.activity && member.activity.attendanceRate) || 0;
+      : yearKey
+        ? 0
+        : (member.activity && member.activity.attendanceRate) || 0;
     return { records, counts, total, rate };
   }
 
@@ -352,17 +641,7 @@
 
   function renderActivityDetailContent(member, kind) {
     if (kind === "attendance") {
-      const { records, counts, total, rate } = getAttendanceStats(member);
-      const summary = `
-        <div class="detail-meta">
-          <span>出席率 <strong>${rate}%</strong></span>
-          <span>出席 ${counts.present}</span>
-          <span>缺席 ${counts.absent}</span>
-          <span>共 ${total} 次</span>
-        </div>`;
-      if (!records.length) {
-        return `${summary}<p class="empty-state">暫無出席紀錄</p>`;
-      }
+      const { records } = getAttendanceStats(member, selectedAttendanceYear);
       const rows = [...records]
         .sort((a, b) => b.date.localeCompare(a.date))
         .map((r) => {
@@ -378,9 +657,16 @@
           </tr>`;
         })
         .join("");
-      return `${summary}
+      return `
         <div class="attendance-table-wrap">
-          <table class="attendance-table" aria-label="出席明細">
+          <table class="attendance-table attendance-table--attendance" aria-label="出席明細">
+            <colgroup>
+              <col class="col-date" />
+              <col class="col-name" />
+              <col class="col-type" />
+              <col class="col-status" />
+              <col class="col-note" />
+            </colgroup>
             <thead>
               <tr>
                 <th scope="col">日期</th>
@@ -415,7 +701,6 @@
             <td><time datetime="${r.date}">${formatDate(r.date)}</time></td>
             <td>${escapeHtml(r.name)}</td>
             <td>${r.hours != null && r.hours !== "" ? `${r.hours} 小時` : "—"}</td>
-            <td class="att-note">${r.note ? escapeHtml(r.note) : "—"}</td>
           </tr>`
         )
         .join("");
@@ -427,7 +712,6 @@
                 <th scope="col">日期</th>
                 <th scope="col">服務項目</th>
                 <th scope="col">時數</th>
-                <th scope="col">備註</th>
               </tr>
             </thead>
             <tbody>${rows}</tbody>
@@ -466,7 +750,7 @@
                 <th scope="col">日期</th>
                 <th scope="col">露營活動</th>
                 <th scope="col">晚數</th>
-                <th scope="col">備註</th>
+                <th scope="col">地點</th>
               </tr>
             </thead>
             <tbody>${rows}</tbody>
@@ -483,17 +767,29 @@
       if (!records.length) {
         return `${summary}<p class="empty-state">暫無戶外活動紀錄</p>`;
       }
-      const items = records
+      const rows = records
         .map(
-          (act) => `
-          <li class="activity-item">
-            <span class="activity-type type-${act.type}">${escapeHtml(act.type)}</span>
-            <span class="activity-name">${escapeHtml(act.name)}</span>
-            <time class="activity-date" datetime="${act.date}">${formatDate(act.date)}</time>
-          </li>`
+          (r) => `
+          <tr>
+            <td><time datetime="${r.date}">${formatDate(r.date)}</time></td>
+            <td>${escapeHtml(r.name)}</td>
+            <td class="att-note">${r.note ? escapeHtml(r.note) : "—"}</td>
+          </tr>`
         )
         .join("");
-      return `${summary}<ul class="activity-list">${items}</ul>`;
+      return `${summary}
+        <div class="attendance-table-wrap">
+          <table class="attendance-table" aria-label="戶外活動明細">
+            <thead>
+              <tr>
+                <th scope="col">日期</th>
+                <th scope="col">活動名稱</th>
+                <th scope="col">地點</th>
+              </tr>
+            </thead>
+            <tbody>${rows}</tbody>
+          </table>
+        </div>`;
     }
 
     return `<p class="empty-state">暫無資料</p>`;
@@ -541,36 +837,55 @@
     sectionsEl.innerHTML = syl.sections
       .map((section) => {
         const sp = sectionProgress(section, completed);
+        const electiveTipShown = new Set();
         const subsHtml = section.subsections
           .map((sub) => {
             const itemsHtml = sub.items
               .map((it) => {
                 const isDone = completed.has(it.id);
+                const completedOn =
+                  isDone &&
+                  progress.itemCompletedDates &&
+                  progress.itemCompletedDates[it.id]
+                    ? progress.itemCompletedDates[it.id]
+                    : null;
                 const details = (it.details || [])
                   .map((d) => `<li>${escapeHtml(d)}</li>`)
                   .join("");
                 return `
                   <li class="syllabus-item ${isDone ? "done" : "pending"}">
                     <div class="syllabus-item-head">
-                      <span class="item-status ${isDone ? "is-done" : "is-pending"}">${isDone ? "已完成" : "未完成"}</span>
                       <span class="syllabus-item-title">${escapeHtml(it.title)}</span>
+                      <div class="item-status-block">
+                        <span class="item-status ${isDone ? "is-done" : "is-pending"}">${isDone ? "已完成" : "未完成"}</span>
+                        ${
+                          completedOn
+                            ? `<time class="item-completed-date" datetime="${completedOn}">${formatDate(completedOn)}</time>`
+                            : isDone
+                              ? `<span class="item-completed-date is-empty">—</span>`
+                              : ""
+                        }
+                      </div>
                     </div>
                     ${details ? `<ul class="syllabus-details">${details}</ul>` : ""}
                   </li>`;
               })
               .join("");
 
-            const titleHtml = sub.elective
-              ? `<aside class="elective-tip" role="note">
+            let tipHtml = "";
+            if (sub.electiveGroup && !electiveTipShown.has(sub.electiveGroup)) {
+              electiveTipShown.add(sub.electiveGroup);
+              tipHtml = `<aside class="elective-tip" role="note">
                   <p class="elective-tip-label">選修提示</p>
-                  <p class="elective-tip-text">${escapeHtml(sub.title).replace(/\n/g, "<br>")}</p>
-                  <p class="elective-tip-count">進度計算：完成其中一項即計 1 項</p>
-                </aside>`
-              : `<h4 class="syllabus-sub-title">${escapeHtml(sub.title)}</h4>`;
+                  <p class="elective-tip-text">${escapeHtml(syl.note || "請於下列 4. 戶外活動／5. 海上活動／6. 航空活動中選取其中一項為主要考核項目；各進度性獎章的選項須相同。海童軍必須選海上活動，空童軍必須選航空活動。").replace(/\n/g, "<br>")}</p>
+                  <p class="elective-tip-count">進度計算：只計算所選一項的全部分項</p>
+                </aside>`;
+            }
 
             return `
-              <div class="syllabus-sub">
-                ${titleHtml}
+              <div class="syllabus-sub ${sub.electiveGroup ? "is-elective-track" : ""}">
+                ${tipHtml}
+                <h4 class="syllabus-sub-title">${escapeHtml(sub.title)}</h4>
                 <ul class="syllabus-items">${itemsHtml}</ul>
               </div>`;
           })
@@ -848,8 +1163,10 @@
                 return `
                   <li class="syllabus-item done">
                     <div class="syllabus-item-head">
-                      <span class="item-status is-done">已完成</span>
                       <span class="syllabus-item-title">${escapeHtml(it.title)}</span>
+                      <div class="item-status-block">
+                        <span class="item-status is-done">已完成</span>
+                      </div>
                     </div>
                     ${details ? `<ul class="syllabus-details">${details}</ul>` : ""}
                   </li>`;
