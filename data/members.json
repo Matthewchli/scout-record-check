@@ -3,39 +3,20 @@
     "troopInfo": [
       {
         "label": "旅團名稱",
-        "value": "香港童軍總會 新界東第1558旅（林大輝中學）"
+        "value": "新界東第1558旅"
+      },
+      {
+        "label": "主辦機構",
+        "value": "林大輝中學"
       },
       {
         "label": "集會時間",
-        "value": "逢星期六 14:00–17:00"
-      },
-      {
-        "label": "集會地點",
-        "value": "社區會堂地下禮堂"
+        "value": "星期六 09:30–13:00",
+        "hint": "詳情請參閱通告"
       },
       {
         "label": "制服要求",
         "value": "正式集會須穿著完整制服"
-      }
-    ],
-    "contacts": [
-      {
-        "role": "旅長",
-        "name": "李領袖",
-        "phone": "9123 4567",
-        "note": "緊急聯絡"
-      },
-      {
-        "role": "副旅長",
-        "name": "王領袖",
-        "phone": "9876 5432",
-        "note": "活動查詢"
-      },
-      {
-        "role": "團務",
-        "name": "張領袖",
-        "phone": "9555 1122",
-        "note": "出席／獎章紀錄"
       }
     ],
     "links": [
@@ -45,31 +26,14 @@
         "desc": "官方網站與最新消息"
       },
       {
-        "title": "進度性獎章綱要",
-        "url": "https://www.scout.org.hk/",
-        "desc": "初級至總章考核要求參考"
+        "title": "沙田東區區會",
+        "url": "https://www.stescout.org/website/contact.html",
+        "desc": "區會聯絡資料"
       },
       {
-        "title": "專科徽章一覽",
-        "url": "https://www.scout.org.hk/",
-        "desc": "各專科徽章考核內容"
-      }
-    ],
-    "notices": [
-      {
-        "date": "2026-06-01",
-        "title": "暑假露營報名",
-        "content": "7月長洲露營名額有限，請於6月20日前向領袖報名。"
-      },
-      {
-        "date": "2026-05-15",
-        "title": "高級獎章考核日",
-        "content": "下月將安排高級獎章相關考核項目，有意者請提早準備。"
-      },
-      {
-        "date": "2026-04-20",
-        "title": "服務時數登記",
-        "content": "校外服務時數可交證明予團務領袖補登。"
+        "title": "童軍訓練綱要",
+        "url": "assets/docs/FullVersion-zh.pdf",
+        "desc": "進度性獎章及專科徽章考核要求"
       }
     ]
   },
@@ -1577,6 +1541,20 @@
           "examiner": "黃主考"
         },
         {
+          "name": "攝影章",
+          "earnedDate": "2025-06-28",
+          "category": "興趣組",
+          "group": "interest",
+          "icon": "assets/specialty/interest/攝影.png",
+          "activityName": "興趣組 - 攝影章",
+          "organizer": "沙田東區",
+          "assessmentDate": "2025-06-28",
+          "syllabusKey": "interest:攝影",
+          "examiner": "",
+          "noticeTitle": "沙田東區 攝影章數碼相機（興趣組）訓練班",
+          "noticeUrl": "assets/notices/20250628-photography-training.pdf"
+        },
+        {
           "name": "攝影章（教導組）",
           "earnedDate": "2026-01-10",
           "category": "教導組",
@@ -2272,10 +2250,10 @@
       "scoutId": "2025045143",
       "englishName": "WANG Zixi",
       "troop": "新界東第1558旅",
-      "section": "Cobra小隊",
+      "section": "Eagle小隊",
       "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "joinDate": "2024-10-19",
+      "photo": "assets/members/2025045143.png",
       "activity": {
         "attendanceRate": 78,
         "serviceHours": 32,
@@ -2687,19 +2665,79 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
-          "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "status": "completed",
+          "completedDate": "2026-03-07",
+          "completedIds": [
+            "d-a-1a",
+            "d-a-1b",
+            "d-a-1c",
+            "d-a-1d",
+            "d-a-2a",
+            "d-a-2b",
+            "d-a-2c",
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1a",
+            "d-c-1b",
+            "d-c-2a",
+            "d-d-1a",
+            "d-d-2a"
+          ],
+          "itemCompletedDates": {
+            "d-a-4a": "2024-11-30",
+            "d-a-4b": "2024-11-30",
+            "d-a-1a": "2024-12-20",
+            "d-a-1b": "2024-12-20",
+            "d-a-1c": "2024-12-20",
+            "d-a-1d": "2024-12-20",
+            "d-b-1a": "2024-12-20",
+            "d-c-1a": "2025-03-01",
+            "d-a-3a": "2025-03-08",
+            "d-a-3b": "2025-03-08",
+            "d-c-1b": "2025-04-10",
+            "d-d-1a": "2025-09-27",
+            "d-d-2a": "2025-09-27",
+            "d-a-2b": "2025-10-04",
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-a-2a": "2026-02-28",
+            "d-a-2c": "2026-02-28",
+            "d-c-2a": "2026-03-07"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-b-1a",
+            "s-b-2a",
+            "s-b-3a",
+            "s-c-1d",
+            "s-d-3a"
+          ],
+          "itemCompletedDates": {
+            "s-a-4a": "2024-11-30",
+            "s-c-1d": "2025-07-04",
+            "s-b-2a": "2025-09-05",
+            "s-b-3a": "2025-11-08",
+            "s-b-1a": "2026-02-28",
+            "s-a-4c": "2026-03-07",
+            "s-d-3a": "2026-05-16"
+          }
         },
         {
           "key": "advanced",
@@ -2756,9 +2794,9 @@
       "englishName": "WONG Yuet Ching",
       "troop": "新界東第1558旅",
       "section": "Eagle小隊",
-      "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "rank": "隊長",
+      "joinDate": "2023-10-14",
+      "photo": "assets/members/2025021995.png",
       "activity": {
         "attendanceRate": 78,
         "serviceHours": 34,
@@ -3145,19 +3183,63 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-2b",
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1a",
+            "d-c-1b",
+            "d-c-2a",
+            "d-d-1a",
+            "d-d-2a"
+          ],
+          "itemCompletedDates": {
+            "d-c-1b": "2024-11-17",
+            "d-a-4a": "2024-11-30",
+            "d-a-4b": "2024-11-30",
+            "d-c-1a": "2025-03-01",
+            "d-a-3a": "2025-03-08",
+            "d-a-3b": "2025-03-08",
+            "d-d-1a": "2025-09-27",
+            "d-d-2a": "2025-09-27",
+            "d-a-2b": "2025-10-04",
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-b-1a": "2025-11-08",
+            "d-c-2a": "2026-03-07"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-b-3a",
+            "s-c-1d",
+            "s-d-3a"
+          ],
+          "itemCompletedDates": {
+            "s-a-4a": "2024-11-30",
+            "s-a-4c": "2025-03-29",
+            "s-c-1d": "2025-04-10",
+            "s-b-3a": "2025-11-08",
+            "s-d-3a": "2026-05-16"
+          }
         },
         {
           "key": "advanced",
@@ -3186,9 +3268,9 @@
       "scoutId": "2026000238",
       "englishName": "YU Sum Pui",
       "troop": "新界東第1558旅",
-      "section": "Falcon小隊",
+      "section": "新成員",
       "rank": "隊員",
-      "joinDate": "",
+      "joinDate": "2025-10-25",
       "photo": null,
       "activity": {
         "attendanceRate": 16,
@@ -3345,19 +3427,35 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b"
+          ],
+          "itemCompletedDates": {
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-b-1a": "2025-11-08"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-b-3a"
+          ],
+          "itemCompletedDates": {
+            "s-b-3a": "2025-11-08"
+          }
         },
         {
           "key": "advanced",
@@ -3387,9 +3485,9 @@
       "englishName": "LEE Choi Lap",
       "troop": "新界東第1558旅",
       "section": "Otter小隊",
-      "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "rank": "副隊",
+      "joinDate": "2024-10-19",
+      "photo": "assets/members/2025045135.png",
       "activity": {
         "attendanceRate": 84,
         "serviceHours": 44,
@@ -3795,19 +3893,73 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-1a",
+            "d-a-1b",
+            "d-a-1c",
+            "d-a-1d",
+            "d-a-2b",
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1a",
+            "d-c-1b",
+            "d-c-2a",
+            "d-d-1a",
+            "d-d-2a"
+          ],
+          "itemCompletedDates": {
+            "d-c-1b": "2024-11-17",
+            "d-a-4a": "2024-11-30",
+            "d-a-4b": "2024-11-30",
+            "d-a-1a": "2024-12-20",
+            "d-a-1b": "2024-12-20",
+            "d-a-1c": "2024-12-20",
+            "d-a-1d": "2024-12-20",
+            "d-b-1a": "2024-12-20",
+            "d-c-1a": "2025-03-01",
+            "d-a-3a": "2025-03-08",
+            "d-a-3b": "2025-03-08",
+            "d-d-1a": "2025-09-27",
+            "d-d-2a": "2025-09-27",
+            "d-a-2b": "2025-10-04",
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-c-2a": "2026-03-07"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-b-2a",
+            "s-b-3a",
+            "s-c-1d",
+            "s-d-3a"
+          ],
+          "itemCompletedDates": {
+            "s-a-4a": "2024-11-30",
+            "s-a-4c": "2025-03-29",
+            "s-c-1d": "2025-04-10",
+            "s-b-2a": "2025-09-05",
+            "s-b-3a": "2025-11-08",
+            "s-d-3a": "2026-05-16"
+          }
         },
         {
           "key": "advanced",
@@ -3921,9 +4073,9 @@
       "scoutId": "2026000204",
       "englishName": "LI Wing Ki",
       "troop": "新界東第1558旅",
-      "section": "Cobra小隊",
+      "section": "新成員",
       "rank": "隊員",
-      "joinDate": "",
+      "joinDate": "2025-10-25",
       "photo": null,
       "activity": {
         "attendanceRate": 0,
@@ -4114,10 +4266,10 @@
       "scoutId": "2025021912",
       "englishName": "LI HOI CHING",
       "troop": "新界東第1558旅",
-      "section": "Eagle小隊",
-      "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "section": "Falcon小隊",
+      "rank": "隊長",
+      "joinDate": "2023-10-14",
+      "photo": "assets/members/2025021912.png",
       "activity": {
         "attendanceRate": 87,
         "serviceHours": 45,
@@ -4523,19 +4675,73 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-1a",
+            "d-a-1b",
+            "d-a-1c",
+            "d-a-1d",
+            "d-a-2b",
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1a",
+            "d-c-1b",
+            "d-c-2a",
+            "d-d-1a",
+            "d-d-2a"
+          ],
+          "itemCompletedDates": {
+            "d-c-1b": "2024-11-17",
+            "d-a-4a": "2024-11-30",
+            "d-a-4b": "2024-11-30",
+            "d-c-1a": "2025-03-01",
+            "d-a-3a": "2025-03-08",
+            "d-a-3b": "2025-03-08",
+            "d-a-1a": "2025-09-05",
+            "d-a-1b": "2025-09-05",
+            "d-a-1c": "2025-09-05",
+            "d-a-1d": "2025-09-05",
+            "d-d-1a": "2025-09-27",
+            "d-d-2a": "2025-09-27",
+            "d-a-2b": "2025-10-04",
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-b-1a": "2025-11-08",
+            "d-c-2a": "2026-03-07"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-b-2a",
+            "s-b-3a",
+            "s-c-1d",
+            "s-d-3a"
+          ],
+          "itemCompletedDates": {
+            "s-a-4a": "2024-11-30",
+            "s-a-4c": "2025-03-29",
+            "s-c-1d": "2025-04-10",
+            "s-b-2a": "2025-09-05",
+            "s-b-3a": "2025-11-08",
+            "s-d-3a": "2026-05-16"
+          }
         },
         {
           "key": "advanced",
@@ -4635,10 +4841,10 @@
       "scoutId": "2025045200",
       "englishName": "LEE Hung Kwan",
       "troop": "新界東第1558旅",
-      "section": "Falcon小隊",
-      "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "section": "Eagle小隊",
+      "rank": "副隊",
+      "joinDate": "2024-10-19",
+      "photo": "assets/members/2025045200.png",
       "activity": {
         "attendanceRate": 73,
         "serviceHours": 19,
@@ -5038,19 +5244,77 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-1a",
+            "d-a-1b",
+            "d-a-1c",
+            "d-a-1d",
+            "d-a-2a",
+            "d-a-2b",
+            "d-a-2c",
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1a",
+            "d-c-1b",
+            "d-c-2a",
+            "d-d-2a"
+          ],
+          "itemCompletedDates": {
+            "d-a-4a": "2024-11-30",
+            "d-a-4b": "2024-11-30",
+            "d-a-1a": "2024-12-20",
+            "d-a-1b": "2024-12-20",
+            "d-a-1c": "2024-12-20",
+            "d-a-1d": "2024-12-20",
+            "d-b-1a": "2024-12-20",
+            "d-c-1a": "2025-03-01",
+            "d-c-1b": "2025-04-10",
+            "d-a-3a": "2025-09-13",
+            "d-a-3b": "2025-09-13",
+            "d-a-2b": "2025-10-04",
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-a-2a": "2026-02-28",
+            "d-a-2c": "2026-02-28",
+            "d-c-2a": "2026-03-07",
+            "d-d-2a": "2026-05-16"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-b-1a",
+            "s-b-2a",
+            "s-b-3a",
+            "s-c-1d",
+            "s-d-3a"
+          ],
+          "itemCompletedDates": {
+            "s-a-4a": "2024-11-30",
+            "s-a-4c": "2025-03-29",
+            "s-c-1d": "2025-07-04",
+            "s-b-2a": "2025-09-05",
+            "s-b-3a": "2025-11-08",
+            "s-b-1a": "2026-02-28",
+            "s-d-3a": "2026-05-16"
+          }
         },
         {
           "key": "advanced",
@@ -5106,10 +5370,10 @@
       "scoutId": "2019048160",
       "englishName": "CHOW Fung Hoi",
       "troop": "新界東第1558旅",
-      "section": "Otter小隊",
+      "section": "Falcon小隊",
       "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "joinDate": "2022-10-15",
+      "photo": "assets/members/2019048160.png",
       "activity": {
         "attendanceRate": 49,
         "serviceHours": 40,
@@ -5497,19 +5761,51 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-1a",
+            "d-a-1b",
+            "d-a-1c",
+            "d-a-1d",
+            "d-a-2a",
+            "d-a-2c",
+            "d-a-3a",
+            "d-a-3b",
+            "d-b-1a",
+            "d-c-1b"
+          ],
+          "itemCompletedDates": {
+            "d-c-1b": "2024-11-17",
+            "d-a-3a": "2025-03-08",
+            "d-a-3b": "2025-03-08",
+            "d-a-1a": "2025-09-05",
+            "d-a-1b": "2025-09-05",
+            "d-a-1c": "2025-09-05",
+            "d-a-1d": "2025-09-05",
+            "d-b-1a": "2025-11-08",
+            "d-a-2a": "2026-02-28",
+            "d-a-2c": "2026-02-28"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-b-1a",
+            "s-b-2a",
+            "s-b-3a",
+            "s-c-1d"
+          ],
+          "itemCompletedDates": {
+            "s-c-1d": "2025-04-10",
+            "s-b-2a": "2025-09-05",
+            "s-b-3a": "2025-11-08",
+            "s-b-1a": "2026-02-28"
+          }
         },
         {
           "key": "advanced",
@@ -5551,10 +5847,10 @@
       "scoutId": "2025045317",
       "englishName": "WOO Kiu Lap",
       "troop": "新界東第1558旅",
-      "section": "Cobra小隊",
+      "section": "Otter小隊",
       "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "joinDate": "2020-11-04",
+      "photo": "assets/members/2025045317.png",
       "activity": {
         "attendanceRate": 56,
         "serviceHours": 26,
@@ -5942,19 +6238,59 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-1a",
+            "d-a-1b",
+            "d-a-1c",
+            "d-a-1d",
+            "d-a-2a",
+            "d-a-2c",
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-c-1a",
+            "d-c-1b"
+          ],
+          "itemCompletedDates": {
+            "d-c-1b": "2024-11-17",
+            "d-a-4a": "2024-11-30",
+            "d-a-4b": "2024-11-30",
+            "d-a-1a": "2024-12-20",
+            "d-a-1b": "2024-12-20",
+            "d-a-1c": "2024-12-20",
+            "d-a-1d": "2024-12-20",
+            "d-b-1a": "2024-12-20",
+            "d-c-1a": "2025-03-01",
+            "d-a-3a": "2025-03-08",
+            "d-a-3b": "2025-03-08",
+            "d-a-2a": "2026-02-28",
+            "d-a-2c": "2026-02-28"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-b-1a",
+            "s-b-2a",
+            "s-b-3a",
+            "s-c-1d"
+          ],
+          "itemCompletedDates": {
+            "s-a-4a": "2024-11-30",
+            "s-c-1d": "2025-04-10",
+            "s-b-2a": "2025-09-05",
+            "s-b-1a": "2026-02-28",
+            "s-b-3a": "2026-02-28"
+          }
         },
         {
           "key": "advanced",
@@ -5996,10 +6332,10 @@
       "scoutId": "2025045168",
       "englishName": "MA Haozhe",
       "troop": "新界東第1558旅",
-      "section": "Eagle小隊",
+      "section": "Cobra小隊",
       "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "joinDate": "2024-10-19",
+      "photo": "assets/members/2025045168.png",
       "activity": {
         "attendanceRate": 89,
         "serviceHours": 40,
@@ -6411,19 +6747,79 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
-          "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "status": "completed",
+          "completedDate": "2026-03-07",
+          "completedIds": [
+            "d-a-1a",
+            "d-a-1b",
+            "d-a-1c",
+            "d-a-1d",
+            "d-a-2a",
+            "d-a-2b",
+            "d-a-2c",
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1a",
+            "d-c-1b",
+            "d-c-2a",
+            "d-d-1a",
+            "d-d-2a"
+          ],
+          "itemCompletedDates": {
+            "d-c-1b": "2024-11-17",
+            "d-a-4a": "2024-11-30",
+            "d-a-4b": "2024-11-30",
+            "d-a-1a": "2024-12-20",
+            "d-a-1b": "2024-12-20",
+            "d-a-1c": "2024-12-20",
+            "d-a-1d": "2024-12-20",
+            "d-b-1a": "2024-12-20",
+            "d-c-1a": "2025-03-01",
+            "d-a-3a": "2025-03-08",
+            "d-a-3b": "2025-03-08",
+            "d-d-1a": "2025-09-27",
+            "d-d-2a": "2025-09-27",
+            "d-a-2b": "2025-10-04",
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-a-2a": "2026-02-28",
+            "d-a-2c": "2026-02-28",
+            "d-c-2a": "2026-03-07"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-b-1a",
+            "s-b-2a",
+            "s-b-3a",
+            "s-c-1d",
+            "s-d-3a"
+          ],
+          "itemCompletedDates": {
+            "s-a-4a": "2024-11-30",
+            "s-a-4c": "2025-03-29",
+            "s-c-1d": "2025-04-10",
+            "s-b-2a": "2025-09-05",
+            "s-b-3a": "2025-11-08",
+            "s-b-1a": "2026-02-28",
+            "s-d-3a": "2026-05-16"
+          }
         },
         {
           "key": "advanced",
@@ -6479,10 +6875,10 @@
       "scoutId": "2025045309",
       "englishName": "KO Cheuk Yin",
       "troop": "新界東第1558旅",
-      "section": "Falcon小隊",
+      "section": "Eagle小隊",
       "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "joinDate": "2020-11-04",
+      "photo": "assets/members/2025045309.png",
       "activity": {
         "attendanceRate": 58,
         "serviceHours": 32,
@@ -6870,19 +7266,71 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-1a",
+            "d-a-1b",
+            "d-a-1c",
+            "d-a-1d",
+            "d-a-2a",
+            "d-a-2b",
+            "d-a-2c",
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1a",
+            "d-c-1b"
+          ],
+          "itemCompletedDates": {
+            "d-c-1b": "2024-11-17",
+            "d-a-4a": "2024-11-30",
+            "d-a-4b": "2024-11-30",
+            "d-a-1a": "2024-12-20",
+            "d-a-1b": "2024-12-20",
+            "d-a-1c": "2024-12-20",
+            "d-a-1d": "2024-12-20",
+            "d-b-1a": "2024-12-20",
+            "d-c-1a": "2025-03-01",
+            "d-a-3a": "2025-03-08",
+            "d-a-3b": "2025-03-08",
+            "d-a-2b": "2025-10-04",
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-a-2a": "2026-02-28",
+            "d-a-2c": "2026-02-28"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-b-1a",
+            "s-b-2a",
+            "s-b-3a",
+            "s-c-1d"
+          ],
+          "itemCompletedDates": {
+            "s-a-4a": "2024-11-30",
+            "s-a-4c": "2025-03-29",
+            "s-c-1d": "2025-04-10",
+            "s-b-2a": "2025-09-05",
+            "s-b-3a": "2025-11-08",
+            "s-b-1a": "2026-02-28"
+          }
         },
         {
           "key": "advanced",
@@ -6926,7 +7374,7 @@
       "troop": "新界東第1558旅",
       "section": "Otter小隊",
       "rank": "隊員",
-      "joinDate": "",
+      "joinDate": "2025-10-25",
       "photo": null,
       "activity": {
         "attendanceRate": 58,
@@ -7102,19 +7550,53 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-2a",
+            "d-a-2c",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1b",
+            "d-c-2a"
+          ],
+          "itemCompletedDates": {
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-b-1a": "2025-11-08",
+            "d-a-2a": "2026-02-28",
+            "d-a-2c": "2026-02-28",
+            "d-a-4a": "2026-03-07",
+            "d-a-4b": "2026-03-07",
+            "d-c-2a": "2026-03-07",
+            "d-c-1b": "2026-03-26"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-b-1a",
+            "s-b-3a"
+          ],
+          "itemCompletedDates": {
+            "s-b-3a": "2025-11-08",
+            "s-b-1a": "2026-02-28",
+            "s-a-4a": "2026-03-07",
+            "s-a-4c": "2026-03-07"
+          }
         },
         {
           "key": "advanced",
@@ -7156,10 +7638,10 @@
       "scoutId": "2025045226",
       "englishName": "CHEUNG Ho Hang",
       "troop": "新界東第1558旅",
-      "section": "Cobra小隊",
+      "section": "Otter小隊",
       "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "joinDate": "2024-10-19",
+      "photo": "assets/members/2025045226.png",
       "activity": {
         "attendanceRate": 93,
         "serviceHours": 40,
@@ -7571,19 +8053,71 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-1a",
+            "d-a-1b",
+            "d-a-1c",
+            "d-a-1d",
+            "d-a-2b",
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1a",
+            "d-c-1b",
+            "d-c-2a",
+            "d-d-1a",
+            "d-d-2a"
+          ],
+          "itemCompletedDates": {
+            "d-c-1b": "2024-11-17",
+            "d-a-4a": "2024-11-30",
+            "d-a-4b": "2024-11-30",
+            "d-a-1a": "2024-12-20",
+            "d-a-1b": "2024-12-20",
+            "d-a-1c": "2024-12-20",
+            "d-a-1d": "2024-12-20",
+            "d-b-1a": "2024-12-20",
+            "d-c-1a": "2025-03-01",
+            "d-a-3a": "2025-03-08",
+            "d-a-3b": "2025-03-08",
+            "d-d-1a": "2025-09-27",
+            "d-d-2a": "2025-09-27",
+            "d-a-2b": "2025-10-04",
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-c-2a": "2026-03-07"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-b-2a",
+            "s-b-3a",
+            "s-c-1d"
+          ],
+          "itemCompletedDates": {
+            "s-a-4a": "2024-11-30",
+            "s-a-4c": "2025-03-29",
+            "s-c-1d": "2025-04-10",
+            "s-b-2a": "2025-09-05",
+            "s-b-3a": "2025-11-08"
+          }
         },
         {
           "key": "advanced",
@@ -7614,8 +8148,8 @@
       "troop": "新界東第1558旅",
       "section": "Eagle小隊",
       "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "joinDate": "2025-10-25",
+      "photo": "assets/members/2026000188.png",
       "activity": {
         "attendanceRate": 84,
         "serviceHours": 13,
@@ -7803,19 +8337,71 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-1a",
+            "d-a-1b",
+            "d-a-1c",
+            "d-a-1d",
+            "d-a-2a",
+            "d-a-2c",
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1a",
+            "d-c-1b",
+            "d-c-2a",
+            "d-d-2a"
+          ],
+          "itemCompletedDates": {
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-b-1a": "2025-11-08",
+            "d-a-1a": "2025-12-19",
+            "d-a-1b": "2025-12-19",
+            "d-a-1c": "2025-12-19",
+            "d-a-1d": "2025-12-19",
+            "d-a-2a": "2026-02-28",
+            "d-a-2c": "2026-02-28",
+            "d-a-4a": "2026-03-07",
+            "d-a-4b": "2026-03-07",
+            "d-c-2a": "2026-03-07",
+            "d-c-1b": "2026-03-26",
+            "d-a-3a": "2026-04-25",
+            "d-a-3b": "2026-04-25",
+            "d-c-1a": "2026-05-09",
+            "d-d-2a": "2026-05-16"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-b-1a",
+            "s-b-3a",
+            "s-d-3a"
+          ],
+          "itemCompletedDates": {
+            "s-b-3a": "2025-11-08",
+            "s-b-1a": "2026-02-28",
+            "s-a-4a": "2026-03-07",
+            "s-a-4c": "2026-03-07",
+            "s-d-3a": "2026-05-16"
+          }
         },
         {
           "key": "advanced",
@@ -7885,9 +8471,9 @@
       "scoutId": "2025045184",
       "englishName": "HUI Hei Yuet",
       "troop": "新界東第1558旅",
-      "section": "Falcon小隊",
+      "section": "Otter小隊",
       "rank": "隊員",
-      "joinDate": "",
+      "joinDate": "2024-10-19",
       "photo": null,
       "activity": {
         "attendanceRate": 44,
@@ -8233,10 +8819,34 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-2b",
+            "d-a-3a",
+            "d-a-3b",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1a",
+            "d-c-1b",
+            "d-d-1a",
+            "d-d-2a"
+          ],
+          "itemCompletedDates": {
+            "d-c-1a": "2025-03-01",
+            "d-a-3a": "2025-03-08",
+            "d-a-3b": "2025-03-08",
+            "d-c-1b": "2025-04-10",
+            "d-d-1a": "2025-09-27",
+            "d-d-2a": "2025-09-27",
+            "d-a-2b": "2025-10-04",
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25"
+          }
         },
         {
           "key": "standard",
@@ -8276,7 +8886,7 @@
       "troop": "新界東第1558旅",
       "section": "Otter小隊",
       "rank": "隊員",
-      "joinDate": "",
+      "joinDate": "2024-10-19",
       "photo": null,
       "activity": {
         "attendanceRate": 24,
@@ -8621,19 +9231,33 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-4a",
+            "d-a-4b",
+            "d-c-1a",
+            "d-c-1b"
+          ],
+          "itemCompletedDates": {
+            "d-c-1b": "2024-11-17",
+            "d-a-4a": "2024-11-30",
+            "d-a-4b": "2024-11-30",
+            "d-c-1a": "2025-03-01"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a"
+          ],
+          "itemCompletedDates": {
+            "s-a-4a": "2024-11-30"
+          }
         },
         {
           "key": "advanced",
@@ -8662,10 +9286,10 @@
       "scoutId": "2025045218",
       "englishName": "CHAN Corey",
       "troop": "新界東第1558旅",
-      "section": "Cobra小隊",
+      "section": "Falcon小隊",
       "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "joinDate": "2023-10-14",
+      "photo": "assets/members/2025045218.png",
       "activity": {
         "attendanceRate": 78,
         "serviceHours": 39,
@@ -9071,19 +9695,77 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-1a",
+            "d-a-1b",
+            "d-a-1c",
+            "d-a-1d",
+            "d-a-2a",
+            "d-a-2b",
+            "d-a-2c",
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1a",
+            "d-c-1b",
+            "d-c-2a",
+            "d-d-2a"
+          ],
+          "itemCompletedDates": {
+            "d-c-1b": "2024-11-17",
+            "d-a-4a": "2024-11-30",
+            "d-a-4b": "2024-11-30",
+            "d-a-1a": "2024-12-20",
+            "d-a-1b": "2024-12-20",
+            "d-a-1c": "2024-12-20",
+            "d-a-1d": "2024-12-20",
+            "d-b-1a": "2024-12-20",
+            "d-a-3a": "2025-09-13",
+            "d-a-3b": "2025-09-13",
+            "d-a-2b": "2025-10-04",
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-a-2a": "2026-02-28",
+            "d-a-2c": "2026-02-28",
+            "d-c-2a": "2026-03-07",
+            "d-c-1a": "2026-05-09",
+            "d-d-2a": "2026-05-16"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-b-1a",
+            "s-b-2a",
+            "s-b-3a",
+            "s-c-1d",
+            "s-d-3a"
+          ],
+          "itemCompletedDates": {
+            "s-a-4a": "2024-11-30",
+            "s-a-4c": "2025-03-29",
+            "s-c-1d": "2025-04-10",
+            "s-b-2a": "2025-09-05",
+            "s-b-3a": "2025-11-08",
+            "s-b-1a": "2026-02-28",
+            "s-d-3a": "2026-05-16"
+          }
         },
         {
           "key": "advanced",
@@ -9125,10 +9807,10 @@
       "scoutId": "2026000170",
       "englishName": "CHAN Pui Tin Jasper",
       "troop": "新界東第1558旅",
-      "section": "Eagle小隊",
+      "section": "Falcon小隊",
       "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "joinDate": "2025-10-25",
+      "photo": "assets/members/2026000170.png",
       "activity": {
         "attendanceRate": 68,
         "serviceHours": 8,
@@ -9304,19 +9986,59 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-1a",
+            "d-a-1b",
+            "d-a-1c",
+            "d-a-1d",
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1b",
+            "d-c-2a"
+          ],
+          "itemCompletedDates": {
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-b-1a": "2025-11-08",
+            "d-a-1a": "2025-12-19",
+            "d-a-1b": "2025-12-19",
+            "d-a-1c": "2025-12-19",
+            "d-a-1d": "2025-12-19",
+            "d-a-4a": "2026-03-07",
+            "d-a-4b": "2026-03-07",
+            "d-c-2a": "2026-03-07",
+            "d-c-1b": "2026-03-26",
+            "d-a-3a": "2026-04-25",
+            "d-a-3b": "2026-04-25"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-b-3a"
+          ],
+          "itemCompletedDates": {
+            "s-b-3a": "2025-11-08",
+            "s-a-4a": "2026-03-07",
+            "s-a-4c": "2026-03-07"
+          }
         },
         {
           "key": "advanced",
@@ -9345,10 +10067,10 @@
       "scoutId": "2025098357",
       "englishName": "CHEN Victor",
       "troop": "新界東第1558旅",
-      "section": "Falcon小隊",
+      "section": "Cobra小隊",
       "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "joinDate": "2025-10-25",
+      "photo": "assets/members/2025098357.png",
       "activity": {
         "attendanceRate": 63,
         "serviceHours": 10,
@@ -9523,19 +10245,47 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-c-1a",
+            "d-c-2a",
+            "d-d-2a"
+          ],
+          "itemCompletedDates": {
+            "d-b-1a": "2025-11-08",
+            "d-a-4a": "2026-03-07",
+            "d-a-4b": "2026-03-07",
+            "d-c-2a": "2026-03-07",
+            "d-a-3a": "2026-04-25",
+            "d-a-3b": "2026-04-25",
+            "d-c-1a": "2026-05-09",
+            "d-d-2a": "2026-05-16"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-b-3a",
+            "s-d-3a"
+          ],
+          "itemCompletedDates": {
+            "s-b-3a": "2025-11-08",
+            "s-a-4a": "2026-03-07",
+            "s-a-4c": "2026-03-07",
+            "s-d-3a": "2026-05-16"
+          }
         },
         {
           "key": "advanced",
@@ -9564,10 +10314,10 @@
       "scoutId": "2022015701",
       "englishName": "CHAN Lok Hei",
       "troop": "新界東第1558旅",
-      "section": "Otter小隊",
+      "section": "Falcon小隊",
       "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "joinDate": "2024-10-19",
+      "photo": "assets/members/2022015701.png",
       "activity": {
         "attendanceRate": 71,
         "serviceHours": 45,
@@ -9973,19 +10723,59 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-1a",
+            "d-a-1b",
+            "d-a-1c",
+            "d-a-1d",
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-c-1a",
+            "d-c-1b",
+            "d-d-1a",
+            "d-d-2a"
+          ],
+          "itemCompletedDates": {
+            "d-c-1b": "2024-11-17",
+            "d-a-4a": "2024-11-30",
+            "d-a-4b": "2024-11-30",
+            "d-a-1a": "2024-12-20",
+            "d-a-1b": "2024-12-20",
+            "d-a-1c": "2024-12-20",
+            "d-a-1d": "2024-12-20",
+            "d-b-1a": "2024-12-20",
+            "d-c-1a": "2025-03-01",
+            "d-a-3a": "2025-09-13",
+            "d-a-3b": "2025-09-13",
+            "d-d-1a": "2025-09-27",
+            "d-d-2a": "2025-09-27"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-b-2a",
+            "s-b-3a",
+            "s-c-1d"
+          ],
+          "itemCompletedDates": {
+            "s-a-4a": "2024-11-30",
+            "s-a-4c": "2025-03-29",
+            "s-c-1d": "2025-04-10",
+            "s-b-2a": "2025-09-05",
+            "s-b-3a": "2025-11-08"
+          }
         },
         {
           "key": "advanced",
@@ -10016,7 +10806,7 @@
       "troop": "新界東第1558旅",
       "section": "Cobra小隊",
       "rank": "隊員",
-      "joinDate": "",
+      "joinDate": "2021-10-30",
       "photo": null,
       "activity": {
         "attendanceRate": 31,
@@ -10374,19 +11164,45 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-1a",
+            "d-a-1b",
+            "d-a-1c",
+            "d-a-1d",
+            "d-a-2b",
+            "d-a-3a",
+            "d-a-3b",
+            "d-b-1a",
+            "d-c-1b"
+          ],
+          "itemCompletedDates": {
+            "d-c-1b": "2024-11-17",
+            "d-a-1a": "2024-12-20",
+            "d-a-1b": "2024-12-20",
+            "d-a-1c": "2024-12-20",
+            "d-a-1d": "2024-12-20",
+            "d-b-1a": "2024-12-20",
+            "d-a-3a": "2025-03-08",
+            "d-a-3b": "2025-03-08",
+            "d-a-2b": "2025-10-04"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-b-2a",
+            "s-c-1d"
+          ],
+          "itemCompletedDates": {
+            "s-c-1d": "2025-04-10",
+            "s-b-2a": "2025-09-05"
+          }
         },
         {
           "key": "advanced",
@@ -10415,9 +11231,9 @@
       "scoutId": "2026000162",
       "englishName": "HUANG Mingyi",
       "troop": "新界東第1558旅",
-      "section": "Eagle小隊",
+      "section": "新成員",
       "rank": "隊員",
-      "joinDate": "",
+      "joinDate": "2025-10-25",
       "photo": null,
       "activity": {
         "attendanceRate": 42,
@@ -10581,19 +11397,51 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1a",
+            "d-c-2a"
+          ],
+          "itemCompletedDates": {
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-b-1a": "2025-11-08",
+            "d-a-4a": "2026-03-07",
+            "d-a-4b": "2026-03-07",
+            "d-c-2a": "2026-03-07",
+            "d-a-3a": "2026-04-25",
+            "d-a-3b": "2026-04-25",
+            "d-c-1a": "2026-05-09"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-b-3a"
+          ],
+          "itemCompletedDates": {
+            "s-b-3a": "2025-11-08",
+            "s-a-4a": "2026-03-07",
+            "s-a-4c": "2026-03-07"
+          }
         },
         {
           "key": "advanced",
@@ -10623,9 +11471,9 @@
       "englishName": "WONG Sum Yiu",
       "troop": "新界東第1558旅",
       "section": "Falcon小隊",
-      "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "rank": "副隊",
+      "joinDate": "2024-10-19",
+      "photo": "assets/members/2025021599.png",
       "activity": {
         "attendanceRate": 71,
         "serviceHours": 32,
@@ -11019,19 +11867,73 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-1a",
+            "d-a-1b",
+            "d-a-1c",
+            "d-a-1d",
+            "d-a-2a",
+            "d-a-2b",
+            "d-a-2c",
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1a",
+            "d-c-1b",
+            "d-c-2a"
+          ],
+          "itemCompletedDates": {
+            "d-c-1b": "2024-11-17",
+            "d-c-1a": "2025-03-01",
+            "d-a-3a": "2025-03-08",
+            "d-a-3b": "2025-03-08",
+            "d-a-4b": "2025-03-29",
+            "d-a-1a": "2025-09-05",
+            "d-a-1b": "2025-09-05",
+            "d-a-1c": "2025-09-05",
+            "d-a-1d": "2025-09-05",
+            "d-a-2b": "2025-10-04",
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-b-1a": "2025-11-08",
+            "d-a-2a": "2026-02-28",
+            "d-a-2c": "2026-02-28",
+            "d-a-4a": "2026-03-07",
+            "d-c-2a": "2026-03-07"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-b-1a",
+            "s-b-2a",
+            "s-b-3a",
+            "s-c-1d"
+          ],
+          "itemCompletedDates": {
+            "s-b-2a": "2025-09-05",
+            "s-c-1d": "2025-09-29",
+            "s-b-3a": "2025-11-08",
+            "s-b-1a": "2026-02-28",
+            "s-a-4a": "2026-03-07",
+            "s-a-4c": "2026-03-07"
+          }
         },
         {
           "key": "advanced",
@@ -11115,10 +12017,10 @@
       "scoutId": "2025045101",
       "englishName": "YEUNG Annabella",
       "troop": "新界東第1558旅",
-      "section": "Otter小隊",
+      "section": "Eagle小隊",
       "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "joinDate": "2024-10-19",
+      "photo": "assets/members/2025045101.png",
       "activity": {
         "attendanceRate": 53,
         "serviceHours": 24,
@@ -11481,19 +12383,57 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-2b",
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1b",
+            "d-d-1a",
+            "d-d-2a"
+          ],
+          "itemCompletedDates": {
+            "d-a-4a": "2024-11-30",
+            "d-a-4b": "2024-11-30",
+            "d-a-3a": "2025-03-08",
+            "d-a-3b": "2025-03-08",
+            "d-c-1b": "2025-04-10",
+            "d-d-1a": "2025-09-27",
+            "d-d-2a": "2025-09-27",
+            "d-a-2b": "2025-10-04",
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-b-1a": "2025-11-08"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-b-3a",
+            "s-c-1d",
+            "s-d-3a"
+          ],
+          "itemCompletedDates": {
+            "s-a-4a": "2024-11-30",
+            "s-c-1d": "2025-07-04",
+            "s-b-3a": "2025-11-08",
+            "s-d-3a": "2026-05-16"
+          }
         },
         {
           "key": "advanced",
@@ -11522,10 +12462,10 @@
       "scoutId": "2025098332",
       "englishName": "YIP Sin Ying Ava",
       "troop": "新界東第1558旅",
-      "section": "Cobra小隊",
+      "section": "Falcon小隊",
       "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "joinDate": "2025-10-25",
+      "photo": "assets/members/2025098332.png",
       "activity": {
         "attendanceRate": 89,
         "serviceHours": 18,
@@ -11719,19 +12659,71 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-1a",
+            "d-a-1b",
+            "d-a-1c",
+            "d-a-1d",
+            "d-a-2a",
+            "d-a-2c",
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1a",
+            "d-c-1b",
+            "d-c-2a",
+            "d-d-2a"
+          ],
+          "itemCompletedDates": {
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-b-1a": "2025-11-08",
+            "d-a-1a": "2025-12-19",
+            "d-a-1b": "2025-12-19",
+            "d-a-1c": "2025-12-19",
+            "d-a-1d": "2025-12-19",
+            "d-a-2a": "2026-02-28",
+            "d-a-2c": "2026-02-28",
+            "d-a-4a": "2026-03-07",
+            "d-a-4b": "2026-03-07",
+            "d-c-2a": "2026-03-07",
+            "d-c-1b": "2026-03-26",
+            "d-a-3a": "2026-04-25",
+            "d-a-3b": "2026-04-25",
+            "d-c-1a": "2026-05-09",
+            "d-d-2a": "2026-05-16"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-b-1a",
+            "s-b-3a",
+            "s-d-3a"
+          ],
+          "itemCompletedDates": {
+            "s-b-3a": "2025-11-08",
+            "s-b-1a": "2026-02-28",
+            "s-a-4a": "2026-03-07",
+            "s-a-4c": "2026-03-07",
+            "s-d-3a": "2026-05-16"
+          }
         },
         {
           "key": "advanced",
@@ -11803,8 +12795,8 @@
       "troop": "新界東第1558旅",
       "section": "Eagle小隊",
       "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "joinDate": "2025-10-25",
+      "photo": "assets/members/2026000089.png",
       "activity": {
         "attendanceRate": 63,
         "serviceHours": 13,
@@ -11991,19 +12983,45 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-2a",
+            "d-a-2c",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1a",
+            "d-c-1b"
+          ],
+          "itemCompletedDates": {
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-b-1a": "2025-11-08",
+            "d-a-2a": "2026-02-28",
+            "d-a-2c": "2026-02-28",
+            "d-c-1b": "2026-03-26",
+            "d-c-1a": "2026-05-09"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-b-1a",
+            "s-b-3a"
+          ],
+          "itemCompletedDates": {
+            "s-b-3a": "2025-11-08",
+            "s-b-1a": "2026-02-28"
+          }
         },
         {
           "key": "advanced",
@@ -12047,8 +13065,8 @@
       "troop": "新界東第1558旅",
       "section": "Falcon小隊",
       "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "joinDate": "2024-10-19",
+      "photo": "assets/members/2025045077.png",
       "activity": {
         "attendanceRate": 69,
         "serviceHours": 16,
@@ -12417,19 +13435,61 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-2b",
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1a",
+            "d-c-1b",
+            "d-c-2a",
+            "d-d-1a",
+            "d-d-2a"
+          ],
+          "itemCompletedDates": {
+            "d-c-1b": "2024-11-17",
+            "d-a-4a": "2024-11-30",
+            "d-a-4b": "2024-11-30",
+            "d-c-1a": "2025-03-01",
+            "d-a-3a": "2025-03-08",
+            "d-a-3b": "2025-03-08",
+            "d-d-1a": "2025-09-27",
+            "d-d-2a": "2025-09-27",
+            "d-a-2b": "2025-10-04",
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-b-1a": "2025-11-08",
+            "d-c-2a": "2026-03-07"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-b-3a",
+            "s-d-3a"
+          ],
+          "itemCompletedDates": {
+            "s-a-4a": "2024-11-30",
+            "s-a-4c": "2025-03-29",
+            "s-b-3a": "2025-11-08",
+            "s-d-3a": "2026-05-16"
+          }
         },
         {
           "key": "advanced",
@@ -12458,9 +13518,9 @@
       "scoutId": "2026000196",
       "englishName": "LIU Chaoyang",
       "troop": "新界東第1558旅",
-      "section": "Otter小隊",
+      "section": "新成員",
       "rank": "隊員",
-      "joinDate": "",
+      "joinDate": "2025-10-25",
       "photo": null,
       "activity": {
         "attendanceRate": 32,
@@ -12630,19 +13690,41 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1a",
+            "d-d-2a"
+          ],
+          "itemCompletedDates": {
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-b-1a": "2025-11-08",
+            "d-c-1a": "2026-05-09",
+            "d-d-2a": "2026-05-16"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-b-3a",
+            "s-d-3a"
+          ],
+          "itemCompletedDates": {
+            "s-b-3a": "2025-11-08",
+            "s-d-3a": "2026-05-16"
+          }
         },
         {
           "key": "advanced",
@@ -12673,7 +13755,7 @@
       "troop": "新界東第1558旅",
       "section": "Cobra小隊",
       "rank": "隊員",
-      "joinDate": "",
+      "joinDate": "2023-10-14",
       "photo": null,
       "activity": {
         "attendanceRate": 31,
@@ -13030,19 +14112,47 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1b"
+          ],
+          "itemCompletedDates": {
+            "d-c-1b": "2024-11-17",
+            "d-a-4a": "2024-11-30",
+            "d-a-4b": "2024-11-30",
+            "d-a-3a": "2025-03-08",
+            "d-a-3b": "2025-03-08",
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-c-1d"
+          ],
+          "itemCompletedDates": {
+            "s-a-4a": "2024-11-30",
+            "s-a-4c": "2025-03-29",
+            "s-c-1d": "2025-04-10"
+          }
         },
         {
           "key": "advanced",
@@ -13071,9 +14181,9 @@
       "scoutId": "2022068510",
       "englishName": "CHOY Chun Hei",
       "troop": "新界東第1558旅",
-      "section": "Eagle小隊",
+      "section": "新成員",
       "rank": "隊員",
-      "joinDate": "",
+      "joinDate": "2025-10-25",
       "photo": null,
       "activity": {
         "attendanceRate": 26,
@@ -13236,19 +14346,51 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-2a",
+            "d-a-2c",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-2a"
+          ],
+          "itemCompletedDates": {
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-b-1a": "2025-11-08",
+            "d-a-2a": "2026-02-28",
+            "d-a-2c": "2026-02-28",
+            "d-a-4a": "2026-03-07",
+            "d-a-4b": "2026-03-07",
+            "d-c-2a": "2026-03-07"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-b-1a",
+            "s-b-3a"
+          ],
+          "itemCompletedDates": {
+            "s-b-3a": "2025-11-08",
+            "s-b-1a": "2026-02-28",
+            "s-a-4a": "2026-03-07",
+            "s-a-4c": "2026-03-07"
+          }
         },
         {
           "key": "advanced",
@@ -13290,10 +14432,10 @@
       "scoutId": "2025045234",
       "englishName": "CHIANG Lai Him",
       "troop": "新界東第1558旅",
-      "section": "Falcon小隊",
-      "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "section": "Cobra小隊",
+      "rank": "隊長",
+      "joinDate": "2024-10-19",
+      "photo": "assets/members/2025045234.png",
       "activity": {
         "attendanceRate": 73,
         "serviceHours": 27,
@@ -13687,19 +14829,71 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-1a",
+            "d-a-1b",
+            "d-a-1c",
+            "d-a-1d",
+            "d-a-2a",
+            "d-a-2b",
+            "d-a-2c",
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1a",
+            "d-c-1b"
+          ],
+          "itemCompletedDates": {
+            "d-c-1b": "2024-11-17",
+            "d-a-4a": "2024-11-30",
+            "d-a-4b": "2024-11-30",
+            "d-a-1a": "2024-12-20",
+            "d-a-1b": "2024-12-20",
+            "d-a-1c": "2024-12-20",
+            "d-a-1d": "2024-12-20",
+            "d-b-1a": "2024-12-20",
+            "d-c-1a": "2025-03-01",
+            "d-a-3a": "2025-03-08",
+            "d-a-3b": "2025-03-08",
+            "d-a-2b": "2025-10-04",
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-a-2a": "2026-02-28",
+            "d-a-2c": "2026-02-28"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-b-1a",
+            "s-b-2a",
+            "s-b-3a",
+            "s-c-1d"
+          ],
+          "itemCompletedDates": {
+            "s-a-4a": "2024-11-30",
+            "s-a-4c": "2025-03-29",
+            "s-c-1d": "2025-04-10",
+            "s-b-2a": "2025-09-05",
+            "s-b-3a": "2025-11-08",
+            "s-b-1a": "2026-02-28"
+          }
         },
         {
           "key": "advanced",
@@ -13769,10 +14963,10 @@
       "scoutId": "2026000246",
       "englishName": "LO Lok Yan",
       "troop": "新界東第1558旅",
-      "section": "Otter小隊",
+      "section": "Cobra小隊",
       "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "joinDate": "2025-10-25",
+      "photo": "assets/members/2026000246.png",
       "activity": {
         "attendanceRate": 84,
         "serviceHours": 13,
@@ -13966,19 +15160,65 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-1a",
+            "d-a-1b",
+            "d-a-1c",
+            "d-a-1d",
+            "d-a-2a",
+            "d-a-2c",
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1b",
+            "d-c-2a"
+          ],
+          "itemCompletedDates": {
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-b-1a": "2025-11-08",
+            "d-a-1a": "2025-12-19",
+            "d-a-1b": "2025-12-19",
+            "d-a-1c": "2025-12-19",
+            "d-a-1d": "2025-12-19",
+            "d-a-2a": "2026-02-28",
+            "d-a-2c": "2026-02-28",
+            "d-a-4a": "2026-03-07",
+            "d-a-4b": "2026-03-07",
+            "d-c-2a": "2026-03-07",
+            "d-c-1b": "2026-03-26",
+            "d-a-3a": "2026-04-25",
+            "d-a-3b": "2026-04-25"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-b-1a",
+            "s-b-3a"
+          ],
+          "itemCompletedDates": {
+            "s-b-3a": "2025-11-08",
+            "s-b-1a": "2026-02-28",
+            "s-a-4a": "2026-03-07",
+            "s-a-4c": "2026-03-07"
+          }
         },
         {
           "key": "advanced",
@@ -14076,10 +15316,10 @@
       "scoutId": "2025021615",
       "englishName": "TSE Tsz Chun Angus",
       "troop": "新界東第1558旅",
-      "section": "Cobra小隊",
-      "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "section": "Otter小隊",
+      "rank": "隊長",
+      "joinDate": "2021-10-30",
+      "photo": "assets/members/2025021615.png",
       "activity": {
         "attendanceRate": 93,
         "serviceHours": 50,
@@ -14503,19 +15743,75 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-1a",
+            "d-a-1b",
+            "d-a-1c",
+            "d-a-1d",
+            "d-a-2a",
+            "d-a-2c",
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1a",
+            "d-c-1b",
+            "d-c-2a",
+            "d-d-2a"
+          ],
+          "itemCompletedDates": {
+            "d-c-1b": "2024-11-17",
+            "d-a-4a": "2024-11-30",
+            "d-a-4b": "2024-11-30",
+            "d-a-1a": "2024-12-20",
+            "d-a-1b": "2024-12-20",
+            "d-a-1c": "2024-12-20",
+            "d-a-1d": "2024-12-20",
+            "d-b-1a": "2024-12-20",
+            "d-c-1a": "2025-03-01",
+            "d-a-3a": "2025-03-08",
+            "d-a-3b": "2025-03-08",
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-a-2a": "2026-02-28",
+            "d-a-2c": "2026-02-28",
+            "d-c-2a": "2026-03-07",
+            "d-d-2a": "2026-05-16"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-b-1a",
+            "s-b-2a",
+            "s-b-3a",
+            "s-c-1d",
+            "s-d-3a"
+          ],
+          "itemCompletedDates": {
+            "s-a-4a": "2024-11-30",
+            "s-a-4c": "2025-03-29",
+            "s-c-1d": "2025-04-10",
+            "s-b-2a": "2025-09-05",
+            "s-b-3a": "2025-11-08",
+            "s-b-1a": "2026-02-28",
+            "s-d-3a": "2026-05-16"
+          }
         },
         {
           "key": "advanced",
@@ -14557,9 +15853,9 @@
       "scoutId": "2026000220",
       "englishName": "TSE Choi Ching",
       "troop": "新界東第1558旅",
-      "section": "Eagle小隊",
+      "section": "新成員",
       "rank": "隊員",
-      "joinDate": "",
+      "joinDate": "2025-10-25",
       "photo": null,
       "activity": {
         "attendanceRate": 0,
@@ -14750,9 +16046,9 @@
       "scoutId": "2026000212",
       "englishName": "LOR Tsz Yau",
       "troop": "新界東第1558旅",
-      "section": "Falcon小隊",
+      "section": "新成員",
       "rank": "隊員",
-      "joinDate": "",
+      "joinDate": "2025-10-25",
       "photo": null,
       "activity": {
         "attendanceRate": 5,
@@ -14950,10 +16246,10 @@
       "scoutId": "2025045085",
       "englishName": "LAW Chun Lam",
       "troop": "新界東第1558旅",
-      "section": "Otter小隊",
-      "rank": "隊員",
-      "joinDate": "",
-      "photo": null,
+      "section": "Cobra小隊",
+      "rank": "副隊",
+      "joinDate": "2024-10-19",
+      "photo": "assets/members/2025045085.png",
       "activity": {
         "attendanceRate": 96,
         "serviceHours": 45,
@@ -15377,19 +16673,79 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
-          "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "status": "completed",
+          "completedDate": "2026-03-07",
+          "completedIds": [
+            "d-a-1a",
+            "d-a-1b",
+            "d-a-1c",
+            "d-a-1d",
+            "d-a-2a",
+            "d-a-2b",
+            "d-a-2c",
+            "d-a-3a",
+            "d-a-3b",
+            "d-a-4a",
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-2a",
+            "d-b-3a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1a",
+            "d-c-1b",
+            "d-c-2a",
+            "d-d-1a",
+            "d-d-2a"
+          ],
+          "itemCompletedDates": {
+            "d-c-1b": "2024-11-17",
+            "d-a-4a": "2024-11-30",
+            "d-a-4b": "2024-11-30",
+            "d-a-1a": "2024-12-20",
+            "d-a-1b": "2024-12-20",
+            "d-a-1c": "2024-12-20",
+            "d-a-1d": "2024-12-20",
+            "d-b-1a": "2024-12-20",
+            "d-c-1a": "2025-03-01",
+            "d-a-3a": "2025-03-08",
+            "d-a-3b": "2025-03-08",
+            "d-d-1a": "2025-09-27",
+            "d-d-2a": "2025-09-27",
+            "d-a-2b": "2025-10-04",
+            "d-b-2a": "2025-10-25",
+            "d-b-3a": "2025-10-25",
+            "d-b-4a": "2025-10-25",
+            "d-b-4b": "2025-10-25",
+            "d-a-2a": "2026-02-28",
+            "d-a-2c": "2026-02-28",
+            "d-c-2a": "2026-03-07"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-a-4a",
+            "s-a-4c",
+            "s-b-1a",
+            "s-b-2a",
+            "s-b-3a",
+            "s-c-1d",
+            "s-d-3a"
+          ],
+          "itemCompletedDates": {
+            "s-a-4a": "2024-11-30",
+            "s-a-4c": "2025-03-29",
+            "s-c-1d": "2025-04-10",
+            "s-b-2a": "2025-09-05",
+            "s-b-3a": "2025-11-08",
+            "s-b-1a": "2026-02-28",
+            "s-d-3a": "2026-05-16"
+          }
         },
         {
           "key": "advanced",
@@ -15445,9 +16801,9 @@
       "scoutId": "2025098324",
       "englishName": "KWAN King Lok",
       "troop": "新界東第1558旅",
-      "section": "Cobra小隊",
+      "section": "新成員",
       "rank": "隊員",
-      "joinDate": "",
+      "joinDate": "2025-10-25",
       "photo": null,
       "activity": {
         "attendanceRate": 16,
@@ -15616,19 +16972,33 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-2a",
+            "d-a-2c",
+            "d-b-1a"
+          ],
+          "itemCompletedDates": {
+            "d-b-1a": "2025-11-08",
+            "d-a-2a": "2026-02-28",
+            "d-a-2c": "2026-02-28"
+          }
         },
         {
           "key": "standard",
           "name": "標準獎章",
           "icon": "assets/badge-standard.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "s-b-1a",
+            "s-b-3a"
+          ],
+          "itemCompletedDates": {
+            "s-b-3a": "2025-11-08",
+            "s-b-1a": "2026-02-28"
+          }
         },
         {
           "key": "advanced",

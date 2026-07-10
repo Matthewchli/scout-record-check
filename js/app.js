@@ -1355,22 +1355,15 @@
         (item) => `
         <div class="info-row">
           <dt>${escapeHtml(item.label)}</dt>
-          <dd>${escapeHtml(item.value)}</dd>
+          <dd>
+            <span class="info-value">${escapeHtml(item.value)}</span>
+            ${
+              item.hint
+                ? `<span class="info-hint">${escapeHtml(item.hint)}</span>`
+                : ""
+            }
+          </dd>
         </div>`
-      )
-      .join("");
-
-    const contactsHtml = (resources.contacts || [])
-      .map(
-        (c) => `
-        <li class="contact-item">
-          <div class="contact-main">
-            <span class="contact-role">${escapeHtml(c.role)}</span>
-            <span class="contact-name">${escapeHtml(c.name)}</span>
-          </div>
-          <a class="contact-phone" href="tel:${c.phone.replace(/\s/g, "")}">${escapeHtml(c.phone)}</a>
-          <span class="contact-note">${escapeHtml(c.note)}</span>
-        </li>`
       )
       .join("");
 
@@ -1386,17 +1379,6 @@
       )
       .join("");
 
-    const noticesHtml = (resources.notices || [])
-      .map(
-        (n) => `
-        <article class="notice-item">
-          <time class="notice-date" datetime="${n.date}">${formatDate(n.date)}</time>
-          <h4 class="notice-title">${escapeHtml(n.title)}</h4>
-          <p class="notice-content">${escapeHtml(n.content)}</p>
-        </article>`
-      )
-      .join("");
-
     container.innerHTML = `
       <div class="resource-grid">
         <section class="resource-block">
@@ -1404,18 +1386,10 @@
           <dl class="info-list">${infoHtml}</dl>
         </section>
         <section class="resource-block">
-          <h3 class="subsection-title">聯絡領袖</h3>
-          <ul class="contact-list">${contactsHtml || `<li class="empty-state">暫無聯絡資料</li>`}</ul>
+          <h3 class="subsection-title">常用連結</h3>
+          <ul class="link-list">${linksHtml || `<li class="empty-state">暫無連結</li>`}</ul>
         </section>
       </div>
-      <section class="resource-block">
-        <h3 class="subsection-title">常用連結</h3>
-        <ul class="link-list">${linksHtml || `<li class="empty-state">暫無連結</li>`}</ul>
-      </section>
-      <section class="resource-block">
-        <h3 class="subsection-title">旅團通告</h3>
-        <div class="notice-list">${noticesHtml || `<p class="empty-state">暫無通告</p>`}</div>
-      </section>
     `;
   }
 
