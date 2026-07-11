@@ -1,0 +1,568 @@
+{
+  "generatedFrom": "assets/specialty",
+  "orderedBy": "data/specialty-order.json (FullVersion-zh.pdf)",
+  "groups": [
+    {
+      "key": "interest",
+      "label": "興趣組",
+      "items": [
+        {
+          "name": "釣魚",
+          "icon": "assets/specialty/interest/釣魚.png",
+          "key": "interest:釣魚"
+        },
+        {
+          "name": "愛護動物",
+          "icon": "assets/specialty/interest/愛護動物.png",
+          "key": "interest:愛護動物"
+        },
+        {
+          "name": "射箭",
+          "icon": "assets/specialty/interest/射箭.png",
+          "key": "interest:射箭"
+        },
+        {
+          "name": "藝術",
+          "icon": "assets/specialty/interest/藝術.png",
+          "key": "interest:藝術"
+        },
+        {
+          "name": "運動",
+          "icon": "assets/specialty/interest/運動.png",
+          "key": "interest:運動"
+        },
+        {
+          "name": "營地烹飪",
+          "icon": "assets/specialty/interest/營地烹飪.png",
+          "key": "interest:營地烹飪"
+        },
+        {
+          "name": "獨木舟",
+          "icon": "assets/specialty/interest/獨木舟.png",
+          "key": "interest:獨木舟"
+        },
+        {
+          "name": "搜集",
+          "icon": "assets/specialty/interest/搜集.png",
+          "key": "interest:搜集"
+        },
+        {
+          "name": "單車",
+          "icon": "assets/specialty/interest/單車.png",
+          "key": "interest:單車"
+        },
+        {
+          "name": "龍舟",
+          "icon": "assets/specialty/interest/龍舟.png",
+          "key": "interest:龍舟"
+        },
+        {
+          "name": "步操",
+          "icon": "assets/specialty/interest/步操.png",
+          "key": "interest:步操"
+        },
+        {
+          "name": "地質",
+          "icon": "assets/specialty/interest/地質.png",
+          "key": "interest:地質"
+        },
+        {
+          "name": "騎術",
+          "icon": "assets/specialty/interest/騎術.png",
+          "key": "interest:騎術"
+        },
+        {
+          "name": "圖書管理",
+          "icon": "assets/specialty/interest/圖書管理.png",
+          "key": "interest:圖書管理"
+        },
+        {
+          "name": "氣象",
+          "icon": "assets/specialty/interest/氣象.png",
+          "key": "interest:氣象"
+        },
+        {
+          "name": "模型製作",
+          "icon": "assets/specialty/interest/模型製作.png",
+          "key": "interest:模型製作"
+        },
+        {
+          "name": "音樂",
+          "icon": "assets/specialty/interest/音樂.png",
+          "key": "interest:音樂"
+        },
+        {
+          "name": "自然",
+          "icon": "assets/specialty/interest/自然.png",
+          "key": "interest:自然"
+        },
+        {
+          "name": "公園定向",
+          "icon": "assets/specialty/interest/公園定向.png",
+          "key": "interest:公園定向"
+        },
+        {
+          "name": "攝影",
+          "icon": "assets/specialty/interest/攝影.png",
+          "key": "interest:攝影"
+        },
+        {
+          "name": "划艇",
+          "icon": "assets/specialty/interest/划艇.png",
+          "key": "interest:划艇"
+        },
+        {
+          "name": "風帆",
+          "icon": "assets/specialty/interest/風帆.png",
+          "key": "interest:風帆"
+        },
+        {
+          "name": "農務",
+          "icon": "assets/specialty/interest/農務.png",
+          "key": "interest:農務"
+        },
+        {
+          "name": "游泳",
+          "icon": "assets/specialty/interest/游泳.png",
+          "key": "interest:游泳"
+        },
+        {
+          "name": "旅遊",
+          "icon": "assets/specialty/interest/旅遊.png",
+          "key": "interest:旅遊"
+        },
+        {
+          "name": "滑浪風帆",
+          "icon": "assets/specialty/interest/滑浪風帆.png",
+          "key": "interest:滑浪風帆"
+        }
+      ]
+    },
+    {
+      "key": "skill",
+      "label": "技能組",
+      "items": [
+        {
+          "name": "射箭",
+          "icon": "assets/specialty/skill/射箭.png",
+          "key": "skill:射箭"
+        },
+        {
+          "name": "天象",
+          "icon": "assets/specialty/skill/天象.png",
+          "key": "skill:天象"
+        },
+        {
+          "name": "原野烹飪",
+          "icon": "assets/specialty/skill/原野烹飪.png",
+          "key": "skill:原野烹飪"
+        },
+        {
+          "name": "露營",
+          "icon": "assets/specialty/skill/露營.png",
+          "key": "skill:露營"
+        },
+        {
+          "name": "獨木舟",
+          "icon": "assets/specialty/skill/獨木舟.png",
+          "key": "skill:獨木舟"
+        },
+        {
+          "name": "獨木舟水球",
+          "icon": "assets/specialty/skill/獨木舟水球.png",
+          "key": "skill:獨木舟水球"
+        },
+        {
+          "name": "通訊",
+          "icon": "assets/specialty/skill/通訊.png",
+          "key": "skill:通訊"
+        },
+        {
+          "name": "電腦",
+          "icon": "assets/specialty/skill/電腦.png",
+          "key": "skill:電腦"
+        },
+        {
+          "name": "烹飪（中式）",
+          "icon": "assets/specialty/skill/烹飪（中式）.png",
+          "key": "skill:烹飪（中式）"
+        },
+        {
+          "name": "手藝",
+          "icon": "assets/specialty/skill/手藝.png",
+          "key": "skill:手藝"
+        },
+        {
+          "name": "電子",
+          "icon": "assets/specialty/skill/電子.png",
+          "key": "skill:電子"
+        },
+        {
+          "name": "探險",
+          "icon": "assets/specialty/skill/探險.png",
+          "key": "skill:探險"
+        },
+        {
+          "name": "步操",
+          "icon": "assets/specialty/skill/步操.png",
+          "key": "skill:步操"
+        },
+        {
+          "name": "獨木舟國際賽艇",
+          "icon": "assets/specialty/skill/獨木舟國際賽艇.png",
+          "key": "skill:獨木舟國際賽艇"
+        },
+        {
+          "name": "地圖繪製",
+          "icon": "assets/specialty/skill/地圖繪製.png",
+          "key": "skill:地圖繪製"
+        },
+        {
+          "name": "地圖閱讀",
+          "icon": "assets/specialty/skill/地圖閱讀.png",
+          "key": "skill:地圖閱讀"
+        },
+        {
+          "name": "射擊",
+          "icon": "assets/specialty/skill/射擊.png",
+          "key": "skill:射擊"
+        },
+        {
+          "name": "技擊",
+          "icon": "assets/specialty/skill/技擊.png",
+          "key": "skill:技擊"
+        },
+        {
+          "name": "機械",
+          "icon": "assets/specialty/skill/機械.png",
+          "key": "skill:機械"
+        },
+        {
+          "name": "氣象",
+          "icon": "assets/specialty/skill/氣象.png",
+          "key": "skill:氣象"
+        },
+        {
+          "name": "領航",
+          "icon": "assets/specialty/skill/領航.png",
+          "key": "skill:領航"
+        },
+        {
+          "name": "觀察",
+          "icon": "assets/specialty/skill/觀察.png",
+          "key": "skill:觀察"
+        },
+        {
+          "name": "野外定向",
+          "icon": "assets/specialty/skill/野外定向.png",
+          "key": "skill:野外定向"
+        },
+        {
+          "name": "先鋒工程",
+          "icon": "assets/specialty/skill/先鋒工程.png",
+          "key": "skill:先鋒工程"
+        },
+        {
+          "name": "風帆賽艇舵手",
+          "icon": "assets/specialty/skill/風帆賽艇舵手.png",
+          "key": "skill:風帆賽艇舵手"
+        },
+        {
+          "name": "風帆",
+          "icon": "assets/specialty/skill/風帆.png",
+          "key": "skill:風帆"
+        },
+        {
+          "name": "徒手潛水",
+          "icon": "assets/specialty/skill/徒手潛水.png",
+          "key": "skill:徒手潛水"
+        },
+        {
+          "name": "艇長",
+          "icon": "assets/specialty/skill/艇長.png",
+          "key": "skill:艇長"
+        },
+        {
+          "name": "體育",
+          "icon": "assets/specialty/skill/體育.png",
+          "key": "skill:體育"
+        },
+        {
+          "name": "樹木護理",
+          "icon": "assets/specialty/skill/樹木護理.png",
+          "key": "skill:樹木護理"
+        },
+        {
+          "name": "國際友誼",
+          "icon": "assets/specialty/skill/國際友誼.png",
+          "key": "skill:國際友誼"
+        }
+      ]
+    },
+    {
+      "key": "service",
+      "label": "服務組",
+      "items": [
+        {
+          "name": "營地管理",
+          "icon": "assets/specialty/service/營地管理.png",
+          "key": "service:營地管理"
+        },
+        {
+          "name": "獨木舟救生",
+          "icon": "assets/specialty/service/獨木舟救生.png",
+          "key": "service:獨木舟救生"
+        },
+        {
+          "name": "公民",
+          "icon": "assets/specialty/service/公民.png",
+          "key": "service:公民"
+        },
+        {
+          "name": "護養",
+          "icon": "assets/specialty/service/護養.png",
+          "key": "service:護養"
+        },
+        {
+          "name": "共融",
+          "icon": "assets/specialty/service/共融.png",
+          "key": "service:共融"
+        },
+        {
+          "name": "消防",
+          "icon": "assets/specialty/service/消防.png",
+          "key": "service:消防"
+        },
+        {
+          "name": "急救",
+          "icon": "assets/specialty/service/急救.png",
+          "key": "service:急救"
+        },
+        {
+          "name": "指引",
+          "icon": "assets/specialty/service/指引.png",
+          "key": "service:指引"
+        },
+        {
+          "name": "語言",
+          "icon": "assets/specialty/service/語言.png",
+          "key": "service:語言"
+        },
+        {
+          "name": "工藝",
+          "icon": "assets/specialty/service/工藝.png",
+          "key": "service:工藝"
+        },
+        {
+          "name": "拯溺",
+          "icon": "assets/specialty/service/拯溺.png",
+          "key": "service:拯溺"
+        },
+        {
+          "name": "領港",
+          "icon": "assets/specialty/service/領港.png",
+          "key": "service:領港"
+        },
+        {
+          "name": "物資管理",
+          "icon": "assets/specialty/service/物資管理.png",
+          "key": "service:物資管理"
+        },
+        {
+          "name": "秘書",
+          "icon": "assets/specialty/service/秘書.png",
+          "key": "service:秘書"
+        }
+      ]
+    },
+    {
+      "key": "instructor",
+      "label": "教導組",
+      "items": [
+        {
+          "name": "單車",
+          "icon": "assets/specialty/instructor/單車.png",
+          "key": "instructor:單車"
+        },
+        {
+          "name": "攝影",
+          "icon": "assets/specialty/instructor/攝影.png",
+          "key": "instructor:攝影"
+        },
+        {
+          "name": "風帆",
+          "icon": "assets/specialty/instructor/風帆.png",
+          "key": "instructor:風帆"
+        },
+        {
+          "name": "游泳",
+          "icon": "assets/specialty/instructor/游泳.png",
+          "key": "instructor:游泳"
+        },
+        {
+          "name": "天象",
+          "icon": "assets/specialty/instructor/天象.png",
+          "key": "instructor:天象"
+        },
+        {
+          "name": "原野烹飪",
+          "icon": "assets/specialty/instructor/原野烹飪.png",
+          "key": "instructor:原野烹飪"
+        },
+        {
+          "name": "露營",
+          "icon": "assets/specialty/instructor/露營.png",
+          "key": "instructor:露營"
+        },
+        {
+          "name": "通訊",
+          "icon": "assets/specialty/instructor/通訊.png",
+          "key": "instructor:通訊"
+        },
+        {
+          "name": "烹飪（中式）",
+          "icon": "assets/specialty/instructor/烹飪（中式）.png",
+          "key": "instructor:烹飪（中式）"
+        },
+        {
+          "name": "地圖繪製",
+          "icon": "assets/specialty/instructor/地圖繪製.png",
+          "key": "instructor:地圖繪製"
+        },
+        {
+          "name": "機械",
+          "icon": "assets/specialty/instructor/機械.png",
+          "key": "instructor:機械"
+        },
+        {
+          "name": "氣象",
+          "icon": "assets/specialty/instructor/氣象.png",
+          "key": "instructor:氣象"
+        },
+        {
+          "name": "觀察",
+          "icon": "assets/specialty/instructor/觀察.png",
+          "key": "instructor:觀察"
+        },
+        {
+          "name": "野外定向",
+          "icon": "assets/specialty/instructor/野外定向.png",
+          "key": "instructor:野外定向"
+        },
+        {
+          "name": "先鋒工程",
+          "icon": "assets/specialty/instructor/先鋒工程.png",
+          "key": "instructor:先鋒工程"
+        },
+        {
+          "name": "樹木護理",
+          "icon": "assets/specialty/instructor/樹木護理.png",
+          "key": "instructor:樹木護理"
+        },
+        {
+          "name": "護養",
+          "icon": "assets/specialty/instructor/護養.png",
+          "key": "instructor:護養"
+        },
+        {
+          "name": "拯溺",
+          "icon": "assets/specialty/instructor/拯溺.png",
+          "key": "instructor:拯溺"
+        }
+      ]
+    },
+    {
+      "key": "water",
+      "label": "水上活動組",
+      "items": [
+        {
+          "name": "艇工",
+          "icon": "assets/specialty/water/艇工.png",
+          "key": "water:艇工"
+        },
+        {
+          "name": "水手",
+          "icon": "assets/specialty/water/水手.png",
+          "key": "water:水手"
+        },
+        {
+          "name": "水手長",
+          "icon": "assets/specialty/water/水手長.png",
+          "key": "water:水手長"
+        }
+      ]
+    },
+    {
+      "key": "aviation",
+      "label": "航空活動組",
+      "items": [
+        {
+          "name": "初級航空活動",
+          "icon": "assets/specialty/aviation/初級航空活動.png",
+          "key": "aviation:初級航空活動"
+        },
+        {
+          "name": "中級航空活動",
+          "icon": "assets/specialty/aviation/中級航空活動.png",
+          "key": "aviation:中級航空活動"
+        },
+        {
+          "name": "高級航空活動",
+          "icon": "assets/specialty/aviation/高級航空活動.png",
+          "key": "aviation:高級航空活動"
+        }
+      ]
+    },
+    {
+      "key": "other",
+      "label": "其他獎章及徽章",
+      "items": [
+        {
+          "name": "服務獎章",
+          "icon": "assets/specialty/other/服務獎章.png",
+          "key": "other:服務獎章"
+        },
+        {
+          "name": "領導才獎章",
+          "icon": "assets/specialty/other/領導才獎章.png",
+          "key": "other:領導才獎章"
+        },
+        {
+          "name": "小隊活動巾圈",
+          "icon": "assets/specialty/other/小隊活動巾圈.png",
+          "key": "other:小隊活動巾圈"
+        },
+        {
+          "name": "社區參與章",
+          "icon": "assets/specialty/other/社區參與章.png",
+          "key": "other:社區參與章"
+        },
+        {
+          "name": "宗教章",
+          "icon": "assets/specialty/other/宗教章.png",
+          "key": "other:宗教章"
+        },
+        {
+          "name": "維護自然世界章",
+          "icon": "assets/specialty/other/維護自然世界章.png",
+          "key": "other:維護自然世界章"
+        },
+        {
+          "name": "世界童軍環境章",
+          "icon": "assets/specialty/other/世界童軍環境章.png",
+          "key": "other:世界童軍環境章"
+        },
+        {
+          "name": "深資童軍先修章",
+          "icon": "assets/specialty/other/深資童軍先修章.png",
+          "key": "other:深資童軍先修章"
+        },
+        {
+          "name": "香港青年獎勵計劃",
+          "icon": "assets/specialty/other/香港青年獎勵計劃.png",
+          "key": "other:香港青年獎勵計劃"
+        }
+      ]
+    }
+  ]
+}

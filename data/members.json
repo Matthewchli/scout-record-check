@@ -668,7 +668,7 @@
           "earnedDate": "2025-07-22",
           "category": "興趣組",
           "group": "interest",
-          "icon": "assets/specialty/interest/游泳.png",
+          "icon": "assets/specialty/instructor/游泳.png",
           "activityName": "游泳章考核",
           "organizer": "新界東第1558旅童軍團",
           "assessmentDate": "2025-07-22",
@@ -692,7 +692,7 @@
           "earnedDate": "2024-11-02",
           "category": "興趣組",
           "group": "interest",
-          "icon": "assets/specialty/interest/單車.png",
+          "icon": "assets/specialty/instructor/單車.png",
           "activityName": "單車章考核",
           "organizer": "香港童軍總會",
           "assessmentDate": "2024-11-02",
@@ -704,7 +704,7 @@
           "earnedDate": "2024-05-18",
           "category": "興趣組",
           "group": "interest",
-          "icon": "assets/specialty/interest/攝影.png",
+          "icon": "assets/specialty/instructor/攝影.png",
           "activityName": "攝影章考核",
           "organizer": "香港紅十字會",
           "assessmentDate": "2024-05-18",
@@ -728,7 +728,7 @@
           "earnedDate": "2024-08-10",
           "category": "技能組",
           "group": "skill",
-          "icon": "assets/specialty/skill/露營.png",
+          "icon": "assets/specialty/instructor/露營.png",
           "activityName": "露營章考核",
           "organizer": "新界東第1558旅童軍團",
           "assessmentDate": "2024-08-10",
@@ -752,7 +752,7 @@
           "earnedDate": "2025-01-11",
           "category": "技能組",
           "group": "skill",
-          "icon": "assets/specialty/skill/先鋒工程.png",
+          "icon": "assets/specialty/instructor/先鋒工程.png",
           "activityName": "先鋒工程章考核",
           "organizer": "香港童軍總會",
           "assessmentDate": "2025-01-11",
@@ -764,7 +764,7 @@
           "earnedDate": "2025-10-05",
           "category": "技能組",
           "group": "skill",
-          "icon": "assets/specialty/skill/觀察.png",
+          "icon": "assets/specialty/instructor/觀察.png",
           "activityName": "觀察章考核",
           "organizer": "香港紅十字會",
           "assessmentDate": "2025-10-05",
@@ -1437,7 +1437,7 @@
           "earnedDate": "2025-04-12",
           "category": "興趣組",
           "group": "interest",
-          "icon": "assets/specialty/interest/氣象.png",
+          "icon": "assets/specialty/instructor/氣象.png",
           "activityName": "氣象章考核",
           "organizer": "新界東地域專章秘書",
           "assessmentDate": "2025-04-12",
@@ -1473,7 +1473,7 @@
           "earnedDate": "2025-01-25",
           "category": "技能組",
           "group": "skill",
-          "icon": "assets/specialty/skill/觀察.png",
+          "icon": "assets/specialty/instructor/觀察.png",
           "activityName": "觀察章考核",
           "organizer": "香港聖約翰救護機構",
           "assessmentDate": "2025-01-25",
@@ -1485,7 +1485,7 @@
           "earnedDate": "2024-12-14",
           "category": "技能組",
           "group": "skill",
-          "icon": "assets/specialty/skill/烹飪（中式）.png",
+          "icon": "assets/specialty/instructor/烹飪（中式）.png",
           "activityName": "烹飪（中式）章考核",
           "organizer": "新界東第1558旅童軍團",
           "assessmentDate": "2024-12-14",
@@ -1497,7 +1497,7 @@
           "earnedDate": "2025-08-16",
           "category": "技能組",
           "group": "skill",
-          "icon": "assets/specialty/skill/天象.png",
+          "icon": "assets/specialty/instructor/天象.png",
           "activityName": "天象章考核",
           "organizer": "新界東地域專章秘書",
           "assessmentDate": "2025-08-16",
@@ -1545,7 +1545,7 @@
           "earnedDate": "2025-06-28",
           "category": "興趣組",
           "group": "interest",
-          "icon": "assets/specialty/interest/攝影.png",
+          "icon": "assets/specialty/instructor/攝影.png",
           "activityName": "興趣組 - 攝影章",
           "organizer": "沙田東區",
           "assessmentDate": "2025-06-28",
@@ -2151,7 +2151,7 @@
           "earnedDate": "2025-08-23",
           "category": "興趣組",
           "group": "interest",
-          "icon": "assets/specialty/interest/步操.png",
+          "icon": "assets/specialty/skill/步操.png",
           "activityName": "步操章考核",
           "organizer": "香港童軍總會",
           "assessmentDate": "2025-08-23",
@@ -2187,7 +2187,7 @@
           "earnedDate": "2025-09-20",
           "category": "技能組",
           "group": "skill",
-          "icon": "assets/specialty/skill/通訊.png",
+          "icon": "assets/specialty/instructor/通訊.png",
           "activityName": "通訊章考核",
           "organizer": "新界東第1558旅童軍團",
           "assessmentDate": "2025-09-20",
@@ -2769,7 +2769,8 @@
           "organizer": "新界東第1558旅",
           "assessmentDate": "2026-02-28",
           "syllabusKey": "interest:單車",
-          "examiner": ""
+          "examiner": "李載禧先生",
+          "examinerTitle": "訓練員"
         },
         {
           "name": "領導才獎章",
@@ -2781,9 +2782,10 @@
           "organizer": "沙田東區",
           "assessmentDate": "2025-11-30",
           "syllabusKey": "other:領導才獎章",
-          "examiner": "",
-          "noticeTitle": "沙田東區 第573屆童軍領導才訓練班",
-          "noticeUrl": "assets/notices/20251130-leadership-training.pdf"
+          "examiner": "李嘉明先生",
+          "examinerTitle": "助理區總監(深資童軍)",
+          "noticeUrl": "assets/notices/20251130-leadership-training.pdf",
+          "noticeTitle": "沙田東區 第573屆童軍領導才訓練班"
         }
       ],
       "awards": []
@@ -3991,9 +3993,10 @@
           "organizer": "沙田東區",
           "assessmentDate": "2026-07-05",
           "syllabusKey": "skill:觀察",
-          "examiner": "",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
-          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf"
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
         },
         {
           "name": "手藝章",
@@ -4005,9 +4008,10 @@
           "organizer": "沙田東區",
           "assessmentDate": "2026-07-05",
           "syllabusKey": "skill:手藝",
-          "examiner": "",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
-          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf"
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
         },
         {
           "name": "模型製作章",
@@ -4019,9 +4023,10 @@
           "organizer": "沙田東區",
           "assessmentDate": "2026-07-05",
           "syllabusKey": "interest:模型製作",
-          "examiner": "",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
-          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf"
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
         },
         {
           "name": "運動章",
@@ -4033,9 +4038,10 @@
           "organizer": "沙田東區",
           "assessmentDate": "2026-07-05",
           "syllabusKey": "interest:運動",
-          "examiner": "",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
-          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf"
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
         },
         {
           "name": "領導才獎章",
@@ -4047,9 +4053,10 @@
           "organizer": "沙田西區",
           "assessmentDate": "2025-07-27",
           "syllabusKey": "other:領導才獎章",
-          "examiner": "",
-          "noticeTitle": "沙田西區 第569屆童軍領導才訓練班",
-          "noticeUrl": "assets/notices/20250727-leadership-training.pdf"
+          "examiner": "譚奕軒先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20250727-leadership-training.pdf",
+          "noticeTitle": "沙田西區 第569屆童軍領導才訓練班"
         },
         {
           "name": "攝影章",
@@ -4061,9 +4068,10 @@
           "organizer": "沙田東區",
           "assessmentDate": "2025-06-28",
           "syllabusKey": "interest:攝影",
-          "examiner": "",
-          "noticeTitle": "沙田東區 攝影章數碼相機（興趣組）訓練班",
-          "noticeUrl": "assets/notices/20250628-photography-training.pdf"
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20250628-photography-training.pdf",
+          "noticeTitle": "沙田東區 攝影章數碼相機（興趣組）訓練班"
         }
       ],
       "awards": []
@@ -4773,9 +4781,10 @@
           "organizer": "沙田東區",
           "assessmentDate": "2026-07-05",
           "syllabusKey": "service:語言",
-          "examiner": "",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
-          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf"
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
         },
         {
           "name": "手藝章",
@@ -4787,9 +4796,10 @@
           "organizer": "沙田東區",
           "assessmentDate": "2026-07-05",
           "syllabusKey": "skill:手藝",
-          "examiner": "",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
-          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf"
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
         },
         {
           "name": "藝術章",
@@ -4801,9 +4811,10 @@
           "organizer": "沙田東區",
           "assessmentDate": "2026-07-05",
           "syllabusKey": "interest:藝術",
-          "examiner": "",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
-          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf"
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
         },
         {
           "name": "模型製作章",
@@ -4815,9 +4826,10 @@
           "organizer": "沙田東區",
           "assessmentDate": "2026-07-05",
           "syllabusKey": "interest:模型製作",
-          "examiner": "",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
-          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf"
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
         },
         {
           "name": "攝影章",
@@ -4829,9 +4841,10 @@
           "organizer": "沙田東區",
           "assessmentDate": "2026-07-05",
           "syllabusKey": "interest:攝影",
-          "examiner": "",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
-          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf"
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
         }
       ],
       "awards": []
@@ -5346,7 +5359,8 @@
           "organizer": "新界東第1558旅",
           "assessmentDate": "2026-02-28",
           "syllabusKey": "interest:單車",
-          "examiner": ""
+          "examiner": "李載禧先生",
+          "examinerTitle": "訓練員"
         },
         {
           "name": "領導才獎章",
@@ -5358,9 +5372,10 @@
           "organizer": "沙田東區",
           "assessmentDate": "2025-11-30",
           "syllabusKey": "other:領導才獎章",
-          "examiner": "",
-          "noticeTitle": "沙田東區 第573屆童軍領導才訓練班",
-          "noticeUrl": "assets/notices/20251130-leadership-training.pdf"
+          "examiner": "李嘉明先生",
+          "examinerTitle": "助理區總監(深資童軍)",
+          "noticeUrl": "assets/notices/20251130-leadership-training.pdf",
+          "noticeTitle": "沙田東區 第573屆童軍領導才訓練班"
         }
       ],
       "awards": []
@@ -5837,7 +5852,8 @@
           "organizer": "新界東第1558旅",
           "assessmentDate": "2026-02-28",
           "syllabusKey": "interest:單車",
-          "examiner": ""
+          "examiner": "李載禧先生",
+          "examinerTitle": "訓練員"
         }
       ],
       "awards": []
@@ -6322,7 +6338,8 @@
           "organizer": "新界東第1558旅",
           "assessmentDate": "2026-02-28",
           "syllabusKey": "interest:單車",
-          "examiner": ""
+          "examiner": "李載禧先生",
+          "examinerTitle": "訓練員"
         }
       ],
       "awards": []
@@ -6851,7 +6868,8 @@
           "organizer": "新界東第1558旅",
           "assessmentDate": "2026-02-28",
           "syllabusKey": "interest:單車",
-          "examiner": ""
+          "examiner": "李載禧先生",
+          "examinerTitle": "訓練員"
         },
         {
           "name": "攝影章",
@@ -6863,9 +6881,10 @@
           "organizer": "沙田東區",
           "assessmentDate": "2025-06-28",
           "syllabusKey": "interest:攝影",
-          "examiner": "",
-          "noticeTitle": "沙田東區 攝影章數碼相機（興趣組）訓練班",
-          "noticeUrl": "assets/notices/20250628-photography-training.pdf"
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20250628-photography-training.pdf",
+          "noticeTitle": "沙田東區 攝影章數碼相機（興趣組）訓練班"
         }
       ],
       "awards": []
@@ -7362,7 +7381,8 @@
           "organizer": "新界東第1558旅",
           "assessmentDate": "2026-02-28",
           "syllabusKey": "interest:單車",
-          "examiner": ""
+          "examiner": "李載禧先生",
+          "examinerTitle": "訓練員"
         }
       ],
       "awards": []
@@ -7628,7 +7648,8 @@
           "organizer": "新界東第1558旅",
           "assessmentDate": "2026-02-28",
           "syllabusKey": "interest:單車",
-          "examiner": ""
+          "examiner": "李載禧先生",
+          "examinerTitle": "訓練員"
         }
       ],
       "awards": []
@@ -8433,9 +8454,10 @@
           "organizer": "沙田東區",
           "assessmentDate": "2026-07-05",
           "syllabusKey": "skill:手藝",
-          "examiner": "",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
-          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf"
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
         },
         {
           "name": "攝影章",
@@ -8447,9 +8469,10 @@
           "organizer": "沙田東區",
           "assessmentDate": "2026-07-05",
           "syllabusKey": "interest:攝影",
-          "examiner": "",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
-          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf"
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
         },
         {
           "name": "單車章",
@@ -8461,7 +8484,8 @@
           "organizer": "新界東第1558旅",
           "assessmentDate": "2026-02-28",
           "syllabusKey": "interest:單車",
-          "examiner": ""
+          "examiner": "李載禧先生",
+          "examinerTitle": "訓練員"
         }
       ],
       "awards": []
@@ -9797,7 +9821,8 @@
           "organizer": "新界東第1558旅",
           "assessmentDate": "2026-02-28",
           "syllabusKey": "interest:單車",
-          "examiner": ""
+          "examiner": "李載禧先生",
+          "examinerTitle": "訓練員"
         }
       ],
       "awards": []
@@ -11965,9 +11990,10 @@
           "organizer": "新界東地域",
           "assessmentDate": "2026-07-05",
           "syllabusKey": "skill:射擊",
-          "examiner": "",
-          "noticeTitle": "新界東地域 童軍射擊（技能組）專章訓練班",
-          "noticeUrl": "assets/notices/20260705-shooting-training.pdf"
+          "examiner": "杜偉基先生",
+          "examinerTitle": "助理領袖訓練主任",
+          "noticeUrl": "assets/notices/20260705-shooting-training.pdf",
+          "noticeTitle": "新界東地域 童軍射擊（技能組）專章訓練班"
         },
         {
           "name": "消防章",
@@ -11979,9 +12005,10 @@
           "organizer": "新界地域",
           "assessmentDate": "2026-05-16",
           "syllabusKey": "service:消防",
-          "examiner": "",
-          "noticeTitle": "新界地域 童軍消防訓練班",
-          "noticeUrl": "assets/notices/20260516-fire-training.pdf"
+          "examiner": "蔡煒樂先生",
+          "examinerTitle": "地域總部總監(童軍)",
+          "noticeUrl": "assets/notices/20260516-fire-training.pdf",
+          "noticeTitle": "新界地域 童軍消防訓練班"
         },
         {
           "name": "單車章",
@@ -11993,7 +12020,8 @@
           "organizer": "新界東第1558旅",
           "assessmentDate": "2026-02-28",
           "syllabusKey": "interest:單車",
-          "examiner": ""
+          "examiner": "李載禧先生",
+          "examinerTitle": "訓練員"
         },
         {
           "name": "攝影章",
@@ -12005,9 +12033,10 @@
           "organizer": "沙田東區",
           "assessmentDate": "2025-06-28",
           "syllabusKey": "interest:攝影",
-          "examiner": "",
-          "noticeTitle": "沙田東區 攝影章數碼相機（興趣組）訓練班",
-          "noticeUrl": "assets/notices/20250628-photography-training.pdf"
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20250628-photography-training.pdf",
+          "noticeTitle": "沙田東區 攝影章數碼相機（興趣組）訓練班"
         }
       ],
       "awards": []
@@ -12755,9 +12784,10 @@
           "organizer": "沙田東區",
           "assessmentDate": "2026-07-05",
           "syllabusKey": "skill:手藝",
-          "examiner": "",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
-          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf"
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
         },
         {
           "name": "攝影章",
@@ -12769,9 +12799,10 @@
           "organizer": "沙田東區",
           "assessmentDate": "2026-07-05",
           "syllabusKey": "interest:攝影",
-          "examiner": "",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
-          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf"
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
         },
         {
           "name": "單車章",
@@ -12783,7 +12814,8 @@
           "organizer": "新界東第1558旅",
           "assessmentDate": "2026-02-28",
           "syllabusKey": "interest:單車",
-          "examiner": ""
+          "examiner": "李載禧先生",
+          "examinerTitle": "訓練員"
         }
       ],
       "awards": []
@@ -13053,7 +13085,8 @@
           "organizer": "新界東第1558旅",
           "assessmentDate": "2026-02-28",
           "syllabusKey": "interest:單車",
-          "examiner": ""
+          "examiner": "李載禧先生",
+          "examinerTitle": "訓練員"
         }
       ],
       "awards": []
@@ -14422,7 +14455,8 @@
           "organizer": "新界東第1558旅",
           "assessmentDate": "2026-02-28",
           "syllabusKey": "interest:單車",
-          "examiner": ""
+          "examiner": "李載禧先生",
+          "examinerTitle": "訓練員"
         }
       ],
       "awards": []
@@ -14925,7 +14959,8 @@
           "organizer": "新界東第1558旅",
           "assessmentDate": "2026-02-28",
           "syllabusKey": "interest:單車",
-          "examiner": ""
+          "examiner": "李載禧先生",
+          "examinerTitle": "訓練員"
         },
         {
           "name": "領導才獎章",
@@ -14937,9 +14972,10 @@
           "organizer": "沙田東區",
           "assessmentDate": "2025-11-30",
           "syllabusKey": "other:領導才獎章",
-          "examiner": "",
-          "noticeTitle": "沙田東區 第573屆童軍領導才訓練班",
-          "noticeUrl": "assets/notices/20251130-leadership-training.pdf"
+          "examiner": "李嘉明先生",
+          "examinerTitle": "助理區總監(深資童軍)",
+          "noticeUrl": "assets/notices/20251130-leadership-training.pdf",
+          "noticeTitle": "沙田東區 第573屆童軍領導才訓練班"
         },
         {
           "name": "急救章",
@@ -14951,9 +14987,10 @@
           "organizer": "北葵涌區",
           "assessmentDate": "2025-08-17",
           "syllabusKey": "service:急救",
-          "examiner": "",
-          "noticeTitle": "北葵涌區 童軍急救章訓練班",
-          "noticeUrl": "assets/notices/20250817-first-aid-training.pdf"
+          "examiner": "蔡志輝先生",
+          "examinerTitle": "助理區總監(童軍)",
+          "noticeUrl": "assets/notices/20250817-first-aid-training.pdf",
+          "noticeTitle": "北葵涌區 童軍急救章訓練班"
         }
       ],
       "awards": []
@@ -15250,9 +15287,10 @@
           "organizer": "沙田東區",
           "assessmentDate": "2026-07-05",
           "syllabusKey": "skill:手藝",
-          "examiner": "",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
-          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf"
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
         },
         {
           "name": "攝影章",
@@ -15264,9 +15302,10 @@
           "organizer": "沙田東區",
           "assessmentDate": "2026-07-05",
           "syllabusKey": "interest:攝影",
-          "examiner": "",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
-          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf"
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
         },
         {
           "name": "運動章",
@@ -15278,9 +15317,10 @@
           "organizer": "沙田東區",
           "assessmentDate": "2026-07-05",
           "syllabusKey": "interest:運動",
-          "examiner": "",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
-          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf"
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
         },
         {
           "name": "消防章",
@@ -15292,9 +15332,10 @@
           "organizer": "新界地域",
           "assessmentDate": "2026-05-16",
           "syllabusKey": "service:消防",
-          "examiner": "",
-          "noticeTitle": "新界地域 童軍消防訓練班",
-          "noticeUrl": "assets/notices/20260516-fire-training.pdf"
+          "examiner": "蔡煒樂先生",
+          "examinerTitle": "地域總部總監(童軍)",
+          "noticeUrl": "assets/notices/20260516-fire-training.pdf",
+          "noticeTitle": "新界地域 童軍消防訓練班"
         },
         {
           "name": "單車章",
@@ -15306,7 +15347,8 @@
           "organizer": "新界東第1558旅",
           "assessmentDate": "2026-02-28",
           "syllabusKey": "interest:單車",
-          "examiner": ""
+          "examiner": "李載禧先生",
+          "examinerTitle": "訓練員"
         }
       ],
       "awards": []
@@ -15843,7 +15885,8 @@
           "organizer": "新界東第1558旅",
           "assessmentDate": "2026-02-28",
           "syllabusKey": "interest:單車",
-          "examiner": ""
+          "examiner": "李載禧先生",
+          "examinerTitle": "訓練員"
         }
       ],
       "awards": []
@@ -16777,7 +16820,8 @@
           "organizer": "新界東第1558旅",
           "assessmentDate": "2026-02-28",
           "syllabusKey": "interest:單車",
-          "examiner": ""
+          "examiner": "李載禧先生",
+          "examinerTitle": "訓練員"
         },
         {
           "name": "攝影章",
@@ -16789,9 +16833,10 @@
           "organizer": "沙田東區",
           "assessmentDate": "2025-06-28",
           "syllabusKey": "interest:攝影",
-          "examiner": "",
-          "noticeTitle": "沙田東區 攝影章數碼相機（興趣組）訓練班",
-          "noticeUrl": "assets/notices/20250628-photography-training.pdf"
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20250628-photography-training.pdf",
+          "noticeTitle": "沙田東區 攝影章數碼相機（興趣組）訓練班"
         }
       ],
       "awards": []
@@ -17030,7 +17075,8 @@
           "organizer": "新界東第1558旅",
           "assessmentDate": "2026-02-28",
           "syllabusKey": "interest:單車",
-          "examiner": ""
+          "examiner": "李載禧先生",
+          "examinerTitle": "訓練員"
         }
       ],
       "awards": []

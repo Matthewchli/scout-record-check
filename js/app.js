@@ -39,24 +39,28 @@
   let resources = null;
   let syllabus = null;
   let specialtySyllabus = null;
+  let specialtyGallery = null;
   let currentMember = null;
 
   /* ---------- Data ---------- */
 
   async function loadData() {
-    const [membersRes, syllabusRes, specialtyRes] = await Promise.all([
+    const [membersRes, syllabusRes, specialtyRes, galleryRes] = await Promise.all([
       fetch("data/members.json", { cache: "no-store" }),
       fetch("data/progressive-syllabus.json", { cache: "no-store" }),
       fetch("data/specialty-syllabus.json", { cache: "no-store" }),
+      fetch("data/specialty-gallery.json", { cache: "no-store" }),
     ]);
     if (!membersRes.ok) throw new Error("無法載入成員資料");
     if (!syllabusRes.ok) throw new Error("無法載入獎章綱要");
     if (!specialtyRes.ok) throw new Error("無法載入專科徽章綱要");
+    if (!galleryRes.ok) throw new Error("無法載入專科徽章圖鑑");
     const data = await membersRes.json();
     members = data.members || [];
     resources = data.resources || null;
     syllabus = await syllabusRes.json();
     specialtySyllabus = await specialtyRes.json();
+    specialtyGallery = await galleryRes.json();
   }
 
   function findMember(name, scoutId) {
@@ -1085,6 +1089,8 @@
     { key: "skill", label: "技能組", selector: "#specialty-skill" },
     { key: "service", label: "服務組", selector: "#specialty-service" },
     { key: "instructor", label: "教導組", selector: "#specialty-instructor" },
+    { key: "water", label: "水上活動組", selector: "#specialty-water" },
+    { key: "aviation", label: "航空活動組", selector: "#specialty-aviation" },
     { key: "other", label: "其他獎章及徽章", selector: "#specialty-other" },
   ];
 
@@ -1093,6 +1099,11 @@
     技能組: "skill",
     服務組: "service",
     教導組: "instructor",
+    水上活動組: "water",
+    海上活動組: "water",
+    海上活動徽章: "water",
+    航空活動組: "aviation",
+    航空活動徽章: "aviation",
     其他獎章及徽章: "other",
     其他: "other",
   };
@@ -1114,6 +1125,8 @@
       skill: [],
       service: [],
       instructor: [],
+      water: [],
+      aviation: [],
       other: [],
     };
 
@@ -1121,9 +1134,48 @@
       grouped[normalizeSpecialtyGroup(badge)].push(badge);
     }
 
+    const orderGroups =
+      (specialtyGallery &&
+        Object.fromEntries(
+          (specialtyGallery.groups || []).map((g) => [
+            g.key,
+            (g.items || []).map((i) => i.name),
+          ])
+        )) ||
+      {};
+
+    function sortBadges(groupKey, list) {
+      const order = orderGroups[groupKey] || [];
+      const rank = new Map(order.map((n, i) => [n, i]));
+      return [...list].sort((a, b) => {
+        const nameA = String(a.name || "")
+          .replace(/（教導組）/g, "")
+          .replace(/\(教導組\)/g, "")
+          .replace(/章$/, "")
+          .trim();
+        const nameB = String(b.name || "")
+          .replace(/（教導組）/g, "")
+          .replace(/\(教導組\)/g, "")
+          .replace(/章$/, "")
+          .trim();
+        const basesA = [a.name, nameA, nameA.replace(/獎章$/, "")];
+        const basesB = [b.name, nameB, nameB.replace(/獎章$/, "")];
+        const ra = basesA.reduce(
+          (best, n) => (rank.has(n) ? Math.min(best, rank.get(n)) : best),
+          9999
+        );
+        const rb = basesB.reduce(
+          (best, n) => (rank.has(n) ? Math.min(best, rank.get(n)) : best),
+          9999
+        );
+        if (ra !== rb) return ra - rb;
+        return String(a.name || "").localeCompare(String(b.name || ""), "zh-Hant");
+      });
+    }
+
     for (const group of SPECIALTY_GROUPS) {
       $(group.selector).innerHTML = renderBadgeItems(
-        grouped[group.key],
+        sortBadges(group.key, grouped[group.key]),
         false,
         `暫無${group.label}`
       );
@@ -1215,11 +1267,189 @@
     return `${group}:${bases[1] || bases[0]}`;
   }
 
+  let specialtyDetailReturnTo = "list";
+
   function showSpecialtyList() {
     const listView = $("#specialty-list-view");
     const detailView = $("#specialty-detail-view");
+    const galleryView = $("#specialty-gallery-view");
     if (listView) listView.hidden = false;
     if (detailView) detailView.hidden = true;
+    if (galleryView) galleryView.hidden = true;
+    specialtyDetailReturnTo = "list";
+    const backBtn = $("#specialty-back-btn");
+    if (backBtn) backBtn.textContent = "← 返回專科徽章列表";
+  }
+
+  function showSpecialtyGallery() {
+    cancelProgressAnimations();
+    const listView = $("#specialty-list-view");
+    const detailView = $("#specialty-detail-view");
+    const galleryView = $("#specialty-gallery-view");
+    if (listView) listView.hidden = true;
+    if (detailView) detailView.hidden = true;
+    if (galleryView) galleryView.hidden = false;
+    specialtyDetailReturnTo = "gallery";
+    renderSpecialtyGallery();
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }
+
+  function memberHasSpecialtyBadge(name, groupKey) {
+    if (!currentMember || !name || !groupKey) return false;
+    const target = String(name)
+      .replace(/（教導組）/g, "")
+      .replace(/\(教導組\)/g, "")
+      .trim();
+    const targetBase = target.replace(/章$/, "").replace(/獎章$/, "");
+    return (currentMember.specialtyBadges || []).some((b) => {
+      if (normalizeSpecialtyGroup(b) !== groupKey) return false;
+      const raw = String(b.name || "")
+        .replace(/（教導組）/g, "")
+        .replace(/\(教導組\)/g, "")
+        .trim();
+      const base = raw.replace(/章$/, "").replace(/獎章$/, "");
+      return raw === name || raw === target || base === targetBase || base === name;
+    });
+  }
+
+  function renderSpecialtyGallery() {
+    const container = $("#specialty-gallery-content");
+    if (!container) return;
+    const groups = (specialtyGallery && specialtyGallery.groups) || [];
+    if (!groups.length) {
+      container.innerHTML = `<p class="empty-state">暫無圖鑑資料</p>`;
+      return;
+    }
+    container.innerHTML = groups
+      .map((group) => {
+        const items = group.items || [];
+        const cards = items
+          .map((item) => {
+            const earned = memberHasSpecialtyBadge(item.name, group.key);
+            return `
+            <button
+              type="button"
+              class="specialty-gallery-card${earned ? " is-earned" : ""}"
+              data-syllabus-key="${escapeHtml(item.key || `${group.key}:${item.name}`)}"
+            >
+              ${
+                earned
+                  ? `<span class="badge-earned-mark" title="已考獲" aria-label="已考獲"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8-8 1.4 1.4-9.4 9.4z"/></svg></span>`
+                  : ""
+              }
+              <img
+                class="specialty-gallery-img"
+                src="${escapeHtml(item.icon)}"
+                alt="${escapeHtml(item.name)}"
+                width="96"
+                height="96"
+                loading="lazy"
+              />
+              <span class="specialty-gallery-name">${escapeHtml(item.name)}</span>
+            </button>`;
+          })
+          .join("");
+        return `
+          <section class="specialty-gallery-group group-${escapeHtml(group.key)}" aria-labelledby="gallery-${escapeHtml(group.key)}">
+            <h3 id="gallery-${escapeHtml(group.key)}" class="subsection-title">${escapeHtml(group.label)}</h3>
+            <div class="specialty-gallery-grid">${cards}</div>
+          </section>`;
+      })
+      .join("");
+
+    $$("#specialty-gallery-content .specialty-gallery-card").forEach((el) => {
+      el.addEventListener("click", () => {
+        showGalleryBadgeDetail(el.dataset.syllabusKey);
+      });
+    });
+  }
+
+  function renderSyllabusItemsPreview(items) {
+    if (!items.length) {
+      return `<p class="empty-state">暫無綱要分項資料</p>`;
+    }
+    return `
+      <section class="syllabus-section">
+        <header class="syllabus-section-header">
+          <h3>考核分項</h3>
+          <span class="section-progress">${items.length} 項</span>
+        </header>
+        <ul class="syllabus-items">
+          ${items
+            .map((it) => {
+              const details = (it.details || [])
+                .map((d) => `<li>${escapeHtml(d)}</li>`)
+                .join("");
+              return `
+                <li class="syllabus-item">
+                  <div class="syllabus-item-head">
+                    <span class="syllabus-item-title">${escapeHtml(it.title)}</span>
+                  </div>
+                  ${details ? `<ul class="syllabus-details">${details}</ul>` : ""}
+                </li>`;
+            })
+            .join("")}
+        </ul>
+      </section>`;
+  }
+
+  function showGalleryBadgeDetail(syllabusKey) {
+    if (!syllabusKey) return;
+    const map = (specialtySyllabus && specialtySyllabus.badges) || {};
+    let syl = map[syllabusKey] || null;
+    if (!syl) {
+      const name = syllabusKey.includes(":")
+        ? syllabusKey.slice(syllabusKey.indexOf(":") + 1)
+        : syllabusKey;
+      syl = Object.values(map).find((b) => b.name === name) || null;
+    }
+
+    const [groupKey, fallbackName] = syllabusKey.includes(":")
+      ? syllabusKey.split(":")
+      : ["other", syllabusKey];
+    const name = (syl && syl.name) || fallbackName;
+    const groupLabel =
+      (syl && syl.category) ||
+      (SPECIALTY_GROUPS.find((g) => g.key === groupKey) || {}).label ||
+      "";
+
+    specialtyDetailReturnTo = "gallery";
+    $("#specialty-list-view").hidden = true;
+    $("#specialty-gallery-view").hidden = true;
+    $("#specialty-detail-view").hidden = false;
+
+    const backBtn = $("#specialty-back-btn");
+    if (backBtn) backBtn.textContent = "← 返回圖鑑";
+
+    const iconSrc =
+      (specialtyGallery &&
+        specialtyGallery.groups &&
+        specialtyGallery.groups
+          .flatMap((g) => g.items || [])
+          .find((i) => i.key === syllabusKey || i.name === name)?.icon) ||
+      `assets/specialty/${groupKey}/${name}.png`;
+
+    const icon = $("#specialty-detail-icon");
+    if (iconSrc) {
+      icon.hidden = false;
+      icon.src = iconSrc;
+      icon.alt = `${name}圖示`;
+    } else {
+      icon.hidden = true;
+      icon.removeAttribute("src");
+    }
+
+    $("#specialty-detail-name").textContent = name;
+    $("#specialty-detail-english").textContent = (syl && syl.englishName) || "";
+    $("#specialty-detail-group").textContent = groupLabel;
+
+    const meta = $("#specialty-meta");
+    if (meta) meta.hidden = true;
+
+    const sectionsEl = $("#specialty-detail-sections");
+    sectionsEl.innerHTML = renderSyllabusItemsPreview((syl && syl.items) || []);
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   function showSpecialtyDetail(index) {
@@ -1234,8 +1464,17 @@
         specialtySyllabus.badges[key]) ||
       null;
 
+    specialtyDetailReturnTo = "list";
     $("#specialty-list-view").hidden = true;
     $("#specialty-detail-view").hidden = false;
+    const galleryView = $("#specialty-gallery-view");
+    if (galleryView) galleryView.hidden = true;
+
+    const backBtn = $("#specialty-back-btn");
+    if (backBtn) backBtn.textContent = "← 返回專科徽章列表";
+
+    const meta = $("#specialty-meta");
+    if (meta) meta.hidden = false;
 
     const iconSrc = resolveSpecialtyIcon(badge);
     const icon = $("#specialty-detail-icon");
@@ -1270,8 +1509,24 @@
     } else {
       noticeEl.textContent = "—";
     }
-    $("#specialty-meta-examiner").textContent =
-      badge.examiner || badge.assessor || "—";
+    $("#specialty-meta-examiner").innerHTML = (() => {
+      const name = badge.examiner || badge.assessor || "";
+      const title = badge.examinerTitle || "";
+      if (!name && !title) return "—";
+      // Support legacy "姓名（職位）" stored in examiner
+      let displayName = name;
+      let displayTitle = title;
+      if (!displayTitle && displayName) {
+        const m = displayName.match(/^(.*?)[（(](.+?)[）)]\s*$/);
+        if (m) {
+          displayName = m[1].trim();
+          displayTitle = m[2].trim();
+        }
+      }
+      if (!displayName) return escapeHtml(displayTitle);
+      if (!displayTitle) return escapeHtml(displayName);
+      return `${escapeHtml(displayName)} <span class="examiner-title">${escapeHtml(displayTitle)}</span>`;
+    })();
 
     const sectionsEl = $("#specialty-detail-sections");
     const items = (syl && syl.items) || [];
@@ -1471,8 +1726,26 @@
   });
 
   $("#specialty-back-btn").addEventListener("click", () => {
-    showSpecialtyList();
+    if (specialtyDetailReturnTo === "gallery") {
+      showSpecialtyGallery();
+    } else {
+      showSpecialtyList();
+    }
   });
+
+  const specialtyGalleryLink = $("#specialty-gallery-link");
+  if (specialtyGalleryLink) {
+    specialtyGalleryLink.addEventListener("click", () => {
+      showSpecialtyGallery();
+    });
+  }
+
+  const specialtyGalleryBackBtn = $("#specialty-gallery-back-btn");
+  if (specialtyGalleryBackBtn) {
+    specialtyGalleryBackBtn.addEventListener("click", () => {
+      showSpecialtyList();
+    });
+  }
 
   $$(".demo-fill").forEach((btn) => {
     btn.addEventListener("click", () => {

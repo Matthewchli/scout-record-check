@@ -13,6 +13,9 @@ const GROUP_MAP = {
   技能組: { key: "skill", label: "技能組" },
   服務組: { key: "service", label: "服務組" },
   教導組: { key: "instructor", label: "教導組" },
+  水上活動組: { key: "water", label: "水上活動組" },
+  海上活動組: { key: "water", label: "水上活動組" },
+  航空活動組: { key: "aviation", label: "航空活動組" },
   其他獎章: { key: "other", label: "其他獎章及徽章" },
   其他獎章及徽章: { key: "other", label: "其他獎章及徽章" },
 };
@@ -74,6 +77,12 @@ function iconPath(groupKey, badgeName, syllabusKey, syllabus) {
   return `assets/specialty/${groupKey}/${baseNameOf(badgeName, groupKey)}.png`;
 }
 
+function formatExaminer(name, title) {
+  const n = String(name || "").trim();
+  const t = String(title || "").trim();
+  return { examiner: n, examinerTitle: t };
+}
+
 function main() {
   const syllabus = JSON.parse(fs.readFileSync(syllabusPath, "utf8")).badges;
   const data = JSON.parse(fs.readFileSync(membersPath, "utf8"));
@@ -132,6 +141,8 @@ function main() {
         ? `${baseNameOf(parsed.badgeName, parsed.groupKey)}章（教導組）`
         : parsed.badgeName;
 
+    const examinerInfo = formatExaminer(row["主考"], row["主考職位"]);
+
     const badge = {
       name: displayName,
       earnedDate: date,
@@ -142,7 +153,8 @@ function main() {
       organizer: String(row["舉辦機構"] || "").trim(),
       assessmentDate: date,
       syllabusKey,
-      examiner: "",
+      examiner: examinerInfo.examiner,
+      examinerTitle: examinerInfo.examinerTitle,
     };
 
     if (!earned.has(name)) earned.set(name, []);
@@ -159,14 +171,32 @@ function main() {
 
   // Apply: replace specialty badges for members present in Excel;
   // clear specialty for other real members (source of truth = Excel)
+  // Preserve notice fields from previous records when matching.
   let updated = 0;
   let cleared = 0;
   for (const member of data.members) {
     if (DEMO_IDS.has(member.scoutId)) continue;
     if (earned.has(member.name)) {
-      member.specialtyBadges = earned
+      const prev = member.specialtyBadges || [];
+      const next = earned
         .get(member.name)
-        .sort((a, b) => String(b.assessmentDate || "").localeCompare(String(a.assessmentDate || "")));
+        .sort((a, b) =>
+          String(b.assessmentDate || "").localeCompare(String(a.assessmentDate || ""))
+        )
+        .map((badge) => {
+          const old = prev.find(
+            (b) =>
+              b.syllabusKey === badge.syllabusKey &&
+              (b.assessmentDate || b.earnedDate) ===
+                (badge.assessmentDate || badge.earnedDate)
+          );
+          if (old) {
+            if (old.noticeUrl) badge.noticeUrl = old.noticeUrl;
+            if (old.noticeTitle) badge.noticeTitle = old.noticeTitle;
+          }
+          return badge;
+        });
+      member.specialtyBadges = next;
       updated += 1;
     } else {
       if ((member.specialtyBadges || []).length) cleared += 1;
@@ -187,11 +217,22 @@ function main() {
   if (unmatchedActs.size) console.log("unmatched acts", [...unmatchedActs]);
   if (noSyllabus.size) console.log("no syllabus keys", [...noSyllabus]);
 
+  const sampleEx = [...earned.values()]
+    .flat()
+    .slice(0, 5)
+    .map((b) => `${b.examiner}${b.examinerTitle ? " " + b.examinerTitle : ""}`);
+  console.log("sample examiners", sampleEx);
+
   for (const [name, badges] of [...earned.entries()].sort((a, b) =>
     a[0].localeCompare(b[0], "zh-Hant")
   )) {
     console.log(
-      `${name}: ${badges.length} — ${badges.map((b) => b.name).join("、")}`
+      `${name}: ${badges.length} — ${badges
+        .map(
+          (b) =>
+            `${b.name}／${b.examiner || "—"}${b.examinerTitle ? " " + b.examinerTitle : ""}`
+        )
+        .join("、")}`
     );
   }
 }

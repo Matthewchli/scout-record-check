@@ -1254,6 +1254,8 @@ button { cursor: pointer; border: none; background: none; }
 .group-skill { border-top: 3px solid #2a5a8a; }
 .group-service { border-top: 3px solid #b33a3a; }
 .group-instructor { border-top: 3px solid var(--gold); }
+.group-water { border-top: 3px solid #1f6f8b; }
+.group-aviation { border-top: 3px solid #5b4b8a; }
 .group-other { border-top: 3px solid #6b6b6b; }
 .award-group { border-top: 3px solid var(--green-soft); }
 
@@ -1264,6 +1266,7 @@ button { cursor: pointer; border: none; background: none; }
 }
 
 .badge-item {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -1277,6 +1280,29 @@ button { cursor: pointer; border: none; background: none; }
 
 .badge-item:hover {
   background: var(--green-mist);
+}
+
+.badge-earned-mark {
+  position: absolute;
+  top: -0.2rem;
+  right: -0.25rem;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.05rem;
+  height: 1.05rem;
+  border-radius: 50%;
+  background: var(--green-deep);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(26, 61, 43, 0.25);
+  pointer-events: none;
+}
+
+.badge-earned-mark svg {
+  width: 0.7rem;
+  height: 0.7rem;
+  display: block;
 }
 
 .badge-icon {
@@ -1319,6 +1345,8 @@ button { cursor: pointer; border: none; background: none; }
 .group-skill .badge-item { border-left-color: #2a5a8a; }
 .group-service .badge-item { border-left-color: #b33a3a; }
 .group-instructor .badge-item { border-left-color: var(--gold); }
+.group-water .badge-item { border-left-color: #1f6f8b; }
+.group-aviation .badge-item { border-left-color: #5b4b8a; }
 .group-other .badge-item { border-left-color: #6b6b6b; }
 
 .badge-item.award {
@@ -1327,6 +1355,142 @@ button { cursor: pointer; border: none; background: none; }
 
 .badge-item.is-clickable {
   cursor: pointer;
+}
+
+.specialty-gallery-link-wrap {
+  margin: 1.75rem 0 0.5rem;
+  text-align: center;
+}
+
+.specialty-gallery-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--green-deep);
+  background: var(--white);
+  border: 1px solid var(--green-soft);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(26, 61, 43, 0.06);
+  transition: background 0.15s, color 0.15s;
+}
+
+.specialty-gallery-link:hover {
+  background: var(--green-mist);
+}
+
+.specialty-gallery-link:focus-visible {
+  outline: 2px solid var(--green-soft);
+  outline-offset: 2px;
+}
+
+.specialty-gallery-view {
+  padding-bottom: 1rem;
+}
+
+.specialty-gallery-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.specialty-gallery-group {
+  background: var(--white);
+  padding: 1.15rem 1.2rem 1.35rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(26, 61, 43, 0.06);
+}
+
+.specialty-gallery-group.group-interest { border-top: 3px solid #3d7a55; }
+.specialty-gallery-group.group-skill { border-top: 3px solid #2a5a8a; }
+.specialty-gallery-group.group-service { border-top: 3px solid #b33a3a; }
+.specialty-gallery-group.group-instructor { border-top: 3px solid var(--gold); }
+.specialty-gallery-group.group-water { border-top: 3px solid #1f6f8b; }
+.specialty-gallery-group.group-aviation { border-top: 3px solid #5b4b8a; }
+.specialty-gallery-group.group-other { border-top: 3px solid #6b6b6b; }
+
+.specialty-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+  gap: 1rem 0.75rem;
+}
+
+.specialty-gallery-card {
+  position: relative;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  text-align: center;
+  padding: 0.55rem 0.35rem;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.specialty-gallery-card:hover {
+  background: var(--green-mist);
+  border-color: var(--cream-warm);
+}
+
+.specialty-gallery-card:focus-visible {
+  outline: 2px solid var(--green-soft);
+  outline-offset: 2px;
+}
+
+.specialty-gallery-card .badge-earned-mark {
+  top: 0.2rem;
+  right: 0.2rem;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.specialty-gallery-card .badge-earned-mark svg {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.specialty-gallery-card.is-earned {
+  border-color: rgba(26, 61, 43, 0.18);
+  background: rgba(232, 240, 235, 0.55);
+}
+
+.specialty-gallery-img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+
+.specialty-gallery-name {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+@media (min-width: 640px) {
+  .specialty-gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1.15rem 1rem;
+  }
+
+  .specialty-gallery-img {
+    width: 88px;
+    height: 88px;
+  }
+
+  .specialty-gallery-name {
+    font-size: 0.85rem;
+  }
 }
 
 .badge-item.is-clickable:hover {
@@ -1375,6 +1539,14 @@ button { cursor: pointer; border: none; background: none; }
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--green-deep);
+}
+
+.specialty-meta .examiner-title {
+  display: inline;
+  margin-left: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--ink-muted);
 }
 
 .specialty-meta-notice {
@@ -1780,19 +1952,19 @@ button { cursor: pointer; border: none; background: none; }
   }
 
   .attendance-table--camping .col-name {
-    width: 46%;
+    width: 34%;
   }
 
   .attendance-table--camping .col-note {
-    width: 24%;
+    width: 36%;
   }
 
   .attendance-table--outdoor .col-name {
-    width: 46%;
+    width: 34%;
   }
 
   .attendance-table--outdoor .col-note {
-    width: 24%;
+    width: 36%;
   }
 
   .attendance-table--service td,
@@ -1909,11 +2081,11 @@ button { cursor: pointer; border: none; background: none; }
 }
 
 .attendance-table--camping .col-name {
-  width: 40%;
+  width: 27%;
 }
 
 .attendance-table--camping .col-note {
-  width: 26%;
+  width: 39%;
 }
 
 .attendance-table--camping .col-nights {
@@ -1925,11 +2097,11 @@ button { cursor: pointer; border: none; background: none; }
 }
 
 .attendance-table--outdoor .col-name {
-  width: 48%;
+  width: 33%;
 }
 
 .attendance-table--outdoor .col-note {
-  width: 30%;
+  width: 45%;
 }
 
 .attendance-table th {
