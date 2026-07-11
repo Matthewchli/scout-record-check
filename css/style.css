@@ -1756,6 +1756,61 @@ button { cursor: pointer; border: none; background: none; }
     text-overflow: unset;
     word-break: break-word;
   }
+
+  /* 服務／露營／戶外：縮短日期欄，讓名稱完整換行顯示 */
+  .attendance-table--service .col-date,
+  .attendance-table--camping .col-date,
+  .attendance-table--outdoor .col-date {
+    width: 28%;
+  }
+
+  .attendance-table--service .col-name {
+    width: 50%;
+  }
+
+  .attendance-table--service .col-hours {
+    width: 22%;
+  }
+
+  /* 手機版隱藏晚數，騰出空間給日期／活動／地點 */
+  .attendance-table--camping .col-nights,
+  .attendance-table--camping th:nth-child(4),
+  .attendance-table--camping td:nth-child(4) {
+    display: none;
+  }
+
+  .attendance-table--camping .col-date {
+    width: 28%;
+  }
+
+  .attendance-table--camping .col-name {
+    width: 42%;
+  }
+
+  .attendance-table--camping .col-note {
+    width: 30%;
+  }
+
+  .attendance-table--outdoor .col-name {
+    width: 44%;
+  }
+
+  .attendance-table--outdoor .col-note {
+    width: 28%;
+  }
+
+  .attendance-table--service td,
+  .attendance-table--camping td,
+  .attendance-table--outdoor td {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    word-break: break-word;
+  }
+
+  .attendance-table--service td:nth-child(3) {
+    white-space: nowrap;
+  }
 }
 
 .detail-meta {
@@ -1813,6 +1868,46 @@ button { cursor: pointer; border: none; background: none; }
 
 .attendance-table--attendance .col-note {
   width: 16%;
+}
+
+.attendance-table--service .col-date {
+  width: 22%;
+}
+
+.attendance-table--service .col-name {
+  width: 56%;
+}
+
+.attendance-table--service .col-hours {
+  width: 22%;
+}
+
+.attendance-table--camping .col-date {
+  width: 20%;
+}
+
+.attendance-table--camping .col-name {
+  width: 40%;
+}
+
+.attendance-table--camping .col-note {
+  width: 26%;
+}
+
+.attendance-table--camping .col-nights {
+  width: 14%;
+}
+
+.attendance-table--outdoor .col-date {
+  width: 22%;
+}
+
+.attendance-table--outdoor .col-name {
+  width: 48%;
+}
+
+.attendance-table--outdoor .col-note {
+  width: 30%;
 }
 
 .attendance-table th {

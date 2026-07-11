@@ -717,7 +717,7 @@
         .map(
           (r) => `
           <tr>
-            <td><time datetime="${r.date}">${formatDate(r.date)}</time></td>
+            <td><time datetime="${r.date}">${formatDateDMY(r.date)}</time></td>
             <td>${escapeHtml(r.name)}</td>
             <td>${r.hours != null && r.hours !== "" ? `${r.hours} 小時` : "—"}</td>
           </tr>`
@@ -725,7 +725,12 @@
         .join("");
       return `${summary}
         <div class="attendance-table-wrap">
-          <table class="attendance-table" aria-label="服務時數明細">
+          <table class="attendance-table attendance-table--service" aria-label="服務時數明細">
+            <colgroup>
+              <col class="col-date" />
+              <col class="col-name" />
+              <col class="col-hours" />
+            </colgroup>
             <thead>
               <tr>
                 <th scope="col">日期</th>
@@ -754,22 +759,28 @@
         .map(
           (r) => `
           <tr>
-            <td><time datetime="${r.date}">${formatDate(r.date)}</time></td>
+            <td><time datetime="${r.date}">${formatDateDMY(r.date)}</time></td>
             <td>${escapeHtml(r.name)}</td>
-            <td>${r.nights != null && r.nights !== "" ? `${r.nights} 晚` : "—"}</td>
             <td class="att-note">${r.note ? escapeHtml(r.note) : "—"}</td>
+            <td>${r.nights != null && r.nights !== "" ? `${r.nights} 晚` : "—"}</td>
           </tr>`
         )
         .join("");
       return `${summary}
         <div class="attendance-table-wrap">
-          <table class="attendance-table" aria-label="露營明細">
+          <table class="attendance-table attendance-table--camping" aria-label="露營明細">
+            <colgroup>
+              <col class="col-date" />
+              <col class="col-name" />
+              <col class="col-note" />
+              <col class="col-nights" />
+            </colgroup>
             <thead>
               <tr>
                 <th scope="col">日期</th>
                 <th scope="col">露營活動</th>
-                <th scope="col">晚數</th>
                 <th scope="col">地點</th>
+                <th scope="col">晚數</th>
               </tr>
             </thead>
             <tbody>${rows}</tbody>
@@ -790,7 +801,7 @@
         .map(
           (r) => `
           <tr>
-            <td><time datetime="${r.date}">${formatDate(r.date)}</time></td>
+            <td><time datetime="${r.date}">${formatDateDMY(r.date)}</time></td>
             <td>${escapeHtml(r.name)}</td>
             <td class="att-note">${r.note ? escapeHtml(r.note) : "—"}</td>
           </tr>`
@@ -798,7 +809,12 @@
         .join("");
       return `${summary}
         <div class="attendance-table-wrap">
-          <table class="attendance-table" aria-label="戶外活動明細">
+          <table class="attendance-table attendance-table--outdoor" aria-label="戶外活動明細">
+            <colgroup>
+              <col class="col-date" />
+              <col class="col-name" />
+              <col class="col-note" />
+            </colgroup>
             <thead>
               <tr>
                 <th scope="col">日期</th>
