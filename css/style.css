@@ -1929,42 +1929,41 @@ button { cursor: pointer; border: none; background: none; }
     word-break: break-word;
   }
 
-  /* 服務／露營／戶外：日期欄寬與出席紀錄一致 */
+  /* 服務／露營／戶外：日期欄寬與出席紀錄一致；隱藏次要欄位 */
   .attendance-table--service .col-date,
   .attendance-table--camping .col-date,
   .attendance-table--outdoor .col-date {
     width: 30%;
   }
 
-  .attendance-table--service .col-name {
-    width: 48%;
+  .attendance-table--service .col-name,
+  .attendance-table--camping .col-name,
+  .attendance-table--outdoor .col-name {
+    width: 70%;
   }
 
-  .attendance-table--service .col-hours {
-    width: 22%;
+  /* 手機版服務：隱藏時數 */
+  .attendance-table--service .col-hours,
+  .attendance-table--service th:nth-child(3),
+  .attendance-table--service td:nth-child(3) {
+    display: none;
   }
 
-  /* 手機版隱藏晚數，騰出空間給日期／活動／地點 */
+  /* 手機版露營：隱藏地點、晚數 */
+  .attendance-table--camping .col-note,
   .attendance-table--camping .col-nights,
+  .attendance-table--camping th:nth-child(3),
   .attendance-table--camping th:nth-child(4),
+  .attendance-table--camping td:nth-child(3),
   .attendance-table--camping td:nth-child(4) {
     display: none;
   }
 
-  .attendance-table--camping .col-name {
-    width: 34%;
-  }
-
-  .attendance-table--camping .col-note {
-    width: 36%;
-  }
-
-  .attendance-table--outdoor .col-name {
-    width: 34%;
-  }
-
-  .attendance-table--outdoor .col-note {
-    width: 36%;
+  /* 手機版戶外：隱藏地點 */
+  .attendance-table--outdoor .col-note,
+  .attendance-table--outdoor th:nth-child(3),
+  .attendance-table--outdoor td:nth-child(3) {
+    display: none;
   }
 
   .attendance-table--service td,
@@ -1978,13 +1977,12 @@ button { cursor: pointer; border: none; background: none; }
 
   .attendance-table--service td:nth-child(1),
   .attendance-table--camping td:nth-child(1),
-  .attendance-table--outdoor td:nth-child(1) {
+  .attendance-table--outdoor td:nth-child(1),
+  .attendance-table--attendance td:nth-child(1) {
     white-space: nowrap;
     word-break: normal;
-  }
-
-  .attendance-table--service td:nth-child(3) {
-    white-space: nowrap;
+    overflow: visible;
+    text-overflow: unset;
   }
 }
 
