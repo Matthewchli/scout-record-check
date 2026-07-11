@@ -1757,15 +1757,15 @@ button { cursor: pointer; border: none; background: none; }
     word-break: break-word;
   }
 
-  /* 服務／露營／戶外：縮短日期欄，讓名稱完整換行顯示 */
+  /* 服務／露營／戶外：日期欄寬與出席紀錄一致 */
   .attendance-table--service .col-date,
   .attendance-table--camping .col-date,
   .attendance-table--outdoor .col-date {
-    width: 28%;
+    width: 30%;
   }
 
   .attendance-table--service .col-name {
-    width: 50%;
+    width: 48%;
   }
 
   .attendance-table--service .col-hours {
@@ -1779,24 +1779,20 @@ button { cursor: pointer; border: none; background: none; }
     display: none;
   }
 
-  .attendance-table--camping .col-date {
-    width: 28%;
-  }
-
   .attendance-table--camping .col-name {
-    width: 42%;
+    width: 46%;
   }
 
   .attendance-table--camping .col-note {
-    width: 30%;
+    width: 24%;
   }
 
   .attendance-table--outdoor .col-name {
-    width: 44%;
+    width: 46%;
   }
 
   .attendance-table--outdoor .col-note {
-    width: 28%;
+    width: 24%;
   }
 
   .attendance-table--service td,
@@ -1806,6 +1802,13 @@ button { cursor: pointer; border: none; background: none; }
     overflow: visible;
     text-overflow: unset;
     word-break: break-word;
+  }
+
+  .attendance-table--service td:nth-child(1),
+  .attendance-table--camping td:nth-child(1),
+  .attendance-table--outdoor td:nth-child(1) {
+    white-space: nowrap;
+    word-break: normal;
   }
 
   .attendance-table--service td:nth-child(3) {
