@@ -1397,15 +1397,21 @@
     if (!syllabusKey) return;
     const map = (specialtySyllabus && specialtySyllabus.badges) || {};
     let syl = map[syllabusKey] || null;
-    if (!syl) {
-      const name = syllabusKey.includes(":")
-        ? syllabusKey.slice(syllabusKey.indexOf(":") + 1)
-        : syllabusKey;
-      syl = Object.values(map).find((b) => b.name === name) || null;
+    if (!syl && syllabusKey.includes(":")) {
+      const groupKey = syllabusKey.slice(0, syllabusKey.indexOf(":"));
+      const name = syllabusKey.slice(syllabusKey.indexOf(":") + 1);
+      // 只在同一組別內以名稱後備，避免技能組誤用興趣／教導組綱要
+      syl =
+        Object.values(map).find(
+          (b) => b.group === groupKey && (b.name === name || b.key === syllabusKey)
+        ) || null;
     }
 
     const [groupKey, fallbackName] = syllabusKey.includes(":")
-      ? syllabusKey.split(":")
+      ? [
+          syllabusKey.slice(0, syllabusKey.indexOf(":")),
+          syllabusKey.slice(syllabusKey.indexOf(":") + 1),
+        ]
       : ["other", syllabusKey];
     const name = (syl && syl.name) || fallbackName;
     const groupLabel =
@@ -1421,12 +1427,18 @@
     const backBtn = $("#specialty-back-btn");
     if (backBtn) backBtn.textContent = "← 返回圖鑑";
 
-    const iconSrc =
+    const galleryItems =
       (specialtyGallery &&
         specialtyGallery.groups &&
-        specialtyGallery.groups
-          .flatMap((g) => g.items || [])
-          .find((i) => i.key === syllabusKey || i.name === name)?.icon) ||
+        specialtyGallery.groups.flatMap((g) =>
+          (g.items || []).map((i) => ({ ...i, groupKey: g.key }))
+        )) ||
+      [];
+    const iconSrc =
+      galleryItems.find((i) => i.key === syllabusKey)?.icon ||
+      galleryItems.find(
+        (i) => i.groupKey === groupKey && i.name === name
+      )?.icon ||
       `assets/specialty/${groupKey}/${name}.png`;
 
     const icon = $("#specialty-detail-icon");
