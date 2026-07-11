@@ -963,6 +963,17 @@ button { cursor: pointer; border: none; background: none; }
   letter-spacing: 0.02em;
 }
 
+.badge-detail-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.65rem;
+}
+
+.badge-detail-title-row .item-status {
+  flex-shrink: 0;
+}
+
 .badge-detail-english {
   margin-top: 0.15rem;
   font-size: 0.85rem;

@@ -1226,23 +1226,37 @@
       .join("");
   }
 
-  function resolveSpecialtyIcon(badge) {
-    if (badge.icon) return badge.icon;
-    const group = normalizeSpecialtyGroup(badge);
-    const raw = String(badge.name || "")
+  function specialtyBaseName(name) {
+    return String(name || "")
       .replace(/（教導組）/g, "")
       .replace(/\(教導組\)/g, "")
-      .trim();
-    const candidates = [
-      raw,
-      raw.replace(/章$/, ""),
-      raw.replace(/獎章$/, ""),
-      raw.replace(/徽章$/, ""),
-    ];
-    for (const base of candidates) {
-      if (!base) continue;
-      return `assets/specialty/${group}/${base}.png`;
-    }
+      .trim()
+      .replace(/章$/, "")
+      .replace(/獎章$/, "")
+      .replace(/徽章$/, "");
+  }
+
+  function resolveSpecialtyIcon(badge) {
+    const group = normalizeSpecialtyGroup(badge);
+    const key =
+      badge.syllabusKey ||
+      `${group}:${specialtyBaseName(badge.name)}`;
+    const fromGallery =
+      specialtyGallery &&
+      specialtyGallery.groups &&
+      specialtyGallery.groups
+        .flatMap((g) =>
+          (g.items || []).map((i) => ({ ...i, groupKey: g.key }))
+        )
+        .find((i) => i.key === key || (i.groupKey === group && i.name === specialtyBaseName(badge.name)));
+    if (fromGallery && fromGallery.icon) return fromGallery.icon;
+
+    const base = specialtyBaseName(badge.name);
+    if (base) return `assets/specialty/${group}/${base}.png`;
+
+    // 僅在路徑已屬正確組別時才沿用資料內 icon，避免誤用同名他組圖示
+    const stored = badge.icon || "";
+    if (stored.includes(`/specialty/${group}/`)) return stored;
     return null;
   }
 
@@ -1454,6 +1468,11 @@
     $("#specialty-detail-name").textContent = name;
     $("#specialty-detail-english").textContent = (syl && syl.englishName) || "";
     $("#specialty-detail-group").textContent = groupLabel;
+    const earnedEl = $("#specialty-detail-earned");
+    if (earnedEl) {
+      const earned = memberHasSpecialtyBadge(name, groupKey);
+      earnedEl.hidden = !earned;
+    }
 
     const meta = $("#specialty-meta");
     if (meta) meta.hidden = true;
@@ -1508,6 +1527,8 @@
         {}).label ||
       "";
     $("#specialty-detail-group").textContent = groupLabel;
+    const earnedEl = $("#specialty-detail-earned");
+    if (earnedEl) earnedEl.hidden = false;
 
     $("#specialty-meta-activity").textContent =
       badge.activityName || badge.name || "—";
@@ -1518,6 +1539,8 @@
     if (badge.noticeUrl) {
       const label = badge.noticeTitle || "查看通告";
       noticeEl.innerHTML = `<a class="specialty-notice-link" href="${escapeHtml(badge.noticeUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`;
+    } else if (normalizeSpecialtyGroup(badge) === "interest") {
+      noticeEl.textContent = "經由旅團領袖考核";
     } else {
       noticeEl.textContent = "—";
     }
@@ -1541,37 +1564,7 @@
     })();
 
     const sectionsEl = $("#specialty-detail-sections");
-    const items = (syl && syl.items) || [];
-    if (!items.length) {
-      sectionsEl.innerHTML = `<p class="empty-state">暫無綱要分項資料</p>`;
-    } else {
-      sectionsEl.innerHTML = `
-        <section class="syllabus-section">
-          <header class="syllabus-section-header">
-            <h3>考核分項</h3>
-            <span class="section-progress">${items.length} 項</span>
-          </header>
-          <ul class="syllabus-items">
-            ${items
-              .map((it) => {
-                const details = (it.details || [])
-                  .map((d) => `<li>${escapeHtml(d)}</li>`)
-                  .join("");
-                return `
-                  <li class="syllabus-item done">
-                    <div class="syllabus-item-head">
-                      <span class="syllabus-item-title">${escapeHtml(it.title)}</span>
-                      <div class="item-status-block">
-                        <span class="item-status is-done">已完成</span>
-                      </div>
-                    </div>
-                    ${details ? `<ul class="syllabus-details">${details}</ul>` : ""}
-                  </li>`;
-              })
-              .join("")}
-          </ul>
-        </section>`;
-    }
+    sectionsEl.innerHTML = renderSyllabusItemsPreview((syl && syl.items) || []);
 
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
