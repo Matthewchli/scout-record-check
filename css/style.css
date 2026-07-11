@@ -1842,6 +1842,25 @@ button { cursor: pointer; border: none; background: none; }
   max-width: 100%;
 }
 
+/* 活動紀錄日期：電腦版 YYYY年MM月DD日，手機版 DD-MM-YYYY */
+.attendance-table .date-dmy {
+  display: none;
+}
+
+.attendance-table .date-ymd {
+  display: inline;
+}
+
+@media (max-width: 640px) {
+  .attendance-table .date-ymd {
+    display: none;
+  }
+
+  .attendance-table .date-dmy {
+    display: inline;
+  }
+}
+
 .attendance-table {
   width: 100%;
   border-collapse: collapse;

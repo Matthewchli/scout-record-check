@@ -98,11 +98,24 @@
     return `${y}年${Number(m)}月${Number(d)}日`;
   }
 
+  function formatDateYMD(iso) {
+    if (!iso) return "—";
+    const [y, m, d] = iso.split("-");
+    if (!y || !m || !d) return "—";
+    return `${y}年${m}月${d}日`;
+  }
+
   function formatDateDMY(iso) {
     if (!iso) return "—";
     const [y, m, d] = iso.split("-");
     if (!y || !m || !d) return "—";
     return `${d}-${m}-${y}`;
+  }
+
+  /** 活動紀錄內頁：電腦版 YYYY年MM月DD日，手機版 DD-MM-YYYY */
+  function formatActivityTableDate(iso) {
+    if (!iso) return "—";
+    return `<span class="date-ymd">${formatDateYMD(iso)}</span><span class="date-dmy">${formatDateDMY(iso)}</span>`;
   }
 
   function initials(name) {
@@ -668,7 +681,7 @@
           const note = formatAttendanceNote(r);
           return `
           <tr>
-            <td><time datetime="${r.date}">${formatDateDMY(r.date)}</time></td>
+            <td><time datetime="${r.date}">${formatActivityTableDate(r.date)}</time></td>
             <td>${escapeHtml(r.name)}</td>
             <td><span class="activity-type type-${r.type}">${escapeHtml(r.type)}</span></td>
             <td><span class="att-status status-${status}">${ATTENDANCE_LABELS[status]}</span></td>
@@ -717,7 +730,7 @@
         .map(
           (r) => `
           <tr>
-            <td><time datetime="${r.date}">${formatDateDMY(r.date)}</time></td>
+            <td><time datetime="${r.date}">${formatActivityTableDate(r.date)}</time></td>
             <td>${escapeHtml(r.name)}</td>
             <td>${r.hours != null && r.hours !== "" ? `${r.hours} 小時` : "—"}</td>
           </tr>`
@@ -759,7 +772,7 @@
         .map(
           (r) => `
           <tr>
-            <td><time datetime="${r.date}">${formatDateDMY(r.date)}</time></td>
+            <td><time datetime="${r.date}">${formatActivityTableDate(r.date)}</time></td>
             <td>${escapeHtml(r.name)}</td>
             <td class="att-note">${r.note ? escapeHtml(r.note) : "—"}</td>
             <td>${r.nights != null && r.nights !== "" ? `${r.nights} 晚` : "—"}</td>
@@ -801,7 +814,7 @@
         .map(
           (r) => `
           <tr>
-            <td><time datetime="${r.date}">${formatDateDMY(r.date)}</time></td>
+            <td><time datetime="${r.date}">${formatActivityTableDate(r.date)}</time></td>
             <td>${escapeHtml(r.name)}</td>
             <td class="att-note">${r.note ? escapeHtml(r.note) : "—"}</td>
           </tr>`
