@@ -1544,6 +1544,22 @@
     } else {
       noticeEl.textContent = "—";
     }
+
+    const certNoEl = $("#specialty-meta-cert-no");
+    if (certNoEl) {
+      certNoEl.textContent = badge.certificateNumber || badge.certNo || "—";
+    }
+    const certCopyEl = $("#specialty-meta-cert-copy");
+    if (certCopyEl) {
+      const copyUrl = badge.certificateCopy || badge.certCopy || "";
+      const copyLabel = badge.certificateCopyTitle || "查看證書";
+      if (copyUrl) {
+        certCopyEl.innerHTML = `<a class="specialty-notice-link" href="${escapeHtml(copyUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(copyLabel)}</a>`;
+      } else {
+        certCopyEl.textContent = "—";
+      }
+    }
+
     $("#specialty-meta-examiner").innerHTML = (() => {
       const name = badge.examiner || badge.assessor || "";
       const title = badge.examinerTitle || "";
