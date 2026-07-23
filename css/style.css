@@ -2416,4 +2416,31 @@ button { cursor: pointer; border: none; background: none; }
     padding-left: 0.85rem;
     padding-right: 0.85rem;
   }
+
+  .admin-tab-nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .admin-charts {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-chart-ring-wrap,
+  .admin-chart-bars-wrap {
+    min-height: 280px;
+  }
+
+  .admin-date-select {
+    max-width: none;
+  }
+
+  .admin-member-card {
+    padding: 0.65rem 0.4rem;
+  }
+
+  .admin-member-avatar,
+  .admin-member-avatar.has-photo {
+    width: 72px;
+    height: 90px;
+  }
 }

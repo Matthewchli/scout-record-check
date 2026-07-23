@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/admin.css" />
 </head>
 <body>
   <!-- 登入畫面 -->
@@ -107,6 +108,11 @@
           </div>
         </div>
       </section>
+
+      <div id="admin-preview-bar" class="admin-preview-bar" hidden>
+        <button type="button" id="admin-preview-back" class="btn-back">← 返回管理者</button>
+        <span id="admin-preview-label" class="admin-preview-label"></span>
+      </div>
 
       <!-- 分頁導覽 -->
       <div class="tabs-area">
@@ -303,6 +309,93 @@
 
     <footer class="dash-footer">
       <p>僅供旅團成員查閱個人紀錄 · 資料由領袖更新</p>
+    </footer>
+  </section>
+
+  <!-- 管理者儀表板 -->
+  <section id="admin-view" class="dashboard-view admin-view" hidden aria-label="管理者紀錄">
+    <header class="dash-header">
+      <div class="dash-header-inner">
+        <div class="dash-brand">
+          <img
+            class="troop-logo troop-logo-header"
+            src="assets/troop-logo.png"
+            alt="新界東第1558旅團徽 · 林大輝中學"
+            width="40"
+            height="40"
+          />
+          <span class="dash-brand-text">童軍成員紀錄 · 管理者</span>
+        </div>
+        <div class="dash-user">
+          <div class="user-meta">
+            <span id="admin-header-name" class="user-name">李載禧</span>
+            <span id="admin-header-id" class="user-id">管理者</span>
+          </div>
+          <button type="button" id="admin-logout-btn" class="btn btn-ghost">登出</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="dash-main">
+      <section class="profile-section" aria-labelledby="admin-profile-heading">
+        <div class="profile-banner">
+          <div class="profile-avatar" id="admin-profile-avatar" aria-hidden="true">管</div>
+          <div class="profile-info">
+            <h2 id="admin-profile-heading" class="profile-name">
+              <span>李載禧</span>
+              <span class="profile-rank">管理者</span>
+            </h2>
+            <p class="profile-detail">
+              <span>新界東第1558旅</span>
+              <span class="dot" aria-hidden="true">·</span>
+              <span>全體成員管理</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="tabs-area">
+        <div class="tab-nav admin-tab-nav" role="tablist" aria-label="管理者分頁">
+          <button type="button" class="tab-btn is-active" role="tab" id="tab-admin-overview" aria-controls="panel-admin-overview" aria-selected="true" data-admin-tab="overview">成員出席紀錄</button>
+          <button type="button" class="tab-btn" role="tab" id="tab-admin-members" aria-controls="panel-admin-members" aria-selected="false" data-admin-tab="members" tabindex="-1">成員活動記錄</button>
+          <button type="button" class="tab-btn" role="tab" id="tab-admin-resources" aria-controls="panel-admin-resources" aria-selected="false" data-admin-tab="resources" tabindex="-1">有用資料</button>
+        </div>
+
+        <div class="tab-panel is-active" id="panel-admin-overview" role="tabpanel" aria-labelledby="tab-admin-overview">
+          <header class="panel-header">
+            <h2>成員出席紀錄</h2>
+            <p>按集會日期查看全體出席情況</p>
+          </header>
+          <div class="admin-date-select-wrap">
+            <label for="admin-date-select">集會日期</label>
+            <select id="admin-date-select" class="admin-date-select" aria-label="選擇集會日期"></select>
+          </div>
+          <div id="admin-overview-stats" class="admin-overview-stats"></div>
+          <div id="admin-overview-table" class="admin-overview-table-wrap"></div>
+        </div>
+
+        <div class="tab-panel" id="panel-admin-members" role="tabpanel" aria-labelledby="tab-admin-members" hidden>
+          <div id="admin-members-list-view">
+            <header class="panel-header">
+              <h2>成員活動記錄</h2>
+              <p>按小隊排列 · 點選成員查看其活動記錄</p>
+            </header>
+            <div id="admin-members-grid" class="admin-members-grid"></div>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="panel-admin-resources" role="tabpanel" aria-labelledby="tab-admin-resources" hidden>
+          <header class="panel-header">
+            <h2>有用資料</h2>
+            <p>旅團資訊、聯絡及常用連結</p>
+          </header>
+          <div id="admin-resources-content" class="resources-content"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="dash-footer">
+      <p>管理者模式 · 可查閱全體成員紀錄</p>
     </footer>
   </section>
 

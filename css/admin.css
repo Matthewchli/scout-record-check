@@ -1,0 +1,312 @@
+/* ===== Admin dashboard ===== */
+.admin-tab-nav {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.admin-date-select-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.admin-date-select-wrap label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+}
+
+.admin-date-select {
+  width: 100%;
+  max-width: 28rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid rgba(26, 61, 43, 0.18);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.admin-overview-stats {
+  margin-bottom: 1rem;
+}
+
+.admin-charts {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) 1fr;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.admin-chart-ring-wrap,
+.admin-chart-bars-wrap {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1rem 1.05rem;
+  box-shadow: 0 2px 8px rgba(26, 61, 43, 0.06);
+  min-height: 300px;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-chart-ring-wrap {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-att-ring {
+  margin: 0 auto;
+}
+
+/* Admin overview ring at 140% of shared .att-ring sizes (148→207, 78→109) */
+.admin-att-ring .att-ring-chart {
+  width: 207px;
+  height: 207px;
+}
+
+.admin-att-ring .att-ring-hole {
+  width: 109px;
+  height: 109px;
+}
+
+.admin-att-ring .att-ring-value {
+  font-size: 2.17rem;
+}
+
+.admin-att-ring .att-ring-label {
+  font-size: 1.01rem;
+}
+
+.admin-ring-caption {
+  margin: 0.65rem 0 0;
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+}
+
+.admin-chart-title {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--green-deep);
+  flex-shrink: 0;
+}
+
+.admin-bar-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.7rem;
+  flex: 1;
+}
+
+.admin-bar-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--green-mid);
+  transition: none;
+}
+
+.admin-bar-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.82rem;
+}
+
+.admin-bar-label {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.admin-bar-value {
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+
+.admin-bar-track {
+  height: 0.55rem;
+  border-radius: 999px;
+  background: var(--cream-warm);
+  overflow: hidden;
+}
+
+.admin-overview-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(26, 61, 43, 0.06);
+}
+
+.admin-overview-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  min-width: 420px;
+}
+
+.admin-overview-table th,
+.admin-overview-table td {
+  padding: 0.65rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--cream-warm);
+  vertical-align: middle;
+}
+
+.admin-overview-table th {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+  background: var(--cream);
+  position: sticky;
+  top: 0;
+}
+
+.admin-overview-table tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-overview-table .admin-section-row td {
+  background: var(--green-mist);
+  color: var(--green-deep);
+  font-weight: 700;
+  font-size: 0.88rem;
+  border-bottom-color: rgba(26, 61, 43, 0.12);
+}
+
+.admin-members-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.admin-patrol-block {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1rem 0.9rem 1.1rem;
+  box-shadow: 0 2px 8px rgba(26, 61, 43, 0.06);
+}
+
+.admin-patrol-title {
+  margin: 0 0 0.85rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--green-deep);
+}
+
+.admin-patrol-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.85rem;
+  align-items: start;
+}
+
+.admin-patrol-leaders {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 0.85rem;
+}
+
+.admin-patrol-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 0.85rem;
+}
+
+.admin-member-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.75rem 0.5rem;
+  border-radius: var(--radius);
+  background: var(--cream);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
+}
+
+.admin-member-card:hover,
+.admin-member-card:focus-visible {
+  background: var(--green-mist);
+  border-color: rgba(26, 61, 43, 0.18);
+  outline: none;
+}
+
+.admin-member-avatar {
+  width: 86px;
+  height: 108px;
+  aspect-ratio: 11 / 20;
+  border-radius: 0;
+  background: var(--green-deep);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.admin-member-avatar.has-photo {
+  background: transparent;
+  color: transparent;
+}
+
+.admin-member-avatar.has-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.admin-member-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.25;
+}
+
+.admin-member-rank {
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+}
+
+.admin-preview-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 0.85rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  box-shadow: none;
+}
+
+.admin-preview-bar[hidden] {
+  display: none !important;
+}
+
+.admin-preview-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+}
+
+body.admin-previewing .admin-view {
+  display: none !important;
+}

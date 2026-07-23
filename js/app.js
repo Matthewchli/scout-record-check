@@ -26,14 +26,53 @@
     absent: "缺席",
   };
 
+  const ADMIN_ACCOUNT = {
+    name: "李載禧",
+    scoutId: "P@ssw0rd",
+    role: "admin",
+  };
+
+  const DEMO_SCOUT_IDS = new Set([
+    "2025000101",
+    "2025000102",
+    "2025000103",
+  ]);
+
+  const ADMIN_TAB_KEY = "scout-record-admin-tab";
+
+  const SECTION_ORDER = [
+    "Cobra小隊",
+    "Eagle小隊",
+    "Falcon小隊",
+    "Otter小隊",
+    "新成員",
+  ];
+
+  /** 全體出席率只計四隊；「新成員」及其他 section 不進分子／分母 */
+  const OVERALL_RATE_SECTIONS = new Set(
+    SECTION_ORDER.filter((s) => s !== "新成員")
+  );
+
+  const RANK_ORDER = {
+    團隊長: 0,
+    隊長: 1,
+    副隊: 2,
+    副隊長: 2,
+    隊員: 3,
+    成員: 3,
+  };
+
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
   const loginView = $("#login-view");
   const dashboardView = $("#dashboard-view");
+  const adminView = $("#admin-view");
   const loginForm = $("#login-form");
   const loginError = $("#login-error");
   const logoutBtn = $("#logout-btn");
+  const adminLogoutBtn = $("#admin-logout-btn");
+  const adminPreviewBar = $("#admin-preview-bar");
 
   let members = [];
   let resources = null;
@@ -41,6 +80,10 @@
   let specialtySyllabus = null;
   let specialtyGallery = null;
   let currentMember = null;
+  let isAdminSession = false;
+  let adminSelectedDate = null;
+  let adminMeetingDates = [];
+  let adminChartAnimFrames = new Set();
 
   /* ---------- Data ---------- */
 
@@ -71,18 +114,43 @@
     );
   }
 
+  function isAdminCredentials(name, scoutId) {
+    return (
+      name.trim() === ADMIN_ACCOUNT.name &&
+      scoutId.trim().toUpperCase() === ADMIN_ACCOUNT.scoutId.toUpperCase()
+    );
+  }
+
   /* ---------- Session ---------- */
 
   function saveSession(member) {
     sessionStorage.setItem(
       STORAGE_KEY,
-      JSON.stringify({ name: member.name, scoutId: member.scoutId })
+      JSON.stringify({
+        name: member.name,
+        scoutId: member.scoutId,
+        role: member.role || "member",
+      })
+    );
+  }
+
+  function saveAdminSession() {
+    sessionStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({
+        name: ADMIN_ACCOUNT.name,
+        scoutId: ADMIN_ACCOUNT.scoutId,
+        role: "admin",
+      })
     );
   }
 
   function clearSession() {
     sessionStorage.removeItem(STORAGE_KEY);
     sessionStorage.removeItem(TAB_KEY);
+    sessionStorage.removeItem(ADMIN_TAB_KEY);
+    isAdminSession = false;
+    exitAdminMemberPreview(false);
   }
 
   function getSession() {
@@ -285,7 +353,10 @@
 
   function showLogin() {
     currentMember = null;
+    isAdminSession = false;
     dashboardView.hidden = true;
+    if (adminView) adminView.hidden = true;
+    exitAdminMemberPreview(false);
     loginView.hidden = false;
     loginError.hidden = true;
     loginForm.reset();
@@ -297,7 +368,14 @@
   function showDashboard(member) {
     currentMember = member;
     loginView.hidden = true;
+    if (adminView) adminView.hidden = true;
     dashboardView.hidden = false;
+    if (
+      adminPreviewBar &&
+      !document.body.classList.contains("admin-previewing")
+    ) {
+      adminPreviewBar.hidden = true;
+    }
     showProgressiveList();
     showActivityList();
     showSpecialtyList();
@@ -1655,8 +1733,9 @@
     return "";
   }
 
-  function renderResources() {
-    const container = $("#resources-content");
+  function renderResources(targetId = "resources-content") {
+    const container = $(`#${targetId}`);
+    if (!container) return;
     if (!resources) {
       container.innerHTML = `<p class="empty-state">暫無有用資料</p>`;
       return;
@@ -1705,6 +1784,430 @@
     `;
   }
 
+  /* ---------- Admin ---------- */
+
+  function getAdminMembers() {
+    return members.filter((m) => !DEMO_SCOUT_IDS.has(String(m.scoutId || "")));
+  }
+
+  function englishSurname(member) {
+    const en = String(member.englishName || "").trim();
+    if (!en) return "";
+    return en.split(/\s+/)[0].toUpperCase();
+  }
+
+  function collectMeetingDates() {
+    const map = new Map();
+    for (const m of getAdminMembers()) {
+      for (const r of m.attendance || []) {
+        if (!r || !r.date) continue;
+        if (!map.has(r.date)) {
+          map.set(r.date, {
+            date: r.date,
+            name: r.name || "",
+            type: r.type || "",
+          });
+        }
+      }
+    }
+    return [...map.values()].sort((a, b) => b.date.localeCompare(a.date));
+  }
+
+  function rankSortValue(rank) {
+    if (RANK_ORDER[rank] != null) return RANK_ORDER[rank];
+    return 99;
+  }
+
+  function sortMembersForPatrol(list) {
+    return [...list].sort((a, b) => {
+      const rd = rankSortValue(a.rank) - rankSortValue(b.rank);
+      if (rd !== 0) return rd;
+      const joinA = a.joinDate || "9999-99-99";
+      const joinB = b.joinDate || "9999-99-99";
+      if (joinA !== joinB) return joinA.localeCompare(joinB);
+      const surA = englishSurname(a);
+      const surB = englishSurname(b);
+      if (surA !== surB) return surA.localeCompare(surB, "en");
+      return String(a.name || "").localeCompare(String(b.name || ""), "zh-Hant");
+    });
+  }
+
+  function getMemberAttendanceOnDate(member, date) {
+    return (member.attendance || []).find((r) => r.date === date) || null;
+  }
+
+  function memberJoinedByDate(member, date) {
+    const join = member.joinDate;
+    if (!join || !date) return true;
+    return join <= date;
+  }
+
+  function cancelAdminChartAnimations() {
+    for (const id of adminChartAnimFrames) cancelAnimationFrame(id);
+    adminChartAnimFrames.clear();
+  }
+
+  function animateAdminCharts(overallRate, presentPct, absentPct, sectionRates) {
+    cancelAdminChartAnimations();
+    const chart = $("#admin-att-ring-chart");
+    const valueEl = $("#admin-att-ring-value");
+    const fills = $$("[data-admin-bar-target]");
+    const duration = 2000;
+    const start = performance.now();
+
+    function easeOutCubic(t) {
+      return 1 - Math.pow(1 - t, 3);
+    }
+
+    function paint(e) {
+      if (chart && valueEl) {
+        const p = presentPct * e;
+        const a = absentPct * e;
+        chart.style.background = `conic-gradient(
+          var(--green-mid) 0 ${p}%,
+          #c45c5c ${p}% ${p + a}%,
+          var(--cream-warm) ${p + a}% 100%
+        )`;
+        valueEl.textContent = `${Math.round(overallRate * e)}%`;
+      }
+      fills.forEach((el, i) => {
+        const target = Number(sectionRates[i]) || 0;
+        el.style.width = `${target * e}%`;
+        const valueNode = el
+          .closest(".admin-bar-item")
+          ?.querySelector("[data-admin-bar-rate]");
+        if (valueNode) {
+          const present = valueNode.dataset.present || "0";
+          const total = valueNode.dataset.total || "0";
+          valueNode.textContent = `${Math.round(target * e)}%（${present}/${total}）`;
+        }
+      });
+    }
+
+    paint(0);
+
+    function frame(now) {
+      const t = Math.min(1, (now - start) / duration);
+      const e = easeOutCubic(t);
+      paint(e);
+      if (t < 1) {
+        const id = requestAnimationFrame(frame);
+        adminChartAnimFrames.add(id);
+      } else {
+        paint(1);
+        adminChartAnimFrames.clear();
+      }
+    }
+
+    const id = requestAnimationFrame(frame);
+    adminChartAnimFrames.add(id);
+  }
+
+  function showAdminDashboard() {
+    isAdminSession = true;
+    currentMember = null;
+    loginView.hidden = true;
+    dashboardView.hidden = true;
+    exitAdminMemberPreview(false);
+    if (adminView) adminView.hidden = false;
+
+    adminMeetingDates = collectMeetingDates();
+    if (!adminSelectedDate && adminMeetingDates.length) {
+      adminSelectedDate = adminMeetingDates[0].date;
+    }
+
+    renderAdminOverview();
+    renderAdminMembersGrid();
+    renderResources("admin-resources-content");
+
+    const savedTab = sessionStorage.getItem(ADMIN_TAB_KEY) || "overview";
+    switchAdminTab(savedTab);
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }
+
+  function switchAdminTab(tabId) {
+    const tabs = $$("[data-admin-tab]");
+    const panels = {
+      overview: $("#panel-admin-overview"),
+      members: $("#panel-admin-members"),
+      resources: $("#panel-admin-resources"),
+    };
+    if (!panels[tabId]) tabId = "overview";
+    sessionStorage.setItem(ADMIN_TAB_KEY, tabId);
+
+    for (const btn of tabs) {
+      const active = btn.dataset.adminTab === tabId;
+      btn.classList.toggle("is-active", active);
+      btn.setAttribute("aria-selected", active ? "true" : "false");
+      btn.tabIndex = active ? 0 : -1;
+    }
+    for (const [key, panel] of Object.entries(panels)) {
+      if (!panel) continue;
+      const active = key === tabId;
+      panel.hidden = !active;
+      panel.classList.toggle("is-active", active);
+    }
+  }
+
+  function initAdminTabs() {
+    const nav = $(".admin-tab-nav");
+    if (!nav) return;
+    nav.addEventListener("click", (e) => {
+      const btn = e.target.closest("[data-admin-tab]");
+      if (!btn) return;
+      switchAdminTab(btn.dataset.adminTab);
+    });
+  }
+
+  function renderAdminOverview() {
+    const selectEl = $("#admin-date-select");
+    const statsEl = $("#admin-overview-stats");
+    const tableEl = $("#admin-overview-table");
+    if (!selectEl || !statsEl || !tableEl) return;
+
+    cancelAdminChartAnimations();
+    const adminMembers = getAdminMembers();
+
+    if (!adminMeetingDates.length) {
+      selectEl.innerHTML = "";
+      statsEl.innerHTML = "";
+      tableEl.innerHTML = `<p class="empty-state">暫無出席紀錄</p>`;
+      return;
+    }
+
+    if (
+      !adminSelectedDate ||
+      !adminMeetingDates.some((d) => d.date === adminSelectedDate)
+    ) {
+      adminSelectedDate = adminMeetingDates[0].date;
+    }
+
+    selectEl.innerHTML = adminMeetingDates
+      .map((d) => {
+        const label = `${formatDateYMD(d.date)}${d.name ? ` · ${d.name}` : ""}`;
+        const selected = d.date === adminSelectedDate ? " selected" : "";
+        return `<option value="${escapeHtml(d.date)}"${selected}>${escapeHtml(label)}</option>`;
+      })
+      .join("");
+
+    selectEl.onchange = () => {
+      adminSelectedDate = selectEl.value;
+      renderAdminOverview();
+    };
+
+    const selectedMeta =
+      adminMeetingDates.find((d) => d.date === adminSelectedDate) || {};
+
+    const eligibleMembers = adminMembers.filter((m) =>
+      memberJoinedByDate(m, adminSelectedDate)
+    );
+
+    const sectionBuckets = new Map();
+    for (const sec of SECTION_ORDER) sectionBuckets.set(sec, []);
+    for (const m of eligibleMembers) {
+      const sec = m.section || "其他";
+      if (!sectionBuckets.has(sec)) sectionBuckets.set(sec, []);
+      sectionBuckets.get(sec).push(m);
+    }
+
+    const sectionStats = [];
+    const tableBodyParts = [];
+    let overallPresent = 0;
+    let overallTotal = 0;
+
+    const orderedSections = [
+      ...SECTION_ORDER.filter((s) => (sectionBuckets.get(s) || []).length),
+      ...[...sectionBuckets.keys()].filter((s) => !SECTION_ORDER.includes(s)),
+    ];
+
+    for (const sec of orderedSections) {
+      const list = sortMembersForPatrol(sectionBuckets.get(sec) || []);
+      if (!list.length) continue;
+
+      let present = 0;
+      const memberRows = [];
+      const countsForOverall = OVERALL_RATE_SECTIONS.has(sec);
+      for (const m of list) {
+        const rec = getMemberAttendanceOnDate(m, adminSelectedDate);
+        const status = rec ? normalizeAttendanceStatus(rec) : "absent";
+        const note = rec ? formatAttendanceNote(rec) : "";
+        if (status === "present") present += 1;
+        if (countsForOverall) {
+          overallTotal += 1;
+          if (status === "present") overallPresent += 1;
+        }
+        memberRows.push(`
+          <tr>
+            <td>${escapeHtml(m.name || "—")}</td>
+            <td>${escapeHtml(m.rank || "—")}</td>
+            <td><span class="att-status status-${status}">${ATTENDANCE_LABELS[status]}</span></td>
+            <td class="att-note">${note ? escapeHtml(note) : "—"}</td>
+          </tr>`);
+      }
+
+      const total = list.length;
+      const rate = total ? Math.round((present / total) * 100) : 0;
+      sectionStats.push({ section: sec, present, total, rate });
+
+      tableBodyParts.push(`
+        <tr class="admin-section-row">
+          <td colspan="4">${escapeHtml(sec)}（出席 ${present}/${total} · ${rate}%）</td>
+        </tr>
+        ${memberRows.join("")}
+      `);
+    }
+
+    const overallRate = overallTotal
+      ? Math.round((overallPresent / overallTotal) * 100)
+      : 0;
+    const overallAbsent = Math.max(0, overallTotal - overallPresent);
+    const presentPct = overallTotal ? (overallPresent / overallTotal) * 100 : 0;
+    const absentPct = overallTotal ? (overallAbsent / overallTotal) * 100 : 0;
+
+    statsEl.innerHTML = `
+      <div class="admin-charts">
+        <div class="admin-chart-ring-wrap">
+          <div class="att-ring admin-att-ring" role="img" aria-label="全體出席率 ${overallRate}%，出席 ${overallPresent} 人，缺席 ${overallAbsent} 人，共 ${overallTotal} 人">
+            <div class="att-ring-chart" id="admin-att-ring-chart" style="background: conic-gradient(var(--cream-warm) 0 100%);">
+              <div class="att-ring-hole">
+                <span class="att-ring-value" id="admin-att-ring-value">0%</span>
+                <span class="att-ring-label">全體出席率</span>
+              </div>
+            </div>
+          </div>
+          <p class="admin-ring-caption">出席 ${overallPresent}／${overallTotal} 人</p>
+        </div>
+        <div class="admin-chart-bars-wrap">
+          <h3 class="admin-chart-title">各小隊出席率</h3>
+          <ul class="admin-bar-list" aria-label="各小隊出席率">
+            ${sectionStats
+              .map(
+                (s) => `
+                <li class="admin-bar-item">
+                  <div class="admin-bar-meta">
+                    <span class="admin-bar-label">${escapeHtml(s.section)}</span>
+                    <span class="admin-bar-value" data-admin-bar-rate data-present="${s.present}" data-total="${s.total}">0%（${s.present}/${s.total}）</span>
+                  </div>
+                  <div class="admin-bar-track" aria-hidden="true">
+                    <div class="admin-bar-fill" data-admin-bar-target="${s.rate}" style="width:0%"></div>
+                  </div>
+                </li>`
+              )
+              .join("")}
+          </ul>
+        </div>
+      </div>
+    `;
+
+    tableEl.innerHTML = tableBodyParts.length
+      ? `
+      <table class="admin-overview-table" aria-label="${escapeHtml(selectedMeta.name || "成員出席紀錄")}">
+        <thead>
+          <tr>
+            <th>姓名</th>
+            <th>職級</th>
+            <th>出席</th>
+            <th>備註</th>
+          </tr>
+        </thead>
+        <tbody>${tableBodyParts.join("")}</tbody>
+      </table>`
+      : `<p class="empty-state">該次活動尚無已加入的成員紀錄</p>`;
+
+    animateAdminCharts(
+      overallRate,
+      presentPct,
+      absentPct,
+      sectionStats.map((s) => s.rate)
+    );
+  }
+
+  function renderAdminMembersGrid() {
+    const grid = $("#admin-members-grid");
+    if (!grid) return;
+
+    const leaderRanks = new Set(["團隊長", "隊長", "副隊", "副隊長"]);
+
+    function memberCard(m) {
+      const avatar = m.photo
+        ? `<span class="admin-member-avatar has-photo"><img src="${escapeHtml(m.photo)}" alt="${escapeHtml(m.name)}" width="86" height="108" loading="lazy" /></span>`
+        : `<span class="admin-member-avatar" aria-hidden="true">${escapeHtml(initials(m.name))}</span>`;
+      return `
+        <button type="button" class="admin-member-card" data-admin-member-id="${escapeHtml(m.scoutId)}">
+          ${avatar}
+          <span class="admin-member-name">${escapeHtml(m.name)}</span>
+          <span class="admin-member-rank">${escapeHtml(m.rank || "")}</span>
+        </button>`;
+    }
+
+    const bySection = new Map();
+    for (const m of getAdminMembers()) {
+      const sec = m.section || "其他";
+      if (!bySection.has(sec)) bySection.set(sec, []);
+      bySection.get(sec).push(m);
+    }
+
+    const orderedSections = [
+      ...SECTION_ORDER.filter((s) => bySection.has(s)),
+      ...[...bySection.keys()].filter((s) => !SECTION_ORDER.includes(s)),
+    ];
+
+    grid.innerHTML = orderedSections
+      .map((sec) => {
+        const list = sortMembersForPatrol(bySection.get(sec) || []);
+        const leaders = list.filter((m) => leaderRanks.has(m.rank));
+        const others = list.filter((m) => !leaderRanks.has(m.rank));
+        return `
+          <section class="admin-patrol-block" aria-label="${escapeHtml(sec)}">
+            <h3 class="admin-patrol-title">${escapeHtml(sec)}</h3>
+            <div class="admin-patrol-layout">
+              <div class="admin-patrol-leaders" aria-label="隊長及副隊長">
+                ${leaders.map(memberCard).join("")}
+              </div>
+              <div class="admin-patrol-members" aria-label="隊員">
+                ${others.map(memberCard).join("")}
+              </div>
+            </div>
+          </section>`;
+      })
+      .join("");
+
+    grid.querySelectorAll("[data-admin-member-id]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const member = getAdminMembers().find(
+          (m) => m.scoutId === btn.dataset.adminMemberId
+        );
+        if (member) openAdminMemberPreview(member);
+      });
+    });
+  }
+
+  function openAdminMemberPreview(member) {
+    if (!isAdminSession || !member) return;
+    if (DEMO_SCOUT_IDS.has(String(member.scoutId || ""))) return;
+    if (adminView) adminView.hidden = true;
+    document.body.classList.add("admin-previewing");
+    if (adminPreviewBar) {
+      adminPreviewBar.hidden = false;
+      const label = $("#admin-preview-label");
+      if (label) {
+        label.textContent = `正在查看：${member.name}（${member.section || ""}）`;
+      }
+    }
+    sessionStorage.setItem(TAB_KEY, "activity");
+    showDashboard(member);
+    switchTab("activity");
+  }
+
+  function exitAdminMemberPreview(returnToAdmin = true) {
+    document.body.classList.remove("admin-previewing");
+    if (adminPreviewBar) adminPreviewBar.hidden = true;
+    if (returnToAdmin && isAdminSession) {
+      showAdminDashboard();
+      switchAdminTab(sessionStorage.getItem(ADMIN_TAB_KEY) || "members");
+    }
+  }
+
   /* ---------- Events ---------- */
 
   loginForm.addEventListener("submit", (e) => {
@@ -1717,6 +2220,13 @@
     if (!name.trim() || !scoutId.trim()) {
       loginError.textContent = "請輸入中文姓名及 Scout ID。";
       loginError.hidden = false;
+      return;
+    }
+
+    if (isAdminCredentials(name, scoutId)) {
+      saveAdminSession();
+      sessionStorage.setItem(ADMIN_TAB_KEY, "overview");
+      showAdminDashboard();
       return;
     }
 
@@ -1736,6 +2246,20 @@
     clearSession();
     showLogin();
   });
+
+  if (adminLogoutBtn) {
+    adminLogoutBtn.addEventListener("click", () => {
+      clearSession();
+      showLogin();
+    });
+  }
+
+  const adminPreviewBack = $("#admin-preview-back");
+  if (adminPreviewBack) {
+    adminPreviewBack.addEventListener("click", () => {
+      exitAdminMemberPreview(true);
+    });
+  }
 
   $("#badge-back-btn").addEventListener("click", () => {
     showProgressiveList();
@@ -1781,6 +2305,7 @@
 
   async function init() {
     initTabs();
+    initAdminTabs();
 
     try {
       await loadData();
@@ -1793,6 +2318,10 @@
 
     const session = getSession();
     if (session) {
+      if (session.role === "admin" || isAdminCredentials(session.name, session.scoutId)) {
+        showAdminDashboard();
+        return;
+      }
       const member = findMember(session.name, session.scoutId);
       if (member) {
         showDashboard(member);
