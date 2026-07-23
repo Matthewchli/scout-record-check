@@ -310,3 +310,77 @@
 body.admin-previewing .admin-view {
   display: none !important;
 }
+
+/* ===== Mobile overrides (must live here: admin.css loads after style.css) ===== */
+@media (max-width: 640px) {
+  .admin-tab-nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .admin-charts {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-chart-ring-wrap {
+    min-height: 120px; /* 40% of desktop 300px */
+    padding: 0.55rem 0.75rem;
+  }
+
+  .admin-chart-bars-wrap {
+    min-height: 220px;
+  }
+
+  /* Admin overall ring: 40% of desktop 140% size (207→83, 109→44) */
+  .admin-att-ring .att-ring-chart {
+    width: 83px;
+    height: 83px;
+  }
+
+  .admin-att-ring .att-ring-hole {
+    width: 44px;
+    height: 44px;
+  }
+
+  .admin-att-ring .att-ring-value {
+    font-size: 0.87rem;
+  }
+
+  .admin-att-ring .att-ring-label {
+    font-size: 0.4rem;
+  }
+
+  .admin-ring-caption {
+    margin-top: 0.3rem;
+    font-size: 0.68rem;
+  }
+
+  .admin-date-select {
+    max-width: none;
+  }
+
+  .admin-patrol-leaders,
+  .admin-patrol-members {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.4rem;
+  }
+
+  .admin-member-card {
+    padding: 0.4rem 0.2rem;
+    gap: 0.3rem;
+  }
+
+  .admin-member-avatar,
+  .admin-member-avatar.has-photo {
+    width: 48px;
+    height: 60px;
+    font-size: 0.9rem;
+  }
+
+  .admin-member-name {
+    font-size: 0.7rem;
+  }
+
+  .admin-member-rank {
+    font-size: 0.6rem;
+  }
+}
