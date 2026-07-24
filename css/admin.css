@@ -3,11 +3,17 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.admin-date-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
 .admin-date-select-wrap {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
-  margin-bottom: 1rem;
 }
 
 .admin-date-select-wrap label {
@@ -16,16 +22,132 @@
   color: var(--ink-muted);
 }
 
-.admin-date-select {
+.admin-date-filters .att-year-switcher {
+  margin: 0;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.admin-date-combo {
+  position: relative;
   width: 100%;
   max-width: 28rem;
+}
+
+.admin-date-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+  width: 100%;
   padding: 0.65rem 0.85rem;
   border: 1px solid rgba(26, 61, 43, 0.18);
   border-radius: var(--radius);
   background: var(--white);
   color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-date-trigger:hover:not(:disabled) {
+  border-color: rgba(26, 61, 43, 0.32);
+}
+
+.admin-date-trigger:focus-visible {
+  outline: 2px solid var(--green-soft);
+  outline-offset: 2px;
+}
+
+.admin-date-trigger:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.admin-date-trigger[aria-expanded="true"] {
+  border-color: var(--green-mid);
+  box-shadow: 0 0 0 2px rgba(45, 90, 63, 0.12);
+}
+
+.admin-date-trigger-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.admin-date-line {
+  display: block;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.admin-date-line-date {
   font-size: 0.92rem;
-  font-weight: 600;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.admin-date-line-name {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ink-muted);
+}
+
+.admin-date-chevron {
+  flex-shrink: 0;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-right: 2px solid var(--ink-muted);
+  border-bottom: 2px solid var(--ink-muted);
+  transform: rotate(45deg) translateY(-0.1rem);
+  transition: transform 0.2s ease;
+}
+
+.admin-date-trigger[aria-expanded="true"] .admin-date-chevron {
+  transform: rotate(225deg) translateY(-0.05rem);
+}
+
+.admin-date-listbox {
+  position: absolute;
+  top: calc(100% + 0.3rem);
+  left: 0;
+  right: 0;
+  z-index: 40;
+  max-height: min(18rem, 55vh);
+  margin: 0;
+  padding: 0.3rem;
+  overflow-y: auto;
+  list-style: none;
+  background: var(--white);
+  border: 1px solid rgba(26, 61, 43, 0.18);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 28px rgba(26, 61, 43, 0.14);
+  -webkit-overflow-scrolling: touch;
+}
+
+.admin-date-option {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 0.6rem 0.7rem;
+  border-radius: calc(var(--radius) - 1px);
+  cursor: pointer;
+}
+
+.admin-date-option:hover,
+.admin-date-option:focus-visible {
+  background: var(--green-mist);
+}
+
+.admin-date-option.is-selected {
+  background: rgba(45, 90, 63, 0.1);
+}
+
+.admin-date-option.is-selected .admin-date-line-date {
+  color: var(--green-deep);
 }
 
 .admin-overview-stats {
@@ -62,23 +184,23 @@
   margin: 0 auto;
 }
 
-/* Admin overview ring at 140% of shared .att-ring sizes (148→207, 78→109) */
+/* Admin overview ring: chart 207px, hole = 80% ≈ 166px */
 .admin-att-ring .att-ring-chart {
   width: 207px;
   height: 207px;
 }
 
 .admin-att-ring .att-ring-hole {
-  width: 109px;
-  height: 109px;
+  width: 166px;
+  height: 166px;
 }
 
 .admin-att-ring .att-ring-value {
-  font-size: 2.17rem;
+  font-size: 2.55rem;
 }
 
 .admin-att-ring .att-ring-label {
-  font-size: 1.01rem;
+  font-size: 1.12rem;
 }
 
 .admin-ring-caption {
@@ -333,23 +455,23 @@ body.admin-previewing .admin-view {
     min-height: 220px;
   }
 
-  /* Admin overall ring mobile: prior 83/44 × 1.5 */
+  /* Admin overall ring mobile: chart 125px, hole = 80% = 100px */
   .admin-att-ring .att-ring-chart {
     width: 125px;
     height: 125px;
   }
 
   .admin-att-ring .att-ring-hole {
-    width: 66px;
-    height: 66px;
+    width: 100px;
+    height: 100px;
   }
 
   .admin-att-ring .att-ring-value {
-    font-size: 1.31rem;
+    font-size: 1.55rem;
   }
 
   .admin-att-ring .att-ring-label {
-    font-size: 0.6rem;
+    font-size: 0.72rem;
   }
 
   .admin-ring-caption {
@@ -357,7 +479,7 @@ body.admin-previewing .admin-view {
     font-size: 0.68rem;
   }
 
-  .admin-date-select {
+  .admin-date-combo {
     max-width: none;
   }
 

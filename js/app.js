@@ -26,11 +26,32 @@
     absent: "缺席",
   };
 
-  const ADMIN_ACCOUNT = {
-    name: "李載禧",
-    scoutId: "P@ssw0rd",
-    role: "admin",
-  };
+  const ADMIN_ACCOUNTS = [
+    {
+      name: "李載禧",
+      scoutId: "P@ssw0rd",
+      role: "admin",
+      photo: "assets/members/li-zaihei.png",
+    },
+    {
+      name: "黃子峰",
+      scoutId: "0106",
+      role: "admin",
+      photo: "assets/members/huang-zifeng.png",
+    },
+    {
+      name: "林芷窰",
+      scoutId: "63008686",
+      role: "admin",
+      photo: "assets/members/lin-zhiyao.png",
+    },
+    {
+      name: "吳承軒",
+      scoutId: "Ryan1363",
+      role: "admin",
+      photo: "assets/members/wu-chengxuan.png",
+    },
+  ];
 
   const DEMO_SCOUT_IDS = new Set([
     "2025000101",
@@ -39,6 +60,14 @@
   ]);
 
   const ADMIN_TAB_KEY = "scout-record-admin-tab";
+  const ADMIN_YEAR_KEY = "scout-record-admin-year";
+
+  /** 學年：每年 9/1 至翌年 8/31（含） */
+  const ACADEMIC_YEARS = [
+    { id: "2024-2025", label: "2024-2025年度", start: "2024-09-01", end: "2025-08-31" },
+    { id: "2025-2026", label: "2025-2026年度", start: "2025-09-01", end: "2026-08-31" },
+    { id: "2026-2027", label: "2026-2027年度", start: "2026-09-01", end: "2027-08-31" },
+  ];
 
   const SECTION_ORDER = [
     "Cobra小隊",
@@ -82,6 +111,7 @@
   let currentMember = null;
   let isAdminSession = false;
   let adminSelectedDate = null;
+  let adminSelectedYear = null;
   let adminMeetingDates = [];
   let adminChartAnimFrames = new Set();
 
@@ -114,11 +144,16 @@
     );
   }
 
-  function isAdminCredentials(name, scoutId) {
-    return (
-      name.trim() === ADMIN_ACCOUNT.name &&
-      scoutId.trim().toUpperCase() === ADMIN_ACCOUNT.scoutId.toUpperCase()
+  function findAdminAccount(name, scoutId) {
+    const n = name.trim();
+    const id = scoutId.trim().toUpperCase();
+    return ADMIN_ACCOUNTS.find(
+      (a) => a.name === n && String(a.scoutId).toUpperCase() === id
     );
+  }
+
+  function isAdminCredentials(name, scoutId) {
+    return !!findAdminAccount(name, scoutId);
   }
 
   /* ---------- Session ---------- */
@@ -134,12 +169,12 @@
     );
   }
 
-  function saveAdminSession() {
+  function saveAdminSession(admin) {
     sessionStorage.setItem(
       STORAGE_KEY,
       JSON.stringify({
-        name: ADMIN_ACCOUNT.name,
-        scoutId: ADMIN_ACCOUNT.scoutId,
+        name: admin.name,
+        scoutId: admin.scoutId,
         role: "admin",
       })
     );
@@ -149,6 +184,7 @@
     sessionStorage.removeItem(STORAGE_KEY);
     sessionStorage.removeItem(TAB_KEY);
     sessionStorage.removeItem(ADMIN_TAB_KEY);
+    sessionStorage.removeItem(ADMIN_YEAR_KEY);
     isAdminSession = false;
     exitAdminMemberPreview(false);
   }
@@ -1820,6 +1856,186 @@
     return [...map.values()].sort((a, b) => b.date.localeCompare(a.date));
   }
 
+  function todayISODate() {
+    const now = new Date();
+    const y = now.getFullYear();
+    const m = String(now.getMonth() + 1).padStart(2, "0");
+    const d = String(now.getDate()).padStart(2, "0");
+    return `${y}-${m}-${d}`;
+  }
+
+  function getAcademicYearForDate(isoDate) {
+    if (!isoDate) return null;
+    for (const y of ACADEMIC_YEARS) {
+      if (isoDate >= y.start && isoDate <= y.end) return y.id;
+    }
+    return null;
+  }
+
+  function getDefaultAcademicYear() {
+    const today = todayISODate();
+    const match = getAcademicYearForDate(today);
+    if (match) return match;
+    if (today < ACADEMIC_YEARS[0].start) return ACADEMIC_YEARS[0].id;
+    return ACADEMIC_YEARS[ACADEMIC_YEARS.length - 1].id;
+  }
+
+  function resolveAdminSelectedYear() {
+    const saved = sessionStorage.getItem(ADMIN_YEAR_KEY);
+    if (saved && ACADEMIC_YEARS.some((y) => y.id === saved)) return saved;
+    return getDefaultAcademicYear();
+  }
+
+  function filterMeetingDatesByYear(dates, yearId) {
+    const year = ACADEMIC_YEARS.find((y) => y.id === yearId);
+    if (!year) return dates;
+    return dates.filter((d) => d.date >= year.start && d.date <= year.end);
+  }
+
+  function syncAdminYearSelect(yearId) {
+    const switcher = $("#admin-year-switcher");
+    if (!switcher) return;
+
+    switcher.innerHTML = ACADEMIC_YEARS.map((y) => {
+      const active = y.id === yearId;
+      return `
+        <button
+          type="button"
+          class="att-year-btn${active ? " is-active" : ""}"
+          data-year="${y.id}"
+          aria-pressed="${active ? "true" : "false"}"
+          aria-label="${escapeHtml(y.label)}"
+        >${escapeHtml(y.id)}</button>`;
+    }).join("");
+
+    switcher.querySelectorAll(".att-year-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const year = btn.dataset.year;
+        if (!year || year === adminSelectedYear) return;
+        adminSelectedYear = year;
+        sessionStorage.setItem(ADMIN_YEAR_KEY, adminSelectedYear);
+        const yearDates = filterMeetingDatesByYear(
+          adminMeetingDates,
+          adminSelectedYear
+        );
+        adminSelectedDate = yearDates.length ? yearDates[0].date : null;
+        closeAdminDateListbox();
+        renderAdminOverview();
+      });
+    });
+  }
+
+  function closeAdminDateListbox() {
+    const trigger = $("#admin-date-trigger");
+    const listbox = $("#admin-date-listbox");
+    if (!trigger || !listbox) return;
+    listbox.hidden = true;
+    trigger.setAttribute("aria-expanded", "false");
+  }
+
+  function openAdminDateListbox() {
+    const trigger = $("#admin-date-trigger");
+    const listbox = $("#admin-date-listbox");
+    if (!trigger || !listbox || trigger.disabled) return;
+    listbox.hidden = false;
+    trigger.setAttribute("aria-expanded", "true");
+    const selected = listbox.querySelector('[aria-selected="true"]');
+    if (selected) {
+      selected.scrollIntoView({ block: "nearest" });
+    }
+  }
+
+  function toggleAdminDateListbox() {
+    const listbox = $("#admin-date-listbox");
+    if (!listbox) return;
+    if (listbox.hidden) openAdminDateListbox();
+    else closeAdminDateListbox();
+  }
+
+  function syncAdminDateCombo(yearDates) {
+    const trigger = $("#admin-date-trigger");
+    const listbox = $("#admin-date-listbox");
+    const dateLine = $("#admin-date-trigger-date");
+    const nameLine = $("#admin-date-trigger-name");
+    if (!trigger || !listbox || !dateLine || !nameLine) return;
+
+    closeAdminDateListbox();
+
+    if (!yearDates.length) {
+      dateLine.textContent = "";
+      nameLine.textContent = "";
+      nameLine.hidden = true;
+      listbox.innerHTML = "";
+      trigger.disabled = true;
+      trigger.removeAttribute("aria-label");
+      return;
+    }
+
+    trigger.disabled = false;
+    const selected =
+      yearDates.find((d) => d.date === adminSelectedDate) || yearDates[0];
+    const dateLabel = formatDateYMD(selected.date);
+    dateLine.textContent = dateLabel;
+    if (selected.name) {
+      nameLine.textContent = selected.name;
+      nameLine.hidden = false;
+      trigger.setAttribute("aria-label", `${dateLabel} ${selected.name}`);
+    } else {
+      nameLine.textContent = "";
+      nameLine.hidden = true;
+      trigger.setAttribute("aria-label", dateLabel);
+    }
+
+    listbox.innerHTML = yearDates
+      .map((d) => {
+        const isSelected = d.date === adminSelectedDate;
+        const nameHtml = d.name
+          ? `<span class="admin-date-line admin-date-line-name">${escapeHtml(d.name)}</span>`
+          : "";
+        return `
+          <li
+            role="option"
+            class="admin-date-option${isSelected ? " is-selected" : ""}"
+            data-date="${escapeHtml(d.date)}"
+            aria-selected="${isSelected ? "true" : "false"}"
+          >
+            <span class="admin-date-line admin-date-line-date">${escapeHtml(formatDateYMD(d.date))}</span>
+            ${nameHtml}
+          </li>`;
+      })
+      .join("");
+
+    trigger.onclick = (e) => {
+      e.stopPropagation();
+      toggleAdminDateListbox();
+    };
+
+    listbox.onclick = (e) => {
+      const option = e.target.closest("[data-date]");
+      if (!option) return;
+      e.stopPropagation();
+      const date = option.dataset.date;
+      if (!date || date === adminSelectedDate) {
+        closeAdminDateListbox();
+        return;
+      }
+      adminSelectedDate = date;
+      closeAdminDateListbox();
+      renderAdminOverview();
+    };
+  }
+
+  function initAdminDateCombo() {
+    document.addEventListener("click", (e) => {
+      const combo = $("#admin-date-combo");
+      if (!combo || combo.contains(e.target)) return;
+      closeAdminDateListbox();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeAdminDateListbox();
+    });
+  }
+
   function rankSortValue(rank) {
     if (RANK_ORDER[rank] != null) return RANK_ORDER[rank];
     return 99;
@@ -1910,7 +2126,7 @@
     adminChartAnimFrames.add(id);
   }
 
-  function showAdminDashboard() {
+  function showAdminDashboard(adminAccount) {
     isAdminSession = true;
     currentMember = null;
     loginView.hidden = true;
@@ -1918,9 +2134,51 @@
     exitAdminMemberPreview(false);
     if (adminView) adminView.hidden = false;
 
+    const session = getSession();
+    const admin =
+      adminAccount ||
+      (session && findAdminAccount(session.name, session.scoutId)) ||
+      ADMIN_ACCOUNTS[0];
+
+    const headerName = $("#admin-header-name");
+    if (headerName) headerName.textContent = admin.name;
+
+    const profileName = $("#admin-profile-name-text");
+    if (profileName) profileName.textContent = admin.name;
+    else {
+      const heading = $("#admin-profile-heading");
+      if (heading) {
+        const nameSpan = heading.querySelector("span:not(.profile-rank)");
+        if (nameSpan) nameSpan.textContent = admin.name;
+      }
+    }
+
+    const adminAvatar = $("#admin-profile-avatar");
+    if (adminAvatar) {
+      if (admin.photo) {
+        adminAvatar.classList.add("has-photo");
+        adminAvatar.setAttribute("aria-hidden", "false");
+        adminAvatar.innerHTML = `<img src="${escapeHtml(admin.photo)}" alt="${escapeHtml(admin.name)}的成員照片" width="120" height="150" />`;
+      } else {
+        adminAvatar.classList.remove("has-photo");
+        adminAvatar.setAttribute("aria-hidden", "true");
+        adminAvatar.textContent = initials(admin.name);
+      }
+    }
+
     adminMeetingDates = collectMeetingDates();
-    if (!adminSelectedDate && adminMeetingDates.length) {
-      adminSelectedDate = adminMeetingDates[0].date;
+    adminSelectedYear = resolveAdminSelectedYear();
+    sessionStorage.setItem(ADMIN_YEAR_KEY, adminSelectedYear);
+
+    const yearDates = filterMeetingDatesByYear(
+      adminMeetingDates,
+      adminSelectedYear
+    );
+    if (
+      !adminSelectedDate ||
+      !yearDates.some((d) => d.date === adminSelectedDate)
+    ) {
+      adminSelectedDate = yearDates.length ? yearDates[0].date : null;
     }
 
     renderAdminOverview();
@@ -1967,43 +2225,46 @@
   }
 
   function renderAdminOverview() {
-    const selectEl = $("#admin-date-select");
+    const comboEl = $("#admin-date-combo");
     const statsEl = $("#admin-overview-stats");
     const tableEl = $("#admin-overview-table");
-    if (!selectEl || !statsEl || !tableEl) return;
+    if (!comboEl || !statsEl || !tableEl) return;
 
     cancelAdminChartAnimations();
     const adminMembers = getAdminMembers();
 
-    if (!adminMeetingDates.length) {
-      selectEl.innerHTML = "";
+    if (!adminSelectedYear) {
+      adminSelectedYear = resolveAdminSelectedYear();
+    }
+    syncAdminYearSelect(adminSelectedYear);
+
+    const yearDates = filterMeetingDatesByYear(
+      adminMeetingDates,
+      adminSelectedYear
+    );
+
+    if (!yearDates.length) {
+      syncAdminDateCombo([]);
       statsEl.innerHTML = "";
-      tableEl.innerHTML = `<p class="empty-state">暫無出席紀錄</p>`;
+      tableEl.innerHTML = `<p class="empty-state">${
+        adminMeetingDates.length
+          ? "此學年暫無出席紀錄"
+          : "暫無出席紀錄"
+      }</p>`;
       return;
     }
 
     if (
       !adminSelectedDate ||
-      !adminMeetingDates.some((d) => d.date === adminSelectedDate)
+      !yearDates.some((d) => d.date === adminSelectedDate)
     ) {
-      adminSelectedDate = adminMeetingDates[0].date;
+      adminSelectedDate = yearDates[0].date;
     }
 
-    selectEl.innerHTML = adminMeetingDates
-      .map((d) => {
-        const label = `${formatDateYMD(d.date)}${d.name ? ` · ${d.name}` : ""}`;
-        const selected = d.date === adminSelectedDate ? " selected" : "";
-        return `<option value="${escapeHtml(d.date)}"${selected}>${escapeHtml(label)}</option>`;
-      })
-      .join("");
-
-    selectEl.onchange = () => {
-      adminSelectedDate = selectEl.value;
-      renderAdminOverview();
-    };
+    syncAdminDateCombo(yearDates);
 
     const selectedMeta =
-      adminMeetingDates.find((d) => d.date === adminSelectedDate) || {};
+      yearDates.find((d) => d.date === adminSelectedDate) || {};
 
     const eligibleMembers = adminMembers.filter((m) =>
       memberJoinedByDate(m, adminSelectedDate)
@@ -2230,10 +2491,11 @@
       return;
     }
 
-    if (isAdminCredentials(name, scoutId)) {
-      saveAdminSession();
+    const admin = findAdminAccount(name, scoutId);
+    if (admin) {
+      saveAdminSession(admin);
       sessionStorage.setItem(ADMIN_TAB_KEY, "overview");
-      showAdminDashboard();
+      showAdminDashboard(admin);
       return;
     }
 
@@ -2313,6 +2575,7 @@
   async function init() {
     initTabs();
     initAdminTabs();
+    initAdminDateCombo();
 
     try {
       await loadData();
@@ -2326,8 +2589,11 @@
     const session = getSession();
     if (session) {
       if (session.role === "admin" || isAdminCredentials(session.name, session.scoutId)) {
-        showAdminDashboard();
-        return;
+        const admin = findAdminAccount(session.name, session.scoutId);
+        if (admin) {
+          showAdminDashboard(admin);
+          return;
+        }
       }
       const member = findMember(session.name, session.scoutId);
       if (member) {

@@ -1846,8 +1846,9 @@ button { cursor: pointer; border: none; background: none; }
 }
 
 .att-ring-hole {
-  width: 78px;
-  height: 78px;
+  /* hole = 80% of chart (148 × 0.8 ≈ 118) */
+  width: 118px;
+  height: 118px;
   border-radius: 50%;
   background: var(--cream);
   display: grid;
@@ -1859,15 +1860,15 @@ button { cursor: pointer; border: none; background: none; }
 
 .att-ring-value {
   font-family: var(--font-serif);
-  font-size: 1.55rem;
+  font-size: 1.85rem;
   font-weight: 700;
   color: var(--green-deep);
-  line-height: 1.1;
+  line-height: 1.05;
   font-variant-numeric: tabular-nums;
 }
 
 .att-ring-label {
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--ink-muted);
 }

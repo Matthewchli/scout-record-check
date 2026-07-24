@@ -7,8 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=5e43aa5" />
-  <link rel="stylesheet" href="css/admin.css?v=5e43aa5" />
+  <link rel="stylesheet" href="css/style.css?v=cec5141" />
+  <link rel="stylesheet" href="css/admin.css?v=cec5141" />
 </head>
 <body>
   <!-- 登入畫面 -->
@@ -328,7 +328,7 @@
         </div>
         <div class="dash-user">
           <div class="user-meta">
-            <span id="admin-header-name" class="user-name">李載禧</span>
+            <span id="admin-header-name" class="user-name">管理者</span>
             <span id="admin-header-id" class="user-id">管理者</span>
           </div>
           <button type="button" id="admin-logout-btn" class="btn btn-ghost">登出</button>
@@ -342,7 +342,7 @@
           <div class="profile-avatar" id="admin-profile-avatar" aria-hidden="true">管</div>
           <div class="profile-info">
             <h2 id="admin-profile-heading" class="profile-name">
-              <span>李載禧</span>
+              <span id="admin-profile-name-text">管理者</span>
               <span class="profile-rank">管理者</span>
             </h2>
             <p class="profile-detail">
@@ -366,9 +366,44 @@
             <h2>成員出席紀錄</h2>
             <p>按集會日期查看全體出席情況</p>
           </header>
-          <div class="admin-date-select-wrap">
-            <label for="admin-date-select">集會日期</label>
-            <select id="admin-date-select" class="admin-date-select" aria-label="選擇集會日期"></select>
+          <div class="admin-date-filters">
+            <div class="admin-date-select-wrap">
+              <label id="admin-year-label">年度</label>
+              <div
+                id="admin-year-switcher"
+                class="att-year-switcher"
+                role="group"
+                aria-labelledby="admin-year-label"
+              ></div>
+            </div>
+            <div class="admin-date-select-wrap">
+              <label id="admin-date-label">集會日期</label>
+              <div class="admin-date-combo" id="admin-date-combo">
+                <button
+                  type="button"
+                  id="admin-date-trigger"
+                  class="admin-date-trigger"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                  aria-controls="admin-date-listbox"
+                  aria-labelledby="admin-date-label"
+                  disabled
+                >
+                  <span class="admin-date-trigger-body">
+                    <span class="admin-date-line admin-date-line-date" id="admin-date-trigger-date"></span>
+                    <span class="admin-date-line admin-date-line-name" id="admin-date-trigger-name" hidden></span>
+                  </span>
+                  <span class="admin-date-chevron" aria-hidden="true"></span>
+                </button>
+                <ul
+                  id="admin-date-listbox"
+                  class="admin-date-listbox"
+                  role="listbox"
+                  aria-labelledby="admin-date-label"
+                  hidden
+                ></ul>
+              </div>
+            </div>
           </div>
           <div id="admin-overview-stats" class="admin-overview-stats"></div>
           <div id="admin-overview-table" class="admin-overview-table-wrap"></div>
@@ -399,6 +434,6 @@
     </footer>
   </section>
 
-  <script src="js/app.js?v=5e43aa5"></script>
+  <script src="js/app.js?v=cec5141"></script>
 </body>
 </html>
