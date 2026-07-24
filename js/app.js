@@ -1066,7 +1066,7 @@
   }
 
   /**
-   * Animate progress fill + optional text from 0 → target over 1.5s.
+   * Animate progress fill + optional text from 0 → target over 2s.
    * textFormatter(doneShown, pctShown) → string
    */
   function animateProgressBar(fillEl, textEl, { done, total, pct, textFormatter }) {
@@ -1076,7 +1076,7 @@
       textEl.textContent = textFormatter(0, 0);
     }
 
-    const duration = 1500;
+    const duration = 2000;
     const start = performance.now();
     let frameId = null;
 
@@ -2201,9 +2201,9 @@
         label.textContent = `正在查看：${member.name}（${member.section || ""}）`;
       }
     }
-    sessionStorage.setItem(TAB_KEY, "activity");
+    sessionStorage.setItem(TAB_KEY, "progressive");
     showDashboard(member);
-    switchTab("activity");
+    switchTab("progressive");
   }
 
   function exitAdminMemberPreview(returnToAdmin = true) {

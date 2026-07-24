@@ -653,7 +653,7 @@ button { cursor: pointer; border: none; background: none; }
   width: 0;
   background: linear-gradient(90deg, var(--green-soft), var(--gold));
   border-radius: 2px;
-  transition: width 0.8s var(--ease);
+  transition: width 2s var(--ease);
 }
 
 /* Activity list */
