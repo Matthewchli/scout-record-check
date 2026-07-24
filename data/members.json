@@ -8171,6 +8171,7 @@
       "rank": "隊員",
       "joinDate": "2025-10-25",
       "photo": "assets/members/2026000188.png",
+      "photoPosition": "center 20%",
       "activity": {
         "attendanceRate": 84,
         "serviceHours": 13,

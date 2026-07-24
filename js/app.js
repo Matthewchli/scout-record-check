@@ -293,6 +293,13 @@
       .replace(/"/g, "&quot;");
   }
 
+  /** Optional per-member CSS object-position (e.g. "center 20%"). */
+  function photoPositionStyle(member) {
+    const pos = member && member.photoPosition;
+    if (!pos || typeof pos !== "string") return "";
+    return ` style="object-position: ${escapeHtml(pos)}"`;
+  }
+
   /* ---------- Tabs ---------- */
 
   function switchTab(tabId) {
@@ -399,7 +406,7 @@
     if (member.photo) {
       avatar.classList.add("has-photo");
       avatar.setAttribute("aria-hidden", "false");
-      avatar.innerHTML = `<img src="${escapeHtml(member.photo)}" alt="${escapeHtml(member.name)}的成員照片" width="120" height="150" />`;
+      avatar.innerHTML = `<img src="${escapeHtml(member.photo)}" alt="${escapeHtml(member.name)}的成員照片" width="120" height="150"${photoPositionStyle(member)} />`;
     } else {
       avatar.classList.remove("has-photo");
       avatar.setAttribute("aria-hidden", "true");
@@ -2130,7 +2137,7 @@
 
     function memberCard(m) {
       const avatar = m.photo
-        ? `<span class="admin-member-avatar has-photo"><img src="${escapeHtml(m.photo)}" alt="${escapeHtml(m.name)}" width="86" height="108" loading="lazy" /></span>`
+        ? `<span class="admin-member-avatar has-photo"><img src="${escapeHtml(m.photo)}" alt="${escapeHtml(m.name)}" width="103" height="103" loading="lazy"${photoPositionStyle(m)} /></span>`
         : `<span class="admin-member-avatar" aria-hidden="true">${escapeHtml(initials(m.name))}</span>`;
       return `
         <button type="button" class="admin-member-card" data-admin-member-id="${escapeHtml(m.scoutId)}">
