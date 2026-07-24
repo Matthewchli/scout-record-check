@@ -51,6 +51,12 @@
       role: "admin",
       photo: "assets/members/wu-chengxuan.png",
     },
+    {
+      name: "吳溢潼",
+      scoutId: "260724",
+      role: "admin",
+      photo: "assets/members/wu-yitong.png",
+    },
   ];
 
   const DEMO_SCOUT_IDS = new Set([
