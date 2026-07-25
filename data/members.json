@@ -23,17 +23,62 @@
       {
         "title": "香港童軍總會",
         "url": "https://www.scout.org.hk/",
-        "desc": "官方網站與最新消息"
+        "desc": "官方網站與最新消息",
+        "icon": "assets/resources/icons/scout-hk.png"
       },
       {
         "title": "沙田東區區會",
         "url": "https://www.stescout.org/website/contact.html",
-        "desc": "區會聯絡資料"
+        "desc": "區會聯絡資料",
+        "icon": "assets/resources/icons/sha-tin-east.png"
       },
       {
         "title": "童軍訓練綱要",
         "url": "assets/docs/FullVersion-zh.pdf",
-        "desc": "進度性獎章及專科徽章考核要求"
+        "desc": "進度性獎章及專科徽章考核要求",
+        "icon": "assets/resources/icons/training-scheme.png"
+      }
+    ],
+    "scoutSkills": [
+      {
+        "title": "背囊收拾",
+        "url": "assets/resources/scout-skills/01-backpack.pdf",
+        "desc": "教學講義 PDF"
+      },
+      {
+        "title": "營地烹飪",
+        "url": "assets/resources/scout-skills/02-camp-cooking.pdf",
+        "desc": "教學講義 PDF"
+      },
+      {
+        "title": "繩索運用",
+        "url": "assets/resources/scout-skills/03-ropework.pdf",
+        "desc": "教學講義 PDF"
+      },
+      {
+        "title": "營藝技巧",
+        "url": "assets/resources/scout-skills/04-campcraft.pdf",
+        "desc": "教學講義 PDF"
+      },
+      {
+        "title": "地圖閱讀",
+        "url": "assets/resources/scout-skills/05-map-reading.pdf",
+        "desc": "教學講義 PDF"
+      },
+      {
+        "title": "遠足技巧",
+        "url": "assets/resources/scout-skills/06-hiking.pdf",
+        "desc": "教學講義 PDF"
+      },
+      {
+        "title": "意外事件處理",
+        "url": "assets/resources/scout-skills/07-incident.pdf",
+        "desc": "教學講義 PDF"
+      },
+      {
+        "title": "天氣認識及保護環境",
+        "url": "assets/resources/scout-skills/08-weather-environment.pdf",
+        "desc": "教學講義 PDF"
       }
     ]
   },

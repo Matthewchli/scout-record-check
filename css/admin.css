@@ -337,18 +337,41 @@
   margin: 0 0 0.65rem;
 }
 
-.admin-prog-badge-switcher {
-  display: inline-flex;
-  margin: 0;
+.admin-prog-badge-switcher.att-year-switcher {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  width: 100%;
   max-width: 100%;
-  flex-wrap: wrap;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.admin-prog-badge-switcher .att-year-btn {
+.admin-prog-badge-switcher.att-year-switcher .att-year-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.28rem;
   min-width: 0;
-  flex: 1 1 auto;
-  padding: 0.4rem 0.65rem;
+  width: 100%;
+  flex: 1 1 0;
+  padding: 0.38rem 0.35rem;
   font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.admin-prog-badge-switcher-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  object-fit: contain;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+.admin-prog-badge-switcher-text {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .admin-prog-zoom {
@@ -455,12 +478,16 @@
   --admin-prog-head-h2: 1.35rem;
   --admin-prog-head-h3: 1.7rem;
   --admin-prog-row-h: 2.15rem;
+  /* Base size for em-relative cells (patrol labels inherit; zoom/scale applies here). */
+  font-size: 0.88rem;
   table-layout: fixed;
   width: var(--admin-prog-table-width);
   min-width: var(--admin-prog-table-width);
   max-width: none;
   border-collapse: separate;
   border-spacing: 0;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 .admin-prog-item-matrix .admin-prog-col-name {
@@ -1020,10 +1047,26 @@ body.admin-prog-detail-open {
   vertical-align: middle;
 }
 
+/* Patrol section rows live inside .admin-prog-table-scale (zoom/transform).
+   Override root-rem .admin-overview-table .admin-section-row; use em under table font-size. */
+.admin-prog-item-matrix.admin-overview-table .admin-section-row td {
+  font-size: 1em;
+  line-height: 1.25;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 .admin-prog-item-matrix .admin-section-row td:first-child {
   position: sticky;
   left: 0;
   z-index: 1;
+}
+
+.admin-prog-patrol-label {
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: inherit;
 }
 
 .admin-members-grid {
@@ -1195,12 +1238,22 @@ body.admin-previewing .admin-view {
     align-items: stretch;
   }
 
-  .admin-prog-badge-switcher {
+  .admin-prog-badge-switcher.att-year-switcher {
     width: 100%;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .admin-prog-badge-switcher .att-year-btn {
-    flex: 1 1 calc(50% - 0.35rem);
+  .admin-prog-badge-switcher.att-year-switcher .att-year-btn {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 0.34rem 0.2rem;
+    font-size: 0.72rem;
+    gap: 0.2rem;
+  }
+
+  .admin-prog-badge-switcher-icon {
+    width: 1rem;
+    height: 1rem;
   }
 
   .admin-prog-zoom {

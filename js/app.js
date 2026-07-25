@@ -88,10 +88,10 @@
   ];
 
   const PROG_OVERVIEW_BADGES = [
-    { key: "discovery", short: "探索", label: "探索獎章" },
-    { key: "standard", short: "標準", label: "標準獎章" },
-    { key: "advanced", short: "高級", label: "高級獎章" },
-    { key: "chief", short: "總領袖", label: "總領袖獎章" },
+    { key: "discovery", short: "探索", label: "探索獎章", icon: "assets/badge-discovery.png" },
+    { key: "standard", short: "標準", label: "標準獎章", icon: "assets/badge-standard.png" },
+    { key: "advanced", short: "高級", label: "高級獎章", icon: "assets/badge-advanced.png" },
+    { key: "chief", short: "總領袖", label: "總領袖獎章", icon: "assets/badge-chief.png" },
   ];
 
   /** 全體出席率只計四隊；「新成員」及其他 section 不進分子／分母 */
@@ -1982,8 +1982,34 @@
         (l) => `
         <li class="link-item">
           <a href="${escapeHtml(l.url)}" target="_blank" rel="noopener noreferrer">
-            <span class="link-title">${escapeHtml(l.title)}</span>
-            <span class="link-desc">${escapeHtml(l.desc)}</span>
+            ${
+              l.icon
+                ? `<img class="link-icon" src="${escapeHtml(l.icon)}" alt="" width="36" height="36" loading="lazy" decoding="async">`
+                : ""
+            }
+            <span class="link-text">
+              <span class="link-title">${escapeHtml(l.title)}</span>
+              <span class="link-desc">${escapeHtml(l.desc)}</span>
+            </span>
+          </a>
+        </li>`
+      )
+      .join("");
+
+    const skillsHtml = (resources.scoutSkills || [])
+      .map(
+        (l) => `
+        <li class="link-item">
+          <a href="${escapeHtml(l.url)}" target="_blank" rel="noopener noreferrer">
+            ${
+              l.icon
+                ? `<img class="link-icon" src="${escapeHtml(l.icon)}" alt="" width="36" height="36" loading="lazy" decoding="async">`
+                : ""
+            }
+            <span class="link-text">
+              <span class="link-title">${escapeHtml(l.title)}</span>
+              <span class="link-desc">${escapeHtml(l.desc || "")}</span>
+            </span>
           </a>
         </li>`
       )
@@ -2000,6 +2026,10 @@
           <ul class="link-list">${linksHtml || `<li class="empty-state">暫無連結</li>`}</ul>
         </section>
       </div>
+      <section class="resource-block">
+        <h3 class="subsection-title">童軍技能</h3>
+        <ul class="link-list">${skillsHtml || `<li class="empty-state">暫無資料</li>`}</ul>
+      </section>
     `;
   }
 
@@ -2946,7 +2976,7 @@
       if (!list.length) continue;
       bodyRows.push(`
         <tr class="admin-section-row">
-          <td colspan="${colCount}">${escapeHtml(sec)}（${list.length} 人）</td>
+          <td colspan="${colCount}"><span class="admin-prog-patrol-label">${escapeHtml(sec)}（${list.length} 人）</span></td>
         </tr>`);
       for (const m of list) {
         const badge = (m.progressiveBadges || []).find(
@@ -3048,15 +3078,24 @@
         ${pctCells}
       </tr>`);
 
-    const switcher = PROG_OVERVIEW_BADGES.map(
-      (b) => `
+    const switcher = PROG_OVERVIEW_BADGES.map((b) => {
+      const iconSrc =
+        (syllabus && syllabus[b.key] && syllabus[b.key].icon) ||
+        b.icon ||
+        BADGE_ICONS[b.key] ||
+        "";
+      const iconHtml = iconSrc
+        ? `<img class="admin-prog-badge-switcher-icon" src="${escapeHtml(iconSrc)}" alt="" width="22" height="22" decoding="async" />`
+        : "";
+      return `
         <button
           type="button"
           class="att-year-btn${b.key === adminProgOverviewBadgeKey ? " is-active" : ""}"
           data-prog-badge-key="${b.key}"
+          aria-label="${escapeHtml(b.label)}"
           aria-pressed="${b.key === adminProgOverviewBadgeKey ? "true" : "false"}"
-        >${escapeHtml(b.label)}</button>`
-    ).join("");
+        >${iconHtml}<span class="admin-prog-badge-switcher-text">${escapeHtml(b.short)}</span></button>`;
+    }).join("");
 
     const sectionHead = sectionGroups
       .map(
