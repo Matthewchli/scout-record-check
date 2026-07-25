@@ -67,6 +67,10 @@
 
   const ADMIN_TAB_KEY = "scout-record-admin-tab";
   const ADMIN_YEAR_KEY = "scout-record-admin-year";
+  const ADMIN_PROG_ZOOM_KEY = "scout-record-admin-prog-zoom";
+  const ADMIN_PROG_ZOOM_MIN = 0.5;
+  const ADMIN_PROG_ZOOM_MAX = 1.5;
+  const ADMIN_PROG_ZOOM_STEP = 0.1;
 
   /** 學年：每年 9/1 至翌年 8/31（含） */
   const ACADEMIC_YEARS = [
@@ -128,6 +132,7 @@
   let adminMeetingDates = [];
   let adminChartAnimFrames = new Set();
   let adminProgOverviewBadgeKey = "discovery";
+  let adminProgOverviewZoom = 1;
 
   /* ---------- Data ---------- */
 
@@ -201,6 +206,163 @@
     sessionStorage.removeItem(ADMIN_YEAR_KEY);
     isAdminSession = false;
     exitAdminMemberPreview(false);
+  }
+
+  function clampAdminProgZoom(value) {
+    const n = Number(value);
+    if (!Number.isFinite(n)) return 1;
+    const stepped =
+      Math.round(n / ADMIN_PROG_ZOOM_STEP) * ADMIN_PROG_ZOOM_STEP;
+    return Math.min(
+      ADMIN_PROG_ZOOM_MAX,
+      Math.max(ADMIN_PROG_ZOOM_MIN, Math.round(stepped * 10) / 10)
+    );
+  }
+
+  function loadAdminProgZoom() {
+    try {
+      const raw = sessionStorage.getItem(ADMIN_PROG_ZOOM_KEY);
+      if (raw == null || raw === "") return 1;
+      return clampAdminProgZoom(parseFloat(raw));
+    } catch {
+      return 1;
+    }
+  }
+
+  function saveAdminProgZoom(zoom) {
+    adminProgOverviewZoom = clampAdminProgZoom(zoom);
+    try {
+      sessionStorage.setItem(ADMIN_PROG_ZOOM_KEY, String(adminProgOverviewZoom));
+    } catch {
+      /* ignore quota / private mode */
+    }
+    return adminProgOverviewZoom;
+  }
+
+  function applyAdminProgTableZoom(root, zoom = adminProgOverviewZoom, { snap = true } = {}) {
+    const scale = snap
+      ? clampAdminProgZoom(zoom)
+      : Math.min(
+          ADMIN_PROG_ZOOM_MAX,
+          Math.max(ADMIN_PROG_ZOOM_MIN, Number(zoom) || 1)
+        );
+    adminProgOverviewZoom = scale;
+    const slot = root?.querySelector(".admin-prog-table-scale-slot");
+    const scaler = root?.querySelector(".admin-prog-table-scale");
+    const label = root?.querySelector("[data-prog-zoom-label]");
+    const minusBtn = root?.querySelector("[data-prog-zoom='-1']");
+    const plusBtn = root?.querySelector("[data-prog-zoom='1']");
+    if (!slot || !scaler) return scale;
+
+    // Prefer CSS zoom (keeps sticky thead / name column working).
+    // Fallback: transform:scale + slot footprint so scroll area isn't clipped.
+    const supportsZoom =
+      typeof CSS !== "undefined" && typeof CSS.supports === "function"
+        ? CSS.supports("zoom", "1")
+        : "zoom" in document.documentElement.style;
+    if (supportsZoom) {
+      scaler.style.transform = "";
+      scaler.style.zoom = String(scale);
+      slot.style.width = "";
+      slot.style.height = "";
+    } else {
+      scaler.style.zoom = "";
+      scaler.style.transform = "none";
+      const width = scaler.scrollWidth || scaler.offsetWidth;
+      const height = scaler.scrollHeight || scaler.offsetHeight;
+      scaler.style.transform = `scale(${scale})`;
+      scaler.style.transformOrigin = "top left";
+      slot.style.width = `${Math.ceil(width * scale)}px`;
+      slot.style.height = `${Math.ceil(height * scale)}px`;
+    }
+
+    if (label) {
+      label.textContent = `${Math.round(scale * 100)}%`;
+      label.setAttribute(
+        "aria-label",
+        `目前縮放 ${Math.round(scale * 100)}%，點按重設為 100%`
+      );
+    }
+    if (minusBtn) minusBtn.disabled = scale <= ADMIN_PROG_ZOOM_MIN + 1e-9;
+    if (plusBtn) plusBtn.disabled = scale >= ADMIN_PROG_ZOOM_MAX - 1e-9;
+    return scale;
+  }
+
+  function bindAdminProgZoomControls(root) {
+    adminProgOverviewZoom = loadAdminProgZoom();
+    applyAdminProgTableZoom(root, adminProgOverviewZoom);
+
+    const setZoom = (next, { snap = true, persist = true } = {}) => {
+      const scale = applyAdminProgTableZoom(root, next, { snap });
+      if (persist) saveAdminProgZoom(scale);
+      hideAdminProgItemHoverTip();
+      hideAdminProgCompletedPopover();
+      return scale;
+    };
+
+    root.querySelectorAll("[data-prog-zoom]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const dir = Number(btn.dataset.progZoom);
+        if (!Number.isFinite(dir) || dir === 0) return;
+        setZoom(adminProgOverviewZoom + dir * ADMIN_PROG_ZOOM_STEP);
+      });
+    });
+
+    root.querySelector("[data-prog-zoom-reset]")?.addEventListener("click", () => {
+      setZoom(1);
+    });
+
+    // Pinch-to-zoom on the table (touch).
+    const tableWrap = root.querySelector(".admin-prog-table-wrap");
+    if (!tableWrap) return;
+
+    let pinchStartDist = 0;
+    let pinchStartZoom = 1;
+
+    const touchDistance = (touches) => {
+      const [a, b] = touches;
+      const dx = a.clientX - b.clientX;
+      const dy = a.clientY - b.clientY;
+      return Math.hypot(dx, dy);
+    };
+
+    tableWrap.addEventListener(
+      "touchstart",
+      (e) => {
+        if (e.touches.length !== 2) return;
+        pinchStartDist = touchDistance(e.touches);
+        pinchStartZoom = adminProgOverviewZoom;
+      },
+      { passive: true }
+    );
+
+    tableWrap.addEventListener(
+      "touchmove",
+      (e) => {
+        if (e.touches.length !== 2 || pinchStartDist <= 0) return;
+        e.preventDefault();
+        const ratio = touchDistance(e.touches) / pinchStartDist;
+        setZoom(pinchStartZoom * ratio, { snap: false, persist: false });
+      },
+      { passive: false }
+    );
+
+    tableWrap.addEventListener(
+      "touchend",
+      (e) => {
+        if (e.touches.length >= 2) return;
+        if (pinchStartDist > 0) {
+          setZoom(adminProgOverviewZoom, { snap: true, persist: true });
+        }
+        pinchStartDist = 0;
+      },
+      { passive: true }
+    );
+
+    // Recompute slot after fonts / layout settle.
+    requestAnimationFrame(() =>
+      applyAdminProgTableZoom(root, adminProgOverviewZoom)
+    );
   }
 
   function getSession() {
@@ -2731,7 +2893,7 @@
     }
 
     const columns = collectProgOverviewColumns(syl);
-    const colCount = columns.length + 2; // 姓名 + 分項… + 完成度
+    const colCount = columns.length + 3; // 姓名 + 分項… + 完成項目 + 完成度
     const memberCount = adminMembers.length;
 
     // Section / subsection colspan must equal visible item count (after hiding sea/air).
@@ -2776,6 +2938,7 @@
 
     const itemDoneCounts = columns.map(() => 0);
     let pctSum = 0;
+    let doneSum = 0;
 
     const bodyRows = [];
     for (const sec of orderedSections) {
@@ -2796,6 +2959,7 @@
           completedIds: badge?.completedIds || [],
         });
         pctSum += pct;
+        doneSum += done;
         const cells = columns
           .map((col, colIdx) => {
             const isDone = completed.has(col.id);
@@ -2822,6 +2986,7 @@
             </td>`;
           })
           .join("");
+        const doneTip = `${selectedBadge.label}完成項目 ${done}/${total}`;
         const pctTip = `${selectedBadge.label}完成度 ${pct}%（${done}/${total}）`;
         bodyRows.push(`
           <tr class="admin-prog-member-row">
@@ -2831,35 +2996,56 @@
               </button>
             </th>
             ${cells}
+            <td class="admin-prog-done-cell" title="${escapeHtml(doneTip)}">
+              <span class="admin-prog-pct-value">${done}</span>
+            </td>
             <td class="admin-prog-pct-cell" title="${escapeHtml(pctTip)}">
               <span class="admin-prog-pct-value">${pct}%</span>
-              <span class="admin-prog-pct-detail">${done}/${total}</span>
             </td>
           </tr>`);
       }
     }
 
     const avgPct = memberCount ? Math.round(pctSum / memberCount) : 0;
-    const completionCells = columns
+    // Average completed-item count (same basis as avgPct); mirrors per-member「完成項目」.
+    const avgDone = memberCount ? Math.round(doneSum / memberCount) : 0;
+    const countCells = columns
       .map((col, colIdx) => {
         const doneN = itemDoneCounts[colIdx];
-        const itemPct = memberCount ? Math.round((doneN / memberCount) * 100) : 0;
-        const tip = `${col.fullTitle} · 全體考獲 ${doneN}/${memberCount}（${itemPct}%）`;
+        const tip = `${col.fullTitle} · 全體考獲 ${doneN}/${memberCount}`;
         return `<td class="admin-prog-item-cell admin-prog-completion-cell" title="${escapeHtml(tip)}">
-          <span class="admin-prog-pct-value">${itemPct}%</span>
-          <span class="admin-prog-pct-detail">${doneN}/${memberCount}</span>
+          <span class="admin-prog-pct-value">${doneN}</span>
         </td>`;
       })
       .join("");
-    const avgTip = `${selectedBadge.label} · 全體平均完成度 ${avgPct}%`;
+    const pctCells = columns
+      .map((col, colIdx) => {
+        const doneN = itemDoneCounts[colIdx];
+        const itemPct = memberCount ? Math.round((doneN / memberCount) * 100) : 0;
+        const tip = `${col.fullTitle} · 全體完成度 ${itemPct}%（${doneN}/${memberCount}）`;
+        return `<td class="admin-prog-item-cell admin-prog-completion-cell" title="${escapeHtml(tip)}">
+          <span class="admin-prog-pct-value">${itemPct}%</span>
+        </td>`;
+      })
+      .join("");
+    const avgDoneTip = `${selectedBadge.label} · 全體平均完成項目 ${avgDone}`;
+    const avgPctTip = `${selectedBadge.label} · 全體平均完成度 ${avgPct}%`;
     bodyRows.push(`
-      <tr class="admin-prog-completion-row">
-        <th scope="row" class="admin-prog-name admin-prog-completion-label">完成度</th>
-        ${completionCells}
-        <td class="admin-prog-pct-cell admin-prog-avg-cell" title="${escapeHtml(avgTip)}">
+      <tr class="admin-prog-completion-row admin-prog-completion-count-row">
+        <th scope="row" class="admin-prog-name admin-prog-completion-label">完成人數</th>
+        ${countCells}
+        <td class="admin-prog-done-cell admin-prog-avg-cell" rowspan="2" title="${escapeHtml(avgDoneTip)}">
+          <span class="admin-prog-pct-value">${avgDone}</span>
+          <span class="admin-prog-pct-detail">平均</span>
+        </td>
+        <td class="admin-prog-pct-cell admin-prog-avg-cell" rowspan="2" title="${escapeHtml(avgPctTip)}">
           <span class="admin-prog-pct-value">${avgPct}%</span>
           <span class="admin-prog-pct-detail">平均</span>
         </td>
+      </tr>
+      <tr class="admin-prog-completion-row admin-prog-completion-pct-row">
+        <th scope="row" class="admin-prog-name admin-prog-completion-label">完成度</th>
+        ${pctCells}
       </tr>`);
 
     const switcher = PROG_OVERVIEW_BADGES.map(
@@ -2902,35 +3088,48 @@
       )
       .join("");
 
-    const tableWidthRem = (5.5 + columns.length * 3.5 + 4.5).toFixed(1);
+    const tableWidthRem = (5.5 + columns.length * 3.5 + 3.5 + 3.5).toFixed(1);
 
     root.innerHTML = `
-      <div class="admin-prog-badge-switcher att-year-switcher" role="group" aria-label="選擇獎章">
-        ${switcher}
+      <div class="admin-prog-overview-toolbar">
+        <div class="admin-prog-badge-switcher att-year-switcher" role="group" aria-label="選擇獎章">
+          ${switcher}
+        </div>
+        <div class="admin-prog-zoom" role="group" aria-label="表格縮放">
+          <button type="button" class="admin-prog-zoom-btn" data-prog-zoom="-1" aria-label="縮小表格">−</button>
+          <button type="button" class="admin-prog-zoom-label" data-prog-zoom-reset data-prog-zoom-label aria-label="目前縮放 100%，點按重設為 100%">100%</button>
+          <button type="button" class="admin-prog-zoom-btn" data-prog-zoom="1" aria-label="放大表格">＋</button>
+        </div>
       </div>
       <p class="admin-prog-selected-hint">目前顯示：${escapeHtml(selectedBadge.label)} · 共 ${columns.length} 個考核分項 · 桌機懸停／手機點按分項可看詳情</p>
       <div class="admin-overview-table-wrap admin-prog-table-wrap">
-        <table class="admin-overview-table admin-prog-item-matrix" style="--admin-prog-item-cols: ${columns.length}; --admin-prog-table-width: ${tableWidthRem}rem" aria-label="${escapeHtml(selectedBadge.label)}分項進度總覽">
-          <colgroup>
-            <col class="admin-prog-col-name" style="width: 5.5rem" />
-            ${columns.map(() => `<col class="admin-prog-col-item" style="width: 3.5rem" />`).join("")}
-            <col class="admin-prog-col-pct" style="width: 4.5rem" />
-          </colgroup>
-          <thead>
-            <tr>
-              <th class="admin-prog-name-head" rowspan="3">姓名</th>
-              ${sectionHead}
-              <th class="admin-prog-pct-head" rowspan="3">完成度</th>
-            </tr>
-            <tr>
-              ${subsectionHead}
-            </tr>
-            <tr>
-              ${itemHead}
-            </tr>
-          </thead>
-          <tbody>${bodyRows.join("") || `<tr><td colspan="${colCount}" class="empty-state">暫無成員資料</td></tr>`}</tbody>
-        </table>
+        <div class="admin-prog-table-scale-slot">
+          <div class="admin-prog-table-scale">
+            <table class="admin-overview-table admin-prog-item-matrix" style="--admin-prog-item-cols: ${columns.length}; --admin-prog-table-width: ${tableWidthRem}rem" aria-label="${escapeHtml(selectedBadge.label)}分項進度總覽">
+              <colgroup>
+                <col class="admin-prog-col-name" style="width: 5.5rem" />
+                ${columns.map(() => `<col class="admin-prog-col-item" style="width: 3.5rem" />`).join("")}
+                <col class="admin-prog-col-done" style="width: 3.5rem" />
+                <col class="admin-prog-col-pct" style="width: 3.5rem" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th class="admin-prog-name-head" rowspan="3">姓名</th>
+                  ${sectionHead}
+                  <th class="admin-prog-done-head" rowspan="3">完成項目</th>
+                  <th class="admin-prog-pct-head" rowspan="3">完成度</th>
+                </tr>
+                <tr>
+                  ${subsectionHead}
+                </tr>
+                <tr>
+                  ${itemHead}
+                </tr>
+              </thead>
+              <tbody>${bodyRows.join("") || `<tr><td colspan="${colCount}" class="empty-state">暫無成員資料</td></tr>`}</tbody>
+            </table>
+          </div>
+        </div>
       </div>`;
 
     root.querySelectorAll(".admin-prog-name-btn").forEach((btn) => {
@@ -2981,6 +3180,8 @@
         if (col) openAdminProgItemDetail(col);
       });
     });
+
+    bindAdminProgZoomControls(root);
   }
 
   function openAdminMemberPreview(member) {

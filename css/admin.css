@@ -28,10 +28,27 @@
   color: var(--ink-muted);
 }
 
-.admin-date-filters .att-year-switcher {
-  margin: 0;
-  max-width: 100%;
+/* 出席紀錄學年按鈕：對齊成員出席分頁，略緊湊；隔離 progressive-overview 的 flex:1 誤傷 */
+.admin-overview .admin-date-filters .att-year-switcher,
+.admin-overview #admin-year-switcher.att-year-switcher {
+  display: inline-flex;
   flex-wrap: wrap;
+  align-items: center;
+  align-self: flex-start;
+  width: auto;
+  max-width: 100%;
+  margin: 0;
+  padding: 0.22rem;
+  gap: 0.3rem;
+}
+
+.admin-overview .admin-date-filters .att-year-btn,
+.admin-overview #admin-year-switcher .att-year-btn {
+  flex: 0 0 auto;
+  width: auto;
+  min-width: 5.6rem;
+  padding: 0.38rem 0.7rem;
+  font-size: 0.78rem;
 }
 
 .admin-date-combo {
@@ -311,9 +328,18 @@
 }
 
 /* ===== Progressive badge overview ===== */
+.admin-prog-overview-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.55rem 0.85rem;
+  margin: 0 0 0.65rem;
+}
+
 .admin-prog-badge-switcher {
   display: inline-flex;
-  margin: 0 0 0.65rem;
+  margin: 0;
   max-width: 100%;
   flex-wrap: wrap;
 }
@@ -325,6 +351,76 @@
   font-size: 0.78rem;
 }
 
+.admin-prog-zoom {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 0.15rem;
+  padding: 0.22rem;
+  border: 1px solid rgba(26, 61, 43, 0.12);
+  border-radius: 999px;
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.85), rgba(232, 240, 235, 0.95));
+  box-shadow: 0 2px 8px rgba(26, 61, 43, 0.05);
+  touch-action: manipulation;
+}
+
+.admin-prog-zoom-btn,
+.admin-prog-zoom-label {
+  appearance: none;
+  border: none;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+  color: var(--green-deep);
+  background: transparent;
+  border-radius: 999px;
+  transition:
+    color 0.15s ease,
+    background 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.admin-prog-zoom-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.05rem;
+  height: 2.05rem;
+  min-width: 2.05rem;
+  padding: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.admin-prog-zoom-label {
+  min-width: 3.4rem;
+  padding: 0.35rem 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--ink-muted);
+}
+
+.admin-prog-zoom-btn:hover:not(:disabled),
+.admin-prog-zoom-label:hover {
+  color: var(--green-deep);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.admin-prog-zoom-btn:focus-visible,
+.admin-prog-zoom-label:focus-visible {
+  outline: 2px solid var(--green-soft);
+  outline-offset: 2px;
+}
+
+.admin-prog-zoom-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
 .admin-prog-selected-hint {
   margin: 0 0 0.75rem;
   font-size: 0.8rem;
@@ -334,11 +430,27 @@
 .admin-prog-table-wrap {
   max-height: min(70vh, 640px);
   overflow: auto;
+  touch-action: pan-x pan-y;
+}
+
+.admin-prog-table-scale-slot {
+  position: relative;
+  min-width: 0;
+}
+
+.admin-prog-table-scale {
+  display: inline-block;
+  transform-origin: top left;
 }
 
 .admin-prog-item-matrix {
   --admin-prog-item-cols: 1;
-  --admin-prog-table-width: calc(5.5rem + var(--admin-prog-item-cols) * 3.5rem + 4.5rem);
+  --admin-prog-done-w: 3.5rem;
+  --admin-prog-pct-w: 3.5rem;
+  --admin-prog-table-width: calc(
+    5.5rem + var(--admin-prog-item-cols) * 3.5rem + var(--admin-prog-done-w) +
+      var(--admin-prog-pct-w)
+  );
   --admin-prog-head-h1: 1.45rem;
   --admin-prog-head-h2: 1.35rem;
   --admin-prog-head-h3: 1.7rem;
@@ -359,8 +471,12 @@
   width: 3.5rem;
 }
 
+.admin-prog-item-matrix .admin-prog-col-done {
+  width: var(--admin-prog-done-w);
+}
+
 .admin-prog-item-matrix .admin-prog-col-pct {
-  width: 4.5rem;
+  width: var(--admin-prog-pct-w);
 }
 
 .admin-prog-item-matrix thead th {
@@ -624,47 +740,65 @@
   pointer-events: none;
 }
 
+.admin-prog-item-matrix .admin-prog-done-head,
+.admin-prog-item-matrix .admin-prog-done-cell,
 .admin-prog-item-matrix .admin-prog-pct-head,
 .admin-prog-item-matrix .admin-prog-pct-cell {
   position: sticky;
-  right: 0;
   z-index: 3;
-  min-width: 4.25rem;
-  max-width: 5.5rem;
-  width: 4.5rem;
-  padding: 0.3rem 0.3rem;
+  padding: 0.3rem 0.2rem;
   text-align: center;
   vertical-align: middle;
   background: var(--cream);
-  box-shadow: -1px 0 0 var(--cream-warm);
   border-left: 1px solid rgba(26, 61, 43, 0.1);
   box-sizing: border-box;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
+.admin-prog-item-matrix .admin-prog-pct-head,
+.admin-prog-item-matrix .admin-prog-pct-cell {
+  right: 0;
+  width: var(--admin-prog-pct-w);
+  min-width: var(--admin-prog-pct-w);
+  max-width: var(--admin-prog-pct-w);
+  box-shadow: -1px 0 0 var(--cream-warm);
+}
+
+.admin-prog-item-matrix .admin-prog-done-head,
+.admin-prog-item-matrix .admin-prog-done-cell {
+  right: var(--admin-prog-pct-w);
+  width: var(--admin-prog-done-w);
+  min-width: var(--admin-prog-done-w);
+  max-width: var(--admin-prog-done-w);
+  box-shadow: -1px 0 0 var(--cream-warm);
+}
+
+.admin-prog-item-matrix .admin-prog-done-head,
 .admin-prog-item-matrix .admin-prog-pct-head {
   z-index: 5;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 700;
   color: var(--green-deep);
-  padding: 0.2rem 0.3rem;
+  padding: 0.2rem 0.15rem;
   /* Match stacked section + subsection + item header rows */
   height: calc(
     var(--admin-prog-head-h1) + var(--admin-prog-head-h2) + var(--admin-prog-head-h3)
   );
 }
 
+.admin-prog-item-matrix .admin-prog-done-cell,
 .admin-prog-item-matrix .admin-prog-pct-cell {
   background: var(--white);
   height: var(--admin-prog-row-h);
-  white-space: nowrap;
 }
 
+.admin-prog-item-matrix tbody tr:hover .admin-prog-done-cell,
 .admin-prog-item-matrix tbody tr:hover .admin-prog-pct-cell {
   background: rgba(232, 240, 235, 0.95);
 }
 
-/* Single-line completion so name / item / pct cells share one row height */
+/* Single-line completion so name / item / summary cells share one row height */
 .admin-prog-pct-value {
   display: inline;
   font-size: 0.78rem;
@@ -686,9 +820,12 @@
 }
 
 .admin-prog-item-matrix .admin-prog-completion-row .admin-prog-name,
-.admin-prog-item-matrix .admin-prog-completion-row .admin-prog-item-cell,
-.admin-prog-item-matrix .admin-prog-completion-row .admin-prog-pct-cell {
+.admin-prog-item-matrix .admin-prog-completion-row .admin-prog-item-cell {
   height: var(--admin-prog-row-h);
+}
+
+.admin-prog-item-matrix .admin-prog-completion-row .admin-prog-avg-cell {
+  height: calc(var(--admin-prog-row-h) * 2);
 }
 
 .admin-prog-completion-cell {
@@ -696,6 +833,7 @@
 }
 
 .admin-prog-completion-row .admin-prog-name,
+.admin-prog-completion-row .admin-prog-done-cell,
 .admin-prog-completion-row .admin-prog-pct-cell,
 .admin-prog-completion-row .admin-prog-item-cell {
   background: rgba(232, 240, 235, 0.65);
@@ -706,14 +844,20 @@
   font-weight: 700;
   color: var(--green-deep);
   text-align: center;
+  font-size: 0.72rem;
 }
 
 .admin-prog-completion-row:hover .admin-prog-name,
+.admin-prog-completion-row:hover .admin-prog-done-cell,
 .admin-prog-completion-row:hover .admin-prog-pct-cell {
   background: rgba(232, 240, 235, 0.85);
 }
 
 .admin-prog-completion-cell .admin-prog-pct-value {
+  font-size: 0.72rem;
+}
+
+.admin-prog-avg-cell .admin-prog-pct-value {
   font-size: 0.72rem;
 }
 
@@ -1034,12 +1178,39 @@ body.admin-previewing .admin-view {
     white-space: nowrap;
   }
 
+  .admin-overview #admin-year-switcher.att-year-switcher {
+    width: auto;
+    max-width: 100%;
+  }
+
+  .admin-overview #admin-year-switcher .att-year-btn {
+    flex: 0 0 auto;
+    min-width: 5.2rem;
+    padding: 0.34rem 0.6rem;
+    font-size: 0.74rem;
+  }
+
+  .admin-prog-overview-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   .admin-prog-badge-switcher {
     width: 100%;
   }
 
   .admin-prog-badge-switcher .att-year-btn {
     flex: 1 1 calc(50% - 0.35rem);
+  }
+
+  .admin-prog-zoom {
+    align-self: flex-end;
+  }
+
+  .admin-prog-zoom-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+    min-width: 2.25rem;
   }
 
   .admin-prog-section-title {
