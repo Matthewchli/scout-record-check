@@ -337,9 +337,16 @@
 }
 
 .admin-prog-item-matrix {
+  --admin-prog-item-cols: 1;
+  --admin-prog-table-width: calc(5.5rem + var(--admin-prog-item-cols) * 3.5rem + 4.5rem);
+  --admin-prog-head-h1: 1.45rem;
+  --admin-prog-head-h2: 1.35rem;
+  --admin-prog-head-h3: 1.7rem;
+  --admin-prog-row-h: 2.15rem;
   table-layout: fixed;
-  width: max-content;
-  min-width: 100%;
+  width: var(--admin-prog-table-width);
+  min-width: var(--admin-prog-table-width);
+  max-width: none;
   border-collapse: separate;
   border-spacing: 0;
 }
@@ -360,6 +367,7 @@
   z-index: 2;
   position: sticky;
   background: var(--cream);
+  box-sizing: border-box;
 }
 
 .admin-prog-item-matrix thead tr:first-child th {
@@ -367,11 +375,23 @@
 }
 
 .admin-prog-item-matrix thead tr:nth-child(2) th {
-  top: 2.1rem;
+  top: var(--admin-prog-head-h1);
 }
 
 .admin-prog-item-matrix thead tr:nth-child(3) th {
-  top: 4rem;
+  top: calc(var(--admin-prog-head-h1) + var(--admin-prog-head-h2));
+}
+
+.admin-prog-item-matrix thead tr:first-child .admin-prog-section-head {
+  height: var(--admin-prog-head-h1);
+}
+
+.admin-prog-item-matrix thead tr:nth-child(2) .admin-prog-subsection-head {
+  height: var(--admin-prog-head-h2);
+}
+
+.admin-prog-item-matrix thead tr:nth-child(3) .admin-prog-item-head {
+  height: var(--admin-prog-head-h3);
 }
 
 .admin-prog-item-matrix .admin-prog-name-head,
@@ -392,11 +412,21 @@
   white-space: nowrap;
   text-align: left;
   vertical-align: middle;
+  padding: 0.3rem 0.4rem;
+  height: var(--admin-prog-row-h);
+  line-height: 1.2;
+  box-sizing: border-box;
 }
 
 .admin-prog-item-matrix .admin-prog-name-head {
   z-index: 5;
   vertical-align: middle;
+  padding: 0.2rem 0.4rem;
+  /* Match stacked section + subsection + item header rows */
+  height: calc(
+    var(--admin-prog-head-h1) + var(--admin-prog-head-h2) + var(--admin-prog-head-h3)
+  );
+  line-height: 1.2;
 }
 
 .admin-prog-item-matrix tbody tr:hover .admin-prog-name {
@@ -432,49 +462,61 @@
 .admin-prog-item-matrix .admin-prog-item-head {
   text-align: center;
   vertical-align: middle;
-  white-space: normal;
+  white-space: nowrap;
   overflow: hidden;
   border-left: 1px solid rgba(26, 61, 43, 0.08);
-  padding: 0.35rem 0.2rem;
+  padding: 0.14rem 0.15rem;
+  line-height: 1.15;
+  box-sizing: border-box;
 }
 
+/* Clip long A.–G. titles inside colspan cells so they cannot widen item columns. */
 .admin-prog-item-matrix .admin-prog-section-label,
 .admin-prog-item-matrix .admin-prog-subsection-label,
 .admin-prog-item-matrix .admin-prog-item-label {
   display: block;
-  width: 100%;
+  width: 0;
+  min-width: 100%;
   margin: 0 auto;
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.15;
+  box-sizing: border-box;
 }
 
 .admin-prog-section-label {
   font-size: 0.72rem;
   font-weight: 700;
   color: var(--green-deep);
-  line-height: 1.25;
+  line-height: 1.15;
 }
 
-.admin-prog-subsection-head {
+/* Item heads keep equal column width; subsection heads use colspan + center (no fixed max-width). */
+.admin-prog-item-matrix .admin-prog-item-head {
+  width: 3.5rem;
+  min-width: 3.5rem;
+  max-width: 3.5rem;
   border-left: 1px solid rgba(26, 61, 43, 0.06);
+}
+
+.admin-prog-item-matrix .admin-prog-subsection-head {
+  border-left: 1px solid rgba(26, 61, 43, 0.06);
+  text-align: center;
 }
 
 .admin-prog-subsection-label {
   font-size: 0.68rem;
   font-weight: 600;
   color: var(--ink);
-  line-height: 1.25;
+  line-height: 1.15;
+  text-align: center;
 }
 
 .admin-prog-item-head {
   position: sticky;
-  width: 3.5rem;
-  min-width: 3.5rem;
-  max-width: 3.5rem;
-  padding: 0.2rem 0.15rem 0.35rem;
-  border-left: 1px solid rgba(26, 61, 43, 0.06);
-  box-sizing: border-box;
+  padding: 0.08rem 0.1rem 0.1rem;
 }
 
 .admin-prog-item-trigger {
@@ -483,9 +525,9 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 1.85rem;
+  min-height: 1.4rem;
   margin: 0;
-  padding: 0.2rem 0.1rem;
+  padding: 0.06rem 0.1rem;
   border: 1px solid transparent;
   border-radius: 0.35rem;
   background: transparent;
@@ -506,10 +548,8 @@
 .admin-prog-item-label {
   font-size: 0.72rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.15;
   color: var(--ink);
-  text-overflow: unset;
-  word-break: break-word;
 }
 
 .admin-prog-hover-tip {
@@ -546,16 +586,19 @@
   color: var(--green-deep);
 }
 
+.admin-prog-item-matrix .admin-prog-item-cell,
 .admin-prog-item-cell {
   width: 3.5rem;
   min-width: 3.5rem;
   max-width: 3.5rem;
-  padding: 0.35rem 0.2rem;
+  padding: 0.3rem 0.15rem;
+  height: var(--admin-prog-row-h);
   text-align: center;
   vertical-align: middle;
   border-left: 1px solid rgba(26, 61, 43, 0.04);
   box-sizing: border-box;
   overflow: hidden;
+  line-height: 1.2;
 }
 
 .admin-prog-item-cell.is-done,
@@ -589,12 +632,14 @@
   min-width: 4.25rem;
   max-width: 5.5rem;
   width: 4.5rem;
-  padding: 0.35rem 0.35rem;
+  padding: 0.3rem 0.3rem;
   text-align: center;
   vertical-align: middle;
   background: var(--cream);
   box-shadow: -1px 0 0 var(--cream-warm);
   border-left: 1px solid rgba(26, 61, 43, 0.1);
+  box-sizing: border-box;
+  line-height: 1.2;
 }
 
 .admin-prog-item-matrix .admin-prog-pct-head {
@@ -602,31 +647,52 @@
   font-size: 0.72rem;
   font-weight: 700;
   color: var(--green-deep);
+  padding: 0.2rem 0.3rem;
+  /* Match stacked section + subsection + item header rows */
+  height: calc(
+    var(--admin-prog-head-h1) + var(--admin-prog-head-h2) + var(--admin-prog-head-h3)
+  );
 }
 
 .admin-prog-item-matrix .admin-prog-pct-cell {
   background: var(--white);
+  height: var(--admin-prog-row-h);
+  white-space: nowrap;
 }
 
 .admin-prog-item-matrix tbody tr:hover .admin-prog-pct-cell {
   background: rgba(232, 240, 235, 0.95);
 }
 
+/* Single-line completion so name / item / pct cells share one row height */
 .admin-prog-pct-value {
-  display: block;
+  display: inline;
   font-size: 0.78rem;
   font-weight: 700;
   line-height: 1.2;
   color: var(--green-deep);
+  white-space: nowrap;
 }
 
 .admin-prog-pct-detail {
-  display: block;
-  margin-top: 0.1rem;
+  display: inline;
+  margin-top: 0;
+  margin-left: 0.2em;
   font-size: 0.62rem;
   font-weight: 500;
   line-height: 1.2;
   color: var(--ink-muted);
+  white-space: nowrap;
+}
+
+.admin-prog-item-matrix .admin-prog-completion-row .admin-prog-name,
+.admin-prog-item-matrix .admin-prog-completion-row .admin-prog-item-cell,
+.admin-prog-item-matrix .admin-prog-completion-row .admin-prog-pct-cell {
+  height: var(--admin-prog-row-h);
+}
+
+.admin-prog-completion-cell {
+  white-space: nowrap;
 }
 
 .admin-prog-completion-row .admin-prog-name,

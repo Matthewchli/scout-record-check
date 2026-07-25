@@ -2495,19 +2495,19 @@
 
   function formatProgOverviewSubLabel(title) {
     const t = stripProgOverviewElectiveMark(title);
-    // Header shows number mark only (1. / 2. …); full text stays in hover / detail sheet
+    // Header shows number mark only (1 / 2 …); full text stays in hover / detail sheet
     const m = t.match(/^(\d+)\./);
-    if (m) return `${m[1]}.`;
+    if (m) return `${m[1]}`;
     return t;
   }
 
   function formatProgOverviewItemLabel(title, short) {
     const t = String(title || "").trim();
-    // Header shows letter mark only (a. / b. …); full text stays in hover / detail sheet
+    // Header shows letter mark only (a / b …); full text stays in hover / detail sheet
     const fromTitle = t.match(/^([a-zA-Z])\./);
-    if (fromTitle) return `${fromTitle[1].toLowerCase()}.`;
+    if (fromTitle) return `${fromTitle[1].toLowerCase()}`;
     const fromShort = String(short || "").match(/([a-zA-Z])$/);
-    if (fromShort) return `${fromShort[1].toLowerCase()}.`;
+    if (fromShort) return `${fromShort[1].toLowerCase()}`;
     return short || t || "";
   }
 
@@ -2734,6 +2734,7 @@
     const colCount = columns.length + 2; // 姓名 + 分項… + 完成度
     const memberCount = adminMembers.length;
 
+    // Section / subsection colspan must equal visible item count (after hiding sea/air).
     const sectionGroups = [];
     const subsectionGroups = [];
     for (const col of columns) {
@@ -2749,16 +2750,11 @@
         });
       }
       const lastSub = subsectionGroups[subsectionGroups.length - 1];
-      if (
-        lastSub &&
-        lastSub.key === col.subsectionKey &&
-        lastSub.sectionKey === col.sectionKey
-      ) {
+      if (lastSub && lastSub.key === col.subsectionKey) {
         lastSub.span += 1;
       } else {
         subsectionGroups.push({
           key: col.subsectionKey,
-          sectionKey: col.sectionKey,
           label: col.subsectionLabel,
           title: col.subsectionTitle || col.subsectionLabel,
           span: 1,
@@ -2885,11 +2881,12 @@
       )
       .join("");
 
+    // Merge consecutive same-subsection columns; number appears once, centered across span.
     const subsectionHead = subsectionGroups
       .map(
         (g) =>
           `<th class="admin-prog-subsection-head" colspan="${g.span}" title="${escapeHtml(g.title || g.label)}">
-            <span class="admin-prog-subsection-label">${escapeHtml(g.label)}</span>
+            <span class="admin-prog-subsection-label">${escapeHtml(g.label || "")}</span>
           </th>`
       )
       .join("");
@@ -2905,17 +2902,19 @@
       )
       .join("");
 
+    const tableWidthRem = (5.5 + columns.length * 3.5 + 4.5).toFixed(1);
+
     root.innerHTML = `
       <div class="admin-prog-badge-switcher att-year-switcher" role="group" aria-label="選擇獎章">
         ${switcher}
       </div>
       <p class="admin-prog-selected-hint">目前顯示：${escapeHtml(selectedBadge.label)} · 共 ${columns.length} 個考核分項 · 桌機懸停／手機點按分項可看詳情</p>
       <div class="admin-overview-table-wrap admin-prog-table-wrap">
-        <table class="admin-overview-table admin-prog-item-matrix" aria-label="${escapeHtml(selectedBadge.label)}分項進度總覽">
+        <table class="admin-overview-table admin-prog-item-matrix" style="--admin-prog-item-cols: ${columns.length}; --admin-prog-table-width: ${tableWidthRem}rem" aria-label="${escapeHtml(selectedBadge.label)}分項進度總覽">
           <colgroup>
-            <col class="admin-prog-col-name" />
-            ${columns.map(() => `<col class="admin-prog-col-item" />`).join("")}
-            <col class="admin-prog-col-pct" />
+            <col class="admin-prog-col-name" style="width: 5.5rem" />
+            ${columns.map(() => `<col class="admin-prog-col-item" style="width: 3.5rem" />`).join("")}
+            <col class="admin-prog-col-pct" style="width: 4.5rem" />
           </colgroup>
           <thead>
             <tr>
