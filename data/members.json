@@ -19,66 +19,393 @@
         "value": "正式集會須穿著完整制服"
       }
     ],
-    "links": [
+    "commonLinks": [
       {
-        "title": "香港童軍總會",
-        "url": "https://www.scout.org.hk/",
-        "desc": "官方網站與最新消息",
-        "icon": "assets/resources/icons/scout-hk.png"
+        "id": "unit-websites",
+        "title": "童軍單位網頁",
+        "type": "page",
+        "page": "units",
+        "icon": "assets/resources/icons/scout-hk.png",
+        "groups": [
+          {
+            "title": "總會／總部",
+            "items": [
+              {
+                "title": "香港童軍總會",
+                "url": "https://www.scout.org.hk/",
+                "icon": "assets/resources/icons/units/香港童軍總會.jpg",
+                "urlSource": "official"
+              },
+              {
+                "title": "銀禧區",
+                "url": "https://scout.org.hk/tc/scout-units/regions-districts/index.html",
+                "icon": "assets/resources/icons/units/銀禧區.jpg",
+                "urlSource": "fallback-regions-index"
+              }
+            ]
+          },
+          {
+            "title": "港島地域",
+            "items": [
+              {
+                "title": "港島地域",
+                "url": "https://www.hkirscout.org.hk/",
+                "icon": "assets/resources/icons/units/港島地域/港島地域.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "灣仔區",
+                "url": "https://www.scout.org.hk/WCH",
+                "icon": "assets/resources/icons/units/港島地域/灣仔區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "港島南區",
+                "url": "https://sites.google.com/hkirscout.org.hk/hks",
+                "icon": "assets/resources/icons/units/港島地域/港島南區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "港島西區",
+                "url": "https://www.scout.org.hk/HKW",
+                "icon": "assets/resources/icons/units/港島地域/港島西區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "港島北區",
+                "url": "https://www.scout.org.hk/HKN",
+                "icon": "assets/resources/icons/units/港島地域/港島北區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "維多利亞城區",
+                "url": "https://www.scout.org.hk/VIC",
+                "icon": "assets/resources/icons/units/港島地域/維多利亞城區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "筲箕灣區",
+                "url": "https://www.scout.org.hk/SKW",
+                "icon": "assets/resources/icons/units/港島地域/筲箕灣區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "柴灣區",
+                "url": "https://www.scout.org.hk/CHW",
+                "icon": "assets/resources/icons/units/港島地域/柴灣區.jpg",
+                "urlSource": "guideline-pdf"
+              }
+            ]
+          },
+          {
+            "title": "九龍地域",
+            "items": [
+              {
+                "title": "九龍地域",
+                "url": "https://www.scout.org.hk/KR",
+                "icon": "assets/resources/icons/units/九龍地域/九龍地域.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "紅磡區",
+                "url": "https://www.scout.org.hk/HHD",
+                "icon": "assets/resources/icons/units/九龍地域/紅磡區.gif",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "何文田區",
+                "url": "https://www.scout.org.hk/HMT",
+                "icon": "assets/resources/icons/units/九龍地域/何文田區.gif",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "九龍城區",
+                "url": "https://www.scout.org.hk/KLC",
+                "icon": "assets/resources/icons/units/九龍地域/九龍城區.png",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "九龍塘區",
+                "url": "https://www.scout.org.hk/KLG",
+                "icon": "assets/resources/icons/units/九龍地域/九龍塘區.png",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "旺角區",
+                "url": "https://www.scout.org.hk/MKD",
+                "icon": "assets/resources/icons/units/九龍地域/旺角區.gif",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "深旺區",
+                "url": "https://www.scout.org.hk/SMD",
+                "icon": "assets/resources/icons/units/九龍地域/深旺區.gif",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "深水埗東區",
+                "url": "https://www.scout.org.hk/SPE",
+                "icon": "assets/resources/icons/units/九龍地域/深水埗東區.gif",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "深水埗西區",
+                "url": "https://www.scout.org.hk/SPW",
+                "icon": "assets/resources/icons/units/九龍地域/深水埗西區.gif",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "油尖區",
+                "url": "https://www.scout.org.hk/YTD",
+                "icon": "assets/resources/icons/units/九龍地域/油尖區.png",
+                "urlSource": "guideline-pdf"
+              }
+            ]
+          },
+          {
+            "title": "東九龍地域",
+            "items": [
+              {
+                "title": "東九龍地域",
+                "url": "https://hkscout-ekr.org/",
+                "icon": "assets/resources/icons/units/東九龍地域/東九龍地域.jpg",
+                "urlSource": "dedicated-site"
+              },
+              {
+                "title": "黃大仙區",
+                "url": "https://www.scout.org.hk/WTS",
+                "icon": "assets/resources/icons/units/東九龍地域/黃大仙區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "慈雲山區",
+                "url": "https://www.scout.org.hk/TWS",
+                "icon": "assets/resources/icons/units/東九龍地域/慈雲山區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "九龍灣區",
+                "url": "https://www.scout.org.hk/KLB",
+                "icon": "assets/resources/icons/units/東九龍地域/九龍灣區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "觀塘區",
+                "url": "https://www.scout.org.hk/KTD",
+                "icon": "assets/resources/icons/units/東九龍地域/觀塘區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "秀茂坪區",
+                "url": "https://www.scout.org.hk/SMP",
+                "icon": "assets/resources/icons/units/東九龍地域/秀茂坪區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "鯉魚門區",
+                "url": "https://www.scout.org.hk/LYM",
+                "icon": "assets/resources/icons/units/東九龍地域/鯉魚門區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "西貢區",
+                "url": "https://www.scout.org.hk/SKD",
+                "icon": "assets/resources/icons/units/東九龍地域/西貢區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "將軍澳區",
+                "url": "https://www.scout.org.hk/TKO",
+                "icon": "assets/resources/icons/units/東九龍地域/將軍澳區.jpg",
+                "urlSource": "guideline-pdf"
+              }
+            ]
+          },
+          {
+            "title": "新界地域",
+            "items": [
+              {
+                "title": "新界地域",
+                "url": "https://www.scout-ntr.org.hk/",
+                "icon": "assets/resources/icons/units/新界地域/新界地域.jpg",
+                "urlSource": "dedicated-site"
+              },
+              {
+                "title": "屯門東區",
+                "url": "https://www.scout.org.hk/TME",
+                "icon": "assets/resources/icons/units/新界地域/屯門東區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "屯門西區",
+                "url": "https://www.scout.org.hk/TMW",
+                "icon": "assets/resources/icons/units/新界地域/屯門西區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "十八鄉區",
+                "url": "https://www.scout.org.hk/SPH",
+                "icon": "assets/resources/icons/units/新界地域/十八鄉區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "元朗東區",
+                "url": "https://www.scout.org.hk/YLE",
+                "icon": "assets/resources/icons/units/新界地域/元朗東區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "元朗西區",
+                "url": "https://www.scout.org.hk/YLW",
+                "icon": "assets/resources/icons/units/新界地域/元朗西區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "南葵涌區",
+                "url": "https://www.scout.org.hk/SKC",
+                "icon": "assets/resources/icons/units/新界地域/南葵涌區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "北葵涌區",
+                "url": "https://www.scout.org.hk/NKC",
+                "icon": "assets/resources/icons/units/新界地域/北葵涌區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "荃灣區",
+                "url": "https://www.scout.org.hk/TWD",
+                "icon": "assets/resources/icons/units/新界地域/荃灣區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "青衣區",
+                "url": "https://www.scout.org.hk/TYD",
+                "icon": "assets/resources/icons/units/新界地域/青衣區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "離島區",
+                "url": "https://sites.google.com/view/islands-scout",
+                "icon": "assets/resources/icons/units/新界地域/離島區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "大嶼山區",
+                "url": "https://www.facebook.com/lantauscouts",
+                "icon": "assets/resources/icons/units/新界地域/大嶼山區.jpg",
+                "urlSource": "guideline-pdf-facebook"
+              }
+            ]
+          },
+          {
+            "title": "新界東地域",
+            "items": [
+              {
+                "title": "新界東地域",
+                "url": "https://www.nter-hkscout.org/",
+                "icon": "assets/resources/icons/units/新界東地域/新界東地域.jpg",
+                "urlSource": "dedicated-site"
+              },
+              {
+                "title": "雙魚區",
+                "url": "https://www.syd-hkscout.org/",
+                "icon": "assets/resources/icons/units/新界東地域/雙魚區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "璧峰區",
+                "url": "https://sites.google.com/view/pikfung-district",
+                "icon": "assets/resources/icons/units/新界東地域/璧峰區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "大埔南區",
+                "url": "http://www.tps.org.hk/",
+                "icon": "assets/resources/icons/units/新界東地域/大埔南區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "大埔北區",
+                "url": "http://tpnscout.org/",
+                "icon": "assets/resources/icons/units/新界東地域/大埔北區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "沙田東區",
+                "url": "https://www.stescout.org/website/",
+                "icon": "assets/resources/icons/units/新界東地域/沙田東區.jpg",
+                "urlSource": "dedicated-site"
+              },
+              {
+                "title": "沙田西區",
+                "url": "https://www.scout.org.hk/STW",
+                "icon": "assets/resources/icons/units/新界東地域/沙田西區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "沙田南區",
+                "url": "https://www.scout.org.hk/STS",
+                "icon": "assets/resources/icons/units/新界東地域/沙田南區.jpg",
+                "urlSource": "guideline-pdf"
+              },
+              {
+                "title": "沙田北區",
+                "url": "https://www.scout.org.hk/STN",
+                "icon": "assets/resources/icons/units/新界東地域/沙田北區.jpg",
+                "urlSource": "guideline-pdf"
+              }
+            ]
+          }
+        ]
       },
       {
-        "title": "沙田東區區會",
-        "url": "https://www.stescout.org/website/contact.html",
-        "desc": "區會聯絡資料",
-        "icon": "assets/resources/icons/sha-tin-east.png"
-      },
-      {
+        "id": "training-scheme",
         "title": "童軍訓練綱要",
+        "type": "link",
         "url": "assets/docs/FullVersion-zh.pdf",
-        "desc": "進度性獎章及專科徽章考核要求",
         "icon": "assets/resources/icons/training-scheme.png"
-      }
-    ],
-    "scoutSkills": [
-      {
-        "title": "背囊收拾",
-        "url": "assets/resources/scout-skills/01-backpack.pdf",
-        "desc": "教學講義 PDF"
       },
       {
-        "title": "營地烹飪",
-        "url": "assets/resources/scout-skills/02-camp-cooking.pdf",
-        "desc": "教學講義 PDF"
-      },
-      {
-        "title": "繩索運用",
-        "url": "assets/resources/scout-skills/03-ropework.pdf",
-        "desc": "教學講義 PDF"
-      },
-      {
-        "title": "營藝技巧",
-        "url": "assets/resources/scout-skills/04-campcraft.pdf",
-        "desc": "教學講義 PDF"
-      },
-      {
-        "title": "地圖閱讀",
-        "url": "assets/resources/scout-skills/05-map-reading.pdf",
-        "desc": "教學講義 PDF"
-      },
-      {
-        "title": "遠足技巧",
-        "url": "assets/resources/scout-skills/06-hiking.pdf",
-        "desc": "教學講義 PDF"
-      },
-      {
-        "title": "意外事件處理",
-        "url": "assets/resources/scout-skills/07-incident.pdf",
-        "desc": "教學講義 PDF"
-      },
-      {
-        "title": "天氣認識及保護環境",
-        "url": "assets/resources/scout-skills/08-weather-environment.pdf",
-        "desc": "教學講義 PDF"
+        "id": "scout-skills",
+        "title": "童軍技能",
+        "type": "page",
+        "page": "skills",
+        "icon": "assets/resources/icons/scout-skills.png",
+        "items": [
+          {
+            "title": "背囊收拾",
+            "url": "assets/resources/scout-skills/01-backpack.pdf"
+          },
+          {
+            "title": "營地烹飪",
+            "url": "assets/resources/scout-skills/02-camp-cooking.pdf"
+          },
+          {
+            "title": "繩索運用",
+            "url": "assets/resources/scout-skills/03-ropework.pdf"
+          },
+          {
+            "title": "營藝技巧",
+            "url": "assets/resources/scout-skills/04-campcraft.pdf"
+          },
+          {
+            "title": "地圖閱讀",
+            "url": "assets/resources/scout-skills/05-map-reading.pdf"
+          },
+          {
+            "title": "遠足技巧",
+            "url": "assets/resources/scout-skills/06-hiking.pdf"
+          },
+          {
+            "title": "意外事件處理",
+            "url": "assets/resources/scout-skills/07-incident.pdf"
+          },
+          {
+            "title": "天氣認識及保護環境",
+            "url": "assets/resources/scout-skills/08-weather-environment.pdf"
+          }
+        ]
       }
     ]
   },

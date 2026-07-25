@@ -219,13 +219,19 @@
     );
   }
 
+  function defaultAdminProgZoom() {
+    return typeof window !== "undefined" && window.matchMedia("(max-width: 640px)").matches
+      ? 0.5
+      : 1;
+  }
+
   function loadAdminProgZoom() {
     try {
       const raw = sessionStorage.getItem(ADMIN_PROG_ZOOM_KEY);
-      if (raw == null || raw === "") return 1;
+      if (raw == null || raw === "") return defaultAdminProgZoom();
       return clampAdminProgZoom(parseFloat(raw));
     } catch {
-      return 1;
+      return defaultAdminProgZoom();
     }
   }
 
@@ -540,6 +546,7 @@
     if (tabId !== "progressive") showProgressiveList();
     if (tabId !== "activity") showActivityList();
     if (tabId !== "badges") showSpecialtyList();
+    if (tabId !== "resources") showResourcesHome();
   }
 
   function initTabs() {
@@ -582,6 +589,7 @@
     showProgressiveList();
     showActivityList();
     showSpecialtyList();
+    showResourcesHome();
   }
 
   function showDashboard(member) {
@@ -598,6 +606,7 @@
     showProgressiveList();
     showActivityList();
     showSpecialtyList();
+    showResourcesHome();
     renderProfile(member);
     renderProgressive(member);
     renderBadges(member);
@@ -1952,6 +1961,133 @@
     return "";
   }
 
+  function findCommonLinkByPage(pageId) {
+    const commonLinks = (resources && (resources.commonLinks || resources.links)) || [];
+    return commonLinks.find((link) => link.type === "page" && link.page === pageId) || null;
+  }
+
+  function renderCommonLinkItem(link) {
+    const type = link.type || "link";
+
+    if (type === "link") {
+      return `
+        <li class="link-item">
+          <a href="${escapeHtml(link.url)}" target="_blank" rel="noopener noreferrer">
+            ${
+              link.icon
+                ? `<img class="link-icon" src="${escapeHtml(link.icon)}" alt="" width="36" height="36" loading="lazy" decoding="async">`
+                : ""
+            }
+            <span class="link-text">
+              <span class="link-title">${escapeHtml(link.title)}</span>
+            </span>
+          </a>
+        </li>`;
+    }
+
+    if (type === "page" && link.page) {
+      return `
+        <li class="link-item">
+          <button type="button" class="link-page-btn" data-resources-page="${escapeHtml(link.page)}">
+            ${
+              link.icon
+                ? `<img class="link-icon" src="${escapeHtml(link.icon)}" alt="" width="36" height="36" loading="lazy" decoding="async">`
+                : ""
+            }
+            <span class="link-text">
+              <span class="link-title">${escapeHtml(link.title)}</span>
+            </span>
+            <span class="link-chevron link-chevron--nav" aria-hidden="true"></span>
+          </button>
+        </li>`;
+    }
+
+    return "";
+  }
+
+  function renderSkillsPageContent(link) {
+    const itemsHtml = (link.items || [])
+      .map(
+        (item) => `
+        <li class="link-item">
+          <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
+            <span class="link-text">
+              <span class="link-title">${escapeHtml(item.title)}</span>
+            </span>
+          </a>
+        </li>`
+      )
+      .join("");
+    return `
+      <section class="resource-block">
+        <ul class="link-list">
+          ${itemsHtml || `<li class="empty-state">暫無資料</li>`}
+        </ul>
+      </section>`;
+  }
+
+  function renderUnitsPageContent(link) {
+    const groupsHtml = (link.groups || [])
+      .map((group) => {
+        const tiles = (group.items || [])
+          .map(
+            (unit) => `
+            <a class="unit-tile" href="${escapeHtml(unit.url)}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(unit.title)}">
+              ${
+                unit.icon
+                  ? `<img class="unit-tile-icon" src="${escapeHtml(unit.icon)}" alt="${escapeHtml(unit.title)}" width="67" height="67" loading="lazy" decoding="async">`
+                  : `<span class="unit-tile-fallback">${escapeHtml(unit.title.slice(0, 2))}</span>`
+              }
+              <span class="unit-tile-name">${escapeHtml(unit.title)}</span>
+            </a>`
+          )
+          .join("");
+        return `
+          <div class="unit-group">
+            <h4 class="unit-group-title">${escapeHtml(group.title)}</h4>
+            <div class="unit-grid">${tiles}</div>
+          </div>`;
+      })
+      .join("");
+    return `
+      <section class="resource-block">
+        <div class="unit-groups">
+          ${groupsHtml || `<p class="empty-state">暫無單位資料</p>`}
+        </div>
+      </section>`;
+  }
+
+  function showResourcesView(container, viewId) {
+    if (!container) return;
+    const allowed = new Set(["home", "skills", "units"]);
+    const next = allowed.has(viewId) ? viewId : "home";
+    container.querySelectorAll("[data-resources-view]").forEach((view) => {
+      view.hidden = view.dataset.resourcesView !== next;
+    });
+    container.dataset.resourcesActiveView = next;
+    const panel = container.closest(".tab-panel");
+    const panelHeader = panel && panel.querySelector(":scope > .panel-header");
+    if (panelHeader) panelHeader.hidden = next !== "home";
+  }
+
+  function showResourcesHome(targetId = "resources-content") {
+    const container = $(`#${targetId}`);
+    if (container) showResourcesView(container, "home");
+  }
+
+  function bindResourcesNavigation(container) {
+    container.querySelectorAll("[data-resources-page]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        showResourcesView(container, btn.dataset.resourcesPage);
+      });
+    });
+    container.querySelectorAll("[data-resources-back]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        showResourcesView(container, "home");
+      });
+    });
+  }
+
   function renderResources(targetId = "resources-content") {
     const container = $(`#${targetId}`);
     if (!container) return;
@@ -1977,60 +2113,46 @@
       )
       .join("");
 
-    const linksHtml = (resources.links || [])
-      .map(
-        (l) => `
-        <li class="link-item">
-          <a href="${escapeHtml(l.url)}" target="_blank" rel="noopener noreferrer">
-            ${
-              l.icon
-                ? `<img class="link-icon" src="${escapeHtml(l.icon)}" alt="" width="36" height="36" loading="lazy" decoding="async">`
-                : ""
-            }
-            <span class="link-text">
-              <span class="link-title">${escapeHtml(l.title)}</span>
-              <span class="link-desc">${escapeHtml(l.desc)}</span>
-            </span>
-          </a>
-        </li>`
-      )
+    const commonLinks = resources.commonLinks || resources.links || [];
+    const linksHtml = commonLinks
+      .map((link) => renderCommonLinkItem(link))
       .join("");
 
-    const skillsHtml = (resources.scoutSkills || [])
-      .map(
-        (l) => `
-        <li class="link-item">
-          <a href="${escapeHtml(l.url)}" target="_blank" rel="noopener noreferrer">
-            ${
-              l.icon
-                ? `<img class="link-icon" src="${escapeHtml(l.icon)}" alt="" width="36" height="36" loading="lazy" decoding="async">`
-                : ""
-            }
-            <span class="link-text">
-              <span class="link-title">${escapeHtml(l.title)}</span>
-              <span class="link-desc">${escapeHtml(l.desc || "")}</span>
-            </span>
-          </a>
-        </li>`
-      )
-      .join("");
+    const skillsLink = findCommonLinkByPage("skills");
+    const unitsLink = findCommonLinkByPage("units");
+    const skillsTitle = (skillsLink && skillsLink.title) || "童軍技能";
+    const unitsTitle = (unitsLink && unitsLink.title) || "童軍單位網頁";
 
     container.innerHTML = `
-      <div class="resource-grid">
-        <section class="resource-block">
-          <h3 class="subsection-title">旅團資訊</h3>
-          <dl class="info-list">${infoHtml}</dl>
-        </section>
-        <section class="resource-block">
-          <h3 class="subsection-title">常用連結</h3>
-          <ul class="link-list">${linksHtml || `<li class="empty-state">暫無連結</li>`}</ul>
-        </section>
+      <div class="resources-view" data-resources-view="home">
+        <div class="resource-grid">
+          <section class="resource-block">
+            <h3 class="subsection-title">旅團資訊</h3>
+            <dl class="info-list">${infoHtml}</dl>
+          </section>
+          <section class="resource-block">
+            <h3 class="subsection-title">常用連結</h3>
+            <ul class="link-list">${linksHtml || `<li class="empty-state">暫無連結</li>`}</ul>
+          </section>
+        </div>
       </div>
-      <section class="resource-block">
-        <h3 class="subsection-title">童軍技能</h3>
-        <ul class="link-list">${skillsHtml || `<li class="empty-state">暫無資料</li>`}</ul>
-      </section>
+      <div class="resources-view resources-subpage" data-resources-view="skills" hidden>
+        <button type="button" class="btn-back" data-resources-back>← 返回常用連結</button>
+        <header class="panel-header resources-subpage-header">
+          <h3 class="resources-subpage-title">${escapeHtml(skillsTitle)}</h3>
+        </header>
+        ${skillsLink ? renderSkillsPageContent(skillsLink) : `<p class="empty-state">暫無資料</p>`}
+      </div>
+      <div class="resources-view resources-subpage" data-resources-view="units" hidden>
+        <button type="button" class="btn-back" data-resources-back>← 返回常用連結</button>
+        <header class="panel-header resources-subpage-header">
+          <h3 class="resources-subpage-title">${escapeHtml(unitsTitle)}</h3>
+        </header>
+        ${unitsLink ? renderUnitsPageContent(unitsLink) : `<p class="empty-state">暫無單位資料</p>`}
+      </div>
     `;
+    showResourcesView(container, "home");
+    bindResourcesNavigation(container);
   }
 
   /* ---------- Admin ---------- */
@@ -2420,6 +2542,7 @@
       panel.hidden = !active;
       panel.classList.toggle("is-active", active);
     }
+    if (tabId !== "resources") showResourcesHome("admin-resources-content");
     if (tabId === "progressive-overview") renderAdminProgressiveOverview();
   }
 

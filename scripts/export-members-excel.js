@@ -170,11 +170,49 @@ const troopInfoRows = ((data.resources && data.resources.troopInfo) || []).map(
   })
 );
 
-const linkRows = ((data.resources && data.resources.links) || []).map((r) => ({
-  標題: r.title || "",
-  網址: r.url || "",
-  說明: r.desc || "",
-}));
+const commonLinks = (data.resources && (data.resources.commonLinks || data.resources.links)) || [];
+const linkRows = commonLinks.flatMap((r) => {
+  if (r.type === "page" && r.page === "skills") {
+    return (r.items || []).map((item) => ({
+      標題: `${r.title || ""} › ${item.title || ""}`,
+      網址: item.url || "",
+      說明: "",
+    }));
+  }
+  if (r.type === "page" && r.page === "units") {
+    return (r.groups || []).flatMap((g) =>
+      (g.items || []).map((item) => ({
+        標題: `${r.title || ""} › ${g.title || ""} › ${item.title || ""}`,
+        網址: item.url || "",
+        說明: "",
+      }))
+    );
+  }
+  // Legacy accordion / unit-grid support
+  if (r.type === "accordion") {
+    return (r.items || []).map((item) => ({
+      標題: `${r.title || ""} › ${item.title || ""}`,
+      網址: item.url || "",
+      說明: "",
+    }));
+  }
+  if (r.type === "unit-grid") {
+    return (r.groups || []).flatMap((g) =>
+      (g.items || []).map((item) => ({
+        標題: `${r.title || ""} › ${g.title || ""} › ${item.title || ""}`,
+        網址: item.url || "",
+        說明: "",
+      }))
+    );
+  }
+  return [
+    {
+      標題: r.title || "",
+      網址: r.url || "",
+      說明: r.desc || "",
+    },
+  ];
+});
 
 const wb = XLSX.utils.book_new();
 
