@@ -7,8 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=86b6174" />
-  <link rel="stylesheet" href="css/admin.css?v=86b6174" />
+  <link rel="stylesheet" href="css/style.css?v=69958da" />
+  <link rel="stylesheet" href="css/admin.css?v=69958da" />
 </head>
 <body>
   <!-- 登入畫面 -->
@@ -357,6 +357,7 @@
       <div class="tabs-area">
         <div class="tab-nav admin-tab-nav" role="tablist" aria-label="管理者分頁">
           <button type="button" class="tab-btn is-active" role="tab" id="tab-admin-overview" aria-controls="panel-admin-overview" aria-selected="true" data-admin-tab="overview">成員出席紀錄</button>
+          <button type="button" class="tab-btn" role="tab" id="tab-admin-progressive-overview" aria-controls="panel-admin-progressive-overview" aria-selected="false" data-admin-tab="progressive-overview" tabindex="-1">進度性獎章總覽</button>
           <button type="button" class="tab-btn" role="tab" id="tab-admin-members" aria-controls="panel-admin-members" aria-selected="false" data-admin-tab="members" tabindex="-1">成員活動記錄</button>
           <button type="button" class="tab-btn" role="tab" id="tab-admin-resources" aria-controls="panel-admin-resources" aria-selected="false" data-admin-tab="resources" tabindex="-1">有用資料</button>
         </div>
@@ -409,6 +410,14 @@
           <div id="admin-overview-table" class="admin-overview-table-wrap"></div>
         </div>
 
+        <div class="tab-panel" id="panel-admin-progressive-overview" role="tabpanel" aria-labelledby="tab-admin-progressive-overview" hidden>
+          <header class="panel-header">
+            <h2>進度性獎章總覽</h2>
+            <p>按獎章查看全體成員各考核分項 · 懸停／點按分項看考核內容 · 點選姓名查看詳情</p>
+          </header>
+          <div id="admin-progressive-overview"></div>
+        </div>
+
         <div class="tab-panel" id="panel-admin-members" role="tabpanel" aria-labelledby="tab-admin-members" hidden>
           <div id="admin-members-list-view">
             <header class="panel-header">
@@ -434,6 +443,6 @@
     </footer>
   </section>
 
-  <script src="js/app.js?v=86b6174"></script>
+  <script src="js/app.js?v=69958da"></script>
 </body>
 </html>

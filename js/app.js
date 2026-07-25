@@ -83,6 +83,13 @@
     "新成員",
   ];
 
+  const PROG_OVERVIEW_BADGES = [
+    { key: "discovery", short: "探索", label: "探索獎章" },
+    { key: "standard", short: "標準", label: "標準獎章" },
+    { key: "advanced", short: "高級", label: "高級獎章" },
+    { key: "chief", short: "總領袖", label: "總領袖獎章" },
+  ];
+
   /** 全體出席率只計四隊；「新成員」及其他 section 不進分子／分母 */
   const OVERALL_RATE_SECTIONS = new Set(
     SECTION_ORDER.filter((s) => s !== "新成員")
@@ -120,6 +127,7 @@
   let adminSelectedYear = null;
   let adminMeetingDates = [];
   let adminChartAnimFrames = new Set();
+  let adminProgOverviewBadgeKey = "discovery";
 
   /* ---------- Data ---------- */
 
@@ -2189,6 +2197,7 @@
 
     renderAdminOverview();
     renderAdminMembersGrid();
+    renderAdminProgressiveOverview();
     renderResources("admin-resources-content");
 
     const savedTab = sessionStorage.getItem(ADMIN_TAB_KEY) || "overview";
@@ -2202,6 +2211,7 @@
       overview: $("#panel-admin-overview"),
       members: $("#panel-admin-members"),
       resources: $("#panel-admin-resources"),
+      "progressive-overview": $("#panel-admin-progressive-overview"),
     };
     if (!panels[tabId]) tabId = "overview";
     sessionStorage.setItem(ADMIN_TAB_KEY, tabId);
@@ -2218,6 +2228,7 @@
       panel.hidden = !active;
       panel.classList.toggle("is-active", active);
     }
+    if (tabId === "progressive-overview") renderAdminProgressiveOverview();
   }
 
   function initAdminTabs() {
@@ -2452,6 +2463,523 @@
           (m) => m.scoutId === btn.dataset.adminMemberId
         );
         if (member) openAdminMemberPreview(member);
+      });
+    });
+  }
+
+  /** Flatten syllabus items for overview columns (land elective track only). */
+  function stripProgOverviewElectiveMark(text) {
+    return String(text || "")
+      .replace(/[（(]\s*選修項目\s*[）)]/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function isHiddenProgOverviewElectiveTrack(sub) {
+    const title = String(sub?.title || "");
+    // Hide sea / aviation elective tracks; keep land「戶外活動」track
+    return /海上活動|航空活動/.test(title);
+  }
+
+  function formatProgOverviewSectionFullLabel(code, title) {
+    const c = String(code || "").trim().replace(/\.$/, "");
+    const t = stripProgOverviewElectiveMark(title);
+    if (c && t) return `${c}.${t.replace(/^\s+/, "")}`;
+    return t || (c ? `${c}.` : "");
+  }
+
+  function formatProgOverviewLabel(code, title) {
+    // Header shows full section title (A.戶外挑戰); still strip elective mark
+    return formatProgOverviewSectionFullLabel(code, title);
+  }
+
+  function formatProgOverviewSubLabel(title) {
+    const t = stripProgOverviewElectiveMark(title);
+    // Header shows number mark only (1. / 2. …); full text stays in hover / detail sheet
+    const m = t.match(/^(\d+)\./);
+    if (m) return `${m[1]}.`;
+    return t;
+  }
+
+  function formatProgOverviewItemLabel(title, short) {
+    const t = String(title || "").trim();
+    // Header shows letter mark only (a. / b. …); full text stays in hover / detail sheet
+    const fromTitle = t.match(/^([a-zA-Z])\./);
+    if (fromTitle) return `${fromTitle[1].toLowerCase()}.`;
+    const fromShort = String(short || "").match(/([a-zA-Z])$/);
+    if (fromShort) return `${fromShort[1].toLowerCase()}.`;
+    return short || t || "";
+  }
+
+  function collectProgOverviewColumns(syl) {
+    const columns = [];
+    if (!syl?.sections) return columns;
+    for (const section of syl.sections) {
+      const sectionKey = section.id || section.code || section.title;
+      const sectionLabel = formatProgOverviewLabel(section.code, section.title);
+      const sectionFullLabel = formatProgOverviewSectionFullLabel(
+        section.code,
+        section.title
+      );
+      for (const sub of section.subsections || []) {
+        if (isHiddenProgOverviewElectiveTrack(sub)) continue;
+        const subNum = (String(sub.title || "").match(/^(\d+)/) || [])[1] || "";
+        const subsectionKey = sub.id || sub.title || `${sectionKey}-${subNum}`;
+        const subsectionLabel = formatProgOverviewSubLabel(sub.title);
+        for (const item of sub.items || []) {
+          const letter =
+            (String(item.title || "").match(/^([a-zA-Z])\./) || [])[1] || "";
+          const itemNum =
+            (String(item.title || "").match(/^(\d+)\./) || [])[1] || "";
+          const fromId =
+            (String(item.id || "").match(/(\d+[a-zA-Z])$/) || [])[1] || "";
+          const short =
+            subNum && letter
+              ? `${subNum}${letter.toLowerCase()}`
+              : itemNum
+                ? `${itemNum}a`
+                : letter || fromId || item.id;
+          const name = String(item.title || "").trim() || short;
+          const details = (item.details || [])
+            .map((d) => String(d || "").trim())
+            .filter(Boolean);
+          columns.push({
+            id: item.id,
+            short,
+            name,
+            itemLabel: formatProgOverviewItemLabel(name, short),
+            details,
+            sectionCode: section.code || "",
+            sectionTitle: section.title || "",
+            sectionKey,
+            sectionLabel,
+            sectionFullLabel,
+            subsectionKey,
+            subsectionLabel,
+            subsectionTitle: stripProgOverviewElectiveMark(sub.title),
+            fullTitle: [stripProgOverviewElectiveMark(sub.title), name]
+              .filter(Boolean)
+              .join(" · "),
+          });
+        }
+      }
+    }
+    return columns;
+  }
+
+  function buildAdminProgItemTipHtml(col) {
+    const tipLines = [col.name, ...(col.details || [])].filter(Boolean);
+    if (!tipLines.length) {
+      return `<span class="admin-prog-tip-line">暫無詳細考核內容</span>`;
+    }
+    return tipLines
+      .map(
+        (line, i) =>
+          `<span class="admin-prog-tip-line${i === 0 ? " is-title" : ""}">${escapeHtml(line)}</span>`
+      )
+      .join("");
+  }
+
+  function hideAdminProgItemHoverTip() {
+    const tip = document.getElementById("admin-prog-hover-tip");
+    if (tip) tip.remove();
+  }
+
+  let adminProgCompletedPopoverCloser = null;
+
+  function hideAdminProgCompletedPopover() {
+    const tip = document.getElementById("admin-prog-completed-tip");
+    if (tip) tip.remove();
+    if (adminProgCompletedPopoverCloser) {
+      document.removeEventListener("click", adminProgCompletedPopoverCloser, true);
+      document.removeEventListener("keydown", adminProgCompletedPopoverCloser);
+      adminProgCompletedPopoverCloser = null;
+    }
+  }
+
+  function showAdminProgCompletedPopover(anchor, dateIso) {
+    if (!anchor) return;
+    hideAdminProgCompletedPopover();
+    hideAdminProgItemHoverTip();
+    const tip = document.createElement("div");
+    tip.id = "admin-prog-completed-tip";
+    tip.className = "admin-prog-completed-tip";
+    tip.setAttribute("role", "status");
+    tip.textContent = dateIso ? `完成日期：${formatDate(dateIso)}` : "已完成";
+    document.body.appendChild(tip);
+
+    const rect = anchor.getBoundingClientRect();
+    const tipRect = tip.getBoundingClientRect();
+    const gap = 6;
+    let left = rect.left + rect.width / 2 - tipRect.width / 2;
+    left = Math.max(8, Math.min(left, window.innerWidth - tipRect.width - 8));
+    let top = rect.top - tipRect.height - gap;
+    if (top < 8) top = rect.bottom + gap;
+    tip.style.left = `${left}px`;
+    tip.style.top = `${top}px`;
+
+    adminProgCompletedPopoverCloser = (e) => {
+      if (e.type === "keydown" && e.key !== "Escape") return;
+      if (e.type === "click" && tip.contains(e.target)) return;
+      if (e.type === "click" && anchor.contains(e.target)) return;
+      hideAdminProgCompletedPopover();
+    };
+    // Defer so the opening click does not immediately close the tip
+    requestAnimationFrame(() => {
+      document.addEventListener("click", adminProgCompletedPopoverCloser, true);
+      document.addEventListener("keydown", adminProgCompletedPopoverCloser);
+    });
+  }
+
+  function showAdminProgItemHoverTip(anchor, col) {
+    if (!anchor || !col) return;
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+    hideAdminProgItemHoverTip();
+    const tip = document.createElement("div");
+    tip.id = "admin-prog-hover-tip";
+    tip.className = "admin-prog-hover-tip";
+    tip.setAttribute("role", "tooltip");
+    tip.innerHTML = buildAdminProgItemTipHtml(col);
+    document.body.appendChild(tip);
+
+    const rect = anchor.getBoundingClientRect();
+    const tipRect = tip.getBoundingClientRect();
+    const gap = 8;
+    let left = rect.left + rect.width / 2 - tipRect.width / 2;
+    left = Math.max(8, Math.min(left, window.innerWidth - tipRect.width - 8));
+    let top = rect.bottom + gap;
+    if (top + tipRect.height > window.innerHeight - 8) {
+      top = Math.max(8, rect.top - tipRect.height - gap);
+    }
+    tip.style.left = `${left}px`;
+    tip.style.top = `${top}px`;
+  }
+
+  function closeAdminProgItemDetail() {
+    const backdrop = document.getElementById("admin-prog-detail-backdrop");
+    if (backdrop) backdrop.remove();
+    document.body.classList.remove("admin-prog-detail-open");
+  }
+
+  function openAdminProgItemDetail(col) {
+    if (!col) return;
+    hideAdminProgItemHoverTip();
+    hideAdminProgCompletedPopover();
+    closeAdminProgItemDetail();
+    const detailsHtml = (col.details || []).length
+      ? `<ul class="admin-prog-detail-list">${col.details
+          .map((d) => `<li>${escapeHtml(d)}</li>`)
+          .join("")}</ul>`
+      : `<p class="admin-prog-detail-empty">暫無詳細考核內容</p>`;
+    const backdrop = document.createElement("div");
+    backdrop.id = "admin-prog-detail-backdrop";
+    backdrop.className = "admin-prog-detail-backdrop";
+    backdrop.innerHTML = `
+      <div class="admin-prog-detail-sheet" role="dialog" aria-modal="true" aria-labelledby="admin-prog-detail-title">
+        <div class="admin-prog-detail-head">
+          <div class="admin-prog-detail-kicker">
+            <span>${escapeHtml(col.sectionFullLabel || col.sectionLabel || "")}</span>
+            <span>${escapeHtml(col.subsectionTitle || col.subsectionLabel || "")}</span>
+          </div>
+          <h3 id="admin-prog-detail-title" class="admin-prog-detail-title">${escapeHtml(col.name || col.itemLabel || "")}</h3>
+          <button type="button" class="admin-prog-detail-close" aria-label="關閉詳情">×</button>
+        </div>
+        <div class="admin-prog-detail-body">${detailsHtml}</div>
+      </div>`;
+    document.body.appendChild(backdrop);
+    document.body.classList.add("admin-prog-detail-open");
+
+    const sheet = backdrop.querySelector(".admin-prog-detail-sheet");
+    const closeBtn = backdrop.querySelector(".admin-prog-detail-close");
+    const onKey = (e) => {
+      if (e.key === "Escape") {
+        e.preventDefault();
+        closeAdminProgItemDetail();
+        document.removeEventListener("keydown", onKey);
+      }
+    };
+    backdrop.addEventListener("click", (e) => {
+      if (e.target === backdrop) closeAdminProgItemDetail();
+    });
+    closeBtn?.addEventListener("click", () => closeAdminProgItemDetail());
+    sheet?.addEventListener("click", (e) => e.stopPropagation());
+    document.addEventListener("keydown", onKey);
+    closeBtn?.focus();
+  }
+
+  function renderAdminProgressiveOverview() {
+    const root = $("#admin-progressive-overview");
+    if (!root) return;
+
+    const adminMembers = getAdminMembers();
+    if (!adminMembers.length) {
+      root.innerHTML = `<p class="empty-state">暫無成員資料</p>`;
+      return;
+    }
+
+    if (!PROG_OVERVIEW_BADGES.some((b) => b.key === adminProgOverviewBadgeKey)) {
+      adminProgOverviewBadgeKey = "discovery";
+    }
+
+    const selectedBadge =
+      PROG_OVERVIEW_BADGES.find((b) => b.key === adminProgOverviewBadgeKey) ||
+      PROG_OVERVIEW_BADGES[0];
+    const syl = syllabus && syllabus[selectedBadge.key];
+    if (!syl) {
+      root.innerHTML = `<p class="empty-state">無法載入獎章綱要</p>`;
+      return;
+    }
+
+    const columns = collectProgOverviewColumns(syl);
+    const colCount = columns.length + 2; // 姓名 + 分項… + 完成度
+    const memberCount = adminMembers.length;
+
+    const sectionGroups = [];
+    const subsectionGroups = [];
+    for (const col of columns) {
+      const lastSec = sectionGroups[sectionGroups.length - 1];
+      if (lastSec && lastSec.key === col.sectionKey) {
+        lastSec.span += 1;
+      } else {
+        sectionGroups.push({
+          key: col.sectionKey,
+          label: col.sectionLabel,
+          title: col.sectionFullLabel || col.sectionLabel,
+          span: 1,
+        });
+      }
+      const lastSub = subsectionGroups[subsectionGroups.length - 1];
+      if (
+        lastSub &&
+        lastSub.key === col.subsectionKey &&
+        lastSub.sectionKey === col.sectionKey
+      ) {
+        lastSub.span += 1;
+      } else {
+        subsectionGroups.push({
+          key: col.subsectionKey,
+          sectionKey: col.sectionKey,
+          label: col.subsectionLabel,
+          title: col.subsectionTitle || col.subsectionLabel,
+          span: 1,
+        });
+      }
+    }
+
+    const bySection = new Map();
+    for (const m of adminMembers) {
+      const sec = m.section || "其他";
+      if (!bySection.has(sec)) bySection.set(sec, []);
+      bySection.get(sec).push(m);
+    }
+
+    const orderedSections = [
+      ...SECTION_ORDER.filter((s) => bySection.has(s)),
+      ...[...bySection.keys()].filter((s) => !SECTION_ORDER.includes(s)),
+    ];
+
+    const itemDoneCounts = columns.map(() => 0);
+    let pctSum = 0;
+
+    const bodyRows = [];
+    for (const sec of orderedSections) {
+      const list = sortMembersForPatrol(bySection.get(sec) || []);
+      if (!list.length) continue;
+      bodyRows.push(`
+        <tr class="admin-section-row">
+          <td colspan="${colCount}">${escapeHtml(sec)}（${list.length} 人）</td>
+        </tr>`);
+      for (const m of list) {
+        const badge = (m.progressiveBadges || []).find(
+          (b) => b.key === selectedBadge.key
+        );
+        const completed = new Set(badge?.completedIds || []);
+        const dates = badge?.itemCompletedDates || {};
+        const { done, total, pct } = progressOf({
+          key: selectedBadge.key,
+          completedIds: badge?.completedIds || [],
+        });
+        pctSum += pct;
+        const cells = columns
+          .map((col, colIdx) => {
+            const isDone = completed.has(col.id);
+            if (isDone) itemDoneCounts[colIdx] += 1;
+            const completedOn = isDone && dates[col.id] ? dates[col.id] : null;
+            const tip = isDone
+              ? completedOn
+                ? `${col.fullTitle} · 已考獲（${formatDate(completedOn)}）`
+                : `${col.fullTitle} · 已考獲`
+              : `${col.fullTitle} · 未考獲`;
+            if (isDone) {
+              const dateAttr = completedOn
+                ? ` data-completed-date="${escapeHtml(completedOn)}"`
+                : "";
+              const markLabel = completedOn
+                ? `已考獲，完成日期 ${formatDate(completedOn)}`
+                : "已考獲";
+              return `<td class="admin-prog-item-cell is-done" title="${escapeHtml(tip)}">
+                <button type="button" class="badge-earned-mark admin-prog-item-mark" data-prog-done-mark${dateAttr} aria-label="${escapeHtml(markLabel)}" title="${escapeHtml(markLabel)}"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8-8 1.4 1.4-9.4 9.4z"/></svg></button>
+              </td>`;
+            }
+            return `<td class="admin-prog-item-cell is-pending" title="${escapeHtml(tip)}">
+              <span class="admin-prog-item-empty" aria-label="未考獲">—</span>
+            </td>`;
+          })
+          .join("");
+        const pctTip = `${selectedBadge.label}完成度 ${pct}%（${done}/${total}）`;
+        bodyRows.push(`
+          <tr class="admin-prog-member-row">
+            <th scope="row" class="admin-prog-name">
+              <button type="button" class="admin-prog-name-btn" data-admin-member-id="${escapeHtml(m.scoutId)}" aria-label="查看 ${escapeHtml(m.name || "")} 進度性獎章">
+                ${escapeHtml(m.name || "—")}
+              </button>
+            </th>
+            ${cells}
+            <td class="admin-prog-pct-cell" title="${escapeHtml(pctTip)}">
+              <span class="admin-prog-pct-value">${pct}%</span>
+              <span class="admin-prog-pct-detail">${done}/${total}</span>
+            </td>
+          </tr>`);
+      }
+    }
+
+    const avgPct = memberCount ? Math.round(pctSum / memberCount) : 0;
+    const completionCells = columns
+      .map((col, colIdx) => {
+        const doneN = itemDoneCounts[colIdx];
+        const itemPct = memberCount ? Math.round((doneN / memberCount) * 100) : 0;
+        const tip = `${col.fullTitle} · 全體考獲 ${doneN}/${memberCount}（${itemPct}%）`;
+        return `<td class="admin-prog-item-cell admin-prog-completion-cell" title="${escapeHtml(tip)}">
+          <span class="admin-prog-pct-value">${itemPct}%</span>
+          <span class="admin-prog-pct-detail">${doneN}/${memberCount}</span>
+        </td>`;
+      })
+      .join("");
+    const avgTip = `${selectedBadge.label} · 全體平均完成度 ${avgPct}%`;
+    bodyRows.push(`
+      <tr class="admin-prog-completion-row">
+        <th scope="row" class="admin-prog-name admin-prog-completion-label">完成度</th>
+        ${completionCells}
+        <td class="admin-prog-pct-cell admin-prog-avg-cell" title="${escapeHtml(avgTip)}">
+          <span class="admin-prog-pct-value">${avgPct}%</span>
+          <span class="admin-prog-pct-detail">平均</span>
+        </td>
+      </tr>`);
+
+    const switcher = PROG_OVERVIEW_BADGES.map(
+      (b) => `
+        <button
+          type="button"
+          class="att-year-btn${b.key === adminProgOverviewBadgeKey ? " is-active" : ""}"
+          data-prog-badge-key="${b.key}"
+          aria-pressed="${b.key === adminProgOverviewBadgeKey ? "true" : "false"}"
+        >${escapeHtml(b.label)}</button>`
+    ).join("");
+
+    const sectionHead = sectionGroups
+      .map(
+        (g) =>
+          `<th class="admin-prog-section-head" colspan="${g.span}" title="${escapeHtml(g.title || g.label)}">
+            <span class="admin-prog-section-label">${escapeHtml(g.label)}</span>
+          </th>`
+      )
+      .join("");
+
+    const subsectionHead = subsectionGroups
+      .map(
+        (g) =>
+          `<th class="admin-prog-subsection-head" colspan="${g.span}" title="${escapeHtml(g.title || g.label)}">
+            <span class="admin-prog-subsection-label">${escapeHtml(g.label)}</span>
+          </th>`
+      )
+      .join("");
+
+    const itemHead = columns
+      .map(
+        (col, idx) =>
+          `<th class="admin-prog-item-head" scope="col">
+            <button type="button" class="admin-prog-item-trigger" data-prog-col-idx="${idx}" aria-label="查看 ${escapeHtml(col.name || col.itemLabel || "考核分項")} 詳情">
+              <span class="admin-prog-item-label">${escapeHtml(col.itemLabel || col.short || "")}</span>
+            </button>
+          </th>`
+      )
+      .join("");
+
+    root.innerHTML = `
+      <div class="admin-prog-badge-switcher att-year-switcher" role="group" aria-label="選擇獎章">
+        ${switcher}
+      </div>
+      <p class="admin-prog-selected-hint">目前顯示：${escapeHtml(selectedBadge.label)} · 共 ${columns.length} 個考核分項 · 桌機懸停／手機點按分項可看詳情</p>
+      <div class="admin-overview-table-wrap admin-prog-table-wrap">
+        <table class="admin-overview-table admin-prog-item-matrix" aria-label="${escapeHtml(selectedBadge.label)}分項進度總覽">
+          <colgroup>
+            <col class="admin-prog-col-name" />
+            ${columns.map(() => `<col class="admin-prog-col-item" />`).join("")}
+            <col class="admin-prog-col-pct" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th class="admin-prog-name-head" rowspan="3">姓名</th>
+              ${sectionHead}
+              <th class="admin-prog-pct-head" rowspan="3">完成度</th>
+            </tr>
+            <tr>
+              ${subsectionHead}
+            </tr>
+            <tr>
+              ${itemHead}
+            </tr>
+          </thead>
+          <tbody>${bodyRows.join("") || `<tr><td colspan="${colCount}" class="empty-state">暫無成員資料</td></tr>`}</tbody>
+        </table>
+      </div>`;
+
+    root.querySelectorAll(".admin-prog-name-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const member = getAdminMembers().find(
+          (m) => m.scoutId === btn.dataset.adminMemberId
+        );
+        if (member) openAdminMemberPreview(member);
+      });
+    });
+
+    root.querySelectorAll("[data-prog-badge-key]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        adminProgOverviewBadgeKey = btn.dataset.progBadgeKey;
+        hideAdminProgItemHoverTip();
+        hideAdminProgCompletedPopover();
+        closeAdminProgItemDetail();
+        renderAdminProgressiveOverview();
+      });
+    });
+
+    const tableWrap = root.querySelector(".admin-prog-table-wrap");
+    const hideFloatingTips = () => {
+      hideAdminProgItemHoverTip();
+      hideAdminProgCompletedPopover();
+    };
+    tableWrap?.addEventListener("scroll", hideFloatingTips, { passive: true });
+
+    root.querySelectorAll("[data-prog-done-mark]").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        showAdminProgCompletedPopover(btn, btn.dataset.completedDate || "");
+      });
+    });
+
+    root.querySelectorAll(".admin-prog-item-trigger").forEach((btn) => {
+      const idx = Number(btn.dataset.progColIdx);
+      const col = columns[idx];
+      btn.addEventListener("mouseenter", () => showAdminProgItemHoverTip(btn, col));
+      btn.addEventListener("mouseleave", hideAdminProgItemHoverTip);
+      btn.addEventListener("focus", () => showAdminProgItemHoverTip(btn, col));
+      btn.addEventListener("blur", hideAdminProgItemHoverTip);
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        // Desktop already has hover tip; click opens the same detail sheet (handy on touch / keyboard).
+        if (col) openAdminProgItemDetail(col);
       });
     });
   }
