@@ -2120,7 +2120,7 @@
 
     const skillsLink = findCommonLinkByPage("skills");
     const unitsLink = findCommonLinkByPage("units");
-    const skillsTitle = (skillsLink && skillsLink.title) || "童軍技能";
+    const skillsTitle = (skillsLink && skillsLink.title) || "童軍基本技能教材";
     const unitsTitle = (unitsLink && unitsLink.title) || "童軍單位網頁";
 
     container.innerHTML = `

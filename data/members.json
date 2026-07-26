@@ -368,7 +368,7 @@
       },
       {
         "id": "scout-skills",
-        "title": "童軍技能",
+        "title": "童軍基本技能教材",
         "type": "page",
         "page": "skills",
         "icon": "assets/resources/icons/scout-skills.png",
