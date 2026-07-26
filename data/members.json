@@ -4368,7 +4368,9 @@
           "examiner": "謝志安先生",
           "examinerTitle": "童軍區長",
           "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
+          "certificateNumber": "STE/S/FY2627/038",
+          "certificateCopy": "assets/certificates/2025045135_觀察章_STE-S-FY2627-038.jpeg"
         },
         {
           "name": "手藝章",
@@ -4383,7 +4385,9 @@
           "examiner": "謝志安先生",
           "examinerTitle": "童軍區長",
           "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
+          "certificateNumber": "STE/S/FY2627/014",
+          "certificateCopy": "assets/certificates/2025045135_手藝章_STE-S-FY2627-014.jpeg"
         },
         {
           "name": "模型製作章",
@@ -4398,7 +4402,9 @@
           "examiner": "謝志安先生",
           "examinerTitle": "童軍區長",
           "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
+          "certificateNumber": "STE/S/FY2627/104",
+          "certificateCopy": "assets/certificates/2025045135_模型製作章_STE-S-FY2627-104.jpeg"
         },
         {
           "name": "運動章",
@@ -4413,7 +4419,9 @@
           "examiner": "謝志安先生",
           "examinerTitle": "童軍區長",
           "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
+          "certificateNumber": "STE/S/FY2627/084",
+          "certificateCopy": "assets/certificates/2025045135_運動章_STE-S-FY2627-084.jpeg"
         },
         {
           "name": "領導才獎章",
@@ -5144,6 +5152,23 @@
       ],
       "specialtyBadges": [
         {
+          "name": "觀察章",
+          "earnedDate": "2026-07-16",
+          "category": "技能組",
+          "group": "skill",
+          "icon": "assets/specialty/skill/觀察.png",
+          "activityName": "技能組 - 觀察章",
+          "organizer": "沙田東區",
+          "assessmentDate": "2026-07-16",
+          "syllabusKey": "skill:觀察",
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "certificateNumber": "STE/S/FY2627/121",
+          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
+          "certificateCopy": "assets/certificates/2025021912_觀察章_STE-S-FY2627-121.jpeg"
+        },
+        {
           "name": "語言章",
           "earnedDate": "2026-07-05",
           "category": "服務組",
@@ -5156,7 +5181,9 @@
           "examiner": "謝志安先生",
           "examinerTitle": "童軍區長",
           "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
+          "certificateNumber": "STE/S/FY2627/059",
+          "certificateCopy": "assets/certificates/2025021912_語言章_STE-S-FY2627-059.jpeg"
         },
         {
           "name": "手藝章",
@@ -5171,7 +5198,9 @@
           "examiner": "謝志安先生",
           "examinerTitle": "童軍區長",
           "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
+          "certificateNumber": "STE/S/FY2627/011",
+          "certificateCopy": "assets/certificates/2025021912_手藝章_STE-S-FY2627-011.jpeg"
         },
         {
           "name": "藝術章",
@@ -5186,7 +5215,9 @@
           "examiner": "謝志安先生",
           "examinerTitle": "童軍區長",
           "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
+          "certificateNumber": "STE/S/FY2627/095",
+          "certificateCopy": "assets/certificates/2025021912_藝術章_STE-S-FY2627-095.jpeg"
         },
         {
           "name": "模型製作章",
@@ -5201,7 +5232,9 @@
           "examiner": "謝志安先生",
           "examinerTitle": "童軍區長",
           "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
+          "certificateNumber": "STE/S/FY2627/099",
+          "certificateCopy": "assets/certificates/2025021912_模型製作章_STE-S-FY2627-099.jpeg"
         },
         {
           "name": "攝影章",
@@ -5216,7 +5249,9 @@
           "examiner": "謝志安先生",
           "examinerTitle": "童軍區長",
           "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
+          "certificateNumber": "STE/S/FY2627/112",
+          "certificateCopy": "assets/certificates/2025021912_攝影章_STE-S-FY2627-112.jpeg"
         }
       ],
       "awards": []
@@ -12354,6 +12389,51 @@
       ],
       "specialtyBadges": [
         {
+          "name": "觀察章",
+          "earnedDate": "2026-07-16",
+          "category": "技能組",
+          "group": "skill",
+          "icon": "assets/specialty/skill/觀察.png",
+          "activityName": "技能組 - 觀察章",
+          "organizer": "沙田東區",
+          "assessmentDate": "2026-07-16",
+          "syllabusKey": "skill:觀察",
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
+        },
+        {
+          "name": "手藝章",
+          "earnedDate": "2026-07-16",
+          "category": "技能組",
+          "group": "skill",
+          "icon": "assets/specialty/skill/手藝.png",
+          "activityName": "技能組 - 手藝章",
+          "organizer": "沙田東區",
+          "assessmentDate": "2026-07-16",
+          "syllabusKey": "skill:手藝",
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
+        },
+        {
+          "name": "語言章",
+          "earnedDate": "2026-07-16",
+          "category": "服務組",
+          "group": "service",
+          "icon": "assets/specialty/service/語言.png",
+          "activityName": "服務組 - 語言章",
+          "organizer": "沙田東區",
+          "assessmentDate": "2026-07-16",
+          "syllabusKey": "service:語言",
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
+        },
+        {
           "name": "射擊章",
           "earnedDate": "2026-07-05",
           "category": "技能組",
@@ -13148,6 +13228,23 @@
       ],
       "specialtyBadges": [
         {
+          "name": "觀察章",
+          "earnedDate": "2026-07-16",
+          "category": "技能組",
+          "group": "skill",
+          "icon": "assets/specialty/skill/觀察.png",
+          "activityName": "技能組 - 觀察章",
+          "organizer": "沙田東區",
+          "assessmentDate": "2026-07-16",
+          "syllabusKey": "skill:觀察",
+          "examiner": "謝志安先生",
+          "examinerTitle": "童軍區長",
+          "certificateNumber": "STE/S/FY2627/122",
+          "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
+          "certificateCopy": "assets/certificates/2025098332_觀察章_STE-S-FY2627-122.jpeg"
+        },
+        {
           "name": "手藝章",
           "earnedDate": "2026-07-05",
           "category": "技能組",
@@ -13160,7 +13257,9 @@
           "examiner": "謝志安先生",
           "examinerTitle": "童軍區長",
           "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
+          "certificateNumber": "STE/S/FY2627/018",
+          "certificateCopy": "assets/certificates/2025098332_手藝章_STE-S-FY2627-018.jpeg"
         },
         {
           "name": "攝影章",
@@ -13175,7 +13274,9 @@
           "examiner": "謝志安先生",
           "examinerTitle": "童軍區長",
           "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
+          "certificateNumber": "STE/S/FY2627/112",
+          "certificateCopy": "assets/certificates/2025098332_攝影章_STE-S-FY2627-112.jpeg"
         },
         {
           "name": "單車章",
@@ -13188,7 +13289,8 @@
           "assessmentDate": "2026-02-28",
           "syllabusKey": "interest:單車",
           "examiner": "李載禧先生",
-          "examinerTitle": "訓練員"
+          "examinerTitle": "訓練員",
+          "certificateCopy": "assets/certificates/2025098332_單車章_nocert.jpeg"
         }
       ],
       "awards": []
