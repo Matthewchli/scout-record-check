@@ -29,6 +29,7 @@ const KEY_PREFIX = {
 const NAME_ALIASES = {
   楊淳𤋮: "楊淳熙",
   梁諾言: "梁諾然",
+  王悅晴: "王悦晴",
 };
 
 function excelDateToIso(value) {
