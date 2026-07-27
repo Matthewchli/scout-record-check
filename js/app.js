@@ -1897,11 +1897,14 @@
     const outdoorCount = (activity.outdoorActivities || []).length;
     const summary = $("#attendance-summary");
 
+    const icon = (file) =>
+      `<span class="att-stat-icon-wrap"><img class="att-stat-icon" src="assets/resources/icons/stats/${file}" alt="" width="512" height="512" decoding="async" aria-hidden="true"></span>`;
+
     const icons = {
-      attendance: `<span class="att-stat-icon-wrap"><svg class="att-stat-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm0 2v14h10V5H7zm2.3 8.7 1.4 1.4 4.3-4.3-1.4-1.4-2.9 2.9-1.1-1.1-1.4 1.4 1.1 1.1zM9 7h6v2H9V7z"/></svg></span>`,
-      service: `<span class="att-stat-icon-wrap"><svg class="att-stat-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a5 5 0 0 1 5 5v1.1c1.7.4 3 2 3 3.9v1l2 3v2h-2.1A5 5 0 0 1 13 21h-2a5 5 0 0 1-4.9-4H4v-2l2-3v-1c0-1.9 1.3-3.5 3-3.9V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v1h6V7a3 3 0 0 0-3-3zM8 10c-.6 0-1 .4-1 1v1.4l-1.6 2.4.2.2h13l.2-.2L17 12.4V11c0-.6-.4-1-1-1H8zm1 8a3 3 0 0 0 3 2h2a3 3 0 0 0 3-2H9z"/></svg></span>`,
-      camping: `<span class="att-stat-icon-wrap"><svg class="att-stat-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3 2 20h5.2L12 11.2 16.8 20H22L12 3zm0 11.5L9.4 20h5.2L12 14.5z"/></svg></span>`,
-      outdoor: `<span class="att-stat-icon-wrap"><svg class="att-stat-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m6.5 16 3.2-4.3 2.1 2.7 3.4-5.1L21 16H6.5zM3 18h18v2H3v-2zm11-9.5A2.5 2.5 0 1 1 16.5 6 2.5 2.5 0 0 1 14 8.5z"/></svg></span>`,
+      attendance: icon("attendance.png"),
+      service: icon("service.png"),
+      camping: icon("camping.png"),
+      outdoor: icon("outdoor.png"),
     };
 
     summary.innerHTML = `
