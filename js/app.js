@@ -577,6 +577,21 @@
 
   /* ---------- Render ---------- */
 
+  function setScoutIdVisibility(show) {
+    const input = $("#scout-id");
+    const btn = $("#toggle-scout-id-visibility");
+    if (!input || !btn) return;
+    input.type = show ? "text" : "password";
+    btn.setAttribute("aria-pressed", show ? "true" : "false");
+    const label = show ? "隱藏 Scout ID" : "顯示 Scout ID";
+    btn.setAttribute("aria-label", label);
+    btn.title = label;
+    const showIcon = btn.querySelector(".password-toggle-icon--show");
+    const hideIcon = btn.querySelector(".password-toggle-icon--hide");
+    if (showIcon) showIcon.hidden = show;
+    if (hideIcon) hideIcon.hidden = !show;
+  }
+
   function showLogin() {
     currentMember = null;
     isAdminSession = false;
@@ -586,6 +601,7 @@
     loginView.hidden = false;
     loginError.hidden = true;
     loginForm.reset();
+    setScoutIdVisibility(false);
     showProgressiveList();
     showActivityList();
     showSpecialtyList();
@@ -2014,6 +2030,11 @@
         (item) => `
         <li class="link-item">
           <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
+            ${
+              item.icon
+                ? `<img class="link-icon" src="${escapeHtml(item.icon)}" alt="" width="36" height="36" loading="lazy" decoding="async">`
+                : ""
+            }
             <span class="link-text">
               <span class="link-title">${escapeHtml(item.title)}</span>
             </span>
@@ -3376,6 +3397,15 @@
   }
 
   /* ---------- Events ---------- */
+
+  const toggleScoutIdBtn = $("#toggle-scout-id-visibility");
+  if (toggleScoutIdBtn) {
+    toggleScoutIdBtn.addEventListener("click", () => {
+      const input = $("#scout-id");
+      if (!input) return;
+      setScoutIdVisibility(input.type !== "text");
+    });
+  }
 
   loginForm.addEventListener("submit", (e) => {
     e.preventDefault();

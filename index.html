@@ -7,8 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=fed6711" />
-  <link rel="stylesheet" href="css/admin.css?v=fed6711" />
+  <link rel="stylesheet" href="css/style.css?v=skillicons0731" />
+  <link rel="stylesheet" href="css/admin.css?v=skillicons0731" />
 </head>
 <body>
   <!-- 登入畫面 -->
@@ -41,14 +41,31 @@
         </div>
         <div class="field">
           <label for="scout-id">Scout ID</label>
-          <input
-            type="text"
-            id="scout-id"
-            name="scoutId"
-            autocomplete="username"
-            placeholder="例如 2025012345"
-            required
-          />
+          <div class="password-field">
+            <input
+              type="password"
+              id="scout-id"
+              name="scoutId"
+              autocomplete="current-password"
+              placeholder="例如 2025012345"
+              required
+            />
+            <button
+              type="button"
+              id="toggle-scout-id-visibility"
+              class="password-toggle"
+              aria-label="顯示 Scout ID"
+              aria-pressed="false"
+              title="顯示 Scout ID"
+            >
+              <svg class="password-toggle-icon password-toggle-icon--show" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M12 5c-5 0-9.3 3.1-11 7 1.7 3.9 6 7 11 7s9.3-3.1 11-7c-1.7-3.9-6-7-11-7zm0 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-2.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+              </svg>
+              <svg class="password-toggle-icon password-toggle-icon--hide" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" hidden>
+                <path fill="currentColor" d="M2.1 3.5 3.5 2.1l18.4 18.4-1.4 1.4-3.1-3.1A12.6 12.6 0 0 1 12 19c-5 0-9.3-3.1-11-7a13.4 13.4 0 0 1 4.6-5.3L2.1 3.5zM12 7a5 5 0 0 1 5 5c0 .7-.1 1.3-.4 1.9l-1.6-1.6a2.5 2.5 0 0 0-3.3-3.3L10.1 7.4C10.7 7.1 11.3 7 12 7zm0-2c5 0 9.3 3.1 11 7a13.5 13.5 0 0 1-3.5 4.6l-1.5-1.5A11.4 11.4 0 0 0 21 12c-1.5-3.3-4.9-5.5-9-5.5-.7 0-1.4.1-2 .2L8.4 5.1C9.5 4.7 10.7 4.5 12 4.5z"/>
+              </svg>
+            </button>
+          </div>
         </div>
         <p id="login-error" class="login-error" role="alert" hidden></p>
         <button type="submit" class="btn btn-primary">登入查閱</button>
@@ -443,6 +460,6 @@
     </footer>
   </section>
 
-  <script src="js/app.js?v=fed6711"></script>
+  <script src="js/app.js?v=skillicons0731"></script>
 </body>
 </html>

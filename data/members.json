@@ -375,35 +375,43 @@
         "items": [
           {
             "title": "背囊收拾",
-            "url": "assets/resources/scout-skills/01-backpack.pdf"
+            "url": "assets/resources/scout-skills/01-backpack.pdf",
+            "icon": "assets/resources/icons/skills/backpack.png"
           },
           {
             "title": "營地烹飪",
-            "url": "assets/resources/scout-skills/02-camp-cooking.pdf"
+            "url": "assets/resources/scout-skills/02-camp-cooking.pdf",
+            "icon": "assets/resources/icons/skills/camp-cooking.png"
           },
           {
             "title": "繩索運用",
-            "url": "assets/resources/scout-skills/03-ropework.pdf"
+            "url": "assets/resources/scout-skills/03-ropework.pdf",
+            "icon": "assets/resources/icons/skills/ropework.png"
           },
           {
             "title": "營藝技巧",
-            "url": "assets/resources/scout-skills/04-campcraft.pdf"
+            "url": "assets/resources/scout-skills/04-campcraft.pdf",
+            "icon": "assets/resources/icons/skills/campcraft.png"
           },
           {
             "title": "地圖閱讀",
-            "url": "assets/resources/scout-skills/05-map-reading.pdf"
+            "url": "assets/resources/scout-skills/05-map-reading.pdf",
+            "icon": "assets/resources/icons/skills/map-reading.png"
           },
           {
             "title": "遠足技巧",
-            "url": "assets/resources/scout-skills/06-hiking.pdf"
+            "url": "assets/resources/scout-skills/06-hiking.pdf",
+            "icon": "assets/resources/icons/skills/hiking.png"
           },
           {
             "title": "意外事件處理",
-            "url": "assets/resources/scout-skills/07-incident.pdf"
+            "url": "assets/resources/scout-skills/07-incident.pdf",
+            "icon": "assets/resources/icons/skills/incident.png"
           },
           {
             "title": "天氣認識及保護環境",
-            "url": "assets/resources/scout-skills/08-weather-environment.pdf"
+            "url": "assets/resources/scout-skills/08-weather-environment.pdf",
+            "icon": "assets/resources/icons/skills/weather-environment.png"
           }
         ]
       }
@@ -14326,7 +14334,7 @@
       "section": "Cobra小隊",
       "rank": "隊員",
       "joinDate": "2023-10-14",
-      "photo": null,
+      "photo": "assets/members/2025045283.png",
       "activity": {
         "attendanceRate": 31,
         "serviceHours": 27,
