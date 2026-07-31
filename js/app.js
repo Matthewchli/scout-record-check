@@ -28,33 +28,73 @@
 
   const ADMIN_ACCOUNTS = [
     {
+      name: "程淑霞",
+      scoutId: "ltfc1234",
+      role: "admin",
+      rank: "旅長",
+      photo: "assets/members/cheng-shuxia.png",
+    },
+    {
+      name: "姚毅俊",
+      scoutId: "ltfc1234",
+      role: "admin",
+      rank: "團長",
+      photo: "assets/members/yao-yijun.png",
+    },
+    {
+      name: "許健孝",
+      scoutId: "ltfc1234",
+      role: "admin",
+      rank: "副團長",
+      photo: "assets/members/xu-jianxiao.png",
+    },
+    {
+      name: "陳嘉濤",
+      scoutId: "ltfc1234",
+      role: "admin",
+      rank: "副團長",
+      photo: "assets/members/chen-jiatao.png",
+    },
+    {
+      name: "梁喆",
+      scoutId: "ltfc1234",
+      role: "admin",
+      rank: "訓練員",
+      photo: "assets/members/liang-zhe.png",
+    },
+    {
       name: "李載禧",
       scoutId: "P@ssw0rd",
       role: "admin",
+      rank: "訓練員",
       photo: "assets/members/li-zaihei.png",
     },
     {
       name: "黃子峰",
       scoutId: "0106",
       role: "admin",
+      rank: "訓練員",
       photo: "assets/members/huang-zifeng.png",
     },
     {
       name: "林芷窰",
       scoutId: "63008686",
       role: "admin",
+      rank: "訓練員",
       photo: "assets/members/lin-zhiyao.png",
     },
     {
       name: "吳承軒",
       scoutId: "Ryan1363",
       role: "admin",
+      rank: "訓練員",
       photo: "assets/members/wu-chengxuan.png",
     },
     {
       name: "吳溢潼",
       scoutId: "260724",
       role: "admin",
+      rank: "訓練員",
       photo: "assets/members/wu-yitong.png",
     },
   ];
@@ -1873,12 +1913,31 @@
     }
     const certCopyEl = $("#specialty-meta-cert-copy");
     if (certCopyEl) {
-      const copyUrl = badge.certificateCopy || badge.certCopy || "";
-      const copyLabel = badge.certificateCopyTitle || "查看證書";
-      if (copyUrl) {
-        certCopyEl.innerHTML = `<a class="specialty-notice-link" href="${escapeHtml(copyUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(copyLabel)}</a>`;
+      const multi = Array.isArray(badge.certificateCopies)
+        ? badge.certificateCopies.filter((c) => c && c.url)
+        : [];
+      if (multi.length > 1) {
+        certCopyEl.innerHTML = multi
+          .map((c) => {
+            const label = c.title || "查看證書";
+            return `<a class="specialty-notice-link" href="${escapeHtml(c.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`;
+          })
+          .join('<span class="cert-copy-sep"> · </span>');
       } else {
-        certCopyEl.textContent = "—";
+        const copyUrl =
+          (multi[0] && multi[0].url) ||
+          badge.certificateCopy ||
+          badge.certCopy ||
+          "";
+        const copyLabel =
+          (multi[0] && multi[0].title) ||
+          badge.certificateCopyTitle ||
+          "查看證書";
+        if (copyUrl) {
+          certCopyEl.innerHTML = `<a class="specialty-notice-link" href="${escapeHtml(copyUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(copyLabel)}</a>`;
+        } else {
+          certCopyEl.textContent = "—";
+        }
       }
     }
 
@@ -2492,8 +2551,12 @@
       (session && findAdminAccount(session.name, session.scoutId)) ||
       ADMIN_ACCOUNTS[0];
 
+    const adminRank = admin.rank || "管理者";
+
     const headerName = $("#admin-header-name");
     if (headerName) headerName.textContent = admin.name;
+    const headerId = $("#admin-header-id");
+    if (headerId) headerId.textContent = adminRank;
 
     const profileName = $("#admin-profile-name-text");
     if (profileName) profileName.textContent = admin.name;
@@ -2504,6 +2567,8 @@
         if (nameSpan) nameSpan.textContent = admin.name;
       }
     }
+    const profileRank = $("#admin-profile-rank");
+    if (profileRank) profileRank.textContent = adminRank;
 
     const adminAvatar = $("#admin-profile-avatar");
     if (adminAvatar) {

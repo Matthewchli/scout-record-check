@@ -83,8 +83,8 @@ def draw_backpack_fallback(base):
 def draw_backpack(base):
     """User backpack motif → TEAL on white badge (white details as cutouts)."""
     if BACKPACK_SOURCE.exists():
-        # 20% larger than previous fill (0.78 → 0.936)
-        mask = extract_dark_silhouette_mask(BACKPACK_SOURCE, fill=0.936, threshold=150)
+        # +50% from previous fill (1.176 → 1.764)
+        mask = extract_dark_silhouette_mask(BACKPACK_SOURCE, fill=1.764, threshold=150)
         _paste_teal_mask(base, mask)
         return base
     return draw_backpack_fallback(base)

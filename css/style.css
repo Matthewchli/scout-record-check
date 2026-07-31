@@ -1618,6 +1618,11 @@ button { cursor: pointer; border: none; background: none; }
   color: var(--green-soft);
 }
 
+.cert-copy-sep {
+  color: var(--ink-muted);
+  margin: 0 0.15rem;
+}
+
 /* ===== Activity record ===== */
 .attendance-summary {
   display: grid;

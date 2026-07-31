@@ -12455,7 +12455,10 @@
           "examiner": "謝志安先生",
           "examinerTitle": "童軍區長",
           "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
+          "certificateNumber": "STE/S/FY2627/035",
+          "certificateCopy": "assets/certificates/2025021599_觀察章_STE-S-FY2627-035_badge.jpeg",
+          "certificateCopyTitle": "專科徽章證書"
         },
         {
           "name": "手藝章",
@@ -12470,7 +12473,10 @@
           "examiner": "謝志安先生",
           "examinerTitle": "童軍區長",
           "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
+          "certificateNumber": "STE/S/FY2627/010",
+          "certificateCopy": "assets/certificates/2025021599_手藝章_STE-S-FY2627-010_badge.jpeg",
+          "certificateCopyTitle": "專科徽章證書"
         },
         {
           "name": "語言章",
@@ -12485,7 +12491,10 @@
           "examiner": "謝志安先生",
           "examinerTitle": "童軍區長",
           "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
+          "certificateNumber": "STE/S/FY2627/058",
+          "certificateCopy": "assets/certificates/2025021599_語言章_STE-S-FY2627-058_badge.jpeg",
+          "certificateCopyTitle": "專科徽章證書"
         },
         {
           "name": "射擊章",
@@ -12500,7 +12509,10 @@
           "examiner": "杜偉基先生",
           "examinerTitle": "助理領袖訓練主任",
           "noticeUrl": "assets/notices/20260705-shooting-training.pdf",
-          "noticeTitle": "新界東地域 童軍射擊（技能組）專章訓練班"
+          "noticeTitle": "新界東地域 童軍射擊（技能組）專章訓練班",
+          "certificateNumber": "NTER/26-27/S/MARKSMAN/1/06",
+          "certificateCopy": "assets/certificates/2025021599_射擊章_NTER-26-27-S-MARKSMAN-1-06_badge.jpeg",
+          "certificateCopyTitle": "專科徽章證書"
         },
         {
           "name": "消防章",
@@ -12515,7 +12527,20 @@
           "examiner": "蔡煒樂先生",
           "examinerTitle": "地域總部總監(童軍)",
           "noticeUrl": "assets/notices/20260516-fire-training.pdf",
-          "noticeTitle": "新界地域 童軍消防訓練班"
+          "noticeTitle": "新界地域 童軍消防訓練班",
+          "certificateNumber": "SFTC/NTR/2026/045/23",
+          "certificateCopy": "assets/certificates/2025021599_消防章_SFTC-NTR-2026-045-23_badge.jpeg",
+          "certificateCopyTitle": "專科徽章證書",
+          "certificateCopies": [
+            {
+              "url": "assets/certificates/2025021599_消防章_SFTC-NTR-2026-045-23_badge.jpeg",
+              "title": "專科徽章證書"
+            },
+            {
+              "url": "assets/certificates/2025021599_消防章_SFTC-NTR-2026-045-23_training.jpeg",
+              "title": "訓練證書"
+            }
+          ]
         },
         {
           "name": "單車章",
@@ -12543,7 +12568,10 @@
           "examiner": "謝志安先生",
           "examinerTitle": "童軍區長",
           "noticeUrl": "assets/notices/20250628-photography-training.pdf",
-          "noticeTitle": "沙田東區 攝影章數碼相機（興趣組）訓練班"
+          "noticeTitle": "沙田東區 攝影章數碼相機（興趣組）訓練班",
+          "certificateNumber": "STE/S/FY2526/023",
+          "certificateCopy": "assets/certificates/2025021599_攝影章_STE-S-FY2526-023_badge.jpeg",
+          "certificateCopyTitle": "專科徽章證書"
         }
       ],
       "awards": []
@@ -15841,7 +15869,10 @@
           "examiner": "謝志安先生",
           "examinerTitle": "童軍區長",
           "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
+          "certificateNumber": "STE/S/FY2627/017",
+          "certificateCopy": "assets/certificates/2026000246_手藝章_STE-S-FY2627-017_badge.jpeg",
+          "certificateCopyTitle": "專科徽章證書"
         },
         {
           "name": "攝影章",
@@ -15856,7 +15887,10 @@
           "examiner": "謝志安先生",
           "examinerTitle": "童軍區長",
           "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
+          "certificateNumber": "STE/S/FY2627/115",
+          "certificateCopy": "assets/certificates/2026000246_攝影章_STE-S-FY2627-115_badge.jpeg",
+          "certificateCopyTitle": "專科徽章證書"
         },
         {
           "name": "運動章",
@@ -15871,7 +15905,10 @@
           "examiner": "謝志安先生",
           "examinerTitle": "童軍區長",
           "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
+          "certificateNumber": "STE/S/FY2627/087",
+          "certificateCopy": "assets/certificates/2026000246_運動章_STE-S-FY2627-087_badge.jpeg",
+          "certificateCopyTitle": "專科徽章證書"
         },
         {
           "name": "消防章",
@@ -15886,7 +15923,20 @@
           "examiner": "蔡煒樂先生",
           "examinerTitle": "地域總部總監(童軍)",
           "noticeUrl": "assets/notices/20260516-fire-training.pdf",
-          "noticeTitle": "新界地域 童軍消防訓練班"
+          "noticeTitle": "新界地域 童軍消防訓練班",
+          "certificateNumber": "SFTC/NTR/2026/045/14",
+          "certificateCopy": "assets/certificates/2026000246_消防章_SFTC-NTR-2026-045-14_badge.jpeg",
+          "certificateCopyTitle": "專科徽章證書",
+          "certificateCopies": [
+            {
+              "url": "assets/certificates/2026000246_消防章_SFTC-NTR-2026-045-14_badge.jpeg",
+              "title": "專科徽章證書"
+            },
+            {
+              "url": "assets/certificates/2026000246_消防章_SFTC-NTR-2026-045-14_training.jpeg",
+              "title": "訓練證書"
+            }
+          ]
         },
         {
           "name": "單車章",
@@ -15899,7 +15949,9 @@
           "assessmentDate": "2026-02-28",
           "syllabusKey": "interest:單車",
           "examiner": "李載禧先生",
-          "examinerTitle": "訓練員"
+          "examinerTitle": "訓練員",
+          "certificateCopy": "assets/certificates/2026000246_單車章_nocert_badge.jpeg",
+          "certificateCopyTitle": "專科徽章證書"
         }
       ],
       "awards": []
