@@ -30,7 +30,8 @@
 
 /* 出席紀錄學年按鈕：對齊成員出席分頁，略緊湊；隔離 progressive-overview 的 flex:1 誤傷 */
 .admin-overview .admin-date-filters .att-year-switcher,
-.admin-overview #admin-year-switcher.att-year-switcher {
+.admin-overview #admin-year-switcher.att-year-switcher,
+.admin-members-filters .att-year-switcher {
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
@@ -43,12 +44,44 @@
 }
 
 .admin-overview .admin-date-filters .att-year-btn,
-.admin-overview #admin-year-switcher .att-year-btn {
+.admin-overview #admin-year-switcher .att-year-btn,
+.admin-members-filters .att-year-btn {
   flex: 0 0 auto;
   width: auto;
   min-width: 5.6rem;
   padding: 0.38rem 0.7rem;
   font-size: 0.78rem;
+}
+
+.admin-members-filters {
+  margin-bottom: 1.1rem;
+}
+
+.admin-member-status-tag {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.08rem 0.4rem;
+  border-radius: 0.3rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.admin-member-status-tag.status-left {
+  background: rgba(148, 68, 42, 0.12);
+  color: #8a3d28;
+}
+
+.admin-member-status-tag.status-leader {
+  background: rgba(26, 61, 43, 0.12);
+  color: var(--green-deep);
+}
+
+.admin-member-name .admin-member-status-tag {
+  display: block;
+  width: fit-content;
+  margin: 0.25rem auto 0;
 }
 
 .admin-date-combo {
@@ -1221,12 +1254,14 @@ body.admin-previewing .admin-view {
     white-space: nowrap;
   }
 
-  .admin-overview #admin-year-switcher.att-year-switcher {
+  .admin-overview #admin-year-switcher.att-year-switcher,
+  .admin-members-filters .att-year-switcher {
     width: auto;
     max-width: 100%;
   }
 
-  .admin-overview #admin-year-switcher .att-year-btn {
+  .admin-overview #admin-year-switcher .att-year-btn,
+  .admin-members-filters .att-year-btn {
     flex: 0 0 auto;
     min-width: 5.2rem;
     padding: 0.34rem 0.6rem;

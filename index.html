@@ -7,8 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=20260801a" />
-  <link rel="stylesheet" href="css/admin.css?v=20260801a" />
+  <link rel="stylesheet" href="css/style.css?v=20260804a" />
+  <link rel="stylesheet" href="css/admin.css?v=20260804a" />
 </head>
 <body>
   <!-- 登入畫面 -->
@@ -317,7 +317,7 @@
         <div class="tab-panel" id="panel-resources" role="tabpanel" aria-labelledby="tab-resources" hidden>
           <header class="panel-header">
             <h2>有用資料</h2>
-            <p>旅團資訊、聯絡及常用連結</p>
+            <p>旅團資訊、常用連結及常用表格</p>
           </header>
           <div id="resources-content" class="resources-content"></div>
         </div>
@@ -382,7 +382,7 @@
         <div class="tab-panel admin-overview is-active" id="panel-admin-overview" role="tabpanel" aria-labelledby="tab-admin-overview">
           <header class="panel-header">
             <h2>成員出席紀錄</h2>
-            <p>按集會日期查看全體出席情況</p>
+            <p>按學年與集會日期查看出席 · 人數／出席率以當日在隊成員計算</p>
           </header>
           <div class="admin-date-filters">
             <div class="admin-date-select-wrap">
@@ -439,8 +439,19 @@
           <div id="admin-members-list-view">
             <header class="panel-header">
               <h2>成員活動記錄</h2>
-              <p>按小隊排列 · 點選成員查看其活動記錄</p>
+              <p>顯示該學年在隊成員 · 按小隊排列 · 點選查看活動記錄</p>
             </header>
+            <div class="admin-date-filters admin-members-filters">
+              <div class="admin-date-select-wrap">
+                <label id="admin-members-year-label">年度</label>
+                <div
+                  id="admin-members-year-switcher"
+                  class="att-year-switcher"
+                  role="group"
+                  aria-labelledby="admin-members-year-label"
+                ></div>
+              </div>
+            </div>
             <div id="admin-members-grid" class="admin-members-grid"></div>
           </div>
         </div>
@@ -448,7 +459,7 @@
         <div class="tab-panel" id="panel-admin-resources" role="tabpanel" aria-labelledby="tab-admin-resources" hidden>
           <header class="panel-header">
             <h2>有用資料</h2>
-            <p>旅團資訊、聯絡及常用連結</p>
+            <p>旅團資訊、常用連結及常用表格</p>
           </header>
           <div id="admin-resources-content" class="resources-content"></div>
         </div>
@@ -460,6 +471,6 @@
     </footer>
   </section>
 
-  <script src="js/app.js?v=20260801a"></script>
+  <script src="js/app.js?v=20260804a"></script>
 </body>
 </html>

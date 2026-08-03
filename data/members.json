@@ -415,6 +415,14 @@
           }
         ]
       }
+    ],
+    "commonForms": [
+      {
+        "id": "pt03",
+        "title": "活動訓練班報名表（PT03）",
+        "type": "link",
+        "url": "assets/resources/forms/PT03-activity-training-enrollment.pdf"
+      }
     ]
   },
   "members": [
@@ -1247,7 +1255,8 @@
           "earnedDate": "2026-01-10",
           "category": "獎項"
         }
-      ]
+      ],
+      "status": "active"
     },
     {
       "name": "吳溢潼",
@@ -1977,7 +1986,8 @@
           "earnedDate": "2024-06-30",
           "category": "獎項"
         }
-      ]
+      ],
+      "status": "active"
     },
     {
       "name": "吳承軒",
@@ -2623,7 +2633,8 @@
           "examiner": "黃主考"
         }
       ],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "王子兮",
@@ -3172,7 +3183,8 @@
           "noticeTitle": "沙田東區 第573屆童軍領導才訓練班"
         }
       ],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "王悦晴",
@@ -3647,7 +3659,8 @@
         }
       ],
       "specialtyBadges": [],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "余心蓓",
@@ -3863,7 +3876,8 @@
         }
       ],
       "specialtyBadges": [],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "李在立",
@@ -4464,7 +4478,8 @@
           "noticeTitle": "沙田東區 攝影章數碼相機（興趣組）訓練班"
         }
       ],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "李泳錡",
@@ -4657,7 +4672,8 @@
         }
       ],
       "specialtyBadges": [],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "李凱晴",
@@ -5264,7 +5280,8 @@
           "certificateCopy": "assets/certificates/2025021912_攝影章_STE-S-FY2627-112.jpeg"
         }
       ],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "李鴻鈞",
@@ -5783,7 +5800,9 @@
           "assessmentDate": "2026-02-28",
           "syllabusKey": "interest:單車",
           "examiner": "李載禧先生",
-          "examinerTitle": "訓練員"
+          "examinerTitle": "訓練員",
+          "certificateCopy": "assets/certificates/2025045200_單車章_nocert_badge.jpeg",
+          "certificateCopyTitle": "專科徽章證書"
         },
         {
           "name": "領導才獎章",
@@ -5798,10 +5817,14 @@
           "examiner": "李嘉明先生",
           "examinerTitle": "助理區總監(深資童軍)",
           "noticeUrl": "assets/notices/20251130-leadership-training.pdf",
-          "noticeTitle": "沙田東區 第573屆童軍領導才訓練班"
+          "noticeTitle": "沙田東區 第573屆童軍領導才訓練班",
+          "certificateNumber": "SLTC/D/573/06",
+          "certificateCopy": "assets/certificates/2025045200_領導才獎章_SLTC-D-573-06_badge.jpeg",
+          "certificateCopyTitle": "證書副本"
         }
       ],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "周丰海",
@@ -6279,7 +6302,8 @@
           "examinerTitle": "訓練員"
         }
       ],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "胡喬立",
@@ -6767,7 +6791,8 @@
           "examinerTitle": "訓練員"
         }
       ],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "馬皓哲",
@@ -7316,7 +7341,8 @@
           "noticeTitle": "沙田東區 攝影章數碼相機（興趣組）訓練班"
         }
       ],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "高卓言",
@@ -7814,7 +7840,8 @@
           "examinerTitle": "訓練員"
         }
       ],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "張芯語",
@@ -8083,7 +8110,8 @@
           "examinerTitle": "訓練員"
         }
       ],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "張浩鏗",
@@ -8595,7 +8623,8 @@
         }
       ],
       "specialtyBadges": [],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "梁諾然",
@@ -8930,7 +8959,8 @@
           "examinerTitle": "訓練員"
         }
       ],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "許曦月",
@@ -9347,7 +9377,8 @@
         }
       ],
       "specialtyBadges": [],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "郭箴然",
@@ -9749,7 +9780,8 @@
         }
       ],
       "specialtyBadges": [],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "陳子峻",
@@ -10275,7 +10307,8 @@
           "examinerTitle": "訓練員"
         }
       ],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "陳培天",
@@ -10537,7 +10570,8 @@
         }
       ],
       "specialtyBadges": [],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "陳睿",
@@ -10788,7 +10822,8 @@
         }
       ],
       "specialtyBadges": [],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "陳樂熹",
@@ -11280,7 +11315,8 @@
         }
       ],
       "specialtyBadges": [],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "陳澤輝",
@@ -11707,7 +11743,8 @@
         }
       ],
       "specialtyBadges": [],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "黃明毅",
@@ -11950,7 +11987,8 @@
         }
       ],
       "specialtyBadges": [],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "黃芯瑤",
@@ -12574,7 +12612,8 @@
           "certificateCopyTitle": "專科徽章證書"
         }
       ],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "楊淳熙",
@@ -13017,7 +13056,8 @@
         }
       ],
       "specialtyBadges": [],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "葉繕熒",
@@ -13377,7 +13417,8 @@
           "certificateCopy": "assets/certificates/2025098332_單車章_nocert.jpeg"
         }
       ],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "劉雨澤",
@@ -13654,7 +13695,8 @@
           "examinerTitle": "訓練員"
         }
       ],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "劉珈晴",
@@ -14113,7 +14155,8 @@
         }
       ],
       "specialtyBadges": [],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "劉晁揚",
@@ -14352,7 +14395,8 @@
         }
       ],
       "specialtyBadges": [],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "蔡卓妍",
@@ -14780,7 +14824,8 @@
         }
       ],
       "specialtyBadges": [],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "蔡振熙",
@@ -15032,7 +15077,8 @@
           "examinerTitle": "訓練員"
         }
       ],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "蔣禮謙",
@@ -15570,7 +15616,8 @@
           "noticeTitle": "北葵涌區 童軍急救章訓練班"
         }
       ],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "盧樂欣",
@@ -15954,7 +16001,8 @@
           "certificateCopyTitle": "專科徽章證書"
         }
       ],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "謝子津",
@@ -16496,7 +16544,8 @@
           "examinerTitle": "訓練員"
         }
       ],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "謝采澄",
@@ -16689,7 +16738,8 @@
         }
       ],
       "specialtyBadges": [],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "羅梓渘",
@@ -16893,7 +16943,8 @@
         }
       ],
       "specialtyBadges": [],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "羅臻琳",
@@ -17454,7 +17505,8 @@
           "noticeTitle": "沙田東區 攝影章數碼相機（興趣組）訓練班"
         }
       ],
-      "awards": []
+      "awards": [],
+      "status": "active"
     },
     {
       "name": "關敬諾",
@@ -17696,7 +17748,8 @@
           "examinerTitle": "訓練員"
         }
       ],
-      "awards": []
+      "awards": [],
+      "status": "active"
     }
   ]
 }

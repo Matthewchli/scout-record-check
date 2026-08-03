@@ -26,6 +26,8 @@
     absent: "缺席",
   };
 
+  /** 管理者帳號；activeYears 為可登入／有效的學年 id */
+  const ALL_ADMIN_YEARS = ["2024-2025", "2025-2026", "2026-2027"];
   const ADMIN_ACCOUNTS = [
     {
       name: "程淑霞",
@@ -33,6 +35,7 @@
       role: "admin",
       rank: "旅長",
       photo: "assets/members/cheng-shuxia.png",
+      activeYears: [...ALL_ADMIN_YEARS],
     },
     {
       name: "姚毅俊",
@@ -40,6 +43,7 @@
       role: "admin",
       rank: "團長",
       photo: "assets/members/yao-yijun.png",
+      activeYears: [...ALL_ADMIN_YEARS],
     },
     {
       name: "許健孝",
@@ -47,6 +51,7 @@
       role: "admin",
       rank: "副團長",
       photo: "assets/members/xu-jianxiao.png",
+      activeYears: [...ALL_ADMIN_YEARS],
     },
     {
       name: "陳嘉濤",
@@ -54,6 +59,7 @@
       role: "admin",
       rank: "副團長",
       photo: "assets/members/chen-jiatao.png",
+      activeYears: [...ALL_ADMIN_YEARS],
     },
     {
       name: "梁喆",
@@ -61,6 +67,7 @@
       role: "admin",
       rank: "訓練員",
       photo: "assets/members/liang-zhe.png",
+      activeYears: [...ALL_ADMIN_YEARS],
     },
     {
       name: "李載禧",
@@ -68,6 +75,7 @@
       role: "admin",
       rank: "訓練員",
       photo: "assets/members/li-zaihei.png",
+      activeYears: [...ALL_ADMIN_YEARS],
     },
     {
       name: "黃子峰",
@@ -75,6 +83,7 @@
       role: "admin",
       rank: "訓練員",
       photo: "assets/members/huang-zifeng.png",
+      activeYears: [...ALL_ADMIN_YEARS],
     },
     {
       name: "林芷窰",
@@ -82,6 +91,7 @@
       role: "admin",
       rank: "訓練員",
       photo: "assets/members/lin-zhiyao.png",
+      activeYears: [...ALL_ADMIN_YEARS],
     },
     {
       name: "吳承軒",
@@ -89,6 +99,7 @@
       role: "admin",
       rank: "訓練員",
       photo: "assets/members/wu-chengxuan.png",
+      activeYears: [...ALL_ADMIN_YEARS],
     },
     {
       name: "吳溢潼",
@@ -96,8 +107,15 @@
       role: "admin",
       rank: "訓練員",
       photo: "assets/members/wu-yitong.png",
+      activeYears: [...ALL_ADMIN_YEARS],
     },
   ];
+
+  const MEMBER_STATUS_LABELS = {
+    active: "在隊",
+    left: "已退隊",
+    leader: "已晉升",
+  };
 
   const DEMO_SCOUT_IDS = new Set([
     "2025000101",
@@ -203,11 +221,21 @@
     );
   }
 
-  function findAdminAccount(name, scoutId) {
+  function isAdminActiveInYear(admin, yearId) {
+    if (!admin) return false;
+    const years = admin.activeYears;
+    if (!Array.isArray(years) || !years.length) return true;
+    return years.includes(yearId);
+  }
+
+  function findAdminAccount(name, scoutId, yearId = getDefaultAcademicYear()) {
     const n = name.trim();
     const id = scoutId.trim().toUpperCase();
     return ADMIN_ACCOUNTS.find(
-      (a) => a.name === n && String(a.scoutId).toUpperCase() === id
+      (a) =>
+        a.name === n &&
+        String(a.scoutId).toUpperCase() === id &&
+        isAdminActiveInYear(a, yearId)
     );
   }
 
@@ -2201,6 +2229,11 @@
       .map((link) => renderCommonLinkItem(link))
       .join("");
 
+    const commonForms = resources.commonForms || [];
+    const formsHtml = commonForms
+      .map((link) => renderCommonLinkItem(link))
+      .join("");
+
     const skillsLink = findCommonLinkByPage("skills");
     const unitsLink = findCommonLinkByPage("units");
     const skillsTitle = (skillsLink && skillsLink.title) || "童軍基本技能教材";
@@ -2216,6 +2249,10 @@
           <section class="resource-block">
             <h3 class="subsection-title">常用連結</h3>
             <ul class="link-list">${linksHtml || `<li class="empty-state">暫無連結</li>`}</ul>
+          </section>
+          <section class="resource-block">
+            <h3 class="subsection-title">常用表格</h3>
+            <ul class="link-list">${formsHtml || `<li class="empty-state">暫無表格</li>`}</ul>
           </section>
         </div>
       </div>
@@ -2242,6 +2279,55 @@
 
   function getAdminMembers() {
     return members.filter((m) => !DEMO_SCOUT_IDS.has(String(m.scoutId || "")));
+  }
+
+  function normalizeMemberStatus(member) {
+    const s = member && member.status;
+    if (s === "left" || s === "leader" || s === "active") return s;
+    return "active";
+  }
+
+  function memberStatusLabel(member) {
+    return MEMBER_STATUS_LABELS[normalizeMemberStatus(member)] || "在隊";
+  }
+
+  /** 該日是否仍屬童軍名單（入隊後、退隊／晉升前） */
+  function memberEligibleOnDate(member, date) {
+    if (!date) return true;
+    if (member.joinDate && member.joinDate > date) return false;
+    if (member.leftDate && member.leftDate <= date) return false;
+    if (member.leaderFrom && member.leaderFrom <= date) return false;
+    return true;
+  }
+
+  /** 該學年是否曾在童軍名單（供學年名單還原） */
+  function memberOnRosterInYear(member, yearId) {
+    const year = ACADEMIC_YEARS.find((y) => y.id === yearId);
+    if (!year) return true;
+    if (member.joinDate && member.joinDate > year.end) return false;
+    if (member.leftDate && member.leftDate < year.start) return false;
+    if (member.leaderFrom && member.leaderFrom < year.start) return false;
+    return true;
+  }
+
+  function isPastAcademicYear(yearId) {
+    const year = ACADEMIC_YEARS.find((y) => y.id === yearId);
+    if (!year) return false;
+    return year.end < todayISODate();
+  }
+
+  /**
+   * 該學年在隊名單。
+   * 過去學年：還原該年曾在隊者（含後來退隊／晉升）。
+   * 當前／未來學年：只顯示現況 status 為在隊者。
+   */
+  function getAdminRosterMembers(yearId = adminSelectedYear) {
+    const yid = yearId || resolveAdminSelectedYear();
+    return getAdminMembers().filter((m) => {
+      if (!memberOnRosterInYear(m, yid)) return false;
+      if (isPastAcademicYear(yid)) return true;
+      return normalizeMemberStatus(m) === "active";
+    });
   }
 
   function englishSurname(member) {
@@ -2332,6 +2418,45 @@
         adminSelectedDate = yearDates.length ? yearDates[0].date : null;
         closeAdminDateListbox();
         renderAdminOverview();
+        renderAdminMembersGrid();
+        renderAdminProgressiveOverview();
+      });
+    });
+  }
+
+  function syncAdminMembersYearSelect(yearId) {
+    const switcher = $("#admin-members-year-switcher");
+    if (!switcher) return;
+
+    switcher.innerHTML = ACADEMIC_YEARS.map((y) => {
+      const active = y.id === yearId;
+      return `
+        <button
+          type="button"
+          class="att-year-btn${active ? " is-active" : ""}"
+          data-year="${y.id}"
+          aria-pressed="${active ? "true" : "false"}"
+          aria-label="${escapeHtml(y.label)}"
+        >${escapeHtml(y.id)}</button>`;
+    }).join("");
+
+    switcher.querySelectorAll(".att-year-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const year = btn.dataset.year;
+        if (!year || year === adminSelectedYear) return;
+        adminSelectedYear = year;
+        sessionStorage.setItem(ADMIN_YEAR_KEY, adminSelectedYear);
+        const yearDates = filterMeetingDatesByYear(
+          adminMeetingDates,
+          adminSelectedYear
+        );
+        adminSelectedDate = yearDates.length ? yearDates[0].date : null;
+        closeAdminDateListbox();
+        syncAdminYearSelect(adminSelectedYear);
+        syncAdminMembersYearSelect(adminSelectedYear);
+        renderAdminOverview();
+        renderAdminMembersGrid();
+        renderAdminProgressiveOverview();
       });
     });
   }
@@ -2471,9 +2596,7 @@
   }
 
   function memberJoinedByDate(member, date) {
-    const join = member.joinDate;
-    if (!join || !date) return true;
-    return join <= date;
+    return memberEligibleOnDate(member, date);
   }
 
   function cancelAdminChartAnimations() {
@@ -2598,6 +2721,7 @@
       adminSelectedDate = yearDates.length ? yearDates[0].date : null;
     }
 
+    syncAdminMembersYearSelect(adminSelectedYear);
     renderAdminOverview();
     renderAdminMembersGrid();
     renderAdminProgressiveOverview();
@@ -2652,12 +2776,12 @@
     if (!comboEl || !statsEl || !tableEl) return;
 
     cancelAdminChartAnimations();
-    const adminMembers = getAdminMembers();
 
     if (!adminSelectedYear) {
       adminSelectedYear = resolveAdminSelectedYear();
     }
     syncAdminYearSelect(adminSelectedYear);
+    syncAdminMembersYearSelect(adminSelectedYear);
 
     const yearDates = filterMeetingDatesByYear(
       adminMeetingDates,
@@ -2687,8 +2811,11 @@
     const selectedMeta =
       yearDates.find((d) => d.date === adminSelectedDate) || {};
 
-    const eligibleMembers = adminMembers.filter((m) =>
-      memberJoinedByDate(m, adminSelectedDate)
+    /** 出席人數／出席率：該學年名單 + 當日在隊（joinDate／leftDate／leaderFrom） */
+    const eligibleMembers = getAdminMembers().filter(
+      (m) =>
+        memberOnRosterInYear(m, adminSelectedYear) &&
+        memberEligibleOnDate(m, adminSelectedDate)
     );
 
     const sectionBuckets = new Map();
@@ -2725,9 +2852,14 @@
           overallTotal += 1;
           if (status === "present") overallPresent += 1;
         }
+        const mStatus = normalizeMemberStatus(m);
+        const statusBadge =
+          mStatus === "active"
+            ? ""
+            : `<span class="admin-member-status-tag status-${mStatus}">${escapeHtml(memberStatusLabel(m))}</span>`;
         memberRows.push(`
           <tr>
-            <td>${escapeHtml(m.name || "—")}</td>
+            <td>${escapeHtml(m.name || "—")}${statusBadge}</td>
             <td>${escapeHtml(m.rank || "—")}</td>
             <td><span class="att-status status-${status}">${ATTENDANCE_LABELS[status]}</span></td>
             <td class="att-note">${note ? escapeHtml(note) : "—"}</td>
@@ -2815,22 +2947,33 @@
     const grid = $("#admin-members-grid");
     if (!grid) return;
 
+    if (!adminSelectedYear) {
+      adminSelectedYear = resolveAdminSelectedYear();
+    }
+    syncAdminMembersYearSelect(adminSelectedYear);
+
+    const roster = getAdminRosterMembers(adminSelectedYear);
     const leaderRanks = new Set(["團隊長", "隊長", "副隊", "副隊長"]);
 
     function memberCard(m) {
+      const mStatus = normalizeMemberStatus(m);
+      const statusBadge =
+        mStatus === "active"
+          ? ""
+          : `<span class="admin-member-status-tag status-${mStatus}">${escapeHtml(memberStatusLabel(m))}</span>`;
       const avatar = m.photo
         ? `<span class="admin-member-avatar has-photo"><img src="${escapeHtml(m.photo)}" alt="${escapeHtml(m.name)}" width="103" height="103" loading="lazy"${photoPositionStyle(m)} /></span>`
         : `<span class="admin-member-avatar" aria-hidden="true">${escapeHtml(initials(m.name))}</span>`;
       return `
         <button type="button" class="admin-member-card" data-admin-member-id="${escapeHtml(m.scoutId)}">
           ${avatar}
-          <span class="admin-member-name">${escapeHtml(m.name)}</span>
+          <span class="admin-member-name">${escapeHtml(m.name)}${statusBadge}</span>
           <span class="admin-member-rank">${escapeHtml(m.rank || "")}</span>
         </button>`;
     }
 
     const bySection = new Map();
-    for (const m of getAdminMembers()) {
+    for (const m of roster) {
       const sec = m.section || "其他";
       if (!bySection.has(sec)) bySection.set(sec, []);
       bySection.get(sec).push(m);
@@ -2841,6 +2984,11 @@
       ...[...bySection.keys()].filter((s) => !SECTION_ORDER.includes(s)),
     ];
 
+    if (!orderedSections.length) {
+      grid.innerHTML = `<p class="empty-state">此學年沒有符合篩選的成員</p>`;
+      return;
+    }
+
     grid.innerHTML = orderedSections
       .map((sec) => {
         const list = sortMembersForPatrol(bySection.get(sec) || []);
@@ -2848,7 +2996,7 @@
         const others = list.filter((m) => !leaderRanks.has(m.rank));
         return `
           <section class="admin-patrol-block" aria-label="${escapeHtml(sec)}">
-            <h3 class="admin-patrol-title">${escapeHtml(sec)}</h3>
+            <h3 class="admin-patrol-title">${escapeHtml(sec)}（${list.length} 人）</h3>
             <div class="admin-patrol-layout">
               <div class="admin-patrol-leaders" aria-label="隊長及副隊長">
                 ${leaders.map(memberCard).join("")}
@@ -2863,7 +3011,7 @@
 
     grid.querySelectorAll("[data-admin-member-id]").forEach((btn) => {
       btn.addEventListener("click", () => {
-        const member = getAdminMembers().find(
+        const member = roster.find(
           (m) => m.scoutId === btn.dataset.adminMemberId
         );
         if (member) openAdminMemberPreview(member);
@@ -3115,9 +3263,13 @@
     const root = $("#admin-progressive-overview");
     if (!root) return;
 
-    const adminMembers = getAdminMembers();
+    if (!adminSelectedYear) {
+      adminSelectedYear = resolveAdminSelectedYear();
+    }
+
+    const adminMembers = getAdminRosterMembers(adminSelectedYear);
     if (!adminMembers.length) {
-      root.innerHTML = `<p class="empty-state">暫無成員資料</p>`;
+      root.innerHTML = `<p class="empty-state">此學年沒有符合篩選的成員</p>`;
       return;
     }
 
@@ -3385,7 +3537,7 @@
 
     root.querySelectorAll(".admin-prog-name-btn").forEach((btn) => {
       btn.addEventListener("click", () => {
-        const member = getAdminMembers().find(
+        const member = adminMembers.find(
           (m) => m.scoutId === btn.dataset.adminMemberId
         );
         if (member) openAdminMemberPreview(member);
@@ -3499,6 +3651,14 @@
       loginError.hidden = false;
       return;
     }
+    if (normalizeMemberStatus(member) !== "active") {
+      loginError.textContent =
+        normalizeMemberStatus(member) === "leader"
+          ? "此帳號已晉升為領袖，請使用管理者帳號登入。"
+          : "此成員已退隊，無法登入。如需查閱紀錄請向領袖查詢。";
+      loginError.hidden = false;
+      return;
+    }
 
     saveSession(member);
     sessionStorage.setItem(TAB_KEY, "progressive");
@@ -3590,7 +3750,7 @@
         }
       }
       const member = findMember(session.name, session.scoutId);
-      if (member) {
+      if (member && normalizeMemberStatus(member) === "active") {
         showDashboard(member);
         return;
       }

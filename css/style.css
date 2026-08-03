@@ -2227,6 +2227,12 @@ button { cursor: pointer; border: none; background: none; }
   }
 }
 
+@media (min-width: 960px) {
+  .resource-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 .resource-block {
   background: var(--white);
   padding: 1.25rem;
