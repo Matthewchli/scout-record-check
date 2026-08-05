@@ -8928,7 +8928,10 @@
           "examiner": "謝志安先生",
           "examinerTitle": "童軍區長",
           "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
+          "certificateNumber": "STE/S/FY2627/019",
+          "certificateCopy": "assets/certificates/2026000188_手藝章_STE-S-FY2627-019_badge.jpeg",
+          "certificateCopyTitle": "專科徽章證書"
         },
         {
           "name": "攝影章",
@@ -8943,7 +8946,10 @@
           "examiner": "謝志安先生",
           "examinerTitle": "童軍區長",
           "noticeUrl": "assets/notices/20260705-specialty-assessment-day.pdf",
-          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026"
+          "noticeTitle": "沙田東區 童軍專科徽章考驗日2026",
+          "certificateNumber": "STE/S/FY2627/117",
+          "certificateCopy": "assets/certificates/2026000188_攝影章_STE-S-FY2627-117_badge.jpeg",
+          "certificateCopyTitle": "專科徽章證書"
         },
         {
           "name": "單車章",
@@ -8956,7 +8962,9 @@
           "assessmentDate": "2026-02-28",
           "syllabusKey": "interest:單車",
           "examiner": "李載禧先生",
-          "examinerTitle": "訓練員"
+          "examinerTitle": "訓練員",
+          "certificateCopy": "assets/certificates/2026000188_單車章_nocert_badge.jpeg",
+          "certificateCopyTitle": "專科徽章證書"
         }
       ],
       "awards": [],
