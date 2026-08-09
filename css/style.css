@@ -1311,6 +1311,7 @@ button { cursor: pointer; border: none; background: none; }
 .group-water { border-top: 3px solid #1f6f8b; }
 .group-aviation { border-top: 3px solid #5b4b8a; }
 .group-other { border-top: 3px solid #6b6b6b; }
+.group-active-citizen { border-top: 3px solid #c45c26; }
 .award-group { border-top: 3px solid var(--green-soft); }
 
 .badge-list {
@@ -1402,6 +1403,7 @@ button { cursor: pointer; border: none; background: none; }
 .group-water .badge-item { border-left-color: #1f6f8b; }
 .group-aviation .badge-item { border-left-color: #5b4b8a; }
 .group-other .badge-item { border-left-color: #6b6b6b; }
+.group-active-citizen .badge-item { border-left-color: #c45c26; }
 
 .badge-item.award {
   border-left-color: var(--green-soft);
@@ -1464,6 +1466,18 @@ button { cursor: pointer; border: none; background: none; }
 .specialty-gallery-group.group-water { border-top: 3px solid #1f6f8b; }
 .specialty-gallery-group.group-aviation { border-top: 3px solid #5b4b8a; }
 .specialty-gallery-group.group-other { border-top: 3px solid #6b6b6b; }
+.specialty-gallery-group.group-activeCitizen { border-top: 3px solid #c45c26; }
+
+.resources-specialty-gallery {
+  margin-top: 0.35rem;
+}
+
+.resources-specialty-intro {
+  margin: 0.85rem 0 1rem;
+  font-size: 0.92rem;
+  color: var(--ink-muted);
+  line-height: 1.55;
+}
 
 .specialty-gallery-grid {
   display: grid;

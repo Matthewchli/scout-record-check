@@ -1482,6 +1482,11 @@
     { key: "water", label: "水上活動組", selector: "#specialty-water" },
     { key: "aviation", label: "航空活動組", selector: "#specialty-aviation" },
     { key: "other", label: "其他獎章及徽章", selector: "#specialty-other" },
+    {
+      key: "activeCitizen",
+      label: "「積極公民」獎章系列",
+      selector: "#specialty-active-citizen",
+    },
   ];
 
   const SPECIALTY_CATEGORY_MAP = {
@@ -1496,6 +1501,8 @@
     航空活動徽章: "aviation",
     其他獎章及徽章: "other",
     其他: "other",
+    "「積極公民」獎章系列": "activeCitizen",
+    積極公民獎章系列: "activeCitizen",
   };
 
   function normalizeSpecialtyGroup(badge) {
@@ -1518,6 +1525,7 @@
       water: [],
       aviation: [],
       other: [],
+      activeCitizen: [],
     };
 
     for (const badge of badges) {
@@ -2068,8 +2076,11 @@
   }
 
   function findCommonLinkByPage(pageId) {
-    const commonLinks = (resources && (resources.commonLinks || resources.links)) || [];
-    return commonLinks.find((link) => link.type === "page" && link.page === pageId) || null;
+    const pools = [
+      ...((resources && (resources.commonLinks || resources.links)) || []),
+      ...((resources && resources.commonForms) || []),
+    ];
+    return pools.find((link) => link.type === "page" && link.page === pageId) || null;
   }
 
   function renderCommonLinkItem(link) {
@@ -2170,7 +2181,13 @@
 
   function showResourcesView(container, viewId) {
     if (!container) return;
-    const allowed = new Set(["home", "skills", "units"]);
+    const allowed = new Set([
+      "home",
+      "skills",
+      "units",
+      "specialty-gallery",
+      "specialty-detail",
+    ]);
     const next = allowed.has(viewId) ? viewId : "home";
     container.querySelectorAll("[data-resources-view]").forEach((view) => {
       view.hidden = view.dataset.resourcesView !== next;
@@ -2186,15 +2203,157 @@
     if (container) showResourcesView(container, "home");
   }
 
+  function resolveSpecialtySyllabus(syllabusKey) {
+    const map = (specialtySyllabus && specialtySyllabus.badges) || {};
+    let syl = map[syllabusKey] || null;
+    if (!syl && syllabusKey && syllabusKey.includes(":")) {
+      const groupKey = syllabusKey.slice(0, syllabusKey.indexOf(":"));
+      const name = syllabusKey.slice(syllabusKey.indexOf(":") + 1);
+      syl =
+        Object.values(map).find(
+          (b) =>
+            b.group === groupKey && (b.name === name || b.key === syllabusKey)
+        ) || null;
+    }
+    return syl;
+  }
+
+  function renderResourcesSpecialtyGalleryHtml() {
+    const groups = (specialtyGallery && specialtyGallery.groups) || [];
+    if (!groups.length) {
+      return `<p class="empty-state">暫無圖鑑資料</p>`;
+    }
+    return `
+      <div class="specialty-gallery-content resources-specialty-gallery">
+        ${groups
+          .map((group) => {
+            const cards = (group.items || [])
+              .map((item) => {
+                const key = item.key || `${group.key}:${item.name}`;
+                const earned = memberHasSpecialtyBadge(item.name, group.key);
+                return `
+                <button
+                  type="button"
+                  class="specialty-gallery-card${earned ? " is-earned" : ""}"
+                  data-resources-specialty-key="${escapeHtml(key)}"
+                >
+                  ${
+                    earned
+                      ? `<span class="badge-earned-mark" title="已考獲" aria-label="已考獲"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9.2 16.6 4.8 12.2l1.4-1.4 3 3 8-8 1.4 1.4-9.4 9.4z"/></svg></span>`
+                      : ""
+                  }
+                  <img
+                    class="specialty-gallery-img"
+                    src="${escapeHtml(item.icon)}"
+                    alt="${escapeHtml(item.name)}"
+                    width="96"
+                    height="96"
+                    loading="lazy"
+                  />
+                  <span class="specialty-gallery-name">${escapeHtml(item.name)}</span>
+                </button>`;
+              })
+              .join("");
+            return `
+              <section class="specialty-gallery-group group-${escapeHtml(group.key)}" aria-label="${escapeHtml(group.label)}">
+                <h4 class="subsection-title">${escapeHtml(group.label)}</h4>
+                <div class="specialty-gallery-grid">${cards}</div>
+              </section>`;
+          })
+          .join("")}
+      </div>`;
+  }
+
+  function showResourcesSpecialtyDetail(container, syllabusKey) {
+    if (!container || !syllabusKey) return;
+    const detailRoot = container.querySelector(
+      '[data-resources-view="specialty-detail"]'
+    );
+    if (!detailRoot) return;
+
+    const syl = resolveSpecialtySyllabus(syllabusKey);
+    const [groupKey, fallbackName] = syllabusKey.includes(":")
+      ? [
+          syllabusKey.slice(0, syllabusKey.indexOf(":")),
+          syllabusKey.slice(syllabusKey.indexOf(":") + 1),
+        ]
+      : ["other", syllabusKey];
+    const name = (syl && syl.name) || fallbackName;
+    const groupLabel =
+      (syl && syl.category) ||
+      (SPECIALTY_GROUPS.find((g) => g.key === groupKey) || {}).label ||
+      "";
+    const galleryItems =
+      (specialtyGallery &&
+        specialtyGallery.groups &&
+        specialtyGallery.groups.flatMap((g) =>
+          (g.items || []).map((i) => ({ ...i, groupKey: g.key }))
+        )) ||
+      [];
+    const iconSrc =
+      galleryItems.find((i) => i.key === syllabusKey)?.icon ||
+      galleryItems.find((i) => i.groupKey === groupKey && i.name === name)
+        ?.icon ||
+      `assets/specialty/${groupKey}/${name}.png`;
+    const earned = memberHasSpecialtyBadge(name, groupKey);
+
+    detailRoot.innerHTML = `
+      <button type="button" class="btn-back" data-resources-specialty-back>← 返回圖鑑</button>
+      <header class="badge-detail-header">
+        ${
+          iconSrc
+            ? `<img class="badge-detail-icon" src="${escapeHtml(iconSrc)}" alt="${escapeHtml(name)}圖示" width="96" height="96" />`
+            : ""
+        }
+        <div class="badge-detail-titles">
+          <div class="badge-detail-title-row">
+            <h2>${escapeHtml(name)}</h2>
+            ${earned ? `<span class="item-status is-done">已考獲</span>` : ""}
+          </div>
+          ${
+            syl && syl.englishName
+              ? `<p class="badge-detail-english">${escapeHtml(syl.englishName)}</p>`
+              : ""
+          }
+          ${groupLabel ? `<span class="prog-status">${escapeHtml(groupLabel)}</span>` : ""}
+        </div>
+      </header>
+      ${
+        syl && syl.intro
+          ? `<p class="resources-specialty-intro">${escapeHtml(syl.intro)}</p>`
+          : ""
+      }
+      <div class="badge-detail-sections">
+        ${renderSyllabusItemsPreview((syl && syl.items) || [])}
+      </div>
+    `;
+
+    const backBtn = detailRoot.querySelector("[data-resources-specialty-back]");
+    if (backBtn) {
+      backBtn.addEventListener("click", () => {
+        showResourcesView(container, "specialty-gallery");
+        window.scrollTo({ top: 0, behavior: "instant" });
+      });
+    }
+    showResourcesView(container, "specialty-detail");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   function bindResourcesNavigation(container) {
     container.querySelectorAll("[data-resources-page]").forEach((btn) => {
       btn.addEventListener("click", () => {
         showResourcesView(container, btn.dataset.resourcesPage);
+        window.scrollTo({ top: 0, behavior: "instant" });
       });
     });
     container.querySelectorAll("[data-resources-back]").forEach((btn) => {
       btn.addEventListener("click", () => {
         showResourcesView(container, "home");
+      });
+    });
+    container.querySelectorAll("[data-resources-specialty-key]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        showResourcesSpecialtyDetail(container, btn.dataset.resourcesSpecialtyKey);
       });
     });
   }
@@ -2236,8 +2395,11 @@
 
     const skillsLink = findCommonLinkByPage("skills");
     const unitsLink = findCommonLinkByPage("units");
+    const galleryLink = findCommonLinkByPage("specialty-gallery");
     const skillsTitle = (skillsLink && skillsLink.title) || "童軍基本技能教材";
     const unitsTitle = (unitsLink && unitsLink.title) || "童軍單位網頁";
+    const galleryTitle =
+      (galleryLink && galleryLink.title) || "專科徽章及獎章圖鑑";
 
     container.innerHTML = `
       <div class="resources-view" data-resources-view="home">
@@ -2251,8 +2413,8 @@
             <ul class="link-list">${linksHtml || `<li class="empty-state">暫無連結</li>`}</ul>
           </section>
           <section class="resource-block">
-            <h3 class="subsection-title">常用表格</h3>
-            <ul class="link-list">${formsHtml || `<li class="empty-state">暫無表格</li>`}</ul>
+            <h3 class="subsection-title">常用表格及資料</h3>
+            <ul class="link-list">${formsHtml || `<li class="empty-state">暫無資料</li>`}</ul>
           </section>
         </div>
       </div>
@@ -2270,6 +2432,15 @@
         </header>
         ${unitsLink ? renderUnitsPageContent(unitsLink) : `<p class="empty-state">暫無單位資料</p>`}
       </div>
+      <div class="resources-view resources-subpage" data-resources-view="specialty-gallery" hidden>
+        <button type="button" class="btn-back" data-resources-back>← 返回常用表格及資料</button>
+        <header class="panel-header resources-subpage-header">
+          <h3 class="resources-subpage-title">${escapeHtml(galleryTitle)}</h3>
+          <p>點選徽章查看考核綱要</p>
+        </header>
+        ${renderResourcesSpecialtyGalleryHtml()}
+      </div>
+      <div class="resources-view resources-subpage" data-resources-view="specialty-detail" hidden></div>
     `;
     showResourcesView(container, "home");
     bindResourcesNavigation(container);

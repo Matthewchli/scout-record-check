@@ -18,6 +18,14 @@ const GROUP_MAP = {
   航空活動組: { key: "aviation", label: "航空活動組" },
   其他獎章: { key: "other", label: "其他獎章及徽章" },
   其他獎章及徽章: { key: "other", label: "其他獎章及徽章" },
+  "「積極公民」獎章系列": {
+    key: "activeCitizen",
+    label: "「積極公民」獎章系列",
+  },
+  積極公民獎章系列: {
+    key: "activeCitizen",
+    label: "「積極公民」獎章系列",
+  },
 };
 
 const NAME_ALIASES = {
@@ -38,6 +46,14 @@ function excelSerialToIso(value) {
 
 function parseActivityName(raw) {
   const text = String(raw || "").trim();
+  const series = text.match(/^「?積極公民」?獎章系列\s*[-－—]\s*(.+)$/);
+  if (series) {
+    return {
+      groupLabel: "「積極公民」獎章系列",
+      groupKey: "activeCitizen",
+      badgeName: series[1].trim(),
+    };
+  }
   const m = text.match(/^(.+?)\s*[-－—]\s*(.+)$/);
   if (!m) return null;
   const groupLabel = m[1].trim();
@@ -48,7 +64,7 @@ function parseActivityName(raw) {
 }
 
 function baseNameOf(badgeName, groupKey) {
-  if (groupKey === "other") return badgeName;
+  if (groupKey === "other" || groupKey === "activeCitizen") return badgeName;
   return badgeName.replace(/章$/, "").replace(/獎章$/, "");
 }
 

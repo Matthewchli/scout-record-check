@@ -324,9 +324,9 @@
           "key": "service:護養"
         },
         {
-          "name": "共融",
-          "icon": "assets/specialty/service/共融.png",
-          "key": "service:共融"
+          "name": "多元共融",
+          "icon": "assets/specialty/service/多元共融.png",
+          "key": "service:多元共融"
         },
         {
           "name": "消防",
@@ -561,6 +561,47 @@
           "name": "香港青年獎勵計劃",
           "icon": "assets/specialty/other/香港青年獎勵計劃.png",
           "key": "other:香港青年獎勵計劃"
+        }
+      ]
+    },
+    {
+      "key": "activeCitizen",
+      "label": "「積極公民」獎章系列",
+      "items": [
+        {
+          "name": "防騙先鋒章",
+          "icon": "assets/specialty/activeCitizen/防騙先鋒.png",
+          "key": "activeCitizen:防騙先鋒章"
+        },
+        {
+          "name": "保護兒童章",
+          "icon": "assets/specialty/activeCitizen/保護兒童.png",
+          "key": "activeCitizen:保護兒童章"
+        },
+        {
+          "name": "禁毒章",
+          "icon": "assets/specialty/activeCitizen/禁毒.png",
+          "key": "activeCitizen:禁毒章"
+        },
+        {
+          "name": "國家安全大使章",
+          "icon": "assets/specialty/activeCitizen/國家安全大使.png",
+          "key": "activeCitizen:國家安全大使章"
+        },
+        {
+          "name": "社區應急先鋒章",
+          "icon": "assets/specialty/activeCitizen/社區應急先鋒.png",
+          "key": "activeCitizen:社區應急先鋒章"
+        },
+        {
+          "name": "環保先鋒章",
+          "icon": "assets/specialty/activeCitizen/環保先鋒.png",
+          "key": "activeCitizen:環保先鋒章"
+        },
+        {
+          "name": "機電先鋒章",
+          "icon": "assets/specialty/activeCitizen/機電先鋒.png",
+          "key": "activeCitizen:機電先鋒章"
         }
       ]
     }
