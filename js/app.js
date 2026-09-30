@@ -24,6 +24,7 @@
   const ATTENDANCE_LABELS = {
     present: "出席",
     absent: "缺席",
+    unrecorded: "未登記",
   };
 
   /** 管理者帳號；activeYears 為可登入／有效的學年 id */
@@ -109,6 +110,22 @@
       photo: "assets/members/wu-yitong.png",
       activeYears: [...ALL_ADMIN_YEARS],
     },
+    {
+      name: "胡喬立",
+      scoutId: "1234",
+      role: "admin",
+      rank: "訓練員",
+      photo: "assets/members/2025045317.png",
+      activeYears: [...ALL_ADMIN_YEARS],
+    },
+    {
+      name: "高卓言",
+      scoutId: "1234",
+      role: "admin",
+      rank: "訓練員",
+      photo: "assets/members/2025045309.png",
+      activeYears: [...ALL_ADMIN_YEARS],
+    },
   ];
 
   const MEMBER_STATUS_LABELS = {
@@ -179,6 +196,7 @@
   const adminPreviewBar = $("#admin-preview-bar");
 
   let members = [];
+  let activityCatalog = [];
   let resources = null;
   let syllabus = null;
   let specialtySyllabus = null;
@@ -191,15 +209,17 @@
   let adminChartAnimFrames = new Set();
   let adminProgOverviewBadgeKey = "discovery";
   let adminProgOverviewZoom = 1;
+  let adminLeftMembersExpanded = false;
 
   /* ---------- Data ---------- */
 
   async function loadData() {
-    const [membersRes, syllabusRes, specialtyRes, galleryRes] = await Promise.all([
+    const [membersRes, syllabusRes, specialtyRes, galleryRes, activitiesRes] = await Promise.all([
       fetch("data/members.json", { cache: "no-store" }),
       fetch("data/progressive-syllabus.json", { cache: "no-store" }),
       fetch("data/specialty-syllabus.json", { cache: "no-store" }),
       fetch("data/specialty-gallery.json", { cache: "no-store" }),
+      fetch("data/activities.json", { cache: "no-store" }),
     ]);
     if (!membersRes.ok) throw new Error("無法載入成員資料");
     if (!syllabusRes.ok) throw new Error("無法載入獎章綱要");
@@ -211,6 +231,9 @@
     syllabus = await syllabusRes.json();
     specialtySyllabus = await specialtyRes.json();
     specialtyGallery = await galleryRes.json();
+    activityCatalog = activitiesRes.ok
+      ? ((await activitiesRes.json()).activities || [])
+      : [];
   }
 
   function findMember(name, scoutId) {
@@ -1776,9 +1799,11 @@
     });
   }
 
-  function renderSyllabusItemsPreview(items) {
+  function renderSyllabusItemsPreview(items, note = "") {
     if (!items.length) {
-      return `<p class="empty-state">暫無綱要分項資料</p>`;
+      return note
+        ? `<p class="badge-detail-note">${escapeHtml(note)}</p>`
+        : `<p class="empty-state">暫無綱要分項資料</p>`;
     }
     return `
       <section class="syllabus-section">
@@ -1802,7 +1827,8 @@
             })
             .join("")}
         </ul>
-      </section>`;
+      </section>
+      ${note ? `<p class="badge-detail-note">${escapeHtml(note)}</p>` : ""}`;
   }
 
   function showGalleryBadgeDetail(syllabusKey) {
@@ -1876,7 +1902,10 @@
     if (meta) meta.hidden = true;
 
     const sectionsEl = $("#specialty-detail-sections");
-    sectionsEl.innerHTML = renderSyllabusItemsPreview((syl && syl.items) || []);
+    sectionsEl.innerHTML = renderSyllabusItemsPreview(
+      (syl && syl.items) || [],
+      (syl && syl.note) || ""
+    );
 
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
@@ -1997,7 +2026,10 @@
     })();
 
     const sectionsEl = $("#specialty-detail-sections");
-    sectionsEl.innerHTML = renderSyllabusItemsPreview((syl && syl.items) || []);
+    sectionsEl.innerHTML = renderSyllabusItemsPreview(
+      (syl && syl.items) || [],
+      (syl && syl.note) || ""
+    );
 
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
@@ -2324,7 +2356,10 @@
           : ""
       }
       <div class="badge-detail-sections">
-        ${renderSyllabusItemsPreview((syl && syl.items) || [])}
+        ${renderSyllabusItemsPreview(
+          (syl && syl.items) || [],
+          (syl && syl.note) || ""
+        )}
       </div>
     `;
 
@@ -2501,6 +2536,22 @@
     });
   }
 
+  /** 已退隊：該學年曾在隊者；本學年另含上學年結束時退隊者 */
+  function getLeftMembersForGrid(yearId = adminSelectedYear) {
+    const yid = yearId || resolveAdminSelectedYear();
+    const year = ACADEMIC_YEARS.find((y) => y.id === yid);
+    const idx = ACADEMIC_YEARS.findIndex((y) => y.id === yid);
+    const prev = idx > 0 ? ACADEMIC_YEARS[idx - 1] : null;
+    return getAdminMembers().filter((m) => {
+      if (normalizeMemberStatus(m) !== "left") return false;
+      if (memberOnRosterInYear(m, yid)) return true;
+      if (!year || isPastAcademicYear(yid)) return false;
+      return Boolean(
+        prev && m.leftDate && m.leftDate >= prev.start && m.leftDate < year.start
+      );
+    });
+  }
+
   function englishSurname(member) {
     const en = String(member.englishName || "").trim();
     if (!en) return "";
@@ -2509,16 +2560,22 @@
 
   function collectMeetingDates() {
     const map = new Map();
+    for (const a of activityCatalog) {
+      if (!a || !a.date) continue;
+      map.set(a.date, {
+        date: a.date,
+        name: a.name || "",
+        type: a.type || "",
+      });
+    }
     for (const m of getAdminMembers()) {
       for (const r of m.attendance || []) {
         if (!r || !r.date) continue;
-        if (!map.has(r.date)) {
-          map.set(r.date, {
-            date: r.date,
-            name: r.name || "",
-            type: r.type || "",
-          });
-        }
+        map.set(r.date, {
+          date: r.date,
+          name: r.name || map.get(r.date)?.name || "",
+          type: r.type || map.get(r.date)?.type || "",
+        });
       }
     }
     return [...map.values()].sort((a, b) => b.date.localeCompare(a.date));
@@ -2805,9 +2862,13 @@
           .closest(".admin-bar-item")
           ?.querySelector("[data-admin-bar-rate]");
         if (valueNode) {
-          const present = valueNode.dataset.present || "0";
-          const total = valueNode.dataset.total || "0";
-          valueNode.textContent = `${Math.round(target * e)}%（${present}/${total}）`;
+          if (valueNode.dataset.recorded === "0") {
+            valueNode.textContent = "尚未點名";
+          } else {
+            const present = valueNode.dataset.present || "0";
+            const total = valueNode.dataset.total || "0";
+            valueNode.textContent = `${Math.round(target * e)}%（${present}/${total}）`;
+          }
         }
       });
     }
@@ -2974,7 +3035,11 @@
       !adminSelectedDate ||
       !yearDates.some((d) => d.date === adminSelectedDate)
     ) {
-      adminSelectedDate = yearDates[0].date;
+      const today = todayISODate();
+      const pastOrToday = yearDates.filter((d) => d.date <= today);
+      adminSelectedDate = pastOrToday.length
+        ? pastOrToday[0].date
+        : yearDates[yearDates.length - 1].date;
     }
 
     syncAdminDateCombo(yearDates);
@@ -2987,6 +3052,10 @@
       (m) =>
         memberOnRosterInYear(m, adminSelectedYear) &&
         memberEligibleOnDate(m, adminSelectedDate)
+    );
+
+    const dateHasRecords = eligibleMembers.some((m) =>
+      getMemberAttendanceOnDate(m, adminSelectedDate)
     );
 
     const sectionBuckets = new Map();
@@ -3016,10 +3085,14 @@
       const countsForOverall = OVERALL_RATE_SECTIONS.has(sec);
       for (const m of list) {
         const rec = getMemberAttendanceOnDate(m, adminSelectedDate);
-        const status = rec ? normalizeAttendanceStatus(rec) : "absent";
+        const status = rec
+          ? normalizeAttendanceStatus(rec)
+          : dateHasRecords
+            ? "absent"
+            : "unrecorded";
         const note = rec ? formatAttendanceNote(rec) : "";
         if (status === "present") present += 1;
-        if (countsForOverall) {
+        if (countsForOverall && status !== "unrecorded") {
           overallTotal += 1;
           if (status === "present") overallPresent += 1;
         }
@@ -3038,12 +3111,16 @@
       }
 
       const total = list.length;
-      const rate = total ? Math.round((present / total) * 100) : 0;
-      sectionStats.push({ section: sec, present, total, rate });
+      const rate = dateHasRecords && total ? Math.round((present / total) * 100) : 0;
+      sectionStats.push({ section: sec, present, total, rate, recorded: dateHasRecords });
 
       tableBodyParts.push(`
         <tr class="admin-section-row">
-          <td colspan="4">${escapeHtml(sec)}（出席 ${present}/${total} · ${rate}%）</td>
+          <td colspan="4">${escapeHtml(sec)}（${
+            dateHasRecords
+              ? `出席 ${present}/${total} · ${rate}%`
+              : "尚未點名"
+          }）</td>
         </tr>
         ${memberRows.join("")}
       `);
@@ -3067,7 +3144,11 @@
               </div>
             </div>
           </div>
-          <p class="admin-ring-caption">出席 ${overallPresent}／${overallTotal} 人</p>
+          <p class="admin-ring-caption">${
+            dateHasRecords
+              ? `出席 ${overallPresent}／${overallTotal} 人`
+              : "尚未點名"
+          }</p>
         </div>
         <div class="admin-chart-bars-wrap">
           <h3 class="admin-chart-title">各小隊出席率</h3>
@@ -3078,7 +3159,9 @@
                 <li class="admin-bar-item">
                   <div class="admin-bar-meta">
                     <span class="admin-bar-label">${escapeHtml(s.section)}</span>
-                    <span class="admin-bar-value" data-admin-bar-rate data-present="${s.present}" data-total="${s.total}">0%（${s.present}/${s.total}）</span>
+                    <span class="admin-bar-value" data-admin-bar-rate data-recorded="${s.recorded ? "1" : "0"}" data-present="${s.present}" data-total="${s.recorded ? s.total : 0}">${
+                      s.recorded ? `0%（${s.present}/${s.total}）` : "尚未點名"
+                    }</span>
                   </div>
                   <div class="admin-bar-track" aria-hidden="true">
                     <div class="admin-bar-fill" data-admin-bar-target="${s.rate}" style="width:0%"></div>
@@ -3123,10 +3206,14 @@
     }
     syncAdminMembersYearSelect(adminSelectedYear);
 
-    const roster = getAdminRosterMembers(adminSelectedYear);
+    const activeRoster = getAdminRosterMembers(adminSelectedYear).filter(
+      (m) => normalizeMemberStatus(m) !== "left"
+    );
+    const leftRoster = getLeftMembersForGrid(adminSelectedYear);
+    const roster = [...activeRoster, ...leftRoster];
     const leaderRanks = new Set(["團隊長", "隊長", "副隊", "副隊長"]);
 
-    function memberCard(m) {
+    function memberCard(m, rankText) {
       const mStatus = normalizeMemberStatus(m);
       const statusBadge =
         mStatus === "active"
@@ -3139,12 +3226,12 @@
         <button type="button" class="admin-member-card" data-admin-member-id="${escapeHtml(m.scoutId)}">
           ${avatar}
           <span class="admin-member-name">${escapeHtml(m.name)}${statusBadge}</span>
-          <span class="admin-member-rank">${escapeHtml(m.rank || "")}</span>
+          <span class="admin-member-rank">${escapeHtml(rankText || m.rank || "")}</span>
         </button>`;
     }
 
     const bySection = new Map();
-    for (const m of roster) {
+    for (const m of activeRoster) {
       const sec = m.section || "其他";
       if (!bySection.has(sec)) bySection.set(sec, []);
       bySection.get(sec).push(m);
@@ -3155,12 +3242,12 @@
       ...[...bySection.keys()].filter((s) => !SECTION_ORDER.includes(s)),
     ];
 
-    if (!orderedSections.length) {
+    if (!orderedSections.length && !leftRoster.length) {
       grid.innerHTML = `<p class="empty-state">此學年沒有符合篩選的成員</p>`;
       return;
     }
 
-    grid.innerHTML = orderedSections
+    const patrolHtml = orderedSections
       .map((sec) => {
         const list = sortMembersForPatrol(bySection.get(sec) || []);
         const leaders = list.filter((m) => leaderRanks.has(m.rank));
@@ -3170,15 +3257,64 @@
             <h3 class="admin-patrol-title">${escapeHtml(sec)}（${list.length} 人）</h3>
             <div class="admin-patrol-layout">
               <div class="admin-patrol-leaders" aria-label="隊長及副隊長">
-                ${leaders.map(memberCard).join("")}
+                ${leaders.map((m) => memberCard(m)).join("")}
               </div>
               <div class="admin-patrol-members" aria-label="隊員">
-                ${others.map(memberCard).join("")}
+                ${others.map((m) => memberCard(m)).join("")}
               </div>
             </div>
           </section>`;
       })
       .join("");
+
+    const leftSorted = SECTION_ORDER.flatMap((sec) =>
+      sortMembersForPatrol(leftRoster.filter((m) => m.section === sec))
+    ).concat(
+      sortMembersForPatrol(
+        leftRoster.filter((m) => !SECTION_ORDER.includes(m.section))
+      )
+    );
+    const leftExpanded = adminLeftMembersExpanded;
+    const leftHtml = leftSorted.length
+      ? `
+        <section class="admin-patrol-block admin-patrol-block--left${leftExpanded ? "" : " is-collapsed"}" aria-label="已退隊">
+          <button
+            type="button"
+            class="admin-left-toggle"
+            id="admin-left-toggle"
+            aria-expanded="${leftExpanded ? "true" : "false"}"
+            aria-controls="admin-left-members"
+          >
+            <span class="admin-left-chevron" aria-hidden="true"></span>
+            <span class="admin-patrol-title">已退隊（${leftSorted.length} 人）</span>
+          </button>
+          <div id="admin-left-members" class="admin-patrol-layout"${leftExpanded ? "" : " hidden"}>
+            <div class="admin-patrol-members" aria-label="已退隊隊員">
+              ${leftSorted
+                .map((m) => {
+                  const rankText = [m.section, m.rank].filter(Boolean).join(" · ");
+                  return memberCard(m, rankText);
+                })
+                .join("")}
+            </div>
+          </div>
+        </section>`
+      : "";
+
+    grid.innerHTML = patrolHtml + leftHtml;
+
+    const leftToggle = $("#admin-left-toggle", grid);
+    const leftBody = $("#admin-left-members", grid);
+    const leftBlock = grid.querySelector(".admin-patrol-block--left");
+    if (leftToggle && leftBody && leftBlock) {
+      leftToggle.addEventListener("click", () => {
+        adminLeftMembersExpanded = !adminLeftMembersExpanded;
+        const open = adminLeftMembersExpanded;
+        leftToggle.setAttribute("aria-expanded", open ? "true" : "false");
+        leftBody.hidden = !open;
+        leftBlock.classList.toggle("is-collapsed", !open);
+      });
+    }
 
     grid.querySelectorAll("[data-admin-member-id]").forEach((btn) => {
       btn.addEventListener("click", () => {

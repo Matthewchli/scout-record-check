@@ -3883,7 +3883,8 @@
       ],
       "specialtyBadges": [],
       "awards": [],
-      "status": "active"
+      "status": "left",
+      "leftDate": "2026-08-31"
     },
     {
       "name": "李在立",
@@ -4679,7 +4680,8 @@
       ],
       "specialtyBadges": [],
       "awards": [],
-      "status": "active"
+      "status": "left",
+      "leftDate": "2026-08-31"
     },
     {
       "name": "李凱晴",
@@ -6798,7 +6800,8 @@
         }
       ],
       "awards": [],
-      "status": "active"
+      "status": "leader",
+      "leaderFrom": "2026-09-01"
     },
     {
       "name": "馬皓哲",
@@ -7847,7 +7850,8 @@
         }
       ],
       "awards": [],
-      "status": "active"
+      "status": "leader",
+      "leaderFrom": "2026-09-01"
     },
     {
       "name": "張芯語",
@@ -9795,7 +9799,8 @@
       ],
       "specialtyBadges": [],
       "awards": [],
-      "status": "active"
+      "status": "left",
+      "leftDate": "2026-08-31"
     },
     {
       "name": "陳子峻",
@@ -11758,7 +11763,8 @@
       ],
       "specialtyBadges": [],
       "awards": [],
-      "status": "active"
+      "status": "left",
+      "leftDate": "2026-08-31"
     },
     {
       "name": "黃明毅",
@@ -14439,7 +14445,8 @@
       ],
       "specialtyBadges": [],
       "awards": [],
-      "status": "active"
+      "status": "left",
+      "leftDate": "2026-08-31"
     },
     {
       "name": "蔡卓妍",
@@ -14868,7 +14875,8 @@
       ],
       "specialtyBadges": [],
       "awards": [],
-      "status": "active"
+      "status": "left",
+      "leftDate": "2026-08-31"
     },
     {
       "name": "蔡振熙",
@@ -15121,7 +15129,8 @@
         }
       ],
       "awards": [],
-      "status": "active"
+      "status": "left",
+      "leftDate": "2026-08-31"
     },
     {
       "name": "蔣禮謙",
@@ -15660,7 +15669,8 @@
         }
       ],
       "awards": [],
-      "status": "active"
+      "status": "left",
+      "leftDate": "2026-08-31"
     },
     {
       "name": "盧樂欣",
@@ -16814,7 +16824,8 @@
       ],
       "specialtyBadges": [],
       "awards": [],
-      "status": "active"
+      "status": "left",
+      "leftDate": "2026-08-31"
     },
     {
       "name": "羅梓渘",
@@ -17019,7 +17030,8 @@
       ],
       "specialtyBadges": [],
       "awards": [],
-      "status": "active"
+      "status": "left",
+      "leftDate": "2026-08-31"
     },
     {
       "name": "羅臻琳",
@@ -17824,7 +17836,8 @@
         }
       ],
       "awards": [],
-      "status": "active"
+      "status": "left",
+      "leftDate": "2026-08-31"
     }
   ]
 }

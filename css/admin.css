@@ -1122,6 +1122,46 @@ body.admin-prog-detail-open {
   color: var(--green-deep);
 }
 
+.admin-patrol-block--left {
+  background: #faf6f3;
+}
+
+.admin-patrol-block--left.is-collapsed {
+  padding-bottom: 1rem;
+}
+
+.admin-left-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.admin-left-toggle .admin-patrol-title {
+  margin: 0;
+  color: #8a3d28;
+}
+
+.admin-left-chevron {
+  flex-shrink: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid #8a3d28;
+  border-bottom: 2px solid #8a3d28;
+  transform: rotate(-45deg);
+  transition: transform 0.2s ease;
+}
+
+.admin-left-toggle[aria-expanded="true"] .admin-left-chevron {
+  transform: rotate(45deg);
+}
+
 .admin-patrol-layout {
   display: grid;
   grid-template-columns: 1fr;

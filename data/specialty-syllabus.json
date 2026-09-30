@@ -1086,6 +1086,61 @@
         }
       ]
     },
+    "skill:原野烹飪": {
+      "key": "skill:原野烹飪",
+      "name": "原野烹飪",
+      "englishName": "Backwoods Cook",
+      "group": "skill",
+      "category": "技能組",
+      "intro": "",
+      "note": "完成此章而學習或練習的時間不少於六個月，可與香港青年獎勵計劃銅章級技能科之相應項目對等。",
+      "items": [
+        {
+          "id": "item-1",
+          "title": "1. 解釋「燃燒四面體」的原理。",
+          "details": []
+        },
+        {
+          "id": "item-2",
+          "title": "2. 懂得選擇合適的天然物品作為燃料。",
+          "details": []
+        },
+        {
+          "id": "item-3",
+          "title": "3. 示範正確使用潛在危險工具的方法。",
+          "details": []
+        },
+        {
+          "id": "item-4",
+          "title": "4. 示範搭建柴架的正確方法。",
+          "details": []
+        },
+        {
+          "id": "item-5",
+          "title": "5. 懂得利用天然物料，以不多於十支火柴在二十分鐘內生火。",
+          "details": []
+        },
+        {
+          "id": "item-6",
+          "title": "6. 以原野烹飪方法（不用任何炊具）煮熟下列其中四種食物：",
+          "details": [
+            "(a) 薯仔蛋或洋蔥蛋；",
+            "(b) 麵粉團；",
+            "(c) 雞肉；",
+            "(d) 魚；",
+            "(e) 飯；",
+            "(f) 水；",
+            "(g) 蛋糕；",
+            "(h) 其他相若之食物。"
+          ]
+        },
+        {
+          "id": "item-7",
+          "title": "7. 認識野外生火的安全守則。",
+          "details": []
+        }
+      ]
+    },
     "skill:探險": {
       "key": "skill:探險",
       "name": "探險",
@@ -2229,7 +2284,7 @@
     "instructor:原野烹飪": {
       "key": "instructor:原野烹飪",
       "name": "原野烹飪",
-      "englishName": "",
+      "englishName": "Backwoods Cook",
       "group": "instructor",
       "category": "教導組",
       "intro": "",
@@ -2251,7 +2306,7 @@
           "details": []
         }
       ],
-      "relatedKey": null
+      "relatedKey": "skill:原野烹飪"
     },
     "instructor:氣象": {
       "key": "instructor:氣象",

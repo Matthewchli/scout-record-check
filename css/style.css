@@ -2218,6 +2218,11 @@ button { cursor: pointer; border: none; background: none; }
   color: var(--danger);
 }
 
+.status-unrecorded {
+  background: rgba(90, 90, 90, 0.08);
+  color: var(--ink-muted);
+}
+
 .att-note {
   font-size: 0.85rem;
   color: var(--ink-muted);
