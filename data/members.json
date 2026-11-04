@@ -1284,12 +1284,6 @@
             "note": "消防及救護教育中心暨博物館"
           },
           {
-            "date": "2026-02-28",
-            "name": "單車活動",
-            "type": "戶外",
-            "note": "大圍至白石角"
-          },
-          {
             "date": "2025-11-23",
             "name": "步行籌款日",
             "type": "戶外",
@@ -2657,6 +2651,12 @@
         "campingCount": 3,
         "outdoorActivities": [
           {
+            "date": "2026-09-05",
+            "name": "高結構繩網",
+            "type": "戶外",
+            "note": "王兆生領袖訓練中心"
+          },
+          {
             "date": "2026-04-18",
             "name": "參觀博物館",
             "type": "戶外",
@@ -2743,7 +2743,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -2778,7 +2778,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "absent",
           "note": ""
@@ -2792,7 +2792,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -3259,7 +3259,7 @@
       "photo": "assets/members/2025021995.png",
       "activity": {
         "attendanceRate": 75,
-        "serviceHours": 34,
+        "serviceHours": 42,
         "campingCount": 0,
         "outdoorActivities": [
           {
@@ -3288,6 +3288,12 @@
           }
         ],
         "serviceRecords": [
+          {
+            "date": "2026-09-17",
+            "name": "學校水運會",
+            "hours": 8,
+            "note": ""
+          },
           {
             "date": "2026-05-16",
             "name": "中六畢業典禮",
@@ -3324,7 +3330,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -3359,7 +3365,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "present",
           "note": ""
@@ -3373,7 +3379,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -3785,7 +3791,7 @@
       "scoutId": "2026000238",
       "englishName": "YU Sum Pui",
       "troop": "新界東第1558旅",
-      "section": "新成員",
+      "section": "未分配小隊",
       "rank": "隊員",
       "joinDate": "2025-10-25",
       "photo": null,
@@ -4009,7 +4015,7 @@
       "photo": "assets/members/2025045135.png",
       "activity": {
         "attendanceRate": 75,
-        "serviceHours": 44,
+        "serviceHours": 52,
         "campingCount": 2,
         "outdoorActivities": [
           {
@@ -4032,6 +4038,12 @@
           }
         ],
         "serviceRecords": [
+          {
+            "date": "2026-09-17",
+            "name": "學校水運會",
+            "hours": 8,
+            "note": ""
+          },
           {
             "date": "2026-07-03",
             "name": "學校時裝表演",
@@ -4093,7 +4105,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -4128,7 +4140,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "present",
           "note": ""
@@ -4142,7 +4154,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -4661,7 +4673,7 @@
       "scoutId": "2026000204",
       "englishName": "LI Wing Ki",
       "troop": "新界東第1558旅",
-      "section": "新成員",
+      "section": "未分配小隊",
       "rank": "隊員",
       "joinDate": "2025-10-25",
       "photo": null,
@@ -4862,9 +4874,15 @@
       "photo": "assets/members/2025021912.png",
       "activity": {
         "attendanceRate": 85,
-        "serviceHours": 45,
+        "serviceHours": 53,
         "campingCount": 2,
         "outdoorActivities": [
+          {
+            "date": "2026-11-01",
+            "name": "香港童軍大會操",
+            "type": "戶外",
+            "note": "香港大球場"
+          },
           {
             "date": "2025-11-23",
             "name": "步行籌款日",
@@ -4885,6 +4903,12 @@
           }
         ],
         "serviceRecords": [
+          {
+            "date": "2026-09-17",
+            "name": "學校水運會",
+            "hours": 8,
+            "note": ""
+          },
           {
             "date": "2026-07-03",
             "name": "學校時裝表演",
@@ -4946,7 +4970,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -4981,7 +5005,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "present",
           "note": ""
@@ -4995,7 +5019,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -5530,6 +5554,12 @@
         "campingCount": 3,
         "outdoorActivities": [
           {
+            "date": "2026-09-05",
+            "name": "高結構繩網",
+            "type": "戶外",
+            "note": "王兆生領袖訓練中心"
+          },
+          {
             "date": "2026-04-18",
             "name": "參觀博物館",
             "type": "戶外",
@@ -5604,7 +5634,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -5639,7 +5669,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "absent",
           "note": ""
@@ -5653,7 +5683,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -6125,7 +6155,7 @@
       "photo": "assets/members/2019048160.png",
       "activity": {
         "attendanceRate": 43,
-        "serviceHours": 40,
+        "serviceHours": 48,
         "campingCount": 1,
         "outdoorActivities": [
           {
@@ -6142,6 +6172,12 @@
           }
         ],
         "serviceRecords": [
+          {
+            "date": "2026-09-17",
+            "name": "學校水運會",
+            "hours": 8,
+            "note": ""
+          },
           {
             "date": "2026-03-26",
             "name": "學校陸運會",
@@ -6164,7 +6200,7 @@
             "date": "2025-07-04",
             "name": "學校時裝表演",
             "hours": 6,
-            "note": "事假"
+            "note": ""
           },
           {
             "date": "2025-04-10",
@@ -6191,7 +6227,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -6226,7 +6262,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "present",
           "note": ""
@@ -6240,7 +6276,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -7240,7 +7276,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -7275,7 +7311,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "absent",
           "note": ""
@@ -7289,7 +7325,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -8291,7 +8327,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -8326,7 +8362,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "absent",
           "note": ""
@@ -8340,7 +8376,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -8586,6 +8622,12 @@
         "campingCount": 3,
         "outdoorActivities": [
           {
+            "date": "2026-09-05",
+            "name": "高結構繩網",
+            "type": "戶外",
+            "note": "王兆生領袖訓練中心"
+          },
+          {
             "date": "2026-04-18",
             "name": "參觀博物館",
             "type": "戶外",
@@ -8672,7 +8714,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -8707,7 +8749,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "absent",
           "note": ""
@@ -8721,7 +8763,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -9152,9 +9194,21 @@
       "photoPosition": "center 20%",
       "activity": {
         "attendanceRate": 89,
-        "serviceHours": 13,
+        "serviceHours": 21,
         "campingCount": 1,
         "outdoorActivities": [
+          {
+            "date": "2026-11-01",
+            "name": "香港童軍大會操",
+            "type": "戶外",
+            "note": "香港大球場"
+          },
+          {
+            "date": "2026-09-05",
+            "name": "高結構繩網",
+            "type": "戶外",
+            "note": "王兆生領袖訓練中心"
+          },
           {
             "date": "2026-02-28",
             "name": "單車活動",
@@ -9175,6 +9229,12 @@
           }
         ],
         "serviceRecords": [
+          {
+            "date": "2026-09-17",
+            "name": "學校水運會",
+            "hours": 8,
+            "note": ""
+          },
           {
             "date": "2026-05-16",
             "name": "中六畢業典禮",
@@ -9200,7 +9260,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -9235,7 +9295,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "present",
           "note": ""
@@ -9249,7 +9309,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -9573,27 +9633,6 @@
       },
       "attendance": [
         {
-          "date": "2026-11-01",
-          "name": "童軍會操",
-          "type": "戶外",
-          "status": "absent",
-          "note": ""
-        },
-        {
-          "date": "2026-10-31",
-          "name": "恆常集會",
-          "type": "集會",
-          "status": "absent",
-          "note": ""
-        },
-        {
-          "date": "2026-10-24",
-          "name": "恆常集會",
-          "type": "集會",
-          "status": "absent",
-          "note": ""
-        },
-        {
           "date": "2026-10-10",
           "name": "恆常集會",
           "type": "集會",
@@ -9609,7 +9648,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "absent",
           "note": ""
@@ -9623,7 +9662,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -10012,7 +10051,8 @@
       ],
       "specialtyBadges": [],
       "awards": [],
-      "status": "active"
+      "status": "left",
+      "leftDate": "2026-10-24"
     },
     {
       "name": "郭箴然",
@@ -10429,9 +10469,15 @@
       "photo": "assets/members/2025045218.png",
       "activity": {
         "attendanceRate": 77,
-        "serviceHours": 39,
+        "serviceHours": 47,
         "campingCount": 2,
         "outdoorActivities": [
+          {
+            "date": "2026-11-01",
+            "name": "香港童軍大會操",
+            "type": "戶外",
+            "note": "香港大球場"
+          },
           {
             "date": "2026-04-18",
             "name": "參觀博物館",
@@ -10458,6 +10504,12 @@
           }
         ],
         "serviceRecords": [
+          {
+            "date": "2026-09-17",
+            "name": "學校水運會",
+            "hours": 8,
+            "note": ""
+          },
           {
             "date": "2026-07-03",
             "name": "學校時裝表演",
@@ -10513,7 +10565,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -10548,7 +10600,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "present",
           "note": ""
@@ -10562,7 +10614,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -11062,7 +11114,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "absent",
           "note": ""
@@ -11076,7 +11128,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -11311,9 +11363,21 @@
       "photo": "assets/members/2025098357.png",
       "activity": {
         "attendanceRate": 74,
-        "serviceHours": 10,
+        "serviceHours": 18,
         "campingCount": 0,
         "outdoorActivities": [
+          {
+            "date": "2026-11-01",
+            "name": "香港童軍大會操",
+            "type": "戶外",
+            "note": "香港大球場"
+          },
+          {
+            "date": "2026-09-05",
+            "name": "高結構繩網",
+            "type": "戶外",
+            "note": "王兆生領袖訓練中心"
+          },
           {
             "date": "2026-04-18",
             "name": "參觀博物館",
@@ -11328,6 +11392,12 @@
           }
         ],
         "serviceRecords": [
+          {
+            "date": "2026-09-17",
+            "name": "學校水運會",
+            "hours": 8,
+            "note": ""
+          },
           {
             "date": "2026-07-03",
             "name": "學校時裝表演",
@@ -11346,7 +11416,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -11381,7 +11451,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "present",
           "note": ""
@@ -11395,7 +11465,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -11619,9 +11689,15 @@
       "photo": "assets/members/2022015701.png",
       "activity": {
         "attendanceRate": 68,
-        "serviceHours": 45,
+        "serviceHours": 53,
         "campingCount": 2,
         "outdoorActivities": [
+          {
+            "date": "2026-09-05",
+            "name": "高結構繩網",
+            "type": "戶外",
+            "note": "王兆生領袖訓練中心"
+          },
           {
             "date": "2026-04-18",
             "name": "參觀博物館",
@@ -11642,6 +11718,12 @@
           }
         ],
         "serviceRecords": [
+          {
+            "date": "2026-09-17",
+            "name": "學校水運會",
+            "hours": 8,
+            "note": ""
+          },
           {
             "date": "2026-07-03",
             "name": "學校時裝表演",
@@ -11717,7 +11799,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "present",
           "note": ""
@@ -11731,7 +11813,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -12571,7 +12653,7 @@
       "scoutId": "2026000162",
       "englishName": "HUANG Mingyi",
       "troop": "新界東第1558旅",
-      "section": "新成員",
+      "section": "未分配小隊",
       "rank": "隊員",
       "joinDate": "2025-10-25",
       "photo": null,
@@ -12614,7 +12696,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "absent",
           "note": ""
@@ -12628,7 +12710,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -12857,9 +12939,15 @@
       "photo": "assets/members/2025021599.png",
       "activity": {
         "attendanceRate": 70,
-        "serviceHours": 32,
+        "serviceHours": 40,
         "campingCount": 1,
         "outdoorActivities": [
+          {
+            "date": "2026-09-05",
+            "name": "高結構繩網",
+            "type": "戶外",
+            "note": "王兆生領袖訓練中心"
+          },
           {
             "date": "2026-04-18",
             "name": "參觀博物館",
@@ -12886,6 +12974,12 @@
           }
         ],
         "serviceRecords": [
+          {
+            "date": "2026-09-17",
+            "name": "學校水運會",
+            "hours": 8,
+            "note": ""
+          },
           {
             "date": "2026-03-26",
             "name": "學校陸運會",
@@ -12929,7 +13023,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -12964,7 +13058,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "present",
           "note": ""
@@ -12978,7 +13072,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "present",
           "note": "事假"
@@ -13569,7 +13663,7 @@
             "date": "2026-05-16",
             "name": "中六畢業典禮",
             "hours": 5,
-            "note": "遲到"
+            "note": ""
           },
           {
             "date": "2025-11-16",
@@ -13609,7 +13703,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "absent",
           "note": ""
@@ -13623,7 +13717,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -14034,9 +14128,15 @@
       "photo": "assets/members/2025098332.png",
       "activity": {
         "attendanceRate": 89,
-        "serviceHours": 18,
+        "serviceHours": 26,
         "campingCount": 1,
         "outdoorActivities": [
+          {
+            "date": "2026-11-01",
+            "name": "香港童軍大會操",
+            "type": "戶外",
+            "note": "香港大球場"
+          },
           {
             "date": "2026-04-18",
             "name": "參觀博物館",
@@ -14057,6 +14157,12 @@
           }
         ],
         "serviceRecords": [
+          {
+            "date": "2026-09-17",
+            "name": "學校水運會",
+            "hours": 8,
+            "note": ""
+          },
           {
             "date": "2026-07-03",
             "name": "學校時裝表演",
@@ -14088,7 +14194,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -14123,7 +14229,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "present",
           "note": ""
@@ -14137,7 +14243,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -14468,6 +14574,18 @@
         "campingCount": 0,
         "outdoorActivities": [
           {
+            "date": "2026-11-01",
+            "name": "香港童軍大會操",
+            "type": "戶外",
+            "note": "香港大球場"
+          },
+          {
+            "date": "2026-09-05",
+            "name": "高結構繩網",
+            "type": "戶外",
+            "note": "王兆生領袖訓練中心"
+          },
+          {
             "date": "2026-04-18",
             "name": "參觀博物館",
             "type": "戶外",
@@ -14511,7 +14629,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -14546,7 +14664,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "absent",
           "note": ""
@@ -14560,7 +14678,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -14859,7 +14977,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "absent",
           "note": ""
@@ -14873,7 +14991,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -15288,7 +15406,7 @@
       "scoutId": "2026000196",
       "englishName": "LIU Chaoyang",
       "troop": "新界東第1558旅",
-      "section": "新成員",
+      "section": "未分配小隊",
       "rank": "隊員",
       "joinDate": "2025-10-25",
       "photo": null,
@@ -15315,7 +15433,7 @@
             "date": "2026-05-16",
             "name": "中六畢業典禮",
             "hours": 5,
-            "note": "遲到"
+            "note": ""
           }
         ],
         "campingRecords": []
@@ -15959,7 +16077,7 @@
       "scoutId": "2022068510",
       "englishName": "CHOY Chun Hei",
       "troop": "新界東第1558旅",
-      "section": "新成員",
+      "section": "未分配小隊",
       "rank": "隊員",
       "joinDate": "2025-10-25",
       "photo": null,
@@ -16759,7 +16877,7 @@
       "photo": "assets/members/2026000246.png",
       "activity": {
         "attendanceRate": 81,
-        "serviceHours": 13,
+        "serviceHours": 21,
         "campingCount": 1,
         "outdoorActivities": [
           {
@@ -16789,6 +16907,12 @@
         ],
         "serviceRecords": [
           {
+            "date": "2026-09-17",
+            "name": "學校水運會",
+            "hours": 8,
+            "note": ""
+          },
+          {
             "date": "2026-07-03",
             "name": "學校時裝表演",
             "hours": 5,
@@ -16813,7 +16937,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -16848,7 +16972,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "present",
           "note": ""
@@ -16862,7 +16986,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -17232,7 +17356,7 @@
       "photo": "assets/members/2025021615.png",
       "activity": {
         "attendanceRate": 87,
-        "serviceHours": 50,
+        "serviceHours": 58,
         "campingCount": 3,
         "outdoorActivities": [
           {
@@ -17261,6 +17385,12 @@
           }
         ],
         "serviceRecords": [
+          {
+            "date": "2026-09-17",
+            "name": "學校水運會",
+            "hours": 8,
+            "note": ""
+          },
           {
             "date": "2026-07-03",
             "name": "學校時裝表演",
@@ -17334,7 +17464,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -17369,7 +17499,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "present",
           "note": ""
@@ -17383,7 +17513,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -17825,7 +17955,7 @@
       "scoutId": "2026000220",
       "englishName": "TSE Choi Ching",
       "troop": "新界東第1558旅",
-      "section": "新成員",
+      "section": "未分配小隊",
       "rank": "隊員",
       "joinDate": "2025-10-25",
       "photo": null,
@@ -18020,7 +18150,7 @@
       "scoutId": "2026000212",
       "englishName": "LOR Tsz Yau",
       "troop": "新界東第1558旅",
-      "section": "新成員",
+      "section": "未分配小隊",
       "rank": "隊員",
       "joinDate": "2025-10-25",
       "photo": null,
@@ -18232,9 +18362,15 @@
       "photo": "assets/members/2025045085.png",
       "activity": {
         "attendanceRate": 91,
-        "serviceHours": 45,
+        "serviceHours": 53,
         "campingCount": 3,
         "outdoorActivities": [
+          {
+            "date": "2026-09-05",
+            "name": "高結構繩網",
+            "type": "戶外",
+            "note": "王兆生領袖訓練中心"
+          },
           {
             "date": "2026-04-18",
             "name": "參觀博物館",
@@ -18267,6 +18403,12 @@
           }
         ],
         "serviceRecords": [
+          {
+            "date": "2026-09-17",
+            "name": "學校水運會",
+            "hours": 8,
+            "note": ""
+          },
           {
             "date": "2026-05-16",
             "name": "中六畢業典禮",
@@ -18334,7 +18476,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -18369,7 +18511,7 @@
         },
         {
           "date": "2026-09-17",
-          "name": "校內服務",
+          "name": "學校水運會",
           "type": "服務",
           "status": "present",
           "note": ""
@@ -18383,7 +18525,7 @@
         },
         {
           "date": "2026-09-05",
-          "name": "戶外活動",
+          "name": "高結構繩網",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -18844,7 +18986,7 @@
       "scoutId": "2025098324",
       "englishName": "KWAN King Lok",
       "troop": "新界東第1558旅",
-      "section": "新成員",
+      "section": "未分配小隊",
       "rank": "隊員",
       "joinDate": "2025-10-25",
       "photo": null,
@@ -19103,7 +19245,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -19185,7 +19327,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -19267,7 +19409,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -19349,7 +19491,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -19431,7 +19573,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -19506,14 +19648,21 @@
         "attendanceRate": 100,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": [],
+        "outdoorActivities": [
+          {
+            "date": "2026-11-01",
+            "name": "香港童軍大會操",
+            "type": "戶外",
+            "note": "香港大球場"
+          }
+        ],
         "serviceRecords": [],
         "campingRecords": []
       },
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -19588,14 +19737,21 @@
         "attendanceRate": 100,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": [],
+        "outdoorActivities": [
+          {
+            "date": "2026-11-01",
+            "name": "香港童軍大會操",
+            "type": "戶外",
+            "note": "香港大球場"
+          }
+        ],
         "serviceRecords": [],
         "campingRecords": []
       },
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -19677,7 +19833,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -19759,7 +19915,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -19834,14 +19990,21 @@
         "attendanceRate": 100,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": [],
+        "outdoorActivities": [
+          {
+            "date": "2026-11-01",
+            "name": "香港童軍大會操",
+            "type": "戶外",
+            "note": "香港大球場"
+          }
+        ],
         "serviceRecords": [],
         "campingRecords": []
       },
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -19916,14 +20079,21 @@
         "attendanceRate": 67,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": [],
+        "outdoorActivities": [
+          {
+            "date": "2026-11-01",
+            "name": "香港童軍大會操",
+            "type": "戶外",
+            "note": "香港大球場"
+          }
+        ],
         "serviceRecords": [],
         "campingRecords": []
       },
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -19998,14 +20168,21 @@
         "attendanceRate": 100,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": [],
+        "outdoorActivities": [
+          {
+            "date": "2026-11-01",
+            "name": "香港童軍大會操",
+            "type": "戶外",
+            "note": "香港大球場"
+          }
+        ],
         "serviceRecords": [],
         "campingRecords": []
       },
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -20087,7 +20264,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -20162,14 +20339,21 @@
         "attendanceRate": 100,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": [],
+        "outdoorActivities": [
+          {
+            "date": "2026-11-01",
+            "name": "香港童軍大會操",
+            "type": "戶外",
+            "note": "香港大球場"
+          }
+        ],
         "serviceRecords": [],
         "campingRecords": []
       },
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -20244,14 +20428,21 @@
         "attendanceRate": 100,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": [],
+        "outdoorActivities": [
+          {
+            "date": "2026-11-01",
+            "name": "香港童軍大會操",
+            "type": "戶外",
+            "note": "香港大球場"
+          }
+        ],
         "serviceRecords": [],
         "campingRecords": []
       },
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -20326,14 +20517,21 @@
         "attendanceRate": 100,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": [],
+        "outdoorActivities": [
+          {
+            "date": "2026-11-01",
+            "name": "香港童軍大會操",
+            "type": "戶外",
+            "note": "香港大球場"
+          }
+        ],
         "serviceRecords": [],
         "campingRecords": []
       },
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -20415,7 +20613,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -20497,7 +20695,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -20572,14 +20770,21 @@
         "attendanceRate": 100,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": [],
+        "outdoorActivities": [
+          {
+            "date": "2026-11-01",
+            "name": "香港童軍大會操",
+            "type": "戶外",
+            "note": "香港大球場"
+          }
+        ],
         "serviceRecords": [],
         "campingRecords": []
       },
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -20661,7 +20866,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -20743,7 +20948,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -20825,7 +21030,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -20900,14 +21105,21 @@
         "attendanceRate": 100,
         "serviceHours": 0,
         "campingCount": 0,
-        "outdoorActivities": [],
+        "outdoorActivities": [
+          {
+            "date": "2026-11-01",
+            "name": "香港童軍大會操",
+            "type": "戶外",
+            "note": "香港大球場"
+          }
+        ],
         "serviceRecords": [],
         "campingRecords": []
       },
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "present",
           "note": ""
@@ -20989,7 +21201,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -21071,7 +21283,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -21153,7 +21365,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""
@@ -21235,7 +21447,7 @@
       "attendance": [
         {
           "date": "2026-11-01",
-          "name": "童軍會操",
+          "name": "香港童軍大會操",
           "type": "戶外",
           "status": "absent",
           "note": ""

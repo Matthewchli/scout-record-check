@@ -22,20 +22,20 @@
     },
     {
       "date": "2027-07-02",
-      "name": "恆常集會",
-      "type": "集會",
-      "hours": null,
+      "name": "學校時裝表演",
+      "type": "服務",
+      "hours": 5,
       "nights": null,
       "location": "",
       "year": "2026-2027"
     },
     {
       "date": "2027-06-25",
-      "name": "恆常集會",
-      "type": "集會",
+      "name": "夏季露營",
+      "type": "露營",
       "hours": null,
-      "nights": null,
-      "location": "",
+      "nights": 1,
+      "location": "待定",
       "year": "2026-2027"
     },
     {
@@ -121,20 +121,20 @@
     },
     {
       "date": "2027-01-07",
-      "name": "恆常集會",
-      "type": "集會",
-      "hours": null,
+      "name": "學校陸運會",
+      "type": "服務",
+      "hours": 8,
       "nights": null,
       "location": "",
       "year": "2026-2027"
     },
     {
       "date": "2026-12-19",
-      "name": "恆常集會",
-      "type": "集會",
+      "name": "冬季露營",
+      "type": "露營",
       "hours": null,
-      "nights": null,
-      "location": "",
+      "nights": 1,
+      "location": "待定",
       "year": "2026-2027"
     },
     {
@@ -157,20 +157,20 @@
     },
     {
       "date": "2026-11-15",
-      "name": "恆常集會",
-      "type": "集會",
-      "hours": null,
+      "name": "學校資訊日",
+      "type": "服務",
+      "hours": 5,
       "nights": null,
       "location": "",
       "year": "2026-2027"
     },
     {
       "date": "2026-11-01",
-      "name": "童軍會操",
+      "name": "香港童軍大會操",
       "type": "戶外",
       "hours": null,
       "nights": null,
-      "location": "",
+      "location": "香港大球場",
       "year": "2026-2027"
     },
     {
@@ -211,9 +211,9 @@
     },
     {
       "date": "2026-09-17",
-      "name": "校內服務",
+      "name": "學校水運會",
       "type": "服務",
-      "hours": null,
+      "hours": 8,
       "nights": null,
       "location": "",
       "year": "2026-2027"
@@ -229,11 +229,11 @@
     },
     {
       "date": "2026-09-05",
-      "name": "戶外活動",
+      "name": "高結構繩網",
       "type": "戶外",
       "hours": null,
       "nights": null,
-      "location": "",
+      "location": "王兆生領袖訓練中心",
       "year": "2026-2027"
     },
     {

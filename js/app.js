@@ -159,7 +159,6 @@
     "Eagle小隊",
     "Falcon小隊",
     "Otter小隊",
-    "新成員",
     "未分配小隊",
   ];
 
@@ -170,10 +169,8 @@
     { key: "chief", short: "總領袖", label: "總領袖獎章", icon: "assets/badge-chief.png" },
   ];
 
-  /** 全體出席率只計四隊；「新成員」及其他 section 不進分子／分母 */
-  const OVERALL_RATE_SECTIONS = new Set(
-    SECTION_ORDER.filter((s) => s !== "新成員")
-  );
+  /** 全體出席率計 SECTION_ORDER 內組別（四隊及未分配小隊）；其他 section 不進分子／分母 */
+  const OVERALL_RATE_SECTIONS = new Set(SECTION_ORDER);
 
   const RANK_ORDER = {
     團隊長: 0,
