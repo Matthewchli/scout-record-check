@@ -160,6 +160,7 @@
     "Falcon小隊",
     "Otter小隊",
     "新成員",
+    "未分配小隊",
   ];
 
   const PROG_OVERVIEW_BADGES = [
@@ -761,8 +762,21 @@
   }
 
   let attendanceRingAnim = null;
-  let selectedAttendanceYear = "2025-2026";
+  let selectedAttendanceYear = "2026-2027";
   const ATTENDANCE_YEARS = ["2026-2027", "2025-2026", "2024-2025"];
+
+  function getAttendanceYearsForMember(member) {
+    if (!member) return ATTENDANCE_YEARS.slice();
+    const years = ATTENDANCE_YEARS.filter((id) => memberOnRosterInYear(member, id));
+    return years.length ? years : ATTENDANCE_YEARS.slice();
+  }
+
+  function ensureSelectedAttendanceYear(member) {
+    const years = getAttendanceYearsForMember(member);
+    if (years.includes(selectedAttendanceYear)) return;
+    const current = getDefaultAcademicYear();
+    selectedAttendanceYear = years.includes(current) ? current : years[0];
+  }
 
   function showActivityList() {
     const listView = $("#activity-list-view");
@@ -827,6 +841,7 @@
   }
 
   function refreshAttendanceDetail(member, animateRing = true) {
+    ensureSelectedAttendanceYear(member);
     renderActivityDetailStats(member, "attendance");
     if (animateRing) {
       renderActivityDetailChart(member, "attendance");
@@ -862,8 +877,11 @@
       return;
     }
 
+    const years = getAttendanceYearsForMember(currentMember);
+    ensureSelectedAttendanceYear(currentMember);
+
     switcher.hidden = false;
-    switcher.innerHTML = ATTENDANCE_YEARS.map((y) => {
+    switcher.innerHTML = years.map((y) => {
       const active = y === selectedAttendanceYear;
       return `
         <button

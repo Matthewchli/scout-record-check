@@ -2652,7 +2652,7 @@
       "joinDate": "2024-10-19",
       "photo": "assets/members/2025045143.png",
       "activity": {
-        "attendanceRate": 78,
+        "attendanceRate": 68,
         "serviceHours": 32,
         "campingCount": 3,
         "outdoorActivities": [
@@ -2741,6 +2741,62 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-07-03",
           "name": "學校時裝表演",
@@ -3202,7 +3258,7 @@
       "joinDate": "2023-10-14",
       "photo": "assets/members/2025021995.png",
       "activity": {
-        "attendanceRate": 78,
+        "attendanceRate": 75,
         "serviceHours": 34,
         "campingCount": 0,
         "outdoorActivities": [
@@ -3266,6 +3322,62 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-07-03",
           "name": "學校時裝表演",
@@ -3896,7 +4008,7 @@
       "joinDate": "2024-10-19",
       "photo": "assets/members/2025045135.png",
       "activity": {
-        "attendanceRate": 84,
+        "attendanceRate": 75,
         "serviceHours": 44,
         "campingCount": 2,
         "outdoorActivities": [
@@ -3979,6 +4091,62 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-07-03",
           "name": "學校時裝表演",
@@ -4693,7 +4861,7 @@
       "joinDate": "2023-10-14",
       "photo": "assets/members/2025021912.png",
       "activity": {
-        "attendanceRate": 87,
+        "attendanceRate": 85,
         "serviceHours": 45,
         "campingCount": 2,
         "outdoorActivities": [
@@ -4776,6 +4944,62 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-07-03",
           "name": "學校時裝表演",
@@ -5301,7 +5525,7 @@
       "joinDate": "2024-10-19",
       "photo": "assets/members/2025045200.png",
       "activity": {
-        "attendanceRate": 73,
+        "attendanceRate": 64,
         "serviceHours": 19,
         "campingCount": 3,
         "outdoorActivities": [
@@ -5378,6 +5602,62 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-07-03",
           "name": "學校時裝表演",
@@ -5844,7 +6124,7 @@
       "joinDate": "2022-10-15",
       "photo": "assets/members/2019048160.png",
       "activity": {
-        "attendanceRate": 49,
+        "attendanceRate": 43,
         "serviceHours": 40,
         "campingCount": 1,
         "outdoorActivities": [
@@ -5909,6 +6189,62 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-07-03",
           "name": "學校時裝表演",
@@ -6813,7 +7149,7 @@
       "joinDate": "2024-10-19",
       "photo": "assets/members/2025045168.png",
       "activity": {
-        "attendanceRate": 89,
+        "attendanceRate": 75,
         "serviceHours": 40,
         "campingCount": 2,
         "outdoorActivities": [
@@ -6902,6 +7238,62 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-07-03",
           "name": "學校時裝表演",
@@ -7863,7 +8255,7 @@
       "joinDate": "2025-10-25",
       "photo": null,
       "activity": {
-        "attendanceRate": 58,
+        "attendanceRate": 41,
         "serviceHours": 8,
         "campingCount": 0,
         "outdoorActivities": [
@@ -7897,6 +8289,62 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-07-03",
           "name": "學校時裝表演",
@@ -8133,7 +8581,7 @@
       "joinDate": "2024-10-19",
       "photo": "assets/members/2025045226.png",
       "activity": {
-        "attendanceRate": 93,
+        "attendanceRate": 81,
         "serviceHours": 40,
         "campingCount": 3,
         "outdoorActivities": [
@@ -8222,6 +8670,62 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-07-03",
           "name": "學校時裝表演",
@@ -8647,7 +9151,7 @@
       "photo": "assets/members/2026000188.png",
       "photoPosition": "center 20%",
       "activity": {
-        "attendanceRate": 84,
+        "attendanceRate": 89,
         "serviceHours": 13,
         "campingCount": 1,
         "outdoorActivities": [
@@ -8694,6 +9198,62 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": "早退"
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-07-03",
           "name": "學校時裝表演",
@@ -8990,7 +9550,7 @@
       "joinDate": "2024-10-19",
       "photo": null,
       "activity": {
-        "attendanceRate": 44,
+        "attendanceRate": 38,
         "serviceHours": 8,
         "campingCount": 0,
         "outdoorActivities": [
@@ -9012,6 +9572,62 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-07-03",
           "name": "學校時裝表演",
@@ -9812,7 +10428,7 @@
       "joinDate": "2023-10-14",
       "photo": "assets/members/2025045218.png",
       "activity": {
-        "attendanceRate": 78,
+        "attendanceRate": 77,
         "serviceHours": 39,
         "campingCount": 2,
         "outdoorActivities": [
@@ -9895,6 +10511,62 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-07-03",
           "name": "學校時裝表演",
@@ -10339,7 +11011,7 @@
       "joinDate": "2025-10-25",
       "photo": "assets/members/2026000170.png",
       "activity": {
-        "attendanceRate": 68,
+        "attendanceRate": 54,
         "serviceHours": 8,
         "campingCount": 1,
         "outdoorActivities": [
@@ -10374,6 +11046,41 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-07-03",
           "name": "學校時裝表演",
@@ -10590,7 +11297,8 @@
       ],
       "specialtyBadges": [],
       "awards": [],
-      "status": "active"
+      "status": "left",
+      "leftDate": "2026-10-24"
     },
     {
       "name": "陳睿",
@@ -10602,7 +11310,7 @@
       "joinDate": "2025-10-25",
       "photo": "assets/members/2025098357.png",
       "activity": {
-        "attendanceRate": 63,
+        "attendanceRate": 74,
         "serviceHours": 10,
         "campingCount": 0,
         "outdoorActivities": [
@@ -10636,6 +11344,62 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-07-03",
           "name": "學校時裝表演",
@@ -10854,7 +11618,7 @@
       "joinDate": "2024-10-19",
       "photo": "assets/members/2022015701.png",
       "activity": {
-        "attendanceRate": 71,
+        "attendanceRate": 68,
         "serviceHours": 45,
         "campingCount": 2,
         "outdoorActivities": [
@@ -10937,6 +11701,41 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-07-03",
           "name": "學校時裝表演",
@@ -11335,7 +12134,8 @@
       ],
       "specialtyBadges": [],
       "awards": [],
-      "status": "active"
+      "status": "left",
+      "leftDate": "2026-10-24"
     },
     {
       "name": "陳澤輝",
@@ -11776,7 +12576,7 @@
       "joinDate": "2025-10-25",
       "photo": null,
       "activity": {
-        "attendanceRate": 42,
+        "attendanceRate": 46,
         "serviceHours": 5,
         "campingCount": 0,
         "outdoorActivities": [
@@ -11798,6 +12598,41 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": "遲到"
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-07-03",
           "name": "學校時裝表演",
@@ -12008,7 +12843,8 @@
       ],
       "specialtyBadges": [],
       "awards": [],
-      "status": "active"
+      "status": "left",
+      "leftDate": "2026-10-24"
     },
     {
       "name": "黃芯瑤",
@@ -12020,7 +12856,7 @@
       "joinDate": "2024-10-19",
       "photo": "assets/members/2025021599.png",
       "activity": {
-        "attendanceRate": 71,
+        "attendanceRate": 70,
         "serviceHours": 32,
         "campingCount": 1,
         "outdoorActivities": [
@@ -12091,6 +12927,62 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": "遲到"
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": "遲到"
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "present",
+          "note": "事假"
+        },
         {
           "date": "2026-07-03",
           "name": "學校時裝表演",
@@ -12661,7 +13553,7 @@
       "joinDate": "2024-10-19",
       "photo": "assets/members/2025045101.png",
       "activity": {
-        "attendanceRate": 53,
+        "attendanceRate": 48,
         "serviceHours": 24,
         "campingCount": 0,
         "outdoorActivities": [
@@ -12701,6 +13593,41 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-07-03",
           "name": "學校時裝表演",
@@ -13093,7 +14020,8 @@
       ],
       "specialtyBadges": [],
       "awards": [],
-      "status": "active"
+      "status": "left",
+      "leftDate": "2026-10-24"
     },
     {
       "name": "葉繕熒",
@@ -13158,6 +14086,62 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-07-03",
           "name": "學校時裝表演",
@@ -13526,6 +14510,62 @@
       },
       "attendance": [
         {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
           "date": "2026-07-03",
           "name": "學校時裝表演",
           "type": "服務",
@@ -13757,7 +14797,7 @@
       "joinDate": "2024-10-19",
       "photo": "assets/members/2025045077.png",
       "activity": {
-        "attendanceRate": 69,
+        "attendanceRate": 62,
         "serviceHours": 16,
         "campingCount": 0,
         "outdoorActivities": [
@@ -13803,6 +14843,41 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-07-03",
           "name": "學校時裝表演",
@@ -14205,7 +15280,8 @@
       ],
       "specialtyBadges": [],
       "awards": [],
-      "status": "active"
+      "status": "left",
+      "leftDate": "2026-10-24"
     },
     {
       "name": "劉晁揚",
@@ -15682,7 +16758,7 @@
       "joinDate": "2025-10-25",
       "photo": "assets/members/2026000246.png",
       "activity": {
-        "attendanceRate": 84,
+        "attendanceRate": 81,
         "serviceHours": 13,
         "campingCount": 1,
         "outdoorActivities": [
@@ -15735,6 +16811,62 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-07-03",
           "name": "學校時裝表演",
@@ -16099,7 +17231,7 @@
       "joinDate": "2021-10-30",
       "photo": "assets/members/2025021615.png",
       "activity": {
-        "attendanceRate": 93,
+        "attendanceRate": 87,
         "serviceHours": 50,
         "campingCount": 3,
         "outdoorActivities": [
@@ -16200,6 +17332,62 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-07-03",
           "name": "學校時裝表演",
@@ -17043,7 +18231,7 @@
       "joinDate": "2024-10-19",
       "photo": "assets/members/2025045085.png",
       "activity": {
-        "attendanceRate": 96,
+        "attendanceRate": 91,
         "serviceHours": 45,
         "campingCount": 3,
         "outdoorActivities": [
@@ -17144,6 +18332,62 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-10",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-03",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-17",
+          "name": "校內服務",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-09-12",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-09-05",
+          "name": "戶外活動",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-07-03",
           "name": "學校時裝表演",
@@ -17838,6 +19082,2220 @@
       "awards": [],
       "status": "left",
       "leftDate": "2026-08-31"
+    },
+    {
+      "name": "向皓勤",
+      "scoutId": "2026065553",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "劉永芝",
+      "scoutId": "2026065561",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "劉信希",
+      "scoutId": "2026065579",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "曾深",
+      "scoutId": "2026065587",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "邱焯楹",
+      "scoutId": "2026065595",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "林靖涵",
+      "scoutId": "2026065603",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 100,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "吳子琳",
+      "scoutId": "2026065611",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 100,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "趙予紳",
+      "scoutId": "2023104538",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 67,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "許悕姸",
+      "scoutId": "2026065629",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "李立言",
+      "scoutId": "2026065637",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 100,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "盧梓萱",
+      "scoutId": "2026065645",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 67,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "盛苡琳",
+      "scoutId": "2024063105",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 100,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "蘇芷仟",
+      "scoutId": "1234",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 33,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "陳湉心",
+      "scoutId": "2026065652",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 100,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "蔡佳德",
+      "scoutId": "2023036920",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 100,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "郭世晞",
+      "scoutId": "2026065660",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 100,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "林匡雋",
+      "scoutId": "2026065678",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 67,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "羅臻靖",
+      "scoutId": "2026065686",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "游蕊言",
+      "scoutId": "2026065694",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 100,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "陳樂恩",
+      "scoutId": "2026065702",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "陳鈺婷",
+      "scoutId": "2026065710",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "郭哲謙",
+      "scoutId": "2026065728",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "張卓傑",
+      "scoutId": "2026065736",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 100,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "朱一哲",
+      "scoutId": "2026065751",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "梁凱舜",
+      "scoutId": "2026065769",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "梁子悅",
+      "scoutId": "2026065777",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 33,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
+    },
+    {
+      "name": "黃云翊",
+      "scoutId": "2026065785",
+      "englishName": "",
+      "troop": "新界東第1558旅",
+      "section": "未分配小隊",
+      "rank": "隊員",
+      "joinDate": "2026-10-24",
+      "photo": null,
+      "activity": {
+        "attendanceRate": 0,
+        "serviceHours": 0,
+        "campingCount": 0,
+        "outdoorActivities": [],
+        "serviceRecords": [],
+        "campingRecords": []
+      },
+      "attendance": [
+        {
+          "date": "2026-11-01",
+          "name": "童軍會操",
+          "type": "戶外",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-31",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
+          "date": "2026-10-24",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        }
+      ],
+      "progressiveBadges": [
+        {
+          "key": "discovery",
+          "name": "探索獎章",
+          "icon": "assets/badge-discovery.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "standard",
+          "name": "標準獎章",
+          "icon": "assets/badge-standard.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "advanced",
+          "name": "高級獎章",
+          "icon": "assets/badge-advanced.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        },
+        {
+          "key": "chief",
+          "name": "總領袖獎章",
+          "icon": "assets/badge-chief.png",
+          "status": "not_started",
+          "completedDate": null,
+          "completedIds": [],
+          "itemCompletedDates": {}
+        }
+      ],
+      "specialtyBadges": [],
+      "awards": [],
+      "status": "active"
     }
   ]
 }
