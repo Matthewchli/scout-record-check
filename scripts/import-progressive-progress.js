@@ -30,6 +30,7 @@ const NAME_ALIASES = {
   楊淳𤋮: "楊淳熙",
   梁諾言: "梁諾然",
   王悅晴: "王悦晴",
+  吳子琳: "吴子琳",
 };
 
 function excelDateToIso(value) {
@@ -167,9 +168,10 @@ function ensureProgressiveBadges(member) {
 
 function main() {
   const knownIds = allSyllabusIds();
-  const wb = XLSX.readFile(
-    "c:/Users/heiin/Desktop/童軍管理平台/進度性獎章.xlsx"
-  );
+  const excelPath =
+    process.argv[2] ||
+    "c:/Users/heiin/Desktop/童軍管理平台/進度性獎章.xlsx";
+  const wb = XLSX.readFile(excelPath);
   const rows = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]], {
     defval: "",
   });

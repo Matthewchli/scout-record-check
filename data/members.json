@@ -2646,7 +2646,7 @@
       "joinDate": "2024-10-19",
       "photo": "assets/members/2025045143.png",
       "activity": {
-        "attendanceRate": 68,
+        "attendanceRate": 67,
         "serviceHours": 32,
         "campingCount": 3,
         "outdoorActivities": [
@@ -2741,6 +2741,13 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -3258,8 +3265,8 @@
       "joinDate": "2023-10-14",
       "photo": "assets/members/2025021995.png",
       "activity": {
-        "attendanceRate": 75,
-        "serviceHours": 42,
+        "attendanceRate": 76,
+        "serviceHours": 47,
         "campingCount": 0,
         "outdoorActivities": [
           {
@@ -3288,6 +3295,12 @@
           }
         ],
         "serviceRecords": [
+          {
+            "date": "2026-11-15",
+            "name": "學校資訊日",
+            "hours": 5,
+            "note": ""
+          },
           {
             "date": "2026-09-17",
             "name": "學校水運會",
@@ -3328,6 +3341,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -4014,7 +4034,7 @@
       "joinDate": "2024-10-19",
       "photo": "assets/members/2025045135.png",
       "activity": {
-        "attendanceRate": 75,
+        "attendanceRate": 74,
         "serviceHours": 52,
         "campingCount": 2,
         "outdoorActivities": [
@@ -4103,6 +4123,13 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -4874,7 +4901,7 @@
       "photo": "assets/members/2025021912.png",
       "activity": {
         "attendanceRate": 85,
-        "serviceHours": 53,
+        "serviceHours": 58,
         "campingCount": 2,
         "outdoorActivities": [
           {
@@ -4903,6 +4930,12 @@
           }
         ],
         "serviceRecords": [
+          {
+            "date": "2026-11-15",
+            "name": "學校資訊日",
+            "hours": 5,
+            "note": ""
+          },
           {
             "date": "2026-09-17",
             "name": "學校水運會",
@@ -4968,6 +5001,13 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -5549,7 +5589,7 @@
       "joinDate": "2024-10-19",
       "photo": "assets/members/2025045200.png",
       "activity": {
-        "attendanceRate": 64,
+        "attendanceRate": 63,
         "serviceHours": 19,
         "campingCount": 3,
         "outdoorActivities": [
@@ -5632,6 +5672,13 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -6225,6 +6272,13 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -7185,7 +7239,7 @@
       "joinDate": "2024-10-19",
       "photo": "assets/members/2025045168.png",
       "activity": {
-        "attendanceRate": 75,
+        "attendanceRate": 74,
         "serviceHours": 40,
         "campingCount": 2,
         "outdoorActivities": [
@@ -7274,6 +7328,13 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -8291,7 +8352,7 @@
       "joinDate": "2025-10-25",
       "photo": null,
       "activity": {
-        "attendanceRate": 41,
+        "attendanceRate": 39,
         "serviceHours": 8,
         "campingCount": 0,
         "outdoorActivities": [
@@ -8325,6 +8386,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -8617,7 +8685,7 @@
       "joinDate": "2024-10-19",
       "photo": "assets/members/2025045226.png",
       "activity": {
-        "attendanceRate": 81,
+        "attendanceRate": 80,
         "serviceHours": 40,
         "campingCount": 3,
         "outdoorActivities": [
@@ -8712,6 +8780,13 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -9191,10 +9266,9 @@
       "rank": "隊員",
       "joinDate": "2025-10-25",
       "photo": "assets/members/2026000188.png",
-      "photoPosition": "center 20%",
       "activity": {
         "attendanceRate": 89,
-        "serviceHours": 21,
+        "serviceHours": 26,
         "campingCount": 1,
         "outdoorActivities": [
           {
@@ -9230,6 +9304,12 @@
         ],
         "serviceRecords": [
           {
+            "date": "2026-11-15",
+            "name": "學校資訊日",
+            "hours": 5,
+            "note": ""
+          },
+          {
             "date": "2026-09-17",
             "name": "學校水運會",
             "hours": 8,
@@ -9258,6 +9338,13 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -9610,7 +9697,7 @@
       "joinDate": "2024-10-19",
       "photo": null,
       "activity": {
-        "attendanceRate": 38,
+        "attendanceRate": 40,
         "serviceHours": 8,
         "campingCount": 0,
         "outdoorActivities": [
@@ -10468,8 +10555,8 @@
       "joinDate": "2023-10-14",
       "photo": "assets/members/2025045218.png",
       "activity": {
-        "attendanceRate": 77,
-        "serviceHours": 47,
+        "attendanceRate": 78,
+        "serviceHours": 52,
         "campingCount": 2,
         "outdoorActivities": [
           {
@@ -10504,6 +10591,12 @@
           }
         ],
         "serviceRecords": [
+          {
+            "date": "2026-11-15",
+            "name": "學校資訊日",
+            "hours": 5,
+            "note": ""
+          },
           {
             "date": "2026-09-17",
             "name": "學校水運會",
@@ -10563,6 +10656,13 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -11362,7 +11462,7 @@
       "joinDate": "2025-10-25",
       "photo": "assets/members/2025098357.png",
       "activity": {
-        "attendanceRate": 74,
+        "attendanceRate": 71,
         "serviceHours": 18,
         "campingCount": 0,
         "outdoorActivities": [
@@ -11414,6 +11514,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -11617,6 +11724,8 @@
             "d-a-4a",
             "d-a-4b",
             "d-b-1a",
+            "d-b-4a",
+            "d-b-4b",
             "d-c-1a",
             "d-c-2a",
             "d-d-2a"
@@ -11629,7 +11738,9 @@
             "d-a-3a": "2026-04-25",
             "d-a-3b": "2026-04-25",
             "d-c-1a": "2026-05-09",
-            "d-d-2a": "2026-05-16"
+            "d-d-2a": "2026-05-16",
+            "d-b-4a": "2026-11-01",
+            "d-b-4b": "2026-11-01"
           }
         },
         {
@@ -12938,7 +13049,7 @@
       "joinDate": "2024-10-19",
       "photo": "assets/members/2025021599.png",
       "activity": {
-        "attendanceRate": 70,
+        "attendanceRate": 69,
         "serviceHours": 40,
         "campingCount": 1,
         "outdoorActivities": [
@@ -13021,6 +13132,13 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -13398,8 +13516,8 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "in_progress",
-          "completedDate": null,
+          "status": "completed",
+          "completedDate": "2026-11-15",
           "completedIds": [
             "d-a-1a",
             "d-a-1b",
@@ -13419,7 +13537,9 @@
             "d-b-4b",
             "d-c-1a",
             "d-c-1b",
-            "d-c-2a"
+            "d-c-2a",
+            "d-d-1a",
+            "d-d-2a"
           ],
           "itemCompletedDates": {
             "d-c-1b": "2024-11-17",
@@ -13440,7 +13560,9 @@
             "d-a-2a": "2026-02-28",
             "d-a-2c": "2026-02-28",
             "d-a-4a": "2026-03-07",
-            "d-c-2a": "2026-03-07"
+            "d-c-2a": "2026-03-07",
+            "d-d-1a": "2026-11-15",
+            "d-d-2a": "2026-11-15"
           }
         },
         {
@@ -14128,7 +14250,7 @@
       "photo": "assets/members/2025098332.png",
       "activity": {
         "attendanceRate": 89,
-        "serviceHours": 26,
+        "serviceHours": 31,
         "campingCount": 1,
         "outdoorActivities": [
           {
@@ -14157,6 +14279,12 @@
           }
         ],
         "serviceRecords": [
+          {
+            "date": "2026-11-15",
+            "name": "學校資訊日",
+            "hours": 5,
+            "note": ""
+          },
           {
             "date": "2026-09-17",
             "name": "學校水運會",
@@ -14192,6 +14320,13 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -14569,7 +14704,7 @@
       "joinDate": "2025-10-25",
       "photo": "assets/members/2026000089.png",
       "activity": {
-        "attendanceRate": 63,
+        "attendanceRate": 61,
         "serviceHours": 13,
         "campingCount": 0,
         "outdoorActivities": [
@@ -14627,6 +14762,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -14827,6 +14969,7 @@
           "completedIds": [
             "d-a-2a",
             "d-a-2c",
+            "d-a-4b",
             "d-b-1a",
             "d-b-2a",
             "d-b-3a",
@@ -14846,7 +14989,8 @@
             "d-a-2a": "2026-02-28",
             "d-a-2c": "2026-02-28",
             "d-c-1b": "2026-03-26",
-            "d-c-1a": "2026-05-09"
+            "d-c-1a": "2026-05-09",
+            "d-a-4b": "2026-10-24"
           }
         },
         {
@@ -16876,7 +17020,7 @@
       "joinDate": "2025-10-25",
       "photo": "assets/members/2026000246.png",
       "activity": {
-        "attendanceRate": 81,
+        "attendanceRate": 79,
         "serviceHours": 21,
         "campingCount": 1,
         "outdoorActivities": [
@@ -16935,6 +17079,13 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": "事假"
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -17356,7 +17507,7 @@
       "photo": "assets/members/2025021615.png",
       "activity": {
         "attendanceRate": 87,
-        "serviceHours": 58,
+        "serviceHours": 63,
         "campingCount": 3,
         "outdoorActivities": [
           {
@@ -17385,6 +17536,12 @@
           }
         ],
         "serviceRecords": [
+          {
+            "date": "2026-11-15",
+            "name": "學校資訊日",
+            "hours": 5,
+            "note": ""
+          },
           {
             "date": "2026-09-17",
             "name": "學校水運會",
@@ -17462,6 +17619,13 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -18362,7 +18526,7 @@
       "photo": "assets/members/2025045085.png",
       "activity": {
         "attendanceRate": 91,
-        "serviceHours": 53,
+        "serviceHours": 58,
         "campingCount": 3,
         "outdoorActivities": [
           {
@@ -18403,6 +18567,12 @@
           }
         ],
         "serviceRecords": [
+          {
+            "date": "2026-11-15",
+            "name": "學校資訊日",
+            "hours": 5,
+            "note": ""
+          },
           {
             "date": "2026-09-17",
             "name": "學校水運會",
@@ -18474,6 +18644,13 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -19244,6 +19421,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
+        {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
           "type": "戶外",
@@ -19325,6 +19509,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -19408,6 +19599,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
+        {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
           "type": "戶外",
@@ -19489,6 +19687,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -19572,6 +19777,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
+        {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
           "type": "戶外",
@@ -19643,10 +19855,10 @@
       "section": "未分配小隊",
       "rank": "隊員",
       "joinDate": "2026-10-24",
-      "photo": null,
+      "photo": "assets/members/2026065603.png",
       "activity": {
         "attendanceRate": 100,
-        "serviceHours": 0,
+        "serviceHours": 5,
         "campingCount": 0,
         "outdoorActivities": [
           {
@@ -19656,10 +19868,24 @@
             "note": "香港大球場"
           }
         ],
-        "serviceRecords": [],
+        "serviceRecords": [
+          {
+            "date": "2026-11-15",
+            "name": "學校資訊日",
+            "hours": 5,
+            "note": ""
+          }
+        ],
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -19687,10 +19913,22 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1b"
+          ],
+          "itemCompletedDates": {
+            "d-a-4b": "2026-10-24",
+            "d-b-1a": "2026-10-24",
+            "d-b-4a": "2026-11-01",
+            "d-b-4b": "2026-11-01",
+            "d-c-1b": "2026-11-15"
+          }
         },
         {
           "key": "standard",
@@ -19725,17 +19963,17 @@
       "status": "active"
     },
     {
-      "name": "吳子琳",
+      "name": "吴子琳",
       "scoutId": "2026065611",
       "englishName": "",
       "troop": "新界東第1558旅",
       "section": "未分配小隊",
       "rank": "隊員",
       "joinDate": "2026-10-24",
-      "photo": null,
+      "photo": "assets/members/2026065611.png",
       "activity": {
         "attendanceRate": 100,
-        "serviceHours": 0,
+        "serviceHours": 5,
         "campingCount": 0,
         "outdoorActivities": [
           {
@@ -19745,10 +19983,24 @@
             "note": "香港大球場"
           }
         ],
-        "serviceRecords": [],
+        "serviceRecords": [
+          {
+            "date": "2026-11-15",
+            "name": "學校資訊日",
+            "hours": 5,
+            "note": ""
+          }
+        ],
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -19776,10 +20028,22 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1b"
+          ],
+          "itemCompletedDates": {
+            "d-a-4b": "2026-10-24",
+            "d-b-1a": "2026-10-24",
+            "d-b-4a": "2026-11-01",
+            "d-b-4b": "2026-11-01",
+            "d-c-1b": "2026-11-15"
+          }
         },
         {
           "key": "standard",
@@ -19823,7 +20087,7 @@
       "joinDate": "2026-10-24",
       "photo": null,
       "activity": {
-        "attendanceRate": 67,
+        "attendanceRate": 50,
         "serviceHours": 0,
         "campingCount": 0,
         "outdoorActivities": [],
@@ -19831,6 +20095,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": "事假"
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -19858,10 +20129,16 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-4b",
+            "d-b-1a"
+          ],
+          "itemCompletedDates": {
+            "d-a-4b": "2026-10-24",
+            "d-b-1a": "2026-10-24"
+          }
         },
         {
           "key": "standard",
@@ -19913,6 +20190,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -19988,7 +20272,7 @@
       "photo": null,
       "activity": {
         "attendanceRate": 100,
-        "serviceHours": 0,
+        "serviceHours": 5,
         "campingCount": 0,
         "outdoorActivities": [
           {
@@ -19998,10 +20282,24 @@
             "note": "香港大球場"
           }
         ],
-        "serviceRecords": [],
+        "serviceRecords": [
+          {
+            "date": "2026-11-15",
+            "name": "學校資訊日",
+            "hours": 5,
+            "note": ""
+          }
+        ],
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -20029,10 +20327,22 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1b"
+          ],
+          "itemCompletedDates": {
+            "d-a-4b": "2026-10-24",
+            "d-b-1a": "2026-10-24",
+            "d-b-4a": "2026-11-01",
+            "d-b-4b": "2026-11-01",
+            "d-c-1b": "2026-11-15"
+          }
         },
         {
           "key": "standard",
@@ -20076,7 +20386,7 @@
       "joinDate": "2026-10-24",
       "photo": null,
       "activity": {
-        "attendanceRate": 67,
+        "attendanceRate": 50,
         "serviceHours": 0,
         "campingCount": 0,
         "outdoorActivities": [
@@ -20091,6 +20401,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -20118,10 +20435,16 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-b-4a",
+            "d-b-4b"
+          ],
+          "itemCompletedDates": {
+            "d-b-4a": "2026-11-01",
+            "d-b-4b": "2026-11-01"
+          }
         },
         {
           "key": "standard",
@@ -20165,7 +20488,7 @@
       "joinDate": "2026-10-24",
       "photo": null,
       "activity": {
-        "attendanceRate": 100,
+        "attendanceRate": 75,
         "serviceHours": 0,
         "campingCount": 0,
         "outdoorActivities": [
@@ -20180,6 +20503,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": "事假"
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -20207,10 +20537,20 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-4a",
+            "d-b-4b"
+          ],
+          "itemCompletedDates": {
+            "d-a-4b": "2026-10-24",
+            "d-b-1a": "2026-10-24",
+            "d-b-4a": "2026-11-01",
+            "d-b-4b": "2026-11-01"
+          }
         },
         {
           "key": "standard",
@@ -20254,7 +20594,7 @@
       "joinDate": "2026-10-24",
       "photo": null,
       "activity": {
-        "attendanceRate": 33,
+        "attendanceRate": 25,
         "serviceHours": 0,
         "campingCount": 0,
         "outdoorActivities": [],
@@ -20262,6 +20602,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -20289,10 +20636,16 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-4b",
+            "d-b-1a"
+          ],
+          "itemCompletedDates": {
+            "d-a-4b": "2026-10-24",
+            "d-b-1a": "2026-10-24"
+          }
         },
         {
           "key": "standard",
@@ -20334,10 +20687,10 @@
       "section": "未分配小隊",
       "rank": "隊員",
       "joinDate": "2026-10-24",
-      "photo": null,
+      "photo": "assets/members/2026065652.png",
       "activity": {
         "attendanceRate": 100,
-        "serviceHours": 0,
+        "serviceHours": 5,
         "campingCount": 0,
         "outdoorActivities": [
           {
@@ -20347,10 +20700,24 @@
             "note": "香港大球場"
           }
         ],
-        "serviceRecords": [],
+        "serviceRecords": [
+          {
+            "date": "2026-11-15",
+            "name": "學校資訊日",
+            "hours": 5,
+            "note": ""
+          }
+        ],
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -20378,10 +20745,22 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1b"
+          ],
+          "itemCompletedDates": {
+            "d-a-4b": "2026-10-24",
+            "d-b-1a": "2026-10-24",
+            "d-b-4a": "2026-11-01",
+            "d-b-4b": "2026-11-01",
+            "d-c-1b": "2026-11-15"
+          }
         },
         {
           "key": "standard",
@@ -20423,10 +20802,10 @@
       "section": "未分配小隊",
       "rank": "隊員",
       "joinDate": "2026-10-24",
-      "photo": null,
+      "photo": "assets/members/2023036920.png",
       "activity": {
         "attendanceRate": 100,
-        "serviceHours": 0,
+        "serviceHours": 5,
         "campingCount": 0,
         "outdoorActivities": [
           {
@@ -20436,10 +20815,24 @@
             "note": "香港大球場"
           }
         ],
-        "serviceRecords": [],
+        "serviceRecords": [
+          {
+            "date": "2026-11-15",
+            "name": "學校資訊日",
+            "hours": 5,
+            "note": ""
+          }
+        ],
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -20467,10 +20860,22 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1b"
+          ],
+          "itemCompletedDates": {
+            "d-a-4b": "2026-10-24",
+            "d-b-1a": "2026-10-24",
+            "d-b-4a": "2026-11-01",
+            "d-b-4b": "2026-11-01",
+            "d-c-1b": "2026-11-15"
+          }
         },
         {
           "key": "standard",
@@ -20512,10 +20917,10 @@
       "section": "未分配小隊",
       "rank": "隊員",
       "joinDate": "2026-10-24",
-      "photo": null,
+      "photo": "assets/members/2026065660.png",
       "activity": {
         "attendanceRate": 100,
-        "serviceHours": 0,
+        "serviceHours": 5,
         "campingCount": 0,
         "outdoorActivities": [
           {
@@ -20525,10 +20930,24 @@
             "note": "香港大球場"
           }
         ],
-        "serviceRecords": [],
+        "serviceRecords": [
+          {
+            "date": "2026-11-15",
+            "name": "學校資訊日",
+            "hours": 5,
+            "note": ""
+          }
+        ],
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -20556,10 +20975,22 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1b"
+          ],
+          "itemCompletedDates": {
+            "d-a-4b": "2026-10-24",
+            "d-b-1a": "2026-10-24",
+            "d-b-4a": "2026-11-01",
+            "d-b-4b": "2026-11-01",
+            "d-c-1b": "2026-11-15"
+          }
         },
         {
           "key": "standard",
@@ -20601,16 +21032,30 @@
       "section": "未分配小隊",
       "rank": "隊員",
       "joinDate": "2026-10-24",
-      "photo": null,
+      "photo": "assets/members/2026065678.png",
       "activity": {
-        "attendanceRate": 67,
-        "serviceHours": 0,
+        "attendanceRate": 75,
+        "serviceHours": 5,
         "campingCount": 0,
         "outdoorActivities": [],
-        "serviceRecords": [],
+        "serviceRecords": [
+          {
+            "date": "2026-11-15",
+            "name": "學校資訊日",
+            "hours": 5,
+            "note": ""
+          }
+        ],
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -20638,10 +21083,18 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-4b",
+            "d-b-1a",
+            "d-c-1b"
+          ],
+          "itemCompletedDates": {
+            "d-a-4b": "2026-10-24",
+            "d-b-1a": "2026-10-24",
+            "d-c-1b": "2026-11-15"
+          }
         },
         {
           "key": "standard",
@@ -20693,6 +21146,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -20765,10 +21225,10 @@
       "section": "未分配小隊",
       "rank": "隊員",
       "joinDate": "2026-10-24",
-      "photo": null,
+      "photo": "assets/members/2026065694.png",
       "activity": {
         "attendanceRate": 100,
-        "serviceHours": 0,
+        "serviceHours": 5,
         "campingCount": 0,
         "outdoorActivities": [
           {
@@ -20778,10 +21238,24 @@
             "note": "香港大球場"
           }
         ],
-        "serviceRecords": [],
+        "serviceRecords": [
+          {
+            "date": "2026-11-15",
+            "name": "學校資訊日",
+            "hours": 5,
+            "note": ""
+          }
+        ],
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -20809,10 +21283,22 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1b"
+          ],
+          "itemCompletedDates": {
+            "d-a-4b": "2026-10-24",
+            "d-b-1a": "2026-10-24",
+            "d-b-4a": "2026-11-01",
+            "d-b-4b": "2026-11-01",
+            "d-c-1b": "2026-11-15"
+          }
         },
         {
           "key": "standard",
@@ -20864,6 +21350,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -20947,6 +21440,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
+        {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
           "type": "戶外",
@@ -21029,6 +21529,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
+        {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
           "type": "戶外",
@@ -21100,10 +21607,10 @@
       "section": "未分配小隊",
       "rank": "隊員",
       "joinDate": "2026-10-24",
-      "photo": null,
+      "photo": "assets/members/2026065736.png",
       "activity": {
         "attendanceRate": 100,
-        "serviceHours": 0,
+        "serviceHours": 5,
         "campingCount": 0,
         "outdoorActivities": [
           {
@@ -21113,10 +21620,24 @@
             "note": "香港大球場"
           }
         ],
-        "serviceRecords": [],
+        "serviceRecords": [
+          {
+            "date": "2026-11-15",
+            "name": "學校資訊日",
+            "hours": 5,
+            "note": ""
+          }
+        ],
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -21144,10 +21665,22 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-4b",
+            "d-b-1a",
+            "d-b-4a",
+            "d-b-4b",
+            "d-c-1b"
+          ],
+          "itemCompletedDates": {
+            "d-a-4b": "2026-10-24",
+            "d-b-1a": "2026-10-24",
+            "d-b-4a": "2026-11-01",
+            "d-b-4b": "2026-11-01",
+            "d-c-1b": "2026-11-15"
+          }
         },
         {
           "key": "standard",
@@ -21199,6 +21732,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -21282,6 +21822,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
+        {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
           "type": "戶外",
@@ -21355,7 +21902,7 @@
       "joinDate": "2026-10-24",
       "photo": null,
       "activity": {
-        "attendanceRate": 33,
+        "attendanceRate": 25,
         "serviceHours": 0,
         "campingCount": 0,
         "outdoorActivities": [],
@@ -21363,6 +21910,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",
@@ -21445,6 +21999,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-15",
+          "name": "學校資訊日",
+          "type": "服務",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-01",
           "name": "香港童軍大會操",

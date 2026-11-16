@@ -24,7 +24,7 @@ const SKIP_NAMES = new Set([
 
 const NAME_ALIASES = {
   楊淳𤋮: "楊淳熙",
-  吴子琳: "吳子琳",
+  吳子琳: "吴子琳",
 };
 
 /** Dates that have Excel files: members eligible that day but missing from the sheet are marked absent. */
