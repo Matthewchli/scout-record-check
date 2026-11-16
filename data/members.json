@@ -13713,7 +13713,7 @@
           "earnedDate": "2026-05-16",
           "category": "「積極公民」獎章系列",
           "group": "activeCitizen",
-          "icon": "assets/specialty/activeCitizen/社區應急先鋒.png",
+          "icon": "assets/specialty/activeCitizen/社區應急先鋒章.png",
           "activityName": "「積極公民」獎章系列 - 社區應急先鋒章",
           "organizer": "新界地域",
           "assessmentDate": "2026-05-16",
@@ -14613,6 +14613,34 @@
       ],
       "specialtyBadges": [
         {
+          "name": "露營章",
+          "earnedDate": "2026-09-20",
+          "category": "技能組",
+          "group": "skill",
+          "icon": "assets/specialty/skill/露營.png",
+          "activityName": "技能組 - 露營章",
+          "organizer": "新界東地域",
+          "assessmentDate": "2026-09-20",
+          "syllabusKey": "skill:露營",
+          "examiner": "何嘉樂先生",
+          "examinerTitle": "助理區總監(童軍)",
+          "certificateNumber": "STE/S/FY2627/180",
+          "noticeUrl": "assets/notices/20260920-camping-training.pdf",
+          "noticeTitle": "新界東地域 童軍露營訓練班（技能及教導組）",
+          "certificateCopy": "assets/certificates/2025098332_露營章_STE-S-FY2627-180_badge.jpeg",
+          "certificateCopyTitle": "證書副本",
+          "certificateCopies": [
+            {
+              "url": "assets/certificates/2025098332_露營章_STE-S-FY2627-180_badge.jpeg",
+              "title": "證書副本"
+            },
+            {
+              "url": "assets/certificates/2025098332_露營章_STE-S-FY2627-180_training.jpeg",
+              "title": "訓練班證書"
+            }
+          ]
+        },
+        {
           "name": "多元共融章",
           "earnedDate": "2026-08-08",
           "category": "服務組",
@@ -14623,7 +14651,10 @@
           "assessmentDate": "2026-08-08",
           "syllabusKey": "service:多元共融",
           "examiner": "何嘉樂先生",
-          "examinerTitle": "助理區總監(童軍)"
+          "examinerTitle": "助理區總監(童軍)",
+          "certificateNumber": "STE/S/FY2627/172",
+          "certificateCopy": "assets/certificates/2025098332_多元共融章_STE-S-FY2627-172_badge.jpeg",
+          "certificateCopyTitle": "專科徽章證書"
         },
         {
           "name": "觀察章",
@@ -17364,6 +17395,52 @@
       ],
       "specialtyBadges": [
         {
+          "name": "急救章",
+          "earnedDate": "2026-11-15",
+          "category": "服務組",
+          "group": "service",
+          "icon": "assets/specialty/service/急救.png",
+          "activityName": "服務組 - 急救章",
+          "organizer": "新界地域",
+          "assessmentDate": "2026-11-15",
+          "syllabusKey": "service:急救",
+          "examiner": "蔡煒樂",
+          "examinerTitle": "地域總部總監(童軍)",
+          "certificateNumber": "SSFAB/N/2026/011/0022",
+          "noticeUrl": "assets/notices/20261115-first-aid-training.pdf",
+          "noticeTitle": "新界地域 童軍急救章訓練班",
+          "certificateCopy": "assets/certificates/2026000246_急救章_SSFAB-N-2026-011-0022_badge.jpeg",
+          "certificateCopyTitle": "專科徽章證書"
+        },
+        {
+          "name": "露營章",
+          "earnedDate": "2026-09-20",
+          "category": "技能組",
+          "group": "skill",
+          "icon": "assets/specialty/skill/露營.png",
+          "activityName": "技能組 - 露營章",
+          "organizer": "新界東地域",
+          "assessmentDate": "2026-09-20",
+          "syllabusKey": "skill:露營",
+          "examiner": "何嘉樂先生",
+          "examinerTitle": "助理區總監(童軍)",
+          "certificateNumber": "STE/S/FY2627/179",
+          "noticeUrl": "assets/notices/20260920-camping-training.pdf",
+          "noticeTitle": "新界東地域 童軍露營訓練班（技能及教導組）",
+          "certificateCopy": "assets/certificates/2026000246_露營章_STE-S-FY2627-179_badge.jpeg",
+          "certificateCopyTitle": "證書副本",
+          "certificateCopies": [
+            {
+              "url": "assets/certificates/2026000246_露營章_STE-S-FY2627-179_badge.jpeg",
+              "title": "證書副本"
+            },
+            {
+              "url": "assets/certificates/2026000246_露營章_STE-S-FY2627-179_training.jpeg",
+              "title": "訓練班證書"
+            }
+          ]
+        },
+        {
           "name": "多元共融章",
           "earnedDate": "2026-08-08",
           "category": "服務組",
@@ -17466,7 +17543,7 @@
           "earnedDate": "2026-05-16",
           "category": "「積極公民」獎章系列",
           "group": "activeCitizen",
-          "icon": "assets/specialty/activeCitizen/社區應急先鋒.png",
+          "icon": "assets/specialty/activeCitizen/社區應急先鋒章.png",
           "activityName": "「積極公民」獎章系列 - 社區應急先鋒章",
           "organizer": "新界地域",
           "assessmentDate": "2026-05-16",

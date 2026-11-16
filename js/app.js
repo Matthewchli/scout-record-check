@@ -2820,10 +2820,19 @@
     return 99;
   }
 
+  function hasMemberPhoto(member) {
+    return Boolean(member && member.photo);
+  }
+
   function sortMembersForPatrol(list) {
     return [...list].sort((a, b) => {
       const rd = rankSortValue(a.rank) - rankSortValue(b.rank);
       if (rd !== 0) return rd;
+      if (a.section === "未分配小隊" && b.section === "未分配小隊") {
+        const photoA = hasMemberPhoto(a) ? 0 : 1;
+        const photoB = hasMemberPhoto(b) ? 0 : 1;
+        if (photoA !== photoB) return photoA - photoB;
+      }
       const joinA = a.joinDate || "9999-99-99";
       const joinB = b.joinDate || "9999-99-99";
       if (joinA !== joinB) return joinA.localeCompare(joinB);

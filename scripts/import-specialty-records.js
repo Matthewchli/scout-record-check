@@ -4,7 +4,9 @@ const XLSX = require("xlsx");
 
 const membersPath = path.join(__dirname, "..", "data", "members.json");
 const syllabusPath = path.join(__dirname, "..", "data", "specialty-syllabus.json");
-const excelPath = "c:/Users/heiin/Desktop/童軍管理平台/專科徽章 Record.xlsx";
+const excelPath =
+  process.argv[2] ||
+  "c:/Users/heiin/Desktop/童軍管理平台/專科徽章 Record.xlsx";
 
 const DEMO_IDS = new Set(["2025000101", "2025000102", "2025000103"]);
 
@@ -31,7 +33,17 @@ const GROUP_MAP = {
 const NAME_ALIASES = {
   梁諾言: "梁諾然",
   楊淳𤋮: "楊淳熙",
+  王悅晴: "王悦晴",
+  吳子琳: "吴子琳",
 };
+
+const PRESERVE_FIELDS = [
+  "noticeUrl",
+  "noticeTitle",
+  "certificateCopy",
+  "certificateCopyTitle",
+  "certificateCopies",
+];
 
 function excelSerialToIso(value) {
   if (typeof value === "string") {
@@ -172,6 +184,8 @@ function main() {
       examiner: examinerInfo.examiner,
       examinerTitle: examinerInfo.examinerTitle,
     };
+    const certNo = String(row["證書編號"] || "").trim();
+    if (certNo) badge.certificateNumber = certNo;
 
     if (!earned.has(name)) earned.set(name, []);
     // dedupe same syllabusKey+date
@@ -207,8 +221,13 @@ function main() {
                 (badge.assessmentDate || badge.earnedDate)
           );
           if (old) {
-            if (old.noticeUrl) badge.noticeUrl = old.noticeUrl;
-            if (old.noticeTitle) badge.noticeTitle = old.noticeTitle;
+            for (const field of PRESERVE_FIELDS) {
+              if (old[field]) badge[field] = old[field];
+            }
+            if (!badge.certificateNumber) {
+              const oldCert = old.certificateNumber || old.certNo;
+              if (oldCert) badge.certificateNumber = oldCert;
+            }
           }
           return badge;
         });
