@@ -1027,5 +1027,12 @@ for (const [k, b] of Object.entries(syllabus)) {
 }
 
 const out = path.join(__dirname, "..", "data", "progressive-syllabus.json");
+if (fs.existsSync(out)) {
+  const current = JSON.parse(fs.readFileSync(out, "utf8"));
+  if (current.advanced) {
+    // Latest Scout Advanced Award is maintained in progressive-syllabus.json.
+    syllabus.advanced = current.advanced;
+  }
+}
 fs.writeFileSync(out, JSON.stringify(syllabus, null, 2), "utf8");
 console.log("written", out);

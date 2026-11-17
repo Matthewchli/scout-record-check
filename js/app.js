@@ -519,9 +519,11 @@
           if (electiveSeen.has(sub.electiveGroup)) continue;
           electiveSeen.add(sub.electiveGroup);
           const tracks = collectElectiveTracks(syl, sub.electiveGroup);
-          const chosen = chooseElectiveTrack(tracks, completed);
-          total += chosen.items.length;
-          done += chosen.items.filter((it) => completed.has(it.id)).length;
+          const chosenTracks = chooseElectiveTracks(tracks, completed);
+          for (const chosen of chosenTracks) {
+            total += chosen.items.length;
+            done += chosen.items.filter((it) => completed.has(it.id)).length;
+          }
         } else {
           for (const item of sub.items) {
             total += 1;
@@ -543,18 +545,26 @@
     return tracks;
   }
 
+  function electivePickCount(tracks) {
+    const n = Number(tracks[0] && tracks[0].electivePick);
+    return Number.isFinite(n) && n > 0 ? n : 1;
+  }
+
+  function chooseElectiveTracks(tracks, completedSet) {
+    if (!tracks.length) return [];
+    const pick = Math.min(electivePickCount(tracks), tracks.length);
+    const ranked = tracks
+      .map((track, idx) => ({
+        track,
+        idx,
+        done: track.items.filter((it) => completedSet.has(it.id)).length,
+      }))
+      .sort((a, b) => b.done - a.done || a.idx - b.idx);
+    return ranked.slice(0, pick).map((row) => row.track);
+  }
+
   function chooseElectiveTrack(tracks, completedSet) {
-    if (!tracks.length) return { items: [] };
-    let best = tracks[0];
-    let bestDone = -1;
-    for (const track of tracks) {
-      const n = track.items.filter((it) => completedSet.has(it.id)).length;
-      if (n > bestDone) {
-        bestDone = n;
-        best = track;
-      }
-    }
-    return best;
+    return chooseElectiveTracks(tracks, completedSet)[0] || { items: [] };
   }
 
   function collectItemIds(syl) {
@@ -579,9 +589,11 @@
         const tracks = section.subsections.filter(
           (s) => s.electiveGroup === sub.electiveGroup
         );
-        const chosen = chooseElectiveTrack(tracks, completedSet);
-        total += chosen.items.length;
-        done += chosen.items.filter((it) => completedSet.has(it.id)).length;
+        const chosenTracks = chooseElectiveTracks(tracks, completedSet);
+        for (const chosen of chosenTracks) {
+          total += chosen.items.length;
+          done += chosen.items.filter((it) => completedSet.has(it.id)).length;
+        }
       } else {
         for (const item of sub.items) {
           total += 1;
@@ -1367,10 +1379,19 @@
             let tipHtml = "";
             if (sub.electiveGroup && !electiveTipShown.has(sub.electiveGroup)) {
               electiveTipShown.add(sub.electiveGroup);
+              const pick = electivePickCount([sub]);
+              const noteText =
+                sub.electiveNote ||
+                syl.note ||
+                "請於下列 4. 戶外活動／5. 海上活動／6. 航空活動中選取其中一項為主要考核項目；各進度性獎章的選項須相同。海童軍必須選海上活動，空童軍必須選航空活動。";
+              const countText =
+                pick === 1
+                  ? "進度計算：只計算所選一項的全部分項"
+                  : `進度計算：只計算所選${pick === 2 ? "兩" : String(pick)}項的全部分項`;
               tipHtml = `<aside class="elective-tip" role="note">
                   <p class="elective-tip-label">選修提示</p>
-                  <p class="elective-tip-text">${escapeHtml(syl.note || "請於下列 4. 戶外活動／5. 海上活動／6. 航空活動中選取其中一項為主要考核項目；各進度性獎章的選項須相同。海童軍必須選海上活動，空童軍必須選航空活動。").replace(/\n/g, "<br>")}</p>
-                  <p class="elective-tip-count">進度計算：只計算所選一項的全部分項</p>
+                  <p class="elective-tip-text">${escapeHtml(noteText).replace(/\n/g, "<br>")}</p>
+                  <p class="elective-tip-count">${escapeHtml(countText)}</p>
                 </aside>`;
             }
 
