@@ -112,7 +112,7 @@
     },
     {
       name: "胡喬立",
-      scoutId: "1234",
+      scoutId: "1734460909",
       role: "admin",
       rank: "訓練員",
       photo: "assets/members/2025045317.png",
@@ -120,7 +120,7 @@
     },
     {
       name: "高卓言",
-      scoutId: "1234",
+      scoutId: "h2972321",
       role: "admin",
       rank: "訓練員",
       photo: "assets/members/2025045309.png",

@@ -51,7 +51,7 @@ function excelDateToIso(value) {
 
 function parseActivity(name) {
   const m = String(name).match(
-    /^(探索|標準|高級|總領袖)獎章\s*([A-E])\.[^\d]*?(\d+)\.\s*[^(]*?\(([a-z])\)\s*$/i
+    /^(探索|標準|高級|總領袖)獎章\s*([A-F])\.[^\d]*?(\d+)\.\s*[^(]*?\(([a-z])\)\s*$/i
   );
   if (!m) return null;
   const key = BADGE_KEY[m[1]];
@@ -176,10 +176,17 @@ function main() {
     defval: "",
   });
 
+  const SKIP_ACTIVITIES = new Set(["已完成童軍探索獎章"]);
+
   // Validate mapping
-  const acts = [...new Set(rows.map((r) => r["活動名稱"]))];
+  const acts = [...new Set(rows.map((r) => String(r["活動名稱"]).trim()))];
   const unmapped = [];
+  const skippedActs = [];
   for (const a of acts) {
+    if (SKIP_ACTIVITIES.has(a)) {
+      skippedActs.push(a);
+      continue;
+    }
     const p = parseActivity(a);
     if (!p || !knownIds.has(p.id)) unmapped.push({ a, p });
   }
@@ -188,7 +195,10 @@ function main() {
     unmapped.forEach((u) => console.error(" ", u.a, u.p));
     process.exit(1);
   }
-  console.log("mapped activities", acts.length);
+  console.log("mapped activities", acts.length - skippedActs.length);
+  if (skippedActs.length) {
+    console.log("skipped non-item activities:", skippedActs.join(", "));
+  }
 
   // person -> itemId -> earliest date
   const progress = new Map();
@@ -200,7 +210,9 @@ function main() {
     }
     let name = String(r["姓名"]).trim();
     name = NAME_ALIASES[name] || name;
-    const parsed = parseActivity(r["活動名稱"]);
+    const activityName = String(r["活動名稱"]).trim();
+    if (SKIP_ACTIVITIES.has(activityName)) continue;
+    const parsed = parseActivity(activityName);
     const date = excelDateToIso(r["舉辦日期"]);
     if (!parsed || !date) continue;
 
