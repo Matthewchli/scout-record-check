@@ -1033,6 +1033,10 @@ if (fs.existsSync(out)) {
     // Latest Scout Advanced Award is maintained in progressive-syllabus.json.
     syllabus.advanced = current.advanced;
   }
+  if (current.chief) {
+    // Latest Chief Scout's Award is maintained in progressive-syllabus.json.
+    syllabus.chief = current.chief;
+  }
 }
 fs.writeFileSync(out, JSON.stringify(syllabus, null, 2), "utf8");
 console.log("written", out);
