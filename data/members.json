@@ -2646,7 +2646,7 @@
       "joinDate": "2024-10-19",
       "photo": "assets/members/2025045143.png",
       "activity": {
-        "attendanceRate": 67,
+        "attendanceRate": 65,
         "serviceHours": 32,
         "campingCount": 3,
         "outdoorActivities": [
@@ -2741,6 +2741,13 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -3265,7 +3272,7 @@
       "joinDate": "2023-10-14",
       "photo": "assets/members/2025021995.png",
       "activity": {
-        "attendanceRate": 76,
+        "attendanceRate": 75,
         "serviceHours": 47,
         "campingCount": 0,
         "outdoorActivities": [
@@ -3341,6 +3348,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": "病假"
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -4034,7 +4048,7 @@
       "joinDate": "2024-10-19",
       "photo": "assets/members/2025045135.png",
       "activity": {
-        "attendanceRate": 74,
+        "attendanceRate": 73,
         "serviceHours": 52,
         "campingCount": 2,
         "outdoorActivities": [
@@ -4123,6 +4137,13 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -5004,6 +5025,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
           "date": "2026-11-15",
           "name": "學校資訊日",
           "type": "服務",
@@ -5593,7 +5621,7 @@
       "joinDate": "2024-10-19",
       "photo": "assets/members/2025045200.png",
       "activity": {
-        "attendanceRate": 63,
+        "attendanceRate": 62,
         "serviceHours": 19,
         "campingCount": 3,
         "outdoorActivities": [
@@ -5676,6 +5704,13 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -6205,7 +6240,7 @@
       "joinDate": "2022-10-15",
       "photo": "assets/members/2019048160.png",
       "activity": {
-        "attendanceRate": 43,
+        "attendanceRate": 42,
         "serviceHours": 48,
         "campingCount": 1,
         "outdoorActivities": [
@@ -6276,6 +6311,13 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -7243,7 +7285,7 @@
       "joinDate": "2024-10-19",
       "photo": "assets/members/2025045168.png",
       "activity": {
-        "attendanceRate": 74,
+        "attendanceRate": 73,
         "serviceHours": 40,
         "campingCount": 2,
         "outdoorActivities": [
@@ -7332,6 +7374,13 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -8356,7 +8405,7 @@
       "joinDate": "2025-10-25",
       "photo": null,
       "activity": {
-        "attendanceRate": 39,
+        "attendanceRate": 38,
         "serviceHours": 8,
         "campingCount": 0,
         "outdoorActivities": [
@@ -8390,6 +8439,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -8689,7 +8745,7 @@
       "joinDate": "2024-10-19",
       "photo": "assets/members/2025045226.png",
       "activity": {
-        "attendanceRate": 80,
+        "attendanceRate": 78,
         "serviceHours": 40,
         "campingCount": 3,
         "outdoorActivities": [
@@ -8784,6 +8840,13 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -9271,7 +9334,7 @@
       "joinDate": "2025-10-25",
       "photo": "assets/members/2026000188.png",
       "activity": {
-        "attendanceRate": 89,
+        "attendanceRate": 90,
         "serviceHours": 26,
         "campingCount": 1,
         "outdoorActivities": [
@@ -9342,6 +9405,13 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -9544,14 +9614,15 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "in_progress",
-          "completedDate": null,
+          "status": "completed",
+          "completedDate": "2026-11-21",
           "completedIds": [
             "d-a-1a",
             "d-a-1b",
             "d-a-1c",
             "d-a-1d",
             "d-a-2a",
+            "d-a-2b",
             "d-a-2c",
             "d-a-3a",
             "d-a-3b",
@@ -9588,7 +9659,8 @@
             "d-a-3a": "2026-04-25",
             "d-a-3b": "2026-04-25",
             "d-c-1a": "2026-05-09",
-            "d-d-2a": "2026-05-16"
+            "d-d-2a": "2026-05-16",
+            "d-a-2b": "2026-11-21"
           }
         },
         {
@@ -9598,6 +9670,9 @@
           "status": "in_progress",
           "completedDate": null,
           "completedIds": [
+            "s-a-2b",
+            "s-a-2c",
+            "s-a-2d",
             "s-a-4a",
             "s-a-4c",
             "s-b-1a",
@@ -9617,7 +9692,10 @@
             "s-c-1b": "2026-05-09",
             "s-d-3a": "2026-05-16",
             "s-c-1d": "2026-05-16",
-            "s-b-2b": "2026-07-05"
+            "s-b-2b": "2026-07-05",
+            "s-a-2b": "2026-11-21",
+            "s-a-2c": "2026-11-21",
+            "s-a-2d": "2026-11-21"
           }
         },
         {
@@ -10665,6 +10743,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
           "date": "2026-11-15",
           "name": "學校資訊日",
           "type": "服務",
@@ -11470,7 +11555,7 @@
       "joinDate": "2025-10-25",
       "photo": "assets/members/2025098357.png",
       "activity": {
-        "attendanceRate": 71,
+        "attendanceRate": 72,
         "serviceHours": 18,
         "campingCount": 0,
         "outdoorActivities": [
@@ -11522,6 +11607,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -11727,6 +11819,8 @@
           "status": "in_progress",
           "completedDate": null,
           "completedIds": [
+            "d-a-1b",
+            "d-a-1d",
             "d-a-3a",
             "d-a-3b",
             "d-a-4a",
@@ -11748,7 +11842,9 @@
             "d-c-1a": "2026-05-09",
             "d-d-2a": "2026-05-16",
             "d-b-4a": "2026-11-01",
-            "d-b-4b": "2026-11-01"
+            "d-b-4b": "2026-11-01",
+            "d-a-1b": "2026-11-21",
+            "d-a-1d": "2026-11-21"
           }
         },
         {
@@ -13143,6 +13239,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
           "date": "2026-11-15",
           "name": "學校資訊日",
           "type": "服務",
@@ -14261,7 +14364,7 @@
       "joinDate": "2025-10-25",
       "photo": "assets/members/2025098332.png",
       "activity": {
-        "attendanceRate": 89,
+        "attendanceRate": 90,
         "serviceHours": 31,
         "campingCount": 1,
         "outdoorActivities": [
@@ -14332,6 +14435,13 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -14542,6 +14652,7 @@
             "d-a-1c",
             "d-a-1d",
             "d-a-2a",
+            "d-a-2b",
             "d-a-2c",
             "d-a-3a",
             "d-a-3b",
@@ -14576,7 +14687,8 @@
             "d-a-3a": "2026-04-25",
             "d-a-3b": "2026-04-25",
             "d-c-1a": "2026-05-09",
-            "d-d-2a": "2026-05-16"
+            "d-d-2a": "2026-05-16",
+            "d-a-2b": "2026-11-21"
           }
         },
         {
@@ -14590,6 +14702,9 @@
             "s-a-1b",
             "s-a-1c",
             "s-a-1e",
+            "s-a-2b",
+            "s-a-2c",
+            "s-a-2d",
             "s-a-4a",
             "s-a-4c",
             "s-b-1a",
@@ -14615,7 +14730,10 @@
             "s-a-1b": "2026-09-20",
             "s-a-1c": "2026-09-20",
             "s-a-1e": "2026-09-20",
-            "s-b-2a": "2026-09-20"
+            "s-b-2a": "2026-09-20",
+            "s-a-2b": "2026-11-21",
+            "s-a-2c": "2026-11-21",
+            "s-a-2d": "2026-11-21"
           }
         },
         {
@@ -14773,7 +14891,7 @@
       "joinDate": "2025-10-25",
       "photo": "assets/members/2026000089.png",
       "activity": {
-        "attendanceRate": 61,
+        "attendanceRate": 59,
         "serviceHours": 13,
         "campingCount": 0,
         "outdoorActivities": [
@@ -14831,6 +14949,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -17151,6 +17276,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
           "date": "2026-11-15",
           "name": "學校資訊日",
           "type": "服務",
@@ -17360,6 +17492,7 @@
             "d-a-1c",
             "d-a-1d",
             "d-a-2a",
+            "d-a-2b",
             "d-a-2c",
             "d-a-3a",
             "d-a-3b",
@@ -17394,7 +17527,8 @@
             "d-c-1b": "2026-03-26",
             "d-a-3a": "2026-04-25",
             "d-a-3b": "2026-04-25",
-            "d-c-1a": "2026-11-15"
+            "d-c-1a": "2026-11-15",
+            "d-a-2b": "2026-11-21"
           }
         },
         {
@@ -17408,6 +17542,9 @@
             "s-a-1b",
             "s-a-1c",
             "s-a-1e",
+            "s-a-2b",
+            "s-a-2c",
+            "s-a-2d",
             "s-a-4a",
             "s-a-4c",
             "s-b-1a",
@@ -17429,7 +17566,10 @@
             "s-a-1c": "2026-09-20",
             "s-a-1e": "2026-09-20",
             "s-b-2a": "2026-09-20",
-            "s-c-1a": "2026-11-15"
+            "s-c-1a": "2026-11-15",
+            "s-a-2b": "2026-11-21",
+            "s-a-2c": "2026-11-21",
+            "s-a-2d": "2026-11-21"
           }
         },
         {
@@ -17655,7 +17795,7 @@
       "joinDate": "2021-10-30",
       "photo": "assets/members/2025021615.png",
       "activity": {
-        "attendanceRate": 87,
+        "attendanceRate": 85,
         "serviceHours": 63,
         "campingCount": 3,
         "outdoorActivities": [
@@ -17768,6 +17908,13 @@
         ]
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -18794,6 +18941,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
           "date": "2026-11-15",
           "name": "學校資訊日",
           "type": "服務",
@@ -19570,6 +19724,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
           "date": "2026-11-15",
           "name": "學校資訊日",
           "type": "服務",
@@ -19658,6 +19819,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -19748,6 +19916,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
           "date": "2026-11-15",
           "name": "學校資訊日",
           "type": "服務",
@@ -19837,6 +20012,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
           "date": "2026-11-15",
           "name": "學校資訊日",
           "type": "服務",
@@ -19925,6 +20107,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -20029,6 +20218,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
           "date": "2026-11-15",
           "name": "學校資訊日",
           "type": "服務",
@@ -20065,6 +20261,8 @@
           "status": "in_progress",
           "completedDate": null,
           "completedIds": [
+            "d-a-1b",
+            "d-a-1d",
             "d-a-4b",
             "d-b-1a",
             "d-b-4a",
@@ -20076,7 +20274,9 @@
             "d-b-1a": "2026-10-24",
             "d-b-4a": "2026-11-01",
             "d-b-4b": "2026-11-01",
-            "d-c-1b": "2026-11-15"
+            "d-c-1b": "2026-11-15",
+            "d-a-1b": "2026-11-21",
+            "d-a-1d": "2026-11-21"
           }
         },
         {
@@ -20144,6 +20344,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
           "date": "2026-11-15",
           "name": "學校資訊日",
           "type": "服務",
@@ -20180,6 +20387,8 @@
           "status": "in_progress",
           "completedDate": null,
           "completedIds": [
+            "d-a-1b",
+            "d-a-1d",
             "d-a-4b",
             "d-b-1a",
             "d-b-4a",
@@ -20191,7 +20400,9 @@
             "d-b-1a": "2026-10-24",
             "d-b-4a": "2026-11-01",
             "d-b-4b": "2026-11-01",
-            "d-c-1b": "2026-11-15"
+            "d-c-1b": "2026-11-15",
+            "d-a-1b": "2026-11-21",
+            "d-a-1d": "2026-11-21"
           }
         },
         {
@@ -20236,7 +20447,7 @@
       "joinDate": "2026-10-24",
       "photo": null,
       "activity": {
-        "attendanceRate": 50,
+        "attendanceRate": 40,
         "serviceHours": 0,
         "campingCount": 0,
         "outdoorActivities": [],
@@ -20244,6 +20455,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": "事假"
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -20339,6 +20557,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -20443,6 +20668,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
           "date": "2026-11-15",
           "name": "學校資訊日",
           "type": "服務",
@@ -20479,6 +20711,8 @@
           "status": "in_progress",
           "completedDate": null,
           "completedIds": [
+            "d-a-1b",
+            "d-a-1d",
             "d-a-4b",
             "d-b-1a",
             "d-b-4a",
@@ -20490,7 +20724,9 @@
             "d-b-1a": "2026-10-24",
             "d-b-4a": "2026-11-01",
             "d-b-4b": "2026-11-01",
-            "d-c-1b": "2026-11-15"
+            "d-c-1b": "2026-11-15",
+            "d-a-1b": "2026-11-21",
+            "d-a-1d": "2026-11-21"
           }
         },
         {
@@ -20535,7 +20771,7 @@
       "joinDate": "2026-10-24",
       "photo": null,
       "activity": {
-        "attendanceRate": 50,
+        "attendanceRate": 60,
         "serviceHours": 0,
         "campingCount": 0,
         "outdoorActivities": [
@@ -20550,6 +20786,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -20587,12 +20830,16 @@
           "status": "in_progress",
           "completedDate": null,
           "completedIds": [
+            "d-a-1b",
+            "d-a-1d",
             "d-b-4a",
             "d-b-4b"
           ],
           "itemCompletedDates": {
             "d-b-4a": "2026-11-01",
-            "d-b-4b": "2026-11-01"
+            "d-b-4b": "2026-11-01",
+            "d-a-1b": "2026-11-21",
+            "d-a-1d": "2026-11-21"
           }
         },
         {
@@ -20637,7 +20884,7 @@
       "joinDate": "2026-10-24",
       "photo": null,
       "activity": {
-        "attendanceRate": 75,
+        "attendanceRate": 80,
         "serviceHours": 0,
         "campingCount": 0,
         "outdoorActivities": [
@@ -20652,6 +20899,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -20689,6 +20943,8 @@
           "status": "in_progress",
           "completedDate": null,
           "completedIds": [
+            "d-a-1b",
+            "d-a-1d",
             "d-a-4b",
             "d-b-1a",
             "d-b-4a",
@@ -20698,7 +20954,9 @@
             "d-a-4b": "2026-10-24",
             "d-b-1a": "2026-10-24",
             "d-b-4a": "2026-11-01",
-            "d-b-4b": "2026-11-01"
+            "d-b-4b": "2026-11-01",
+            "d-a-1b": "2026-11-21",
+            "d-a-1d": "2026-11-21"
           }
         },
         {
@@ -20743,7 +21001,7 @@
       "joinDate": "2026-10-24",
       "photo": null,
       "activity": {
-        "attendanceRate": 25,
+        "attendanceRate": 40,
         "serviceHours": 0,
         "campingCount": 0,
         "outdoorActivities": [],
@@ -20751,6 +21009,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -20788,12 +21053,16 @@
           "status": "in_progress",
           "completedDate": null,
           "completedIds": [
+            "d-a-1b",
+            "d-a-1d",
             "d-a-4b",
             "d-b-1a"
           ],
           "itemCompletedDates": {
             "d-a-4b": "2026-10-24",
-            "d-b-1a": "2026-10-24"
+            "d-b-1a": "2026-10-24",
+            "d-a-1b": "2026-11-21",
+            "d-a-1d": "2026-11-21"
           }
         },
         {
@@ -20838,7 +21107,7 @@
       "joinDate": "2026-10-24",
       "photo": "assets/members/2026065652.png",
       "activity": {
-        "attendanceRate": 100,
+        "attendanceRate": 80,
         "serviceHours": 5,
         "campingCount": 0,
         "outdoorActivities": [
@@ -20860,6 +21129,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": "病假"
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -20976,6 +21252,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
           "date": "2026-11-15",
           "name": "學校資訊日",
           "type": "服務",
@@ -21012,6 +21295,8 @@
           "status": "in_progress",
           "completedDate": null,
           "completedIds": [
+            "d-a-1b",
+            "d-a-1d",
             "d-a-4b",
             "d-b-1a",
             "d-b-4a",
@@ -21023,7 +21308,9 @@
             "d-b-1a": "2026-10-24",
             "d-b-4a": "2026-11-01",
             "d-b-4b": "2026-11-01",
-            "d-c-1b": "2026-11-15"
+            "d-c-1b": "2026-11-15",
+            "d-a-1b": "2026-11-21",
+            "d-a-1d": "2026-11-21"
           }
         },
         {
@@ -21091,6 +21378,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
           "date": "2026-11-15",
           "name": "學校資訊日",
           "type": "服務",
@@ -21127,6 +21421,8 @@
           "status": "in_progress",
           "completedDate": null,
           "completedIds": [
+            "d-a-1b",
+            "d-a-1d",
             "d-a-4b",
             "d-b-1a",
             "d-b-4a",
@@ -21138,7 +21434,9 @@
             "d-b-1a": "2026-10-24",
             "d-b-4a": "2026-11-01",
             "d-b-4b": "2026-11-01",
-            "d-c-1b": "2026-11-15"
+            "d-c-1b": "2026-11-15",
+            "d-a-1b": "2026-11-21",
+            "d-a-1d": "2026-11-21"
           }
         },
         {
@@ -21183,7 +21481,7 @@
       "joinDate": "2026-10-24",
       "photo": "assets/members/2026065678.png",
       "activity": {
-        "attendanceRate": 75,
+        "attendanceRate": 80,
         "serviceHours": 5,
         "campingCount": 0,
         "outdoorActivities": [],
@@ -21198,6 +21496,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -21235,6 +21540,8 @@
           "status": "in_progress",
           "completedDate": null,
           "completedIds": [
+            "d-a-1b",
+            "d-a-1d",
             "d-a-4b",
             "d-b-1a",
             "d-c-1b"
@@ -21242,7 +21549,9 @@
           "itemCompletedDates": {
             "d-a-4b": "2026-10-24",
             "d-b-1a": "2026-10-24",
-            "d-c-1b": "2026-11-15"
+            "d-c-1b": "2026-11-15",
+            "d-a-1b": "2026-11-21",
+            "d-a-1d": "2026-11-21"
           }
         },
         {
@@ -21295,6 +21604,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -21399,6 +21715,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
+        {
           "date": "2026-11-15",
           "name": "學校資訊日",
           "type": "服務",
@@ -21435,6 +21758,8 @@
           "status": "in_progress",
           "completedDate": null,
           "completedIds": [
+            "d-a-1b",
+            "d-a-1d",
             "d-a-4b",
             "d-b-1a",
             "d-b-4a",
@@ -21446,7 +21771,9 @@
             "d-b-1a": "2026-10-24",
             "d-b-4a": "2026-11-01",
             "d-b-4b": "2026-11-01",
-            "d-c-1b": "2026-11-15"
+            "d-c-1b": "2026-11-15",
+            "d-a-1b": "2026-11-21",
+            "d-a-1d": "2026-11-21"
           }
         },
         {
@@ -21499,6 +21826,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -21589,6 +21923,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
           "date": "2026-11-15",
           "name": "學校資訊日",
           "type": "服務",
@@ -21678,6 +22019,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
           "date": "2026-11-15",
           "name": "學校資訊日",
           "type": "服務",
@@ -21758,7 +22106,7 @@
       "joinDate": "2026-10-24",
       "photo": "assets/members/2026065736.png",
       "activity": {
-        "attendanceRate": 100,
+        "attendanceRate": 80,
         "serviceHours": 5,
         "campingCount": 0,
         "outdoorActivities": [
@@ -21780,6 +22128,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -21882,6 +22237,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
           "date": "2026-11-15",
           "name": "學校資訊日",
           "type": "服務",
@@ -21971,6 +22333,13 @@
       },
       "attendance": [
         {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
+        {
           "date": "2026-11-15",
           "name": "學校資訊日",
           "type": "服務",
@@ -22051,7 +22420,7 @@
       "joinDate": "2026-10-24",
       "photo": null,
       "activity": {
-        "attendanceRate": 25,
+        "attendanceRate": 40,
         "serviceHours": 0,
         "campingCount": 0,
         "outdoorActivities": [],
@@ -22059,6 +22428,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "present",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
@@ -22093,10 +22469,16 @@
           "key": "discovery",
           "name": "探索獎章",
           "icon": "assets/badge-discovery.png",
-          "status": "not_started",
+          "status": "in_progress",
           "completedDate": null,
-          "completedIds": [],
-          "itemCompletedDates": {}
+          "completedIds": [
+            "d-a-1b",
+            "d-a-1d"
+          ],
+          "itemCompletedDates": {
+            "d-a-1b": "2026-11-21",
+            "d-a-1d": "2026-11-21"
+          }
         },
         {
           "key": "standard",
@@ -22148,6 +22530,13 @@
         "campingRecords": []
       },
       "attendance": [
+        {
+          "date": "2026-11-21",
+          "name": "恆常集會",
+          "type": "集會",
+          "status": "absent",
+          "note": ""
+        },
         {
           "date": "2026-11-15",
           "name": "學校資訊日",
